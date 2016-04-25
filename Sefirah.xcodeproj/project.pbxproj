@@ -185,15 +185,13 @@
 			isa = PBXGroup;
 			children = (
 				D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */,
-				D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */,
 				D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */,
 				D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */,
 				D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */,
 				D0D5AB031CCDBEB60099BE6F /* Info.plist */,
 				D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */,
-				D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */,
-				D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */,
-				D0ED62E21CCEB9D0001F9917 /* Settings.swift */,
+				D0ED62E51CCEC14B001F9917 /* Controllers */,
+				D0ED62E41CCEC141001F9917 /* Classes */,
 			);
 			path = Sefirah;
 			sourceTree = "<group>";
@@ -229,6 +227,24 @@
 				D0D5AB1B1CCDBEB60099BE6F /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0ED62E41CCEC141001F9917 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED62E21CCEB9D0001F9917 /* Settings.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D0ED62E51CCEC14B001F9917 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */,
+				D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */,
+				D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

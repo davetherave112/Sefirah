@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1158" y="64"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Settings-->
         <scene sceneID="HQr-TP-aXa">
             <objects>
-                <tableViewController id="DD2-1J-b5Y" customClass="SettingsTableViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Settings" id="DD2-1J-b5Y" customClass="SettingsTableViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="10o-4k-a7D">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
                             <outlet property="delegate" destination="DD2-1J-b5Y" id="gCc-pQ-uOZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Le1-lH-jIL"/>
+                    <navigationItem key="navigationItem" title="Settings" id="Le1-lH-jIL"/>
                     <connections>
                         <outlet property="selectedLanguage" destination="57w-kl-gxq" id="hXM-SM-eMY"/>
                     </connections>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="1970" y="724"/>
         </scene>
-        <!--Languages Table View Controller-->
+        <!--Language-->
         <scene sceneID="f4h-bQ-ITc">
             <objects>
-                <tableViewController id="fvv-d2-Vil" customClass="LanguagesTableViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Language" id="fvv-d2-Vil" customClass="LanguagesTableViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YFi-yS-Vlf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
