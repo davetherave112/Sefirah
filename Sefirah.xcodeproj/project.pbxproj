@@ -10,7 +10,7 @@
 		8E67972F6F6A2832DF6402B0 /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19BACC8C9A6F7969B537D41 /* Pods_Sefirah_WatchKit_Extension.framework */; };
 		9C7B5370D72D0CCAD4DCFABA /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */; };
 		D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */; };
-		D0D5AAFA1CCDBEB60099BE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */; };
+		D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */; };
 		D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */; };
 		D0D5AAFF1CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */; };
 		D0D5AB021CCDBEB60099BE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */; };
@@ -24,6 +24,9 @@
 		D0D5AB231CCDBEB60099BE6F /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB221CCDBEB60099BE6F /* GlanceController.swift */; };
 		D0D5AB251CCDBEB60099BE6F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB241CCDBEB60099BE6F /* ComplicationController.swift */; };
 		D0D5AB271CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */; };
+		D0ED62DF1CCEA696001F9917 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */; };
+		D0ED62E11CCEA6AF001F9917 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */; };
+		D0ED62E31CCEB9D0001F9917 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62E21CCEB9D0001F9917 /* Settings.swift */; };
 		D70BC38E9663997FEB7FDCC7 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7B74E2E834D294BEADF374 /* Pods_Sefirah.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +82,7 @@
 		BE86024BCF4FFEC937CCF1D9 /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
 		D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0D5AAFC1CCDBEB60099BE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0D5AB011CCDBEB60099BE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +101,9 @@
 		D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0D5AB281CCDBEB60099BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sefirah-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
+		D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D0ED62E21CCEB9D0001F9917 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		D19362DB81AD7EE031650B6D /* Pods-Sefirah WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		ED83B42E37788AF61DBEF824 /* Pods-Sefirah WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,12 +185,15 @@
 			isa = PBXGroup;
 			children = (
 				D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */,
-				D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */,
+				D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */,
 				D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */,
 				D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */,
 				D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */,
 				D0D5AB031CCDBEB60099BE6F /* Info.plist */,
 				D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */,
+				D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */,
+				D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */,
+				D0ED62E21CCEB9D0001F9917 /* Settings.swift */,
 			);
 			path = Sefirah;
 			sourceTree = "<group>";
@@ -486,8 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0D5AAFA1CCDBEB60099BE6F /* ViewController.swift in Sources */,
+				D0ED62E11CCEA6AF001F9917 /* SettingsTableViewController.swift in Sources */,
+				D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */,
 				D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */,
+				D0ED62DF1CCEA696001F9917 /* LanguagesTableViewController.swift in Sources */,
+				D0ED62E31CCEB9D0001F9917 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

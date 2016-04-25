@@ -10,7 +10,7 @@ import UIKit
 import KosherCocoa
 import CircleProgressView
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var sefiraDay: UILabel!
     @IBOutlet weak var progressView: CircleProgressView!
@@ -25,9 +25,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
         let dayOfSefira = KCSefiratHaomerCalculator.dayOfSefira()
         let formatter = KCSefiraFormatter()
-        formatter.language = KCSefiraLanguage.LanguageEnglish
+        formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
         self.sefiraDay.text = formatter.countStringFromInteger(dayOfSefira)
         self.progressLabel.text = "\(dayOfSefira)"
         
