@@ -1,8 +1,0 @@
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/CircleProgressView" "$CONFIGURATION_BUILD_DIR/KosherCocoa-iOS"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/CircleProgressView/CircleProgressView.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/KosherCocoa-iOS/KosherCocoa.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "CircleProgressView" -framework "KosherCocoa"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_ROOT = ${SRCROOT}/Pods
