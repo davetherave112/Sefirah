@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E67972F6F6A2832DF6402B0 /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19BACC8C9A6F7969B537D41 /* Pods_Sefirah_WatchKit_Extension.framework */; };
+		9C7B5370D72D0CCAD4DCFABA /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */; };
+		D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */; };
+		D0D5AAFA1CCDBEB60099BE6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */; };
+		D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */; };
+		D0D5AAFF1CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */; };
+		D0D5AB021CCDBEB60099BE6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */; };
+		D0D5AB071CCDBEB60099BE6F /* Sefirah WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D0D5AB061CCDBEB60099BE6F /* Sefirah WatchKit App.app */; };
+		D0D5AB0D1CCDBEB60099BE6F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB0B1CCDBEB60099BE6F /* Interface.storyboard */; };
+		D0D5AB0F1CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB0E1CCDBEB60099BE6F /* Assets.xcassets */; };
+		D0D5AB161CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D0D5AB151CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D0D5AB1D1CCDBEB60099BE6F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB1C1CCDBEB60099BE6F /* InterfaceController.swift */; };
+		D0D5AB1F1CCDBEB60099BE6F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB1E1CCDBEB60099BE6F /* ExtensionDelegate.swift */; };
+		D0D5AB211CCDBEB60099BE6F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB201CCDBEB60099BE6F /* NotificationController.swift */; };
+		D0D5AB231CCDBEB60099BE6F /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB221CCDBEB60099BE6F /* GlanceController.swift */; };
+		D0D5AB251CCDBEB60099BE6F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB241CCDBEB60099BE6F /* ComplicationController.swift */; };
+		D0D5AB271CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */; };
+		D70BC38E9663997FEB7FDCC7 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7B74E2E834D294BEADF374 /* Pods_Sefirah.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0D5AB081CCDBEB60099BE6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D5AAEC1CCDBEB50099BE6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D5AB051CCDBEB60099BE6F;
+			remoteInfo = "Sefirah WatchKit App";
+		};
+		D0D5AB171CCDBEB60099BE6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D5AAEC1CCDBEB50099BE6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D5AB141CCDBEB60099BE6F;
+			remoteInfo = "Sefirah WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0D5AB2E1CCDBEB60099BE6F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D0D5AB161CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AB321CCDBEB60099BE6F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D0D5AB071CCDBEB60099BE6F /* Sefirah WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B533562A48162EEF1CE2D21 /* Pods-Sefirah WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		3401F6DE41C7041660914F65 /* Pods-Sefirah WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		3D7B74E2E834D294BEADF374 /* Pods_Sefirah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		859D34508212706209E11C59 /* Pods-Sefirah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.debug.xcconfig"; sourceTree = "<group>"; };
+		85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A19BACC8C9A6F7969B537D41 /* Pods_Sefirah_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE86024BCF4FFEC937CCF1D9 /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
+		D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0D5AAFC1CCDBEB60099BE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D5AB011CCDBEB60099BE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0D5AB031CCDBEB60099BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D5AB061CCDBEB60099BE6F /* Sefirah WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sefirah WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D5AB0C1CCDBEB60099BE6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D0D5AB0E1CCDBEB60099BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D5AB101CCDBEB60099BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D5AB151CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sefirah WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D5AB1B1CCDBEB60099BE6F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		D0D5AB1C1CCDBEB60099BE6F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D0D5AB1E1CCDBEB60099BE6F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D0D5AB201CCDBEB60099BE6F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D0D5AB221CCDBEB60099BE6F /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		D0D5AB241CCDBEB60099BE6F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0D5AB281CCDBEB60099BE6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sefirah-Bridging-Header.h"; sourceTree = "<group>"; };
+		D19362DB81AD7EE031650B6D /* Pods-Sefirah WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		ED83B42E37788AF61DBEF824 /* Pods-Sefirah WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60E9C9702FDF72047B5F87FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7B5370D72D0CCAD4DCFABA /* Pods_Sefirah_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AAF11CCDBEB50099BE6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70BC38E9663997FEB7FDCC7 /* Pods_Sefirah.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AB121CCDBEB60099BE6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E67972F6F6A2832DF6402B0 /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15A0955518DB3250400768D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D7B74E2E834D294BEADF374 /* Pods_Sefirah.framework */,
+				85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */,
+				A19BACC8C9A6F7969B537D41 /* Pods_Sefirah_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		833C3C53809DF79176FF94C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				859D34508212706209E11C59 /* Pods-Sefirah.debug.xcconfig */,
+				BE86024BCF4FFEC937CCF1D9 /* Pods-Sefirah.release.xcconfig */,
+				1B533562A48162EEF1CE2D21 /* Pods-Sefirah WatchKit App.debug.xcconfig */,
+				3401F6DE41C7041660914F65 /* Pods-Sefirah WatchKit App.release.xcconfig */,
+				D19362DB81AD7EE031650B6D /* Pods-Sefirah WatchKit Extension.debug.xcconfig */,
+				ED83B42E37788AF61DBEF824 /* Pods-Sefirah WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0D5AAEB1CCDBEB50099BE6F = {
+			isa = PBXGroup;
+			children = (
+				D0D5AAF61CCDBEB60099BE6F /* Sefirah */,
+				D0D5AB0A1CCDBEB60099BE6F /* Sefirah WatchKit App */,
+				D0D5AB191CCDBEB60099BE6F /* Sefirah WatchKit Extension */,
+				D0D5AAF51CCDBEB50099BE6F /* Products */,
+				833C3C53809DF79176FF94C0 /* Pods */,
+				15A0955518DB3250400768D4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0D5AAF51CCDBEB50099BE6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */,
+				D0D5AB061CCDBEB60099BE6F /* Sefirah WatchKit App.app */,
+				D0D5AB151CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0D5AAF61CCDBEB60099BE6F /* Sefirah */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */,
+				D0D5AAF91CCDBEB60099BE6F /* ViewController.swift */,
+				D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */,
+				D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */,
+				D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */,
+				D0D5AB031CCDBEB60099BE6F /* Info.plist */,
+				D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */,
+			);
+			path = Sefirah;
+			sourceTree = "<group>";
+		};
+		D0D5AB0A1CCDBEB60099BE6F /* Sefirah WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AB0B1CCDBEB60099BE6F /* Interface.storyboard */,
+				D0D5AB0E1CCDBEB60099BE6F /* Assets.xcassets */,
+				D0D5AB101CCDBEB60099BE6F /* Info.plist */,
+			);
+			path = "Sefirah WatchKit App";
+			sourceTree = "<group>";
+		};
+		D0D5AB191CCDBEB60099BE6F /* Sefirah WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AB1C1CCDBEB60099BE6F /* InterfaceController.swift */,
+				D0D5AB1E1CCDBEB60099BE6F /* ExtensionDelegate.swift */,
+				D0D5AB201CCDBEB60099BE6F /* NotificationController.swift */,
+				D0D5AB221CCDBEB60099BE6F /* GlanceController.swift */,
+				D0D5AB241CCDBEB60099BE6F /* ComplicationController.swift */,
+				D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */,
+				D0D5AB281CCDBEB60099BE6F /* Info.plist */,
+				D0D5AB1A1CCDBEB60099BE6F /* Supporting Files */,
+			);
+			path = "Sefirah WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D0D5AB1A1CCDBEB60099BE6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5AB1B1CCDBEB60099BE6F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0D5AAF31CCDBEB50099BE6F /* Sefirah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D5AB331CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah" */;
+			buildPhases = (
+				C409650C0338F5E492E21E73 /* 📦 Check Pods Manifest.lock */,
+				D0D5AAF01CCDBEB50099BE6F /* Sources */,
+				D0D5AAF11CCDBEB50099BE6F /* Frameworks */,
+				D0D5AAF21CCDBEB50099BE6F /* Resources */,
+				D0D5AB321CCDBEB60099BE6F /* Embed Watch Content */,
+				3F03C5DA6FFE694B350B62C4 /* 📦 Embed Pods Frameworks */,
+				620760D6B14BDEA52CBD5CAE /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D5AB091CCDBEB60099BE6F /* PBXTargetDependency */,
+			);
+			name = Sefirah;
+			productName = Sefirah;
+			productReference = D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0D5AB051CCDBEB60099BE6F /* Sefirah WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D5AB2F1CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah WatchKit App" */;
+			buildPhases = (
+				B1D2AA8FE1D78F32B778F22D /* 📦 Check Pods Manifest.lock */,
+				D0D5AB041CCDBEB60099BE6F /* Resources */,
+				D0D5AB2E1CCDBEB60099BE6F /* Embed App Extensions */,
+				60E9C9702FDF72047B5F87FC /* Frameworks */,
+				9D5BC1104BB6D04B08377107 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D5AB181CCDBEB60099BE6F /* PBXTargetDependency */,
+			);
+			name = "Sefirah WatchKit App";
+			productName = "Sefirah WatchKit App";
+			productReference = D0D5AB061CCDBEB60099BE6F /* Sefirah WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D0D5AB141CCDBEB60099BE6F /* Sefirah WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D5AB2B1CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah WatchKit Extension" */;
+			buildPhases = (
+				E8697B550FBCC3FEE7BB3DC4 /* 📦 Check Pods Manifest.lock */,
+				D0D5AB111CCDBEB60099BE6F /* Sources */,
+				D0D5AB121CCDBEB60099BE6F /* Frameworks */,
+				D0D5AB131CCDBEB60099BE6F /* Resources */,
+				9B3716A29E4BDFF88C5EEDD8 /* 📦 Embed Pods Frameworks */,
+				7A7DF68D653E9F8D2610EDF8 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sefirah WatchKit Extension";
+			productName = "Sefirah WatchKit Extension";
+			productReference = D0D5AB151CCDBEB60099BE6F /* Sefirah WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0D5AAEC1CCDBEB50099BE6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Josh Siegel";
+				TargetAttributes = {
+					D0D5AAF31CCDBEB50099BE6F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D0D5AB051CCDBEB60099BE6F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					D0D5AB141CCDBEB60099BE6F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = D0D5AAEF1CCDBEB50099BE6F /* Build configuration list for PBXProject "Sefirah" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0D5AAEB1CCDBEB50099BE6F;
+			productRefGroup = D0D5AAF51CCDBEB50099BE6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0D5AAF31CCDBEB50099BE6F /* Sefirah */,
+				D0D5AB051CCDBEB60099BE6F /* Sefirah WatchKit App */,
+				D0D5AB141CCDBEB60099BE6F /* Sefirah WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0D5AAF21CCDBEB50099BE6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5AB021CCDBEB60099BE6F /* LaunchScreen.storyboard in Resources */,
+				D0D5AAFF1CCDBEB60099BE6F /* Assets.xcassets in Resources */,
+				D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AB041CCDBEB60099BE6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5AB0F1CCDBEB60099BE6F /* Assets.xcassets in Resources */,
+				D0D5AB0D1CCDBEB60099BE6F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AB131CCDBEB60099BE6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5AB271CCDBEB60099BE6F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F03C5DA6FFE694B350B62C4 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620760D6B14BDEA52CBD5CAE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7DF68D653E9F8D2610EDF8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3716A29E4BDFF88C5EEDD8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D5BC1104BB6D04B08377107 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1D2AA8FE1D78F32B778F22D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C409650C0338F5E492E21E73 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8697B550FBCC3FEE7BB3DC4 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0D5AAF01CCDBEB50099BE6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5AAFA1CCDBEB60099BE6F /* ViewController.swift in Sources */,
+				D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5AB111CCDBEB60099BE6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5AB211CCDBEB60099BE6F /* NotificationController.swift in Sources */,
+				D0D5AB1F1CCDBEB60099BE6F /* ExtensionDelegate.swift in Sources */,
+				D0D5AB251CCDBEB60099BE6F /* ComplicationController.swift in Sources */,
+				D0D5AB1D1CCDBEB60099BE6F /* InterfaceController.swift in Sources */,
+				D0D5AB231CCDBEB60099BE6F /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0D5AB091CCDBEB60099BE6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D5AB051CCDBEB60099BE6F /* Sefirah WatchKit App */;
+			targetProxy = D0D5AB081CCDBEB60099BE6F /* PBXContainerItemProxy */;
+		};
+		D0D5AB181CCDBEB60099BE6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D5AB141CCDBEB60099BE6F /* Sefirah WatchKit Extension */;
+			targetProxy = D0D5AB171CCDBEB60099BE6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D5AAFC1CCDBEB60099BE6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D5AB011CCDBEB60099BE6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D5AB0B1CCDBEB60099BE6F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D5AB0C1CCDBEB60099BE6F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0D5AB291CCDBEB60099BE6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0D5AB2A1CCDBEB60099BE6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0D5AB2C1CCDBEB60099BE6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D19362DB81AD7EE031650B6D /* Pods-Sefirah WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Sefirah WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		D0D5AB2D1CCDBEB60099BE6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED83B42E37788AF61DBEF824 /* Pods-Sefirah WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Sefirah WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		D0D5AB301CCDBEB60099BE6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B533562A48162EEF1CE2D21 /* Pods-Sefirah WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sefirah_WatchKit_Extension;
+				INFOPLIST_FILE = "Sefirah WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		D0D5AB311CCDBEB60099BE6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3401F6DE41C7041660914F65 /* Pods-Sefirah WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sefirah_WatchKit_Extension;
+				INFOPLIST_FILE = "Sefirah WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		D0D5AB341CCDBEB60099BE6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 859D34508212706209E11C59 /* Pods-Sefirah.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Sefirah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0D5AB351CCDBEB60099BE6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE86024BCF4FFEC937CCF1D9 /* Pods-Sefirah.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Sefirah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.Sefirah;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0D5AAEF1CCDBEB50099BE6F /* Build configuration list for PBXProject "Sefirah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5AB291CCDBEB60099BE6F /* Debug */,
+				D0D5AB2A1CCDBEB60099BE6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D5AB2B1CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5AB2C1CCDBEB60099BE6F /* Debug */,
+				D0D5AB2D1CCDBEB60099BE6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D5AB2F1CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5AB301CCDBEB60099BE6F /* Debug */,
+				D0D5AB311CCDBEB60099BE6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D5AB331CCDBEB60099BE6F /* Build configuration list for PBXNativeTarget "Sefirah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5AB341CCDBEB60099BE6F /* Debug */,
+				D0D5AB351CCDBEB60099BE6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0D5AAEC1CCDBEB50099BE6F /* Project object */;
+}

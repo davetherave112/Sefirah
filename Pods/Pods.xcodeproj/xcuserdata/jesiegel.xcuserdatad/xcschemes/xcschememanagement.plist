@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>CircleProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KosherCocoa-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KosherCocoa-watchOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Sefirah WatchKit App.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Sefirah WatchKit Extension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Sefirah.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1255D273C4B5D6E97CE6AB1BFC7F194A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3D970461593C8867376EB72F65195CC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F91D6F7B8369D98CF0FBF106C83308C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EF23D366DB583D27EE8E43BE466A983</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AAAF367F62F10D68011597AC6A0B113</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDF243BD4A56CF1CE2F1074FEA9AD773</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
