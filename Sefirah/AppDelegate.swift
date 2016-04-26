@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Register the preference defaults early.
         NSUserDefaults.standardUserDefaults().registerDefaults([
             "Language" : Languages.English.rawValue,
+            "Nusach" : Nusach.Ashkenaz.rawValue,
+            "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
         ])
         return true
     }
