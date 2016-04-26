@@ -31,7 +31,7 @@
                                                     <constraint firstAttribute="width" constant="136" id="fqK-wz-DxF"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -45,7 +45,7 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-LN-ccl" customClass="CircleProgressView" customModule="CircleProgressView">
                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="180" id="GO8-cM-dbQ"/>
                                                             <constraint firstAttribute="width" secondItem="iQG-LN-ccl" secondAttribute="height" multiplier="1:1" id="hEf-a6-PNC"/>
@@ -55,7 +55,7 @@
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
-                                                                <real key="value" value="15"/>
+                                                                <real key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
                                                                 <real key="value" value="1"/>
@@ -63,11 +63,24 @@
                                                             <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                                                 <real key="value" value="0.0"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                                                <color key="value" red="0.039215686274509803" green="0.21176470588235294" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                                                <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
+                                                                <color key="value" red="0.039215686270000001" green="0.21176470589999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbt-8T-SgY">
                                                         <rect key="frame" x="75.5" y="75.5" width="30" height="29"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="textColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -92,7 +105,7 @@
                                                 </variation>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="10" id="2tQ-Tl-KVi"/>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="10" id="EIo-eZ-3vQ"/>
@@ -112,7 +125,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hfI-Rs-bd6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6ZC-s1-Yyq"/>
                             <constraint firstItem="amM-9W-Zrl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cBP-U6-C5T"/>
@@ -380,6 +393,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6qu-I4-MsQ"/>
                         <segue destination="sMU-hQ-QWc" kind="relationship" relationship="viewControllers" id="8iJ-RQ-usW"/>

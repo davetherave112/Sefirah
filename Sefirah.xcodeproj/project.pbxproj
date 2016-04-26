@@ -11,6 +11,7 @@
 		9C7B5370D72D0CCAD4DCFABA /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */; };
 		D039462E1CCF87D700D9499B /* NusachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039462D1CCF87D700D9499B /* NusachTableViewController.swift */; };
 		D03946301CCF9E1000D9499B /* PrayerOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039462F1CCF9E1000D9499B /* PrayerOptionsTableViewController.swift */; };
+		D03946321CCFAB5100D9499B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03946311CCFAB5100D9499B /* UIColorExtension.swift */; };
 		D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */; };
 		D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */; };
 		D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		BE86024BCF4FFEC937CCF1D9 /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
 		D039462D1CCF87D700D9499B /* NusachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NusachTableViewController.swift; sourceTree = "<group>"; };
 		D039462F1CCF9E1000D9499B /* PrayerOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsTableViewController.swift; sourceTree = "<group>"; };
+		D03946311CCFAB5100D9499B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D03946331CCFAB5C00D9499B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D03946311CCFAB5100D9499B /* UIColorExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		D0D5AAEB1CCDBEB50099BE6F = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 				D0D5AB371CCDF6AC0099BE6F /* Sefirah-Bridging-Header.h */,
 				D0ED62E51CCEC14B001F9917 /* Controllers */,
 				D0ED62E41CCEC141001F9917 /* Classes */,
+				D03946331CCFAB5C00D9499B /* Extensions */,
 			);
 			path = Sefirah;
 			sourceTree = "<group>";
@@ -520,6 +531,7 @@
 				D0ED62E11CCEA6AF001F9917 /* SettingsTableViewController.swift in Sources */,
 				D039462E1CCF87D700D9499B /* NusachTableViewController.swift in Sources */,
 				D03946301CCF9E1000D9499B /* PrayerOptionsTableViewController.swift in Sources */,
+				D03946321CCFAB5100D9499B /* UIColorExtension.swift in Sources */,
 				D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */,
 				D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */,
 				D0ED62DF1CCEA696001F9917 /* LanguagesTableViewController.swift in Sources */,

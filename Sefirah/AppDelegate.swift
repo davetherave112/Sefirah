@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "Nusach" : Nusach.Ashkenaz.rawValue,
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
         ])
+        
+        UITabBar.appearance().tintColor = UIColor(rgba: "#0A366D")
         return true
     }
 
