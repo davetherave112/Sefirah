@@ -6,12 +6,34 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		D07CD1861CD068FD001247B5 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D07CD1871CD068FD001247B5 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				D07CD18A1CD06911001247B5 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8E67972F6F6A2832DF6402B0 /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19BACC8C9A6F7969B537D41 /* Pods_Sefirah_WatchKit_Extension.framework */; };
 		9C7B5370D72D0CCAD4DCFABA /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A65470F523016454FDA1F9 /* Pods_Sefirah_WatchKit_App.framework */; };
 		D039462E1CCF87D700D9499B /* NusachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039462D1CCF87D700D9499B /* NusachTableViewController.swift */; };
 		D03946301CCF9E1000D9499B /* PrayerOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039462F1CCF9E1000D9499B /* PrayerOptionsTableViewController.swift */; };
 		D03946321CCFAB5100D9499B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03946311CCFAB5100D9499B /* UIColorExtension.swift */; };
+		D03946351CCFB8B800D9499B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03946341CCFB8B800D9499B /* NotificationManager.swift */; };
+		D05334A11CD00CCA00155C7A /* NewNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05334A01CD00CCA00155C7A /* NewNotificationTableViewController.swift */; };
+		D070EDE21CCFE4C300120029 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070EDE11CCFE4C300120029 /* NotificationsTableViewController.swift */; };
+		D070EDE41CCFEEAD00120029 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D070EDE31CCFEEAD00120029 /* NotificationCell.xib */; };
+		D070EDE61CCFEECC00120029 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070EDE51CCFEECC00120029 /* NotificationTableViewCell.swift */; };
+		D07CD1851CD0665E001247B5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D07CD1831CD0665D001247B5 /* Model.xcdatamodeld */; };
+		D07CD18F1CD06A5F001247B5 /* _Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CD18D1CD06A5F001247B5 /* _Notification.swift */; };
+		D07CD1901CD06A5F001247B5 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07CD18E1CD06A5F001247B5 /* Notification.swift */; };
 		D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */; };
 		D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */; };
 		D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */; };
@@ -86,6 +108,15 @@
 		D039462D1CCF87D700D9499B /* NusachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NusachTableViewController.swift; sourceTree = "<group>"; };
 		D039462F1CCF9E1000D9499B /* PrayerOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsTableViewController.swift; sourceTree = "<group>"; };
 		D03946311CCFAB5100D9499B /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D03946341CCFB8B800D9499B /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		D05334A01CD00CCA00155C7A /* NewNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNotificationTableViewController.swift; sourceTree = "<group>"; };
+		D070EDE11CCFE4C300120029 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		D070EDE31CCFEEAD00120029 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		D070EDE51CCFEECC00120029 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		D07CD1841CD0665E001247B5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D07CD18B1CD069F9001247B5 /* v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.xcdatamodel; sourceTree = "<group>"; };
+		D07CD18D1CD06A5F001247B5 /* _Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Notification.swift; sourceTree = "<group>"; };
+		D07CD18E1CD06A5F001247B5 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +204,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		D07CD18C1CD06A5F001247B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D07CD18D1CD06A5F001247B5 /* _Notification.swift */,
+				D07CD18E1CD06A5F001247B5 /* Notification.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D0D5AAEB1CCDBEB50099BE6F = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */,
+				D07CD1831CD0665D001247B5 /* Model.xcdatamodeld */,
 				D0D5AAFB1CCDBEB60099BE6F /* Main.storyboard */,
 				D0D5AAFE1CCDBEB60099BE6F /* Assets.xcassets */,
 				D0D5AB001CCDBEB60099BE6F /* LaunchScreen.storyboard */,
@@ -207,6 +248,8 @@
 				D0ED62E51CCEC14B001F9917 /* Controllers */,
 				D0ED62E41CCEC141001F9917 /* Classes */,
 				D03946331CCFAB5C00D9499B /* Extensions */,
+				D07CD18C1CD06A5F001247B5 /* Model */,
+				D070EDE31CCFEEAD00120029 /* NotificationCell.xib */,
 			);
 			path = Sefirah;
 			sourceTree = "<group>";
@@ -248,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				D0ED62E21CCEB9D0001F9917 /* Settings.swift */,
+				D03946341CCFB8B800D9499B /* NotificationManager.swift */,
+				D070EDE51CCFEECC00120029 /* NotificationTableViewCell.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -260,6 +305,8 @@
 				D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */,
 				D039462D1CCF87D700D9499B /* NusachTableViewController.swift */,
 				D039462F1CCF9E1000D9499B /* PrayerOptionsTableViewController.swift */,
+				D070EDE11CCFE4C300120029 /* NotificationsTableViewController.swift */,
+				D05334A01CD00CCA00155C7A /* NewNotificationTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -339,6 +386,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Josh Siegel";
 				TargetAttributes = {
+					D07CD1861CD068FD001247B5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					D0D5AAF31CCDBEB50099BE6F = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -366,6 +416,7 @@
 				D0D5AAF31CCDBEB50099BE6F /* Sefirah */,
 				D0D5AB051CCDBEB60099BE6F /* Sefirah WatchKit App */,
 				D0D5AB141CCDBEB60099BE6F /* Sefirah WatchKit Extension */,
+				D07CD1861CD068FD001247B5 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D070EDE41CCFEEAD00120029 /* NotificationCell.xib in Resources */,
 				D0D5AB021CCDBEB60099BE6F /* LaunchScreen.storyboard in Resources */,
 				D0D5AAFF1CCDBEB60099BE6F /* Assets.xcassets in Resources */,
 				D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */,
@@ -506,6 +558,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		D07CD18A1CD06911001247B5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Sefirah/Model.xcdatamodeld -O Sefirah/Model --swift --template-var arc=true";
+		};
 		E8697B550FBCC3FEE7BB3DC4 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,12 +595,19 @@
 			files = (
 				D0ED62E11CCEA6AF001F9917 /* SettingsTableViewController.swift in Sources */,
 				D039462E1CCF87D700D9499B /* NusachTableViewController.swift in Sources */,
+				D070EDE21CCFE4C300120029 /* NotificationsTableViewController.swift in Sources */,
+				D05334A11CD00CCA00155C7A /* NewNotificationTableViewController.swift in Sources */,
 				D03946301CCF9E1000D9499B /* PrayerOptionsTableViewController.swift in Sources */,
+				D03946351CCFB8B800D9499B /* NotificationManager.swift in Sources */,
 				D03946321CCFAB5100D9499B /* UIColorExtension.swift in Sources */,
 				D0D5AAFA1CCDBEB60099BE6F /* MainViewController.swift in Sources */,
 				D0D5AAF81CCDBEB60099BE6F /* AppDelegate.swift in Sources */,
 				D0ED62DF1CCEA696001F9917 /* LanguagesTableViewController.swift in Sources */,
+				D07CD18F1CD06A5F001247B5 /* _Notification.swift in Sources */,
+				D07CD1901CD06A5F001247B5 /* Notification.swift in Sources */,
 				D0ED62E31CCEB9D0001F9917 /* Settings.swift in Sources */,
+				D07CD1851CD0665E001247B5 /* Model.xcdatamodeld in Sources */,
+				D070EDE61CCFEECC00120029 /* NotificationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +666,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D07CD1881CD068FD001247B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D07CD1891CD068FD001247B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		D0D5AB291CCDBEB60099BE6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -779,6 +865,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D07CD1871CD068FD001247B5 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D07CD1881CD068FD001247B5 /* Debug */,
+				D07CD1891CD068FD001247B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D0D5AAEF1CCDBEB50099BE6F /* Build configuration list for PBXProject "Sefirah" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -816,6 +910,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D07CD1831CD0665D001247B5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D07CD18B1CD069F9001247B5 /* v1.0.xcdatamodel */,
+				D07CD1841CD0665E001247B5 /* Model.xcdatamodel */,
+			);
+			currentVersion = D07CD18B1CD069F9001247B5 /* v1.0.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0D5AAEC1CCDBEB50099BE6F /* Project object */;
 }
