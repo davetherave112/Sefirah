@@ -13,6 +13,18 @@ import KosherCocoa
 import CoreData
 import SugarRecord
 
+// WIP - create native notifications
+enum NativeNotifications: Int {
+    case Tzeis = 0
+    
+    var description: String {
+        switch self {
+        case .Tzeis:
+            return "Tzeis"
+        }
+    }
+}
+
 class NotificationManager: NSObject, CLLocationManagerDelegate {
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreData.Store.Named("db")
@@ -64,6 +76,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        
         locationManager.stopUpdatingLocation()
 
         scheduleTzeis(locValue)
@@ -82,7 +95,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         let calendar: KCZmanimCalendar = KCZmanimCalendar.init(location: location)
         let tzeis = calendar.tzais()
         
-        scheduleLocal("Tzeis", fireDate: tzeis, repeatAlert: false)
+        scheduleLocal("Tzeis", fireDate: tzeis, repeatAlert: true)
         
     }
     
@@ -97,18 +110,14 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["name": name]
         
-        do {
-            try db.operation { (context, save) throws -> Void in
-                let newNotification: Notification = try! context.create()
-                newNotification.name = name
-                newNotification.date = fireDate
-                newNotification.enabled = true
-                newNotification.repeatAlert = repeatAlert
-                save()
+        Notification.createNotification(name, fireDate: fireDate, enabled: true, repeatAlert: repeatAlert) { success, error in
+            
+            if let error = error {
+                //TODO: handle error
+                return
+            } else {
+                UIApplication.sharedApplication().scheduleLocalNotification(notification)
             }
-        }
-        catch {
-            //TODO: There was an error in the operation
         }
         
         /*
@@ -129,8 +138,5 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         }
         */
     
-        
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
 }

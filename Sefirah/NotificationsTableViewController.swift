@@ -125,7 +125,9 @@ class NotificationsTableViewController: UITableViewController {
             cell.nameLabel.text = notification.name //notification.0
             cell.dateLabel.text = "\(dateString) - \(timeString)"
             cell.delegate = tableView
-            
+        
+            let enabled = notification.enabled as! Bool
+            enabled ? cell.notificationSwitch.setOn(true, animated: false) : cell.notificationSwitch.setOn(false, animated: false)
             /*
             if notificationsDict[cell.nameLabel.text!]![true] != nil {
                 cell.notificationSwitch.setOn(true, animated: false)
