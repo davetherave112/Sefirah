@@ -13,6 +13,7 @@ class NusachTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,6 +31,9 @@ class NusachTableViewController: UITableViewController {
         return Nusach.allValues.count
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 70
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NusachCell", forIndexPath: indexPath)
