@@ -24,22 +24,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-Rs-bd6">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="90z-Gu-CQc">
-                                                <rect key="frame" x="20" y="233" width="560" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="KHi-hq-Hn0"/>
-                                                    <constraint firstAttribute="width" constant="136" id="fqK-wz-DxF"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <color key="textColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="KHi-hq-Hn0"/>
-                                                        <exclude reference="fqK-wz-DxF"/>
-                                                    </mask>
-                                                </variation>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxg-Wp-cWr">
                                                 <rect key="frame" x="210" y="35" width="180" height="180"/>
                                                 <subviews>
@@ -104,10 +88,33 @@
                                                     </mask>
                                                 </variation>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90z-Gu-CQc">
+                                                <rect key="frame" x="20" y="257" width="560" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="KHi-hq-Hn0"/>
+                                                    <constraint firstAttribute="width" constant="136" id="fqK-wz-DxF"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Placeholder">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="17" name="LucidaGrande"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="KHi-hq-Hn0"/>
+                                                        <exclude reference="fqK-wz-DxF"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="18" id="2tQ-Tl-KVi"/>
+                                            <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="42" id="2tQ-Tl-KVi"/>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="10" id="EIo-eZ-3vQ"/>
                                             <constraint firstItem="Vxg-Wp-cWr" firstAttribute="top" secondItem="hfI-Rs-bd6" secondAttribute="top" constant="35" id="LAN-UZ-KBv"/>
                                             <constraint firstItem="Vxg-Wp-cWr" firstAttribute="centerX" secondItem="hfI-Rs-bd6" secondAttribute="centerX" id="Zdc-DW-imc"/>
@@ -438,7 +445,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Repeat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5H-Qm-esn">
                                             <rect key="frame" x="8" y="11" width="54" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
