@@ -1,5 +1,6 @@
 PODS:
   - CircleProgressView (1.0.10)
+  - KDCircularProgress (1.4.0)
   - KosherCocoa (3.0.6)
   - Result (1.0.2)
   - SugarRecord/CoreData (2.2.5):
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - CircleProgressView (from `https://github.com/CardinalNow/iOS-CircleProgressView.git`)
+  - KDCircularProgress
   - KosherCocoa (from `git@github.com:MosheBerman/KosherCocoa.git`, commit `5376523`)
   - SugarRecord/CoreData
 
@@ -27,10 +29,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CircleProgressView: 5116fc2d3be792d755e6979d7f7309648de79d11
+  KDCircularProgress: f5770bbd83da909bf6cd96c2dea0b8bae45ec774
   KosherCocoa: 135cca36db10094abd0f691d4860b48f2e4aa951
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SugarRecord: ccccf3fd03b8eb2d09e815b144fbd1baf08be82f
 
-PODFILE CHECKSUM: 0f846519d22ede5b8815770a8eb8a8482efd41d4
+PODFILE CHECKSUM: 4ea0043aae49fc3c07f0358240caa0ffafe56140
 
 COCOAPODS: 1.0.0.beta.8

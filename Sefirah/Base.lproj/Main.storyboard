@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="DorianCLM-Book.ttf">
+            <string>DorianCLM-Book</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Sefirah-->
         <scene sceneID="tne-QT-ifu">
@@ -27,60 +32,20 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxg-Wp-cWr">
                                                 <rect key="frame" x="210" y="35" width="180" height="180"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQG-LN-ccl" customClass="CircleProgressView" customModule="CircleProgressView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                                        <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="180" id="GO8-cM-dbQ"/>
-                                                            <constraint firstAttribute="width" secondItem="iQG-LN-ccl" secondAttribute="height" multiplier="1:1" id="hEf-a6-PNC"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="refreshRate">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
-                                                                <color key="value" red="0.039215686274509803" green="0.21176470588235294" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
-                                                                <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
-                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
-                                                                <color key="value" red="0.039215686270000001" green="0.21176470589999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbt-8T-SgY">
-                                                        <rect key="frame" x="75.5" y="75.5" width="30" height="29"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <rect key="frame" x="74" y="73.5" width="33.5" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="DorianCLM-Book" family="Dorian CLM" pointSize="24"/>
                                                         <color key="textColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="iQG-LN-ccl" firstAttribute="centerX" secondItem="Vxg-Wp-cWr" secondAttribute="centerX" id="1BQ-rL-7ZP"/>
                                                     <constraint firstItem="jbt-8T-SgY" firstAttribute="centerY" secondItem="Vxg-Wp-cWr" secondAttribute="centerY" id="4Vx-ia-Ip8"/>
-                                                    <constraint firstItem="iQG-LN-ccl" firstAttribute="centerY" secondItem="Vxg-Wp-cWr" secondAttribute="centerY" id="7mv-dg-vzl"/>
                                                     <constraint firstAttribute="width" secondItem="Vxg-Wp-cWr" secondAttribute="height" multiplier="1:1" id="GJM-ai-dk0"/>
-                                                    <constraint firstAttribute="trailing" secondItem="iQG-LN-ccl" secondAttribute="trailing" id="Jju-4G-3Nk"/>
                                                     <constraint firstAttribute="height" constant="180" id="TWg-sE-oap"/>
-                                                    <constraint firstItem="iQG-LN-ccl" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="top" id="Upy-0L-Adv"/>
-                                                    <constraint firstItem="iQG-LN-ccl" firstAttribute="leading" secondItem="Vxg-Wp-cWr" secondAttribute="leading" id="eIG-Qv-PZs"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="g48-tD-WsZ"/>
                                                     <constraint firstItem="jbt-8T-SgY" firstAttribute="centerX" secondItem="Vxg-Wp-cWr" secondAttribute="centerX" id="tXx-ER-euP"/>
-                                                    <constraint firstAttribute="bottom" secondItem="iQG-LN-ccl" secondAttribute="bottom" id="wwV-Nm-94B"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
@@ -89,7 +54,7 @@
                                                 </variation>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90z-Gu-CQc">
-                                                <rect key="frame" x="20" y="257" width="560" height="24"/>
+                                                <rect key="frame" x="20" y="238" width="560" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="52" id="KHi-hq-Hn0"/>
                                                     <constraint firstAttribute="width" constant="136" id="fqK-wz-DxF"/>
@@ -114,7 +79,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="42" id="2tQ-Tl-KVi"/>
+                                            <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="23" id="2tQ-Tl-KVi"/>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="10" id="EIo-eZ-3vQ"/>
                                             <constraint firstItem="Vxg-Wp-cWr" firstAttribute="top" secondItem="hfI-Rs-bd6" secondAttribute="top" constant="35" id="LAN-UZ-KBv"/>
                                             <constraint firstItem="Vxg-Wp-cWr" firstAttribute="centerX" secondItem="hfI-Rs-bd6" secondAttribute="centerX" id="Zdc-DW-imc"/>
@@ -158,8 +123,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Sefirah" image="home" id="Jd2-00-K0A"/>
                     <connections>
+                        <outlet property="circleView" destination="Vxg-Wp-cWr" id="IgD-QL-Pl3"/>
                         <outlet property="progressLabel" destination="jbt-8T-SgY" id="nZc-Gt-see"/>
-                        <outlet property="progressView" destination="iQG-LN-ccl" id="Efq-nn-rFd"/>
                         <outlet property="scrollView" destination="amM-9W-Zrl" id="7ul-uD-6Ya"/>
                         <outlet property="sefiraDay" destination="90z-Gu-CQc" id="KOy-a5-XJj"/>
                     </connections>
