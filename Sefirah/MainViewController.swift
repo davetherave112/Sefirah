@@ -10,8 +10,9 @@ import UIKit
 import KosherCocoa
 import CircleProgressView
 import KDCircularProgress
+import CoreLocation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var sefiraDay: UILabel!
@@ -20,6 +21,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var dayOfSefira: Int?
+    let locationManager = CLLocationManager()
+    var formatter = KCSefiraFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,22 +35,12 @@ class MainViewController: UIViewController {
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        dayOfSefira = KCSefiratHaomerCalculator.dayOfSefira()
-        
-        let formatter = KCSefiraFormatter()
+        formatter = KCSefiraFormatter()
+        self.getLocation()
         
         formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
         formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!
         
-        let prayerOptions = userDefaults.arrayForKey("Options")!
-        
-        var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
-        for option in prayerOptions {
-            prayers = prayers.union(Options.optionValues[option as! String]!)
-        }
-
-        self.sefiraDay.attributedText = formatter.countStringFromInteger(dayOfSefira!, withPrayers: prayers)
-        self.progressLabel.text = "\(dayOfSefira!)"
         
         //let progress = Double(dayOfSefira)/100.0
         
@@ -83,12 +76,74 @@ class MainViewController: UIViewController {
         progress.setColors(UIColor(rgba: "#c19f69"))
         
         self.sefiraDay.sizeToFit()
-        
+                
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func getLocation() {
+        // Ask for Authorisation from the User.
+        //locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+            if #available(iOS 9.0, *) {
+                locationManager.requestLocation()
+            } else {
+                locationManager.startUpdatingLocation()
+            }
+            
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        locationManager.stopUpdatingLocation()
+        self.setAdjustedSefiraDay(locValue)
+    }
+    
+    func setAdjustedSefiraDay(location: CLLocationCoordinate2D) {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        
+        let jewishCalendar = KCJewishCalendar(location: location)
+        let sunset = jewishCalendar.sunset()
+        
+        let dayOfSefira = self.workingDateAdjustedForSunset(sunset)
+        
+        let prayerOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options")!
+        var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
+        for option in prayerOptions {
+            prayers = prayers.union(Options.optionValues[option as! String]!)
+        }
+
+        self.sefiraDay.attributedText = formatter.countStringFromInteger(dayOfSefira, withPrayers: prayers)
+        self.progressLabel.text = "\(dayOfSefira)"
+        
+    }
+    
+    func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
+    
+        let isAfterSunset = sunset.timeIntervalSinceNow < 0
+        
+        var sefiraCount: Int?
+        if (isAfterSunset) {
+            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira() + 1
+        } else {
+            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira()
+        }
+        
+        return sefiraCount!
     }
 
 

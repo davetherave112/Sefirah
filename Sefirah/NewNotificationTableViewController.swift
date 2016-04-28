@@ -62,8 +62,11 @@ class NewNotificationTableViewController: UITableViewController {
         timeFormatter.dateStyle = .NoStyle
         timeFormatter.timeStyle = .ShortStyle
 
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NewNotificationTableViewController.localeChanged(_:)), name: NSCurrentLocaleDidChangeNotification, object: nil)
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
