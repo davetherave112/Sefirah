@@ -12,6 +12,7 @@ target 'Sefirah' do
 	pod 'CircleProgressView', :git => 'https://github.com/CardinalNow/iOS-CircleProgressView.git'
     pod "KDCircularProgress"
 	pod "SugarRecord/CoreData"
+	pod "KDCircularProgress"
 end
 
 target 'Sefirah WatchKit App' do

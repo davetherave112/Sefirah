@@ -49,10 +49,15 @@
 		D0D5AB231CCDBEB60099BE6F /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB221CCDBEB60099BE6F /* GlanceController.swift */; };
 		D0D5AB251CCDBEB60099BE6F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D5AB241CCDBEB60099BE6F /* ComplicationController.swift */; };
 		D0D5AB271CCDBEB60099BE6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5AB261CCDBEB60099BE6F /* Assets.xcassets */; };
+		D0E55E0A1CD1BCF000FBC3E2 /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D07CD1911CD1BAC4001247B5 /* DorianCLM-Book.ttf */; };
+		D0E55E0B1CD1BCF300FBC3E2 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D07CD1921CD1BAC4001247B5 /* DorianCLM-BookItalic.ttf */; };
 		D0ED62DF1CCEA696001F9917 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62DE1CCEA696001F9917 /* LanguagesTableViewController.swift */; };
 		D0ED62E11CCEA6AF001F9917 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62E01CCEA6AF001F9917 /* SettingsTableViewController.swift */; };
 		D0ED62E31CCEB9D0001F9917 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED62E21CCEB9D0001F9917 /* Settings.swift */; };
+
 		F00768FABF628E1149588330 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B251E282A753A7F7027F3E /* Pods_Sefirah.framework */; };
+		D70BC38E9663997FEB7FDCC7 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7B74E2E834D294BEADF374 /* Pods_Sefirah.framework */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +120,8 @@
 		D07CD18B1CD069F9001247B5 /* v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.xcdatamodel; sourceTree = "<group>"; };
 		D07CD18D1CD06A5F001247B5 /* _Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Notification.swift; sourceTree = "<group>"; };
 		D07CD18E1CD06A5F001247B5 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		D07CD1911CD1BAC4001247B5 /* DorianCLM-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DorianCLM-Book.ttf"; path = "../DorianCLM-Book.ttf"; sourceTree = "<group>"; };
+		D07CD1921CD1BAC4001247B5 /* DorianCLM-BookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DorianCLM-BookItalic.ttf"; path = "../DorianCLM-BookItalic.ttf"; sourceTree = "<group>"; };
 		D0D5AAF41CCDBEB50099BE6F /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5AAF71CCDBEB60099BE6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D5AAF91CCDBEB60099BE6F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +150,9 @@
 		D41F09D9C6ACF59435598BDE /* Pods-Sefirah WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		DC9E4C7C2003703497D0B8CB /* Pods_Sefirah_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9031A01BECFBF8E39C4500 /* Pods-Sefirah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.debug.xcconfig"; sourceTree = "<group>"; };
+		D0EDA8411CD1CECF00EC62A5 /* ShmulikCLM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShmulikCLM.ttf; sourceTree = "<group>"; };
+		D19362DB81AD7EE031650B6D /* Pods-Sefirah WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		ED83B42E37788AF61DBEF824 /* Pods-Sefirah WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +210,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D07CD1931CD1BAC8001247B5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D07CD1911CD1BAC4001247B5 /* DorianCLM-Book.ttf */,
+				D0EDA8411CD1CECF00EC62A5 /* ShmulikCLM.ttf */,
+				D07CD1921CD1BAC4001247B5 /* DorianCLM-BookItalic.ttf */,
+			);
+			name = fonts;
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D0D5AAEB1CCDBEB50099BE6F = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +258,7 @@
 				D03946331CCFAB5C00D9499B /* Extensions */,
 				D07CD18C1CD06A5F001247B5 /* Model */,
 				D070EDE31CCFEEAD00120029 /* NotificationCell.xib */,
+				D07CD1931CD1BAC8001247B5 /* fonts */,
 			);
 			path = Sefirah;
 			sourceTree = "<group>";
@@ -430,6 +452,9 @@
 				D0D5AB021CCDBEB60099BE6F /* LaunchScreen.storyboard in Resources */,
 				D0D5AAFF1CCDBEB60099BE6F /* Assets.xcassets in Resources */,
 				D0D5AAFD1CCDBEB60099BE6F /* Main.storyboard in Resources */,
+				D0E55E0A1CD1BCF000FBC3E2 /* DorianCLM-Book.ttf in Resources */,
+				D0EDA8421CD1CEF800EC62A5 /* ShmulikCLM.ttf in Resources */,
+				D0E55E0B1CD1BCF300FBC3E2 /* DorianCLM-BookItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
