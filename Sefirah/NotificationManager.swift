@@ -60,6 +60,11 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
+            if #available(iOS 9.0, *) {
+                locationManager.allowsBackgroundLocationUpdates = true
+            } else {
+                // Fallback on earlier versions
+            }
             locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
             if #available(iOS 9.0, *) {
                 locationManager.requestLocation()
@@ -75,7 +80,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue: CLLocationCoordinate2D = manager.location!.coordinate
+        let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         
         locationManager.stopUpdatingLocation()
 

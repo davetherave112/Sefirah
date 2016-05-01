@@ -56,6 +56,7 @@ class LanguagesTableViewController: UITableViewController {
         cell?.accessoryType = .Checkmark
         let language = Languages.allValues[indexPath.row].rawValue
         NSUserDefaults.standardUserDefaults().setValue(language, forKey: "Language")
+        NSUserDefaults.standardUserDefaults().synchronize()
         self.tableView.reloadData()
     }
     

@@ -1,23 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--progressController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Sefirah_WatchKit_App" customModuleProvider="target">
+                <controller identifier="progressController" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
                         <imageView alignment="left" image="day0" id="SBA-gv-rxP"/>
                     </items>
                     <connections>
                         <outlet property="progressImage" destination="SBA-gv-rxP" id="bUC-5x-nJW"/>
+                        <segue destination="IdI-Zv-Rhq" kind="relationship" relationship="nextPage" id="tJd-lC-piR"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="206" y="113"/>
+        </scene>
+        <!--textController-->
+        <scene sceneID="qfk-Ag-MEM">
+            <objects>
+                <controller identifier="textController" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.40000000000000002" id="UZn-wh-wb1">
+                            <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="lLB-pF-fU0">
+                        <items>
+                            <menuItem title="Language" image="alef" id="Zax-8e-ysF">
+                                <connections>
+                                    <action selector="languageSettings" destination="IdI-Zv-Rhq" id="ik0-xZ-GFP"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="sefriahTextLabel" destination="UZn-wh-wb1" id="58f-F6-ccl"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="466" y="113"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="ahe-jX-1Ih">
+            <objects>
+                <controller identifier="LanguagesController" title="Close" id="jcb-R2-2sx" customClass="LanguageSettingsInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="Rlw-dy-1jp">
+                            <items>
+                                <tableRow identifier="LanguageRow" id="Sry-OW-IDT" customClass="LanguageRowController" customModule="Sefirah_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="ndh-za-1kZ">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="aHS-zB-OZQ">
+                                                <color key="color" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="8nv-uU-L0T">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="Vo2-1k-HYd">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="Language" id="caN-Oo-zGX"/>
+                                                            <imageView alignment="right" verticalAlignment="center" hidden="YES" image="check" id="U1U-On-SGO"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="checkImage" destination="U1U-On-SGO" id="YQD-Gy-mft"/>
+                                        <outlet property="languageLabel" destination="caN-Oo-zGX" id="xfg-Ii-d3a"/>
+                                        <outlet property="separator" destination="aHS-zB-OZQ" id="FdC-PG-3bf"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="languagesTable" destination="Rlw-dy-1jp" id="qtG-TE-Mbc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="206" y="393"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -30,7 +98,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="235" y="672"/>
+            <point key="canvasLocation" x="206" y="749"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -46,14 +114,15 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
+            <point key="canvasLocation" x="206" y="1063"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
                 <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Sefirah_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="474" y="1063"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
 </document>

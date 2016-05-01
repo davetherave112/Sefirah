@@ -46,20 +46,6 @@ class NotificationsTableViewController: UITableViewController {
         Notification.destroyExpiredNotifications()
         
         self.notifications = Notification.fetchAllNotifications()
-        /*
-        if let notifications = (NSUserDefaults.standardUserDefaults().objectForKey("Notifications"))  {
-            var notificationsDict = NotificationManager.sharedInstance.getNotificationsDictionary()!
-            for (name, data) in notificationsDict {
-                if data[true] != nil {
-                    if data[true]!.compare(NSDate()) == NSComparisonResult.OrderedAscending {
-                        notificationsDict.removeValueForKey(name)
-                        let keyedArch = NSKeyedArchiver.archivedDataWithRootObject(notificationsDict)
-                        NSUserDefaults.standardUserDefaults().setObject(keyedArch, forKey: "Notifications")
-                    }
-                }
-            }
-        }
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,13 +60,6 @@ class NotificationsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*
-        if let notifications = self.notifications {
-            return self.notifications!.count
-        } else {
-            return 0
-        }
-        */
         return self.notifications.count
         
     }
@@ -93,13 +72,7 @@ class NotificationsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NotificationCell", forIndexPath: indexPath) as! NotificationTableViewCell
 
-        /*
-        if let notifications = (NSUserDefaults.standardUserDefaults().objectForKey("Notifications"))  {
-            let notificationsDict = NotificationManager.sharedInstance.getNotificationsDictionary()!
-            let filtered = notificationsDict.filter { _,_ in true }
-            */
-        //if let notifications = self.notifications {
-            let notification: Notification = notifications[indexPath.row] //filtered[indexPath.row]
+            let notification: Notification = notifications[indexPath.row]
             
             cell.notification = notification
             
@@ -108,34 +81,16 @@ class NotificationsTableViewController: UITableViewController {
             let timeFormatter = NSDateFormatter()
             timeFormatter.setLocalizedDateFormatFromTemplate("hh:mm")
             
-            var dateString: String = dateFormatter.stringFromDate(notification.date!)
-            var timeString: String = timeFormatter.stringFromDate(notification.date!)
-            
-            /*
-            if notification.1[true] != nil {
-                dateString = dateFormatter.stringFromDate(notification.1[true]!)
-                timeString = timeFormatter.stringFromDate(notification.1[true]!)
-            } else {
-                dateString = dateFormatter.stringFromDate(notification.1[false]!)
-                timeString = timeFormatter.stringFromDate(notification.1[false]!)
-            }
-            */
+            let dateString: String = dateFormatter.stringFromDate(notification.date!)
+            let timeString: String = timeFormatter.stringFromDate(notification.date!)
  
-            
-            cell.nameLabel.text = notification.name //notification.0
+            cell.nameLabel.text = notification.name
             cell.dateLabel.text = "\(dateString) - \(timeString)"
             cell.delegate = tableView
         
             let enabled = notification.enabled as! Bool
             enabled ? cell.notificationSwitch.setOn(true, animated: false) : cell.notificationSwitch.setOn(false, animated: false)
-            /*
-            if notificationsDict[cell.nameLabel.text!]![true] != nil {
-                cell.notificationSwitch.setOn(true, animated: false)
-            } else {
-                cell.notificationSwitch.setOn(false, animated: false)
-            }
-            */
-        //}
+
         
         return cell
     }

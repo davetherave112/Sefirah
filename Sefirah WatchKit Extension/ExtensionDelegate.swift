@@ -16,6 +16,12 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        NSUserDefaults.standardUserDefaults().registerDefaults([
+            "Language" : Languages.English.rawValue,
+            "Nusach" : Nusach.Ashkenaz.rawValue,
+            "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
+            "ScheduleTzeis": true,
+            ])
         setupWCDelegate()
     }
 
