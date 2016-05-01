@@ -32,7 +32,7 @@ enum Options: String {
     case Beracha = "Beracha"
     case Harachaman = "Harachaman"
     case Lamenatzaiach = "Lamenatzaiach"
-    case LeshaimYichud = "LeshaimYichud"
+    case LeshaimYichud = "Leshaim Yichud"
     case Ribono = "Ribono"
     
     static let allValues = [Aleinu, Ana, Beracha, Harachaman, Lamenatzaiach, LeshaimYichud, Ribono]
