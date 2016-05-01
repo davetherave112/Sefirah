@@ -68,6 +68,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        // Recover from no location services available
+        let lastRecordedDay = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+        if lastRecordedDay > 0 {
+            setSefiraText(lastRecordedDay)
+            createProgressCircle(lastRecordedDay)
+        }
         print(error)
     }
     

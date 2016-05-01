@@ -36,6 +36,7 @@ class NotificationsTableViewController: UITableViewController {
         self.tableView.registerNib(nibName, forCellReuseIdentifier: "NotificationCell")
         
         let addButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: #selector(addItem))
+        addButton.tintColor = UIColor(rgba: "#C19F69")
         
         self.navigationItem.rightBarButtonItem = addButton;
     }

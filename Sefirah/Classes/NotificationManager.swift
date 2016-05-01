@@ -124,24 +124,6 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
                 UIApplication.sharedApplication().scheduleLocalNotification(notification)
             }
         }
-        
-        /*
-        var notificationsDict = getNotificationsDictionary()
-        if let dictionary = notificationsDict {
-            for (notificationName,_) in dictionary {
-                if notificationName == name {
-                    return
-                }
-            }
-            notificationsDict![name] = [true: fireDate]
-            let keyedArch = NSKeyedArchiver.archivedDataWithRootObject(notificationsDict!)
-            NSUserDefaults.standardUserDefaults().setObject(keyedArch, forKey: "Notifications")
-        } else {
-            let notificationsDict = [name: [true: fireDate]]
-            let keyedArch = NSKeyedArchiver.archivedDataWithRootObject(notificationsDict)
-            NSUserDefaults.standardUserDefaults().setObject(keyedArch, forKey: "Notifications")
-        }
-        */
     
     }
 }

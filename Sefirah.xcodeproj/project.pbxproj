@@ -1,2625 +1,1081 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01380C96913712275C13C9F7A3EF1AE9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.app-extension</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Sefirah WatchKit Extension.appex</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>015AB78E3C470E39881760C112C4F05D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C6A8A7D2C0AAD4A42906751BCCD57BFF</string>
-				<string>4FE9131A7790936C42AC93E02614E91C</string>
-				<string>9897993FA0FDF0BCC042F2EDA767A9C5</string>
-				<string>CABC0576CB3200852AE9237CB317B10B</string>
-				<string>EFDFC68A77B640D91C90A8CF7498980F</string>
-				<string>D070BF741CD5A62200A9B9C1</string>
-				<string>75F07ACAE8847F4DB1C2EA89C0F141DD</string>
-				<string>60BF01550EA95057627FD9DA1DF7263E</string>
-				<string>71BCAA03A826671A7E3AFF8231362494</string>
-				<string>51AF862ED4889B315C65512A293F8F44</string>
-				<string>3212E03C36D72BEF5557C7F700100169</string>
-				<string>FD93110408F3BBC56FB72B619CF805C5</string>
-				<string>352F469FC724FB8A98175F2E4D71542E</string>
-				<string>77A954BCAFD6998FE9844915CF3161F8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Sefirah</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>05C91F6E25ABCD0403D72B611F9BCF91</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NotificationTableViewCell.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0891D13817AC8FE7CA7E7132EA5548D4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ExtensionDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08FC9073FA1469575A8DB91DF63EB4E2</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Josh Siegel</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>2251D053A723C356E4A41443E79E6014</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>HS7PR5FH22</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>0</string>
-							</dict>
-							<key>com.apple.BackgroundModes</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>3D1F71ABD21E82DD349B36719F7A67C6</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>HS7PR5FH22</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>0</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>EFF376459A71A064ACA6705CC0F3A300</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-						<key>DevelopmentTeam</key>
-						<string>HS7PR5FH22</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>0</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>FFE8C172F1AEB1F1839B0422E0F0CDF3</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>1E6B41FFF927CFA30636FCE97F2B76E7</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>E5F1B76F7BE686F3159BB29BF4838BFB</string>
-			<key>productRefGroup</key>
-			<string>26AE42C92F3ED053280139125F1A3E52</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>2251D053A723C356E4A41443E79E6014</string>
-				<string>3D1F71ABD21E82DD349B36719F7A67C6</string>
-				<string>EFF376459A71A064ACA6705CC0F3A300</string>
-				<string>FFE8C172F1AEB1F1839B0422E0F0CDF3</string>
-			</array>
-		</dict>
-		<key>0922D881921AEDE40A30386EBF0B8EAD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BACAB6396F58719E2295A7A98F7B824C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0A3AA44D019C9664F86BF385A19101C4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah WatchKit Extension.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B03E9D0B7F5E2C07A225692DAAAD2D7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0C384E246AAA10DCA86AB009C0C40E6B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>path</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0B1E268EDE9C6F92C0C23831365D8F81</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Sefirah.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>0B89A54FED83FE845090E81BE1C77E66</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>EFF376459A71A064ACA6705CC0F3A300</string>
-			<key>targetProxy</key>
-			<string>FE4B0AC6CFBB714644DCEEE3DAC72CB1</string>
-		</dict>
-		<key>0C384E246AAA10DCA86AB009C0C40E6B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>PushNotificationPayload.apns</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0CE4F539E93B2E309C578109B148A05E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1FBEBE583B94BFCC156AB9D53E4E2639</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0E2088A63734F804BE33CAE7C995D28E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>75F07ACAE8847F4DB1C2EA89C0F141DD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1295A4B6A586F1A3BC2CF12DF6E7D713</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1419DE1096FE34BC6B2C18F9062AACBF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>ED3F5844C719B218C59825B5E277EE6F</string>
-				<string>E00FEB6E4636DD4FBD7C6CC95BE551E5</string>
-				<string>0A3AA44D019C9664F86BF385A19101C4</string>
-				<string>912567255AB53C0AD9DFC106CAE17F9A</string>
-				<string>9C8030664E07C50A68F433D02A9C9EA4</string>
-				<string>D2D408E3E59470263AE9B48AAF1F052C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1506E35CCFC4B5003E8394421E16C297</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NotificationsTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>159F9E3AD6A2886D716A69A32D0BE0EE</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PrayerOptionsTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16C658153715319F15256ACC2CB27304</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>776DA91AD5F8F7954097FCF3FB004D10</string>
-				<string>F2640ED8EA4D65CA0A07A583229D8C84</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1A7F3BB4933FA6BE947FBE96F3973524</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>99E1650F3185D797C733D05B48E81D57</string>
-				<string>E7B6CF65F4FF45B1AC60FDEB5A6E403E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1DC5DFD3C5C03516D5FF31F3E7E4D118</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Notification.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1E1AFB256C5A82932957D3121BF1DCDE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1E296FB86B99FA24A0F456194798BBCD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9A95BAC51332BEBAD66FA890D7EA1D87</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>1E6B41FFF927CFA30636FCE97F2B76E7</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>AA2D06CC10E192B3C65D3C3B6F537DE5</string>
-				<string>2C13D14C8F51769DA2767EFC4C0AB6BF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>1FBEBE583B94BFCC156AB9D53E4E2639</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ComplicationController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>209EAE38A21312C3C9C46E7BF5BF5F60</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Sefirah WatchKit App.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>2251D053A723C356E4A41443E79E6014</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>47314BE852AC0ED3C79CBE424BDD0BB4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>59585740AB322112594A398FA9AFB081</string>
-				<string>A35D9231924B206EAB0956CE1F73ADD8</string>
-				<string>1E296FB86B99FA24A0F456194798BBCD</string>
-				<string>29DAE51DD775D5244EF24077E69FDA42</string>
-				<string>F02B130C81690918CB703FD4BAFBC5F5</string>
-				<string>EC6EDD0C26E7C14EEB18DD9863E28E6B</string>
-				<string>5E7C7332510FB883D90C8B94F66604BE</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C1C3CBCD90520EE340553B4506827F14</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Sefirah</string>
-			<key>productName</key>
-			<string>Sefirah</string>
-			<key>productReference</key>
-			<string>CF4C80D3E579943C312E2CB7F83C5CF0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>237D2AADAD8D7E6EDFFB4D22A9BF36BD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>24767A50582A66A53D2922566DE23376</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24CF03D9AD9CAD948176D8549BCC384B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>ShmulikCLM.ttf</string>
-			<key>path</key>
-			<string>ShmulikCLM.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>26AE42C92F3ED053280139125F1A3E52</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>209EAE38A21312C3C9C46E7BF5BF5F60</string>
-				<string>01380C96913712275C13C9F7A3EF1AE9</string>
-				<string>CF4C80D3E579943C312E2CB7F83C5CF0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>27F28176EF3D81769A76B2CF4190547D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2A0AD3F29526A80369B42678026205CB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>29DAE51DD775D5244EF24077E69FDA42</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CD2A57F5B986CDF1AFD1A4D2D39190BD</string>
-				<string>D5B4245DB249F0CFC73EBB216794BD77</string>
-				<string>C0BD2BA1C031C80D9E528A02B7BB8C25</string>
-				<string>D668451FB1B49871D3F82CBCED84E7CF</string>
-				<string>DC6CCB5D8528A26F51A80C5DAC16FD58</string>
-				<string>C387A5233928498C0882A3CB9F87A11E</string>
-				<string>3568BCF8DB0A148FB56787EBC8C0CCA8</string>
-				<string>880394C12CF47848DC7F6CBB675653EE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2A0AD3F29526A80369B42678026205CB</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C13D14C8F51769DA2767EFC4C0AB6BF</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2CF3F83ADA324A14A021D29769FC6A06</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>60B301665038AA7130366FB0071BA064</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Interface.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D0E154956DD8B0F897B4DE354C27304</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DB56B72A076445A1224BF94DD14F4E9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D070BF751CD5D0B600A9B9C1</string>
-				<string>D070BF761CD5D0C300A9B9C1</string>
-				<string>0B03E9D0B7F5E2C07A225692DAAAD2D7</string>
-				<string>2D0E154956DD8B0F897B4DE354C27304</string>
-				<string>0891D13817AC8FE7CA7E7132EA5548D4</string>
-				<string>1E1AFB256C5A82932957D3121BF1DCDE</string>
-				<string>DBE3407B7D29B1A7556A03F9F856220A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Sefirah WatchKit Extension</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2EDDF65C3B5F6A5AC7537A6E25842F96</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DB14A18FCBF7E5D1D7E513DCE88190BF</string>
-				<string>3B420FAABE7FC9B6668294DA42C74611</string>
-			</array>
-			<key>currentVersion</key>
-			<string>3B420FAABE7FC9B6668294DA42C74611</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>name</key>
-			<string>Model.xcdatamodeld</string>
-			<key>path</key>
-			<string>Model.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>2EEC944E9A6BDE6DE6AE01F65EECA71C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>159F9E3AD6A2886D716A69A32D0BE0EE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2FCB1D2A06A127FDE29E6EC010D37D6B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>557F3097070E3ED5A241DE3F0F1E72A2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>30617029DA68F863650068E0A8116D57</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B46DBB44B2FC7DEBDE74EA8A4B387120</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3212E03C36D72BEF5557C7F700100169</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>70022424B84AC2B5FDB82BA51D1FE62F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3477336F43CDB337F0188FBDD36296D2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>352F469FC724FB8A98175F2E4D71542E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>path</key>
-			<string>Sefirah.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3568BCF8DB0A148FB56787EBC8C0CCA8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>77A954BCAFD6998FE9844915CF3161F8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>376588E319A301D5B25A8FA2CE725D09</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NotificationManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A5AC13ED55CD9F6FCA784CFD74E2F3C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B3F68F99DD3D198A1B8743341B83F957</string>
-				<string>AD6B25ABF8BBDB7C79103BAFE6D90C67</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3B420FAABE7FC9B6668294DA42C74611</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>v1.0.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D1F71ABD21E82DD349B36719F7A67C6</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>1A7F3BB4933FA6BE947FBE96F3973524</string>
-			<key>buildPhases</key>
-			<array>
-				<string>237D2AADAD8D7E6EDFFB4D22A9BF36BD</string>
-				<string>8A1E22323D0FCABE5D7E97B3BCB3E6C0</string>
-				<string>D24B7889C82A05B7B22129C5E13AE1F8</string>
-				<string>3E5D15CE9150B68177D2EA4FD5DD60A9</string>
-				<string>3477336F43CDB337F0188FBDD36296D2</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>0B89A54FED83FE845090E81BE1C77E66</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Sefirah WatchKit App</string>
-			<key>productName</key>
-			<string>Sefirah WatchKit App</string>
-			<key>productReference</key>
-			<string>209EAE38A21312C3C9C46E7BF5BF5F60</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application.watchapp2</string>
-		</dict>
-		<key>3D34DDE88089DC70731E835A32BB9302</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>mogenerator -m Sefirah/Model.xcdatamodeld -O Sefirah/Model --swift --template-var arc=true</string>
-		</dict>
-		<key>3E5D15CE9150B68177D2EA4FD5DD60A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>41296E18494E113C2EE1CF6480907CE3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>41296E18494E113C2EE1CF6480907CE3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C2B6D1C8CF9B577C678BA25E5A271056</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>419CA748C2D46B4FCE54C095CD7FF1A0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0B1E268EDE9C6F92C0C23831365D8F81</string>
-				<string>C2B6D1C8CF9B577C678BA25E5A271056</string>
-				<string>9F695AEBCA1F700456B2575B301E0C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>47314BE852AC0ED3C79CBE424BDD0BB4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8D254F0D5E180752ADB00A19FC28E2EE</string>
-				<string>62BE253252C72EE4A88A8ACBA53B7F60</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>4961115A03C964CB449101A196BD00C0</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Settings.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4B913B872E0928B32A365C4836D770A3</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MainViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BAAB0C8EF0BE19BBD9F07271B59C68E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4961115A03C964CB449101A196BD00C0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4FE9131A7790936C42AC93E02614E91C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DEC57FC7C7056A6ED9C5221FFB66A215</string>
-				<string>4B913B872E0928B32A365C4836D770A3</string>
-				<string>C23263B26C7715669FC8A7885C55BAD0</string>
-				<string>1506E35CCFC4B5003E8394421E16C297</string>
-				<string>63F11FB6E5B28525818FEBB7762D4660</string>
-				<string>159F9E3AD6A2886D716A69A32D0BE0EE</string>
-				<string>2A0AD3F29526A80369B42678026205CB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controllers</string>
-			<key>path</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51AF862ED4889B315C65512A293F8F44</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>24767A50582A66A53D2922566DE23376</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>550206918C1ECA17D8F3EB053673DC6E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>path</key>
-			<string>Sefirah WatchKit App.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>557F3097070E3ED5A241DE3F0F1E72A2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>GlanceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>567C6677C54996BB585D3A23EAAC8518</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SefirahTextInterfaceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>591903883EFFF2F7DF4BBB8F7C398219</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Sefirah WatchKit App-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>59585740AB322112594A398FA9AFB081</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5E7C7332510FB883D90C8B94F66604BE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>6028E1BB885092718DE9AE81AD1D8B8F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>DorianCLM-BookItalic.ttf</string>
-			<key>path</key>
-			<string>DorianCLM-BookItalic.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>60B301665038AA7130366FB0071BA064</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Interface.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>60BF01550EA95057627FD9DA1DF7263E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6163B880561DE6F54EF314BEF0F16D96</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SefiraDay.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>62BE253252C72EE4A88A8ACBA53B7F60</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D2D408E3E59470263AE9B48AAF1F052C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Sefirah/Sefirah-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>63F11FB6E5B28525818FEBB7762D4660</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NusachTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6C1E329F02A634E918F23BC39C09078D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>376588E319A301D5B25A8FA2CE725D09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>70022424B84AC2B5FDB82BA51D1FE62F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71BCAA03A826671A7E3AFF8231362494</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>72E0D77EA1A801249E1CADD6D8004433</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>_Notification.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73ECC088926F477EA1FFF7B05DEBE7B9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4B913B872E0928B32A365C4836D770A3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>75F07ACAE8847F4DB1C2EA89C0F141DD</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>776DA91AD5F8F7954097FCF3FB004D10</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>77A954BCAFD6998FE9844915CF3161F8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>path</key>
-			<string>Settings-Watch.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>806D861B7320E49014829AC1E2FD4494</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIColorExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8416B2E72FA88EB4511BA12DF8F2AB44</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SefiraDayWatch.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>849A92C7773CB8BEA2E4588104333DC8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MainInterfaceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>880394C12CF47848DC7F6CBB675653EE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>24CF03D9AD9CAD948176D8549BCC384B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8A1E22323D0FCABE5D7E97B3BCB3E6C0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0922D881921AEDE40A30386EBF0B8EAD</string>
-				<string>F9772E86514DCB5B13F58A3E103D830C</string>
-				<string>D0493EBB1CD3364300C4D3F8</string>
-				<string>D0493EBD1CD3364300C4D3F8</string>
-				<string>D0493EBC1CD3364300C4D3F8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8C0328E84BF2CCE09F575A9D150CF906</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>08FC9073FA1469575A8DB91DF63EB4E2</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>3D1F71ABD21E82DD349B36719F7A67C6</string>
-			<key>remoteInfo</key>
-			<string>Sefirah WatchKit App</string>
-		</dict>
-		<key>8D254F0D5E180752ADB00A19FC28E2EE</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9C8030664E07C50A68F433D02A9C9EA4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Sefirah/Sefirah-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>9030EC3EC17448C8865EBBAB22412441</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C23263B26C7715669FC8A7885C55BAD0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>912567255AB53C0AD9DFC106CAE17F9A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah WatchKit Extension.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93EDA27A2092101BE4A15975F5CD9433</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6163B880561DE6F54EF314BEF0F16D96</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9456E52608FA3123AEFAE8439263D4BF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>05C91F6E25ABCD0403D72B611F9BCF91</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>96C229E12B22B8B868CA362E68DA844B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0891D13817AC8FE7CA7E7132EA5548D4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>98567C246AB6F216FFC6FCDCC6E03312</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2D0E154956DD8B0F897B4DE354C27304</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9897993FA0FDF0BCC042F2EDA767A9C5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>806D861B7320E49014829AC1E2FD4494</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Extensions</string>
-			<key>path</key>
-			<string>Extensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99E1650F3185D797C733D05B48E81D57</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>ED3F5844C719B218C59825B5E277EE6F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
-				<string>YES</string>
-				<key>IBSC_MODULE</key>
-				<string>Sefirah_WatchKit_Extension</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah WatchKit App/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer.watchkitapp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>watchos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Sefirah/Sefirah WatchKit App-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>4</string>
-				<key>WATCHOS_DEPLOYMENT_TARGET</key>
-				<string>2.2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>9A95BAC51332BEBAD66FA890D7EA1D87</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B1E268EDE9C6F92C0C23831365D8F81</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9ACBA65E92E794421476C6B556469322</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2EDDF65C3B5F6A5AC7537A6E25842F96</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9C8030664E07C50A68F433D02A9C9EA4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F695AEBCA1F700456B2575B301E0C03</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Sefirah_WatchKit_Extension.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A35D9231924B206EAB0956CE1F73ADD8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0E2088A63734F804BE33CAE7C995D28E</string>
-				<string>E48B94100D91D74CCE2D293A99891780</string>
-				<string>73ECC088926F477EA1FFF7B05DEBE7B9</string>
-				<string>9ACBA65E92E794421476C6B556469322</string>
-				<string>9030EC3EC17448C8865EBBAB22412441</string>
-				<string>ABC1FEC8CF0C622AF4F312C9308454DB</string>
-				<string>6C1E329F02A634E918F23BC39C09078D</string>
-				<string>9456E52608FA3123AEFAE8439263D4BF</string>
-				<string>EC6DCCCBBAD5FCF6C517163F380A7EE7</string>
-				<string>D7B4852EAFCEF1F5D49295CD9E8D4470</string>
-				<string>2EEC944E9A6BDE6DE6AE01F65EECA71C</string>
-				<string>93EDA27A2092101BE4A15975F5CD9433</string>
-				<string>CDF6B24120784D620C3195B6EEDD1A00</string>
-				<string>27F28176EF3D81769A76B2CF4190547D</string>
-				<string>AA458E10767DCD6335FA550FBB48AFB6</string>
-				<string>B2A6E1169203361213FA748EC7B0EFF4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A626BF629A10B9AFEA62E73F62D2F5C4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>D0493EBF1CD3364400C4D3F8</string>
-				<string>98567C246AB6F216FFC6FCDCC6E03312</string>
-				<string>D0493EBE1CD3364400C4D3F8</string>
-				<string>D0493EC01CD3364400C4D3F8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>A7CAE737318D1506B905CE33B03213A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>01380C96913712275C13C9F7A3EF1AE9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>RemoveHeadersOnCopy</string>
-				</array>
-			</dict>
-		</dict>
-		<key>AA2D06CC10E192B3C65D3C3B6F537DE5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>AA458E10767DCD6335FA550FBB48AFB6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>806D861B7320E49014829AC1E2FD4494</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AA771D00DA7E01E4F5E08B9E52C0D8D1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>209EAE38A21312C3C9C46E7BF5BF5F60</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AB6ED615BB76320F7C900244FB9A3A59</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>name</key>
-			<string>DorianCLM-Book.ttf</string>
-			<key>path</key>
-			<string>DorianCLM-Book.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ABC1FEC8CF0C622AF4F312C9308454DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1DC5DFD3C5C03516D5FF31F3E7E4D118</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AD6B25ABF8BBDB7C79103BAFE6D90C67</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>912567255AB53C0AD9DFC106CAE17F9A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_COMPLICATION_NAME</key>
-				<string>Complication</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah WatchKit Extension/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer.watchkitapp.watchkitextension</string>
-				<key>PRODUCT_NAME</key>
-				<string>${TARGET_NAME}</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>watchos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>4</string>
-				<key>WATCHOS_DEPLOYMENT_TARGET</key>
-				<string>2.2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B00D898D1CEC34461E5E963496E78BB4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BACAB6396F58719E2295A7A98F7B824C</string>
-				<string>F9F13371159E37A40587CCE9F0C9AA32</string>
-				<string>2CF3F83ADA324A14A021D29769FC6A06</string>
-				<string>550206918C1ECA17D8F3EB053673DC6E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Sefirah WatchKit App</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2A6E1169203361213FA748EC7B0EFF4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>72E0D77EA1A801249E1CADD6D8004433</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B3F68F99DD3D198A1B8743341B83F957</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0A3AA44D019C9664F86BF385A19101C4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_COMPLICATION_NAME</key>
-				<string>Complication</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>CODE_SIGN_IDENTITY[sdk=watchos*]</key>
-				<string>iPhone Developer</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah WatchKit Extension/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer.watchkitapp.watchkitextension</string>
-				<key>PRODUCT_NAME</key>
-				<string>${TARGET_NAME}</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>watchos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>4</string>
-				<key>WATCHOS_DEPLOYMENT_TARGET</key>
-				<string>2.2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B46DBB44B2FC7DEBDE74EA8A4B387120</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NotificationController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B8CE17CD16C3C1A5FB1E4114A0D54ACC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>BACAB6396F58719E2295A7A98F7B824C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C0BD2BA1C031C80D9E528A02B7BB8C25</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6028E1BB885092718DE9AE81AD1D8B8F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1C3CBCD90520EE340553B4506827F14</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>3D1F71ABD21E82DD349B36719F7A67C6</string>
-			<key>targetProxy</key>
-			<string>8C0328E84BF2CCE09F575A9D150CF906</string>
-		</dict>
-		<key>C23263B26C7715669FC8A7885C55BAD0</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NewNotificationTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2B6D1C8CF9B577C678BA25E5A271056</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Sefirah_WatchKit_App.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>C387A5233928498C0882A3CB9F87A11E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FDD143FD90A031C398BDB92B592BE9A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5242D66EF084E56F9B1DB2C999C7518</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8416B2E72FA88EB4511BA12DF8F2AB44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C6A8A7D2C0AAD4A42906751BCCD57BFF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>376588E319A301D5B25A8FA2CE725D09</string>
-				<string>05C91F6E25ABCD0403D72B611F9BCF91</string>
-				<string>6163B880561DE6F54EF314BEF0F16D96</string>
-				<string>591903883EFFF2F7DF4BBB8F7C398219</string>
-				<string>4961115A03C964CB449101A196BD00C0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7579B50E3734AEF261F752187B1774E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9F695AEBCA1F700456B2575B301E0C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CA699061B93CFEF29444761734DDB418</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0CE4F539E93B2E309C578109B148A05E</string>
-				<string>D070BF7F1CD602F800A9B9C1</string>
-				<string>96C229E12B22B8B868CA362E68DA844B</string>
-				<string>2FCB1D2A06A127FDE29E6EC010D37D6B</string>
-				<string>D070BF781CD5EC9000A9B9C1</string>
-				<string>D070BF7D1CD5FF8700A9B9C1</string>
-				<string>D070BF7A1CD5F26200A9B9C1</string>
-				<string>DD7154CCFCE9AEDD910B279ACA7E321A</string>
-				<string>30617029DA68F863650068E0A8116D57</string>
-				<string>C5242D66EF084E56F9B1DB2C999C7518</string>
-				<string>D214B5AB70BA14C8C3C06FA87FBFF717</string>
-				<string>4BAAB0C8EF0BE19BBD9F07271B59C68E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CABC0576CB3200852AE9237CB317B10B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AB6ED615BB76320F7C900244FB9A3A59</string>
-				<string>6028E1BB885092718DE9AE81AD1D8B8F</string>
-				<string>24CF03D9AD9CAD948176D8549BCC384B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Fonts</string>
-			<key>path</key>
-			<string>Fonts</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD2A57F5B986CDF1AFD1A4D2D39190BD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>60BF01550EA95057627FD9DA1DF7263E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CDF6B24120784D620C3195B6EEDD1A00</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4961115A03C964CB449101A196BD00C0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CF4C80D3E579943C312E2CB7F83C5CF0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Sefirah.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>D0493EBB1CD3364300C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AB6ED615BB76320F7C900244FB9A3A59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0493EBC1CD3364300C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6028E1BB885092718DE9AE81AD1D8B8F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0493EBD1CD3364300C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>24CF03D9AD9CAD948176D8549BCC384B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0493EBE1CD3364400C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AB6ED615BB76320F7C900244FB9A3A59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0493EBF1CD3364400C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6028E1BB885092718DE9AE81AD1D8B8F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D0493EC01CD3364400C4D3F8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>24CF03D9AD9CAD948176D8549BCC384B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D070BF741CD5A62200A9B9C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FDD143FD90A031C398BDB92B592BE9A4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Nibs</string>
-			<key>path</key>
-			<string>Nibs</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF751CD5D0B600A9B9C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8416B2E72FA88EB4511BA12DF8F2AB44</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF761CD5D0C300A9B9C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D070BF7B1CD5FF6600A9B9C1</string>
-				<string>1FBEBE583B94BFCC156AB9D53E4E2639</string>
-				<string>557F3097070E3ED5A241DE3F0F1E72A2</string>
-				<string>D070BF771CD5EC9000A9B9C1</string>
-				<string>849A92C7773CB8BEA2E4588104333DC8</string>
-				<string>B46DBB44B2FC7DEBDE74EA8A4B387120</string>
-				<string>D070BF7E1CD602F800A9B9C1</string>
-				<string>567C6677C54996BB585D3A23EAAC8518</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controllers</string>
-			<key>path</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF771CD5EC9000A9B9C1</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LanguageSettingsInterfaceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF781CD5EC9000A9B9C1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D070BF771CD5EC9000A9B9C1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D070BF791CD5F26200A9B9C1</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LanguageRowController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF7A1CD5F26200A9B9C1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D070BF791CD5F26200A9B9C1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D070BF7B1CD5FF6600A9B9C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D070BF791CD5F26200A9B9C1</string>
-				<string>D070BF7C1CD5FF8700A9B9C1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Row Controllers</string>
-			<key>path</key>
-			<string>Row Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF7C1CD5FF8700A9B9C1</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PrayerOptionsRowController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF7D1CD5FF8700A9B9C1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D070BF7C1CD5FF8700A9B9C1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D070BF7E1CD602F800A9B9C1</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PrayerOptionsInterfaceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D070BF7F1CD602F800A9B9C1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D070BF7E1CD602F800A9B9C1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D214B5AB70BA14C8C3C06FA87FBFF717</key>
-		<dict>
-			<key>fileRef</key>
-			<string>567C6677C54996BB585D3A23EAAC8518</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D24B7889C82A05B7B22129C5E13AE1F8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string></string>
-			<key>dstSubfolderSpec</key>
-			<string>13</string>
-			<key>files</key>
-			<array>
-				<string>A7CAE737318D1506B905CE33B03213A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>name</key>
-			<string>Embed App Extensions</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D2D408E3E59470263AE9B48AAF1F052C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D5B4245DB249F0CFC73EBB216794BD77</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AB6ED615BB76320F7C900244FB9A3A59</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D668451FB1B49871D3F82CBCED84E7CF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>51AF862ED4889B315C65512A293F8F44</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D790E6E9133D46A2640F781549CC5585</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>C7579B50E3734AEF261F752187B1774E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D7B4852EAFCEF1F5D49295CD9E8D4470</key>
-		<dict>
-			<key>fileRef</key>
-			<string>63F11FB6E5B28525818FEBB7762D4660</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DB14A18FCBF7E5D1D7E513DCE88190BF</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>Model.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBE3407B7D29B1A7556A03F9F856220A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>path</key>
-			<string>Sefirah WatchKit Extension.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DC6CCB5D8528A26F51A80C5DAC16FD58</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3212E03C36D72BEF5557C7F700100169</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DD7154CCFCE9AEDD910B279ACA7E321A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>849A92C7773CB8BEA2E4588104333DC8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DEC57FC7C7056A6ED9C5221FFB66A215</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LanguagesTableViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E00FEB6E4636DD4FBD7C6CC95BE551E5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah WatchKit App.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E48B94100D91D74CCE2D293A99891780</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEC57FC7C7056A6ED9C5221FFB66A215</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5F1B76F7BE686F3159BB29BF4838BFB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>419CA748C2D46B4FCE54C095CD7FF1A0</string>
-				<string>1419DE1096FE34BC6B2C18F9062AACBF</string>
-				<string>26AE42C92F3ED053280139125F1A3E52</string>
-				<string>015AB78E3C470E39881760C112C4F05D</string>
-				<string>B00D898D1CEC34461E5E963496E78BB4</string>
-				<string>2DB56B72A076445A1224BF94DD14F4E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E78CB5FDAA5C86F3D93942910334ED8D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E7B6CF65F4FF45B1AC60FDEB5A6E403E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E00FEB6E4636DD4FBD7C6CC95BE551E5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer: aron harkham (WBBX266M83)</string>
-				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
-				<string>YES</string>
-				<key>IBSC_MODULE</key>
-				<string>Sefirah_WatchKit_Extension</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Sefirah WatchKit App/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.jesiegel.SefiratHaomer.watchkitapp</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>watchos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Sefirah/Sefirah WatchKit App-Bridging-Header.h</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>4</string>
-				<key>WATCHOS_DEPLOYMENT_TARGET</key>
-				<string>2.2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EC6DCCCBBAD5FCF6C517163F380A7EE7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1506E35CCFC4B5003E8394421E16C297</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EC6EDD0C26E7C14EEB18DD9863E28E6B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>ED3F5844C719B218C59825B5E277EE6F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Sefirah WatchKit App.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFDFC68A77B640D91C90A8CF7498980F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2EDDF65C3B5F6A5AC7537A6E25842F96</string>
-				<string>1DC5DFD3C5C03516D5FF31F3E7E4D118</string>
-				<string>72E0D77EA1A801249E1CADD6D8004433</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EFF376459A71A064ACA6705CC0F3A300</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3A5AC13ED55CD9F6FCA784CFD74E2F3C</string>
-			<key>buildPhases</key>
-			<array>
-				<string>B8CE17CD16C3C1A5FB1E4114A0D54ACC</string>
-				<string>CA699061B93CFEF29444761734DDB418</string>
-				<string>D790E6E9133D46A2640F781549CC5585</string>
-				<string>A626BF629A10B9AFEA62E73F62D2F5C4</string>
-				<string>1295A4B6A586F1A3BC2CF12DF6E7D713</string>
-				<string>E78CB5FDAA5C86F3D93942910334ED8D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Sefirah WatchKit Extension</string>
-			<key>productName</key>
-			<string>Sefirah WatchKit Extension</string>
-			<key>productReference</key>
-			<string>01380C96913712275C13C9F7A3EF1AE9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.watchkit2-extension</string>
-		</dict>
-		<key>F02B130C81690918CB703FD4BAFBC5F5</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>$(CONTENTS_FOLDER_PATH)/Watch</string>
-			<key>dstSubfolderSpec</key>
-			<string>16</string>
-			<key>files</key>
-			<array>
-				<string>AA771D00DA7E01E4F5E08B9E52C0D8D1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>name</key>
-			<string>Embed Watch Content</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F2640ED8EA4D65CA0A07A583229D8C84</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F9772E86514DCB5B13F58A3E103D830C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2CF3F83ADA324A14A021D29769FC6A06</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F9F13371159E37A40587CCE9F0C9AA32</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FD93110408F3BBC56FB72B619CF805C5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Sefirah-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDD143FD90A031C398BDB92B592BE9A4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>NotificationCell.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FE4B0AC6CFBB714644DCEEE3DAC72CB1</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>08FC9073FA1469575A8DB91DF63EB4E2</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>EFF376459A71A064ACA6705CC0F3A300</string>
-			<key>remoteInfo</key>
-			<string>Sefirah WatchKit Extension</string>
-		</dict>
-		<key>FFE8C172F1AEB1F1839B0422E0F0CDF3</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>16C658153715319F15256ACC2CB27304</string>
-			<key>buildPhases</key>
-			<array>
-				<string>3D34DDE88089DC70731E835A32BB9302</string>
-			</array>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXAggregateTarget</string>
-			<key>name</key>
-			<string>Mogenerator</string>
-			<key>productName</key>
-			<string>Mogenerator</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>08FC9073FA1469575A8DB91DF63EB4E2</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FFE8C172F1AEB1F1839B0422E0F0CDF3 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 16C658153715319F15256ACC2CB27304 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				3D34DDE88089DC70731E835A32BB9302 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		07B64FBEBC4354E93B4D25C0F6A48A8E /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */; };
+		0922D881921AEDE40A30386EBF0B8EAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACAB6396F58719E2295A7A98F7B824C /* Assets.xcassets */; };
+		09F7709B9FE28DD76058ACB5BD776BEF /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
+		0E2088A63734F804BE33CAE7C995D28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F07ACAE8847F4DB1C2EA89C0F141DD /* AppDelegate.swift */; };
+		18FFFA4A084381C7DC70ADBF3AE958AC /* SefiraDayWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */; };
+		27F28176EF3D81769A76B2CF4190547D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AD3F29526A80369B42678026205CB /* SettingsTableViewController.swift */; };
+		2EEC944E9A6BDE6DE6AE01F65EECA71C /* PrayerOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */; };
+		3568BCF8DB0A148FB56787EBC8C0CCA8 /* Settings-Watch.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77A954BCAFD6998FE9844915CF3161F8 /* Settings-Watch.bundle */; };
+		3FC6F2C9A77866115D5886C09FDEB000 /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
+		41296E18494E113C2EE1CF6480907CE3 /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B6D1C8CF9B577C678BA25E5A271056 /* Pods_Sefirah_WatchKit_App.framework */; };
+		4BAAB0C8EF0BE19BBD9F07271B59C68E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		519D29333E0E9508BEB53235A65B9B0B /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
+		5437B2D1C32A7891B8BC3D2902FFCC32 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8705ECE112416693757F2A9E5E80AFB /* Model.xcdatamodeld */; };
+		56ADC1776C7290BE4DF3BACD29B2189F /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72CCBC1FABC10E1C900A7E1D8ED2E48 /* NotificationCell.xib */; };
+		5D7EDEEE51F8E0BCA25FEE9C18C5F988 /* LanguageSettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */; };
+		65F80F06C3AC790F1C358C2AECECACE6 /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */; };
+		6C1E329F02A634E918F23BC39C09078D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376588E319A301D5B25A8FA2CE725D09 /* NotificationManager.swift */; };
+		728DD3124921641337D8D93232C2FD88 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */; };
+		73ECC088926F477EA1FFF7B05DEBE7B9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B913B872E0928B32A365C4836D770A3 /* MainViewController.swift */; };
+		75783599791BB58424EC8F22D39AFAB2 /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
+		78A4EFA1E519E75833246E568C2007C2 /* PrayerOptionsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */; };
+		9030EC3EC17448C8865EBBAB22412441 /* NewNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23263B26C7715669FC8A7885C55BAD0 /* NewNotificationTableViewController.swift */; };
+		93BED4814B98D3E79385D13F1FF1BAD1 /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */; };
+		93EDA27A2092101BE4A15975F5CD9433 /* SefiraDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */; };
+		9456E52608FA3123AEFAE8439263D4BF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C91F6E25ABCD0403D72B611F9BCF91 /* NotificationTableViewCell.swift */; };
+		96C229E12B22B8B868CA362E68DA844B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891D13817AC8FE7CA7E7132EA5548D4 /* ExtensionDelegate.swift */; };
+		96C8B5074EA39A32081FFF62C5C11A26 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */; };
+		98567C246AB6F216FFC6FCDCC6E03312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0E154956DD8B0F897B4DE354C27304 /* Assets.xcassets */; };
+		9A95BAC51332BEBAD66FA890D7EA1D87 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E268EDE9C6F92C0C23831365D8F81 /* Pods_Sefirah.framework */; };
+		A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */; };
+		A7CAE737318D1506B905CE33B03213A9 /* Sefirah WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01380C96913712275C13C9F7A3EF1AE9 /* Sefirah WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AA458E10767DCD6335FA550FBB48AFB6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */; };
+		AA771D00DA7E01E4F5E08B9E52C0D8D1 /* Sefirah WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 209EAE38A21312C3C9C46E7BF5BF5F60 /* Sefirah WatchKit App.app */; };
+		AAA1C0C60CE9033800F2E828188F6EF5 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */; };
+		ABC1FEC8CF0C622AF4F312C9308454DB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5DFD3C5C03516D5FF31F3E7E4D118 /* Notification.swift */; };
+		B2A6E1169203361213FA748EC7B0EFF4 /* _Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0D77EA1A801249E1CADD6D8004433 /* _Notification.swift */; };
+		B8A9BA6027927798CCFBA3C3B5A53562 /* SefirahTextInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544E11F11E2025C772C6476CD2E43995 /* SefirahTextInterfaceController.swift */; };
+		C7579B50E3734AEF261F752187B1774E /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F695AEBCA1F700456B2575B301E0C03 /* Pods_Sefirah_WatchKit_Extension.framework */; };
+		C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
+		CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */; };
+		CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
+		D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */; };
+		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
+		D7B4852EAFCEF1F5D49295CD9E8D4470 /* NusachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */; };
+		DC6CCB5D8528A26F51A80C5DAC16FD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3212E03C36D72BEF5557C7F700100169 /* Main.storyboard */; };
+		E48B94100D91D74CCE2D293A99891780 /* LanguagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC57FC7C7056A6ED9C5221FFB66A215 /* LanguagesTableViewController.swift */; };
+		E5E687F51B9AFC8D08F31F8BE9E74D97 /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */; };
+		EC6DCCCBBAD5FCF6C517163F380A7EE7 /* NotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1506E35CCFC4B5003E8394421E16C297 /* NotificationsTableViewController.swift */; };
+		F9772E86514DCB5B13F58A3E103D830C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF3F83ADA324A14A021D29769FC6A06 /* Interface.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C0328E84BF2CCE09F575A9D150CF906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FC9073FA1469575A8DB91DF63EB4E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D1F71ABD21E82DD349B36719F7A67C6;
+			remoteInfo = "Sefirah WatchKit App";
+		};
+		FE4B0AC6CFBB714644DCEEE3DAC72CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FC9073FA1469575A8DB91DF63EB4E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFF376459A71A064ACA6705CC0F3A300;
+			remoteInfo = "Sefirah WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D24B7889C82A05B7B22129C5E13AE1F8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A7CAE737318D1506B905CE33B03213A9 /* Sefirah WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F02B130C81690918CB703FD4BAFBC5F5 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				AA771D00DA7E01E4F5E08B9E52C0D8D1 /* Sefirah WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01380C96913712275C13C9F7A3EF1AE9 /* Sefirah WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sefirah WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsInterfaceController.swift; sourceTree = "<group>"; };
+		05C91F6E25ABCD0403D72B611F9BCF91 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		0891D13817AC8FE7CA7E7132EA5548D4 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		0A3AA44D019C9664F86BF385A19101C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		0B1E268EDE9C6F92C0C23831365D8F81 /* Pods_Sefirah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C384E246AAA10DCA86AB009C0C40E6B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageRowController.swift; sourceTree = "<group>"; };
+		1506E35CCFC4B5003E8394421E16C297 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
+		159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsTableViewController.swift; sourceTree = "<group>"; };
+		1B15CE34F7797AFD0E834D9683EB3A7E /* v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.xcdatamodel; sourceTree = "<group>"; };
+		1DC5DFD3C5C03516D5FF31F3E7E4D118 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		1E1AFB256C5A82932957D3121BF1DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		209EAE38A21312C3C9C46E7BF5BF5F60 /* Sefirah WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sefirah WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24767A50582A66A53D2922566DE23376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2A0AD3F29526A80369B42678026205CB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		2D0E154956DD8B0F897B4DE354C27304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		352F469FC724FB8A98175F2E4D71542E /* Sefirah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Sefirah.entitlements; sourceTree = "<group>"; };
+		376588E319A301D5B25A8FA2CE725D09 /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		4961115A03C964CB449101A196BD00C0 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4B913B872E0928B32A365C4836D770A3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		52A2C8668E329F8F23A2994ACF69796A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		544E11F11E2025C772C6476CD2E43995 /* SefirahTextInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SefirahTextInterfaceController.swift; sourceTree = "<group>"; };
+		550206918C1ECA17D8F3EB053673DC6E /* Sefirah WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit App.entitlements"; sourceTree = "<group>"; };
+		591903883EFFF2F7DF4BBB8F7C398219 /* Sefirah WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sefirah WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		60B301665038AA7130366FB0071BA064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SefiraDay.swift; sourceTree = "<group>"; };
+		63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NusachTableViewController.swift; sourceTree = "<group>"; };
+		70022424B84AC2B5FDB82BA51D1FE62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71BCAA03A826671A7E3AFF8231362494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E0D77EA1A801249E1CADD6D8004433 /* _Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Notification.swift; sourceTree = "<group>"; };
+		75F07ACAE8847F4DB1C2EA89C0F141DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		77A954BCAFD6998FE9844915CF3161F8 /* Settings-Watch.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Settings-Watch.bundle"; sourceTree = "<group>"; };
+		806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
+		912567255AB53C0AD9DFC106CAE17F9A /* Pods-Sefirah WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9C8030664E07C50A68F433D02A9C9EA4 /* Pods-Sefirah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.debug.xcconfig"; sourceTree = "<group>"; };
+		9F695AEBCA1F700456B2575B301E0C03 /* Pods_Sefirah_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SefiraDayWatch.swift; sourceTree = "<group>"; };
+		B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DorianCLM-Book.ttf"; sourceTree = "<group>"; };
+		BACAB6396F58719E2295A7A98F7B824C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C23263B26C7715669FC8A7885C55BAD0 /* NewNotificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNotificationTableViewController.swift; sourceTree = "<group>"; };
+		C2B6D1C8CF9B577C678BA25E5A271056 /* Pods_Sefirah_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShmulikCLM.ttf; sourceTree = "<group>"; };
+		CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DorianCLM-BookItalic.ttf"; sourceTree = "<group>"; };
+		D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
+		DBE3407B7D29B1A7556A03F9F856220A /* Sefirah WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		DEC57FC7C7056A6ED9C5221FFB66A215 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
+		E00FEB6E4636DD4FBD7C6CC95BE551E5 /* Pods-Sefirah WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		E72CCBC1FABC10E1C900A7E1D8ED2E48 /* NotificationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSettingsInterfaceController.swift; sourceTree = "<group>"; };
+		EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsRowController.swift; sourceTree = "<group>"; };
+		EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		ED3F5844C719B218C59825B5E277EE6F /* Pods-Sefirah WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		F9F13371159E37A40587CCE9F0C9AA32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD93110408F3BBC56FB72B619CF805C5 /* Sefirah-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sefirah-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E296FB86B99FA24A0F456194798BBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A95BAC51332BEBAD66FA890D7EA1D87 /* Pods_Sefirah.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E5D15CE9150B68177D2EA4FD5DD60A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41296E18494E113C2EE1CF6480907CE3 /* Pods_Sefirah_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D790E6E9133D46A2640F781549CC5585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7579B50E3734AEF261F752187B1774E /* Pods_Sefirah_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		015AB78E3C470E39881760C112C4F05D /* Sefirah */ = {
+			isa = PBXGroup;
+			children = (
+				C6A8A7D2C0AAD4A42906751BCCD57BFF /* Classes */,
+				4FE9131A7790936C42AC93E02614E91C /* Controllers */,
+				9897993FA0FDF0BCC042F2EDA767A9C5 /* Extensions */,
+				D97009287101E310998FDDABC11BD50B /* Fonts */,
+				EFDFC68A77B640D91C90A8CF7498980F /* Model */,
+				C993568F36F4827CE4444959A47AB24A /* Nibs */,
+				75F07ACAE8847F4DB1C2EA89C0F141DD /* AppDelegate.swift */,
+				60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */,
+				71BCAA03A826671A7E3AFF8231362494 /* Info.plist */,
+				51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */,
+				3212E03C36D72BEF5557C7F700100169 /* Main.storyboard */,
+				FD93110408F3BBC56FB72B619CF805C5 /* Sefirah-Bridging-Header.h */,
+				352F469FC724FB8A98175F2E4D71542E /* Sefirah.entitlements */,
+				77A954BCAFD6998FE9844915CF3161F8 /* Settings-Watch.bundle */,
+			);
+			path = Sefirah;
+			sourceTree = "<group>";
+		};
+		0B03E9D0B7F5E2C07A225692DAAAD2D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C384E246AAA10DCA86AB009C0C40E6B /* PushNotificationPayload.apns */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1419DE1096FE34BC6B2C18F9062AACBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED3F5844C719B218C59825B5E277EE6F /* Pods-Sefirah WatchKit App.debug.xcconfig */,
+				E00FEB6E4636DD4FBD7C6CC95BE551E5 /* Pods-Sefirah WatchKit App.release.xcconfig */,
+				0A3AA44D019C9664F86BF385A19101C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */,
+				912567255AB53C0AD9DFC106CAE17F9A /* Pods-Sefirah WatchKit Extension.release.xcconfig */,
+				9C8030664E07C50A68F433D02A9C9EA4 /* Pods-Sefirah.debug.xcconfig */,
+				D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		26AE42C92F3ED053280139125F1A3E52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				209EAE38A21312C3C9C46E7BF5BF5F60 /* Sefirah WatchKit App.app */,
+				01380C96913712275C13C9F7A3EF1AE9 /* Sefirah WatchKit Extension.appex */,
+				CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DB56B72A076445A1224BF94DD14F4E9 /* Sefirah WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4AB14C56B2B34785E7DDC603B0C5BE36 /* Classes */,
+				986D9899D00EE68A09D1E30491A06C38 /* Controllers */,
+				0B03E9D0B7F5E2C07A225692DAAAD2D7 /* Supporting Files */,
+				2D0E154956DD8B0F897B4DE354C27304 /* Assets.xcassets */,
+				0891D13817AC8FE7CA7E7132EA5548D4 /* ExtensionDelegate.swift */,
+				1E1AFB256C5A82932957D3121BF1DCDE /* Info.plist */,
+				DBE3407B7D29B1A7556A03F9F856220A /* Sefirah WatchKit Extension.entitlements */,
+			);
+			path = "Sefirah WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		419CA748C2D46B4FCE54C095CD7FF1A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B1E268EDE9C6F92C0C23831365D8F81 /* Pods_Sefirah.framework */,
+				C2B6D1C8CF9B577C678BA25E5A271056 /* Pods_Sefirah_WatchKit_App.framework */,
+				9F695AEBCA1F700456B2575B301E0C03 /* Pods_Sefirah_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FE9131A7790936C42AC93E02614E91C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEC57FC7C7056A6ED9C5221FFB66A215 /* LanguagesTableViewController.swift */,
+				4B913B872E0928B32A365C4836D770A3 /* MainViewController.swift */,
+				C23263B26C7715669FC8A7885C55BAD0 /* NewNotificationTableViewController.swift */,
+				1506E35CCFC4B5003E8394421E16C297 /* NotificationsTableViewController.swift */,
+				63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */,
+				159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */,
+				2A0AD3F29526A80369B42678026205CB /* SettingsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9897993FA0FDF0BCC042F2EDA767A9C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B00D898D1CEC34461E5E963496E78BB4 /* Sefirah WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				BACAB6396F58719E2295A7A98F7B824C /* Assets.xcassets */,
+				F9F13371159E37A40587CCE9F0C9AA32 /* Info.plist */,
+				2CF3F83ADA324A14A021D29769FC6A06 /* Interface.storyboard */,
+				550206918C1ECA17D8F3EB053673DC6E /* Sefirah WatchKit App.entitlements */,
+			);
+			path = "Sefirah WatchKit App";
+			sourceTree = "<group>";
+		};
+		C6A8A7D2C0AAD4A42906751BCCD57BFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				376588E319A301D5B25A8FA2CE725D09 /* NotificationManager.swift */,
+				05C91F6E25ABCD0403D72B611F9BCF91 /* NotificationTableViewCell.swift */,
+				6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */,
+				591903883EFFF2F7DF4BBB8F7C398219 /* Sefirah WatchKit App-Bridging-Header.h */,
+				4961115A03C964CB449101A196BD00C0 /* Settings.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D97009287101E310998FDDABC11BD50B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */,
+				D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */,
+				CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C993568F36F4827CE4444959A47AB24A /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				E72CCBC1FABC10E1C900A7E1D8ED2E48 /* NotificationCell.xib */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		4AB14C56B2B34785E7DDC603B0C5BE36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		986D9899D00EE68A09D1E30491A06C38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */,
+				EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */,
+				5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */,
+				EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */,
+				8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */,
+				26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */,
+				054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */,
+				544E11F11E2025C772C6476CD2E43995 /* SefirahTextInterfaceController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */,
+				EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */,
+			);
+			path = "Row Controllers";
+			sourceTree = "<group>";
+		};
+		E5F1B76F7BE686F3159BB29BF4838BFB = {
+			isa = PBXGroup;
+			children = (
+				419CA748C2D46B4FCE54C095CD7FF1A0 /* Frameworks */,
+				1419DE1096FE34BC6B2C18F9062AACBF /* Pods */,
+				26AE42C92F3ED053280139125F1A3E52 /* Products */,
+				015AB78E3C470E39881760C112C4F05D /* Sefirah */,
+				B00D898D1CEC34461E5E963496E78BB4 /* Sefirah WatchKit App */,
+				2DB56B72A076445A1224BF94DD14F4E9 /* Sefirah WatchKit Extension */,
+			);
+			sourceTree = "<group>";
+		};
+		EFDFC68A77B640D91C90A8CF7498980F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8705ECE112416693757F2A9E5E80AFB /* Model.xcdatamodeld */,
+				1DC5DFD3C5C03516D5FF31F3E7E4D118 /* Notification.swift */,
+				72E0D77EA1A801249E1CADD6D8004433 /* _Notification.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2251D053A723C356E4A41443E79E6014 /* Sefirah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47314BE852AC0ED3C79CBE424BDD0BB4 /* Build configuration list for PBXNativeTarget "Sefirah" */;
+			buildPhases = (
+				59585740AB322112594A398FA9AFB081 /* 📦 Check Pods Manifest.lock */,
+				A35D9231924B206EAB0956CE1F73ADD8 /* Sources */,
+				1E296FB86B99FA24A0F456194798BBCD /* Frameworks */,
+				29DAE51DD775D5244EF24077E69FDA42 /* Resources */,
+				F02B130C81690918CB703FD4BAFBC5F5 /* Embed Watch Content */,
+				EC6EDD0C26E7C14EEB18DD9863E28E6B /* 📦 Embed Pods Frameworks */,
+				5E7C7332510FB883D90C8B94F66604BE /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C1C3CBCD90520EE340553B4506827F14 /* PBXTargetDependency */,
+			);
+			name = Sefirah;
+			productName = Sefirah;
+			productReference = CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D1F71ABD21E82DD349B36719F7A67C6 /* Sefirah WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A7F3BB4933FA6BE947FBE96F3973524 /* Build configuration list for PBXNativeTarget "Sefirah WatchKit App" */;
+			buildPhases = (
+				237D2AADAD8D7E6EDFFB4D22A9BF36BD /* 📦 Check Pods Manifest.lock */,
+				8A1E22323D0FCABE5D7E97B3BCB3E6C0 /* Resources */,
+				D24B7889C82A05B7B22129C5E13AE1F8 /* Embed App Extensions */,
+				3E5D15CE9150B68177D2EA4FD5DD60A9 /* Frameworks */,
+				3477336F43CDB337F0188FBDD36296D2 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B89A54FED83FE845090E81BE1C77E66 /* PBXTargetDependency */,
+			);
+			name = "Sefirah WatchKit App";
+			productName = "Sefirah WatchKit App";
+			productReference = 209EAE38A21312C3C9C46E7BF5BF5F60 /* Sefirah WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		EFF376459A71A064ACA6705CC0F3A300 /* Sefirah WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A5AC13ED55CD9F6FCA784CFD74E2F3C /* Build configuration list for PBXNativeTarget "Sefirah WatchKit Extension" */;
+			buildPhases = (
+				B8CE17CD16C3C1A5FB1E4114A0D54ACC /* 📦 Check Pods Manifest.lock */,
+				CA699061B93CFEF29444761734DDB418 /* Sources */,
+				D790E6E9133D46A2640F781549CC5585 /* Frameworks */,
+				A626BF629A10B9AFEA62E73F62D2F5C4 /* Resources */,
+				1295A4B6A586F1A3BC2CF12DF6E7D713 /* 📦 Embed Pods Frameworks */,
+				E78CB5FDAA5C86F3D93942910334ED8D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sefirah WatchKit Extension";
+			productName = "Sefirah WatchKit Extension";
+			productReference = 01380C96913712275C13C9F7A3EF1AE9 /* Sefirah WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FC9073FA1469575A8DB91DF63EB4E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Josh Siegel";
+				TargetAttributes = {
+					2251D053A723C356E4A41443E79E6014 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = H7QACAK68J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					3D1F71ABD21E82DD349B36719F7A67C6 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = H7QACAK68J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					EFF376459A71A064ACA6705CC0F3A300 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = H7QACAK68J;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					FFE8C172F1AEB1F1839B0422E0F0CDF3 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 1E6B41FFF927CFA30636FCE97F2B76E7 /* Build configuration list for PBXProject "Sefirah" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5F1B76F7BE686F3159BB29BF4838BFB;
+			productRefGroup = 26AE42C92F3ED053280139125F1A3E52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2251D053A723C356E4A41443E79E6014 /* Sefirah */,
+				3D1F71ABD21E82DD349B36719F7A67C6 /* Sefirah WatchKit App */,
+				EFF376459A71A064ACA6705CC0F3A300 /* Sefirah WatchKit Extension */,
+				FFE8C172F1AEB1F1839B0422E0F0CDF3 /* Mogenerator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29DAE51DD775D5244EF24077E69FDA42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */,
+				65F80F06C3AC790F1C358C2AECECACE6 /* DorianCLM-Book.ttf in Resources */,
+				C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */,
+				D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */,
+				DC6CCB5D8528A26F51A80C5DAC16FD58 /* Main.storyboard in Resources */,
+				56ADC1776C7290BE4DF3BACD29B2189F /* NotificationCell.xib in Resources */,
+				3568BCF8DB0A148FB56787EBC8C0CCA8 /* Settings-Watch.bundle in Resources */,
+				3FC6F2C9A77866115D5886C09FDEB000 /* ShmulikCLM.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A1E22323D0FCABE5D7E97B3BCB3E6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0922D881921AEDE40A30386EBF0B8EAD /* Assets.xcassets in Resources */,
+				07B64FBEBC4354E93B4D25C0F6A48A8E /* DorianCLM-Book.ttf in Resources */,
+				09F7709B9FE28DD76058ACB5BD776BEF /* DorianCLM-BookItalic.ttf in Resources */,
+				F9772E86514DCB5B13F58A3E103D830C /* Interface.storyboard in Resources */,
+				519D29333E0E9508BEB53235A65B9B0B /* ShmulikCLM.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A626BF629A10B9AFEA62E73F62D2F5C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98567C246AB6F216FFC6FCDCC6E03312 /* Assets.xcassets in Resources */,
+				93BED4814B98D3E79385D13F1FF1BAD1 /* DorianCLM-Book.ttf in Resources */,
+				D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */,
+				75783599791BB58424EC8F22D39AFAB2 /* ShmulikCLM.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1295A4B6A586F1A3BC2CF12DF6E7D713 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		237D2AADAD8D7E6EDFFB4D22A9BF36BD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3477336F43CDB337F0188FBDD36296D2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D34DDE88089DC70731E835A32BB9302 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mogenerator -m Sefirah/Model.xcdatamodeld -O Sefirah/Model --swift --template-var arc=true";
+		};
+		59585740AB322112594A398FA9AFB081 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E7C7332510FB883D90C8B94F66604BE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8CE17CD16C3C1A5FB1E4114A0D54ACC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E78CB5FDAA5C86F3D93942910334ED8D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6EDD0C26E7C14EEB18DD9863E28E6B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A35D9231924B206EAB0956CE1F73ADD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E2088A63734F804BE33CAE7C995D28E /* AppDelegate.swift in Sources */,
+				E48B94100D91D74CCE2D293A99891780 /* LanguagesTableViewController.swift in Sources */,
+				73ECC088926F477EA1FFF7B05DEBE7B9 /* MainViewController.swift in Sources */,
+				5437B2D1C32A7891B8BC3D2902FFCC32 /* Model.xcdatamodeld in Sources */,
+				9030EC3EC17448C8865EBBAB22412441 /* NewNotificationTableViewController.swift in Sources */,
+				ABC1FEC8CF0C622AF4F312C9308454DB /* Notification.swift in Sources */,
+				6C1E329F02A634E918F23BC39C09078D /* NotificationManager.swift in Sources */,
+				9456E52608FA3123AEFAE8439263D4BF /* NotificationTableViewCell.swift in Sources */,
+				EC6DCCCBBAD5FCF6C517163F380A7EE7 /* NotificationsTableViewController.swift in Sources */,
+				D7B4852EAFCEF1F5D49295CD9E8D4470 /* NusachTableViewController.swift in Sources */,
+				2EEC944E9A6BDE6DE6AE01F65EECA71C /* PrayerOptionsTableViewController.swift in Sources */,
+				93EDA27A2092101BE4A15975F5CD9433 /* SefiraDay.swift in Sources */,
+				CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */,
+				27F28176EF3D81769A76B2CF4190547D /* SettingsTableViewController.swift in Sources */,
+				AA458E10767DCD6335FA550FBB48AFB6 /* UIColorExtension.swift in Sources */,
+				B2A6E1169203361213FA748EC7B0EFF4 /* _Notification.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA699061B93CFEF29444761734DDB418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAA1C0C60CE9033800F2E828188F6EF5 /* ComplicationController.swift in Sources */,
+				96C229E12B22B8B868CA362E68DA844B /* ExtensionDelegate.swift in Sources */,
+				96C8B5074EA39A32081FFF62C5C11A26 /* GlanceController.swift in Sources */,
+				D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */,
+				5D7EDEEE51F8E0BCA25FEE9C18C5F988 /* LanguageSettingsInterfaceController.swift in Sources */,
+				E5E687F51B9AFC8D08F31F8BE9E74D97 /* MainInterfaceController.swift in Sources */,
+				728DD3124921641337D8D93232C2FD88 /* NotificationController.swift in Sources */,
+				A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */,
+				78A4EFA1E519E75833246E568C2007C2 /* PrayerOptionsRowController.swift in Sources */,
+				18FFFA4A084381C7DC70ADBF3AE958AC /* SefiraDayWatch.swift in Sources */,
+				B8A9BA6027927798CCFBA3C3B5A53562 /* SefirahTextInterfaceController.swift in Sources */,
+				4BAAB0C8EF0BE19BBD9F07271B59C68E /* Settings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B89A54FED83FE845090E81BE1C77E66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFF376459A71A064ACA6705CC0F3A300 /* Sefirah WatchKit Extension */;
+			targetProxy = FE4B0AC6CFBB714644DCEEE3DAC72CB1 /* PBXContainerItemProxy */;
+		};
+		C1C3CBCD90520EE340553B4506827F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D1F71ABD21E82DD349B36719F7A67C6 /* Sefirah WatchKit App */;
+			targetProxy = 8C0328E84BF2CCE09F575A9D150CF906 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CF3F83ADA324A14A021D29769FC6A06 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60B301665038AA7130366FB0071BA064 /* Base */,
+			);
+			name = Interface.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		3212E03C36D72BEF5557C7F700100169 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70022424B84AC2B5FDB82BA51D1FE62F /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24767A50582A66A53D2922566DE23376 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C13D14C8F51769DA2767EFC4C0AB6BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62BE253252C72EE4A88A8ACBA53B7F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Sefirah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		776DA91AD5F8F7954097FCF3FB004D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8D254F0D5E180752ADB00A19FC28E2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C8030664E07C50A68F433D02A9C9EA4 /* Pods-Sefirah.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Sefirah/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		99E1650F3185D797C733D05B48E81D57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3F5844C719B218C59825B5E277EE6F /* Pods-Sefirah WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sefirah_WatchKit_Extension;
+				INFOPLIST_FILE = "Sefirah WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		AA2D06CC10E192B3C65D3C3B6F537DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AD6B25ABF8BBDB7C79103BAFE6D90C67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 912567255AB53C0AD9DFC106CAE17F9A /* Pods-Sefirah WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Sefirah WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		B3F68F99DD3D198A1B8743341B83F957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A3AA44D019C9664F86BF385A19101C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Sefirah WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		E7B6CF65F4FF45B1AC60FDEB5A6E403E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E00FEB6E4636DD4FBD7C6CC95BE551E5 /* Pods-Sefirah WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Sefirah_WatchKit_Extension;
+				INFOPLIST_FILE = "Sefirah WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jesiegel.SefiratHaomer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah WatchKit App-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		F2640ED8EA4D65CA0A07A583229D8C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16C658153715319F15256ACC2CB27304 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776DA91AD5F8F7954097FCF3FB004D10 /* Debug */,
+				F2640ED8EA4D65CA0A07A583229D8C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A7F3BB4933FA6BE947FBE96F3973524 /* Build configuration list for PBXNativeTarget "Sefirah WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99E1650F3185D797C733D05B48E81D57 /* Debug */,
+				E7B6CF65F4FF45B1AC60FDEB5A6E403E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6B41FFF927CFA30636FCE97F2B76E7 /* Build configuration list for PBXProject "Sefirah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2D06CC10E192B3C65D3C3B6F537DE5 /* Debug */,
+				2C13D14C8F51769DA2767EFC4C0AB6BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A5AC13ED55CD9F6FCA784CFD74E2F3C /* Build configuration list for PBXNativeTarget "Sefirah WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F68F99DD3D198A1B8743341B83F957 /* Debug */,
+				AD6B25ABF8BBDB7C79103BAFE6D90C67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47314BE852AC0ED3C79CBE424BDD0BB4 /* Build configuration list for PBXNativeTarget "Sefirah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D254F0D5E180752ADB00A19FC28E2EE /* Debug */,
+				62BE253252C72EE4A88A8ACBA53B7F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A8705ECE112416693757F2A9E5E80AFB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52A2C8668E329F8F23A2994ACF69796A /* Model.xcdatamodel */,
+				1B15CE34F7797AFD0E834D9683EB3A7E /* v1.0.xcdatamodel */,
+			);
+			currentVersion = 1B15CE34F7797AFD0E834D9683EB3A7E /* v1.0.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 08FC9073FA1469575A8DB91DF63EB4E2 /* Project object */;
+}

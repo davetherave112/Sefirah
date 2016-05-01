@@ -338,7 +338,7 @@
     {
         custom = 0;
     }
-    
+
     if (language < composite.count)
     {
         NSArray <NSArray <NSString *> *> *customs = composite[language];
@@ -393,7 +393,7 @@
     UIFont *smallerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     UIFont *font = [UIFont preferredFontForTextStyle: UIFontTextStyleBody];
     UIFont *subheadFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    UIFont *dorianFont = [UIFont fontWithName:@"DorianCLM-Book" size:26];
+    UIFont *shmulikFontXL = [UIFont fontWithName:@"ShmulikCLM" size:26];
     UIFont *shmulikFontLarge = [UIFont fontWithName:@"ShmulikCLM" size:22];
     UIFont *shmulikFontRegular = [UIFont fontWithName:@"ShmulikCLM" size:18];
     
@@ -461,14 +461,34 @@
     NSMutableParagraphStyle *centeredStyle = [[NSMutableParagraphStyle alloc] init];
     centeredStyle.alignment = NSTextAlignmentCenter;
     
-    static NSDictionary *countAttributes = nil;
+    
+    //static NSDictionary *countAttributes = nil; remove so language change updates shadow offset
+    NSDictionary *countAttributes = nil;
     
     if(!countAttributes)
     {
+        
+#if TARGET_OS_IOS
+        NSShadow *shadow = [[NSShadow alloc] init];
+        if (self.language == KCSefiraLanguageHebrew) {
+            shadow.shadowOffset = CGSizeMake(1.0, 1.0);
+        } else {
+            shadow.shadowOffset = CGSizeMake(-1.0, 1.0);
+        }
+        
+        shadow.shadowColor = [UIColor blackColor];
         countAttributes = @{
                             NSParagraphStyleAttributeName : centeredStyle,
-                            NSFontAttributeName : dorianFont //countFont
+                            NSFontAttributeName : shmulikFontXL,
+                            NSShadowAttributeName : shadow
                             };
+#else
+        countAttributes = @{
+                            NSParagraphStyleAttributeName : centeredStyle,
+                            NSFontAttributeName : shmulikFontXL
+                            };
+#endif
+        
     }
     
     NSString *plainTextCountString = [self countStringFromInteger:integer];
@@ -476,6 +496,7 @@
     if (plainTextCountString != nil)
     {
         NSAttributedString *countString = [[NSAttributedString alloc] initWithString:plainTextCountString attributes:countAttributes];
+        
         if(output.length > 0)
         {
             [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n\n\n"]];
@@ -549,6 +570,7 @@
     if (showRibono)
     {
         
+
         NSString *trait = [self kabbalisticTraitFromInteger:integer];
         
         NSString *ribonoText = [NSString stringWithFormat:@"רִבּוֹנוֹ  שֶׁל עוֹלָם, אַתָּה צִוִּיתָֽנוּ עַל יְדֵי מֹשֶׁה עַבְדֶּֽךָ לִסְפּוֹר סְפִירַת הָעֹֽמֶר, כְּדֵי לְטַהֲרֵֽנוּ מִקְּלִפּוֹתֵֽינוּ וּמִטֻּמְאוֹתֵֽינוּ, כְּמוֹ שֶׁכָּתַֽבְתָּ בְּתוֹרָתֶֽךָ: וּסְפַרְתֶּם לָכֶם מִמָּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת עֹֽמֶר הַתְּנוּפָה, שֶֽׁבַע שַׁבָּתוֹת תְּמִימֹת תִּהְיֶֽינָה, עַד מִמָּחֳרַת הַשַּׁבָּת הַשְּׁבִיעִת תִּסְפְּרוּ חֲמִשִּׁים יוֹם, כְּדֵי שֶׁיִּטָּהֲרוּ נַפְשׁוֹת עַמְּךָ יִשְׂרָאֵל מִזֻּהֲמָתָם. וּבְכֵן יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְיָ אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁבִּזְכוּת סְפִירַת הָעֹֽמֶר שֶׁסָּפַֽרְתִּי הַיּוֹם, יְתֻקַּן מַה שֶּׁפָּגַֽמְתִּי בִּסְפִירָה %@ וְאֶטָּהֵר וְאֶתְקַדֵּשׁ בִּקְדֻשָּׁה שֶׁל מַֽעְלָה, וְעַל יְדֵי זֶה יֻשְׁפַּע שֶֽׁפַע רַב בְּכָל הָעוֹלָמוֹת, וּלְתַקֵּן אֶת נַפְשׁוֹתֵֽינוּ וְרוּחוֹתֵֽינוּ וְנִשְׁמוֹתֵֽינוּ מִכָּל סִיג וּפְגַם, וּלְטַהֲרֵֽנוּ וּלְקַדְּשֵֽׁנוּ בִּקְדֻשָּׁתְךָ הָעֶלְיוֹנָה, אָמֵן סֶֽלָה.", trait];

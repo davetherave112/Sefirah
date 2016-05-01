@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Suppp</string>
+	<string>In order to provide you with a zmanim-based Omer count, we need to be able to access your location.  Location services will only be accessed very briefly and will NEVER be recorded.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DorianCLM-Book.ttf</string>
