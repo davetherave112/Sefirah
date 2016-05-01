@@ -10,7 +10,7 @@
             <objects>
                 <controller identifier="progressController" title="Progress" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" image="day0" id="SBA-gv-rxP"/>
+                        <imageView width="1" widthAdjustment="-5" alignment="center" verticalAlignment="center" image="day0" contentMode="scaleAspectFit" id="SBA-gv-rxP"/>
                     </items>
                     <connections>
                         <outlet property="progressImage" destination="SBA-gv-rxP" id="bUC-5x-nJW"/>
