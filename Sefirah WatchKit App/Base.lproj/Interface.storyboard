@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--progressController-->
+        <!--Progress-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="progressController" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                <controller identifier="progressController" title="Progress" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
                         <imageView alignment="left" image="day0" id="SBA-gv-rxP"/>
                     </items>
@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="206" y="113"/>
         </scene>
-        <!--textController-->
+        <!--Text-->
         <scene sceneID="qfk-Ag-MEM">
             <objects>
-                <controller identifier="textController" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                <controller identifier="textController" title="Text" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
                         <group alignment="left" spacing="4" id="GQu-yk-Rai">
                             <items>
@@ -114,7 +114,7 @@
                                                 <items>
                                                     <group width="1" height="32" alignment="left" spacing="4" id="JRU-oR-djS">
                                                         <items>
-                                                            <label alignment="left" verticalAlignment="center" text="Language" id="CSH-AY-DjT"/>
+                                                            <label alignment="left" verticalAlignment="center" text="Option" id="CSH-AY-DjT"/>
                                                             <imageView alignment="right" verticalAlignment="center" hidden="YES" image="check" id="tbs-GX-Bhe"/>
                                                         </items>
                                                     </group>
