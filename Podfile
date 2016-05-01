@@ -7,11 +7,10 @@
 use_frameworks!
 
 target 'Sefirah' do
-	platform :ios, '8.0'
+	platform :ios, '8.3'
 	pod 'KosherCocoa', :git => 'git@github.com:MosheBerman/KosherCocoa.git', :commit => '5376523'
-	pod 'CircleProgressView', :git => 'https://github.com/CardinalNow/iOS-CircleProgressView.git'
+    pod "KDCircularProgress"
 	pod "SugarRecord/CoreData"
-	pod "KDCircularProgress"
 end
 
 target 'Sefirah WatchKit App' do

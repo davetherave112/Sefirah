@@ -8,10 +8,10 @@
 
 import UIKit
 import KosherCocoa
-import CircleProgressView
 import KDCircularProgress
+import CoreLocation
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var circleView: UIView!
     @IBOutlet weak var sefiraDay: UILabel!
@@ -20,11 +20,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var dayOfSefira: Int?
+    let locationManager = CLLocationManager()
+    var formatter = KCSefiraFormatter()
+    var sefiraDayNumber: SefiraDay?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        locationManager.delegate = self
+        self.sefiraDayNumber = SefiraDay(locationManager: locationManager)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,28 +35,16 @@ class MainViewController: UIViewController {
         
         let userDefaults = NSUserDefaults.standardUserDefaults()
         
-        dayOfSefira = KCSefiratHaomerCalculator.dayOfSefira()
-        
-        let formatter = KCSefiraFormatter()
+        formatter = KCSefiraFormatter()
+
+        sefiraDayNumber!.getLocation()
         
         formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
         formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!
         
-        let prayerOptions = userDefaults.arrayForKey("Options")!
-        
-        var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
-        for option in prayerOptions {
-            prayers = prayers.union(Options.optionValues[option as! String]!)
-        }
-
-        self.sefiraDay.attributedText = formatter.countStringFromInteger(dayOfSefira!, withPrayers: prayers)
-        self.progressLabel.text = "\(dayOfSefira!)"
-        
-        //let progress = Double(dayOfSefira)/100.0
-        
-        //self.progressView.setProgress(progress, animated: true)
-        
-        
+        let lastRecordedDay = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+        self.setSefiraText(lastRecordedDay)
+        self.createProgressCircle(lastRecordedDay)
         
     }
     
@@ -62,6 +53,42 @@ class MainViewController: UIViewController {
         
         self.scrollView.contentSize = CGSize(width: self.scrollView.bounds.width, height: self.sefiraDay.frame.maxY + 50)
         
+        self.sefiraDay.sizeToFit()
+                
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = locations.last!.coordinate
+        locationManager.stopUpdatingLocation()
+        self.dayOfSefira = sefiraDayNumber!.setAdjustedSefiraDay(locValue)
+        NSUserDefaults.standardUserDefaults().setInteger(dayOfSefira!, forKey: "LastRecordedDay")
+        setSefiraText(dayOfSefira!)
+        createProgressCircle(dayOfSefira!)
+        
+    }
+
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    
+    func setSefiraText(dayOfSefira: Int) {
+        let prayerOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options")!
+        var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
+        for option in prayerOptions {
+            prayers = prayers.union(Options.optionValues[option as! String]!)
+        }
+        
+        self.sefiraDay.attributedText = formatter.countStringFromInteger(dayOfSefira, withPrayers: prayers)
+        self.progressLabel.text = "\(dayOfSefira)"
+    }
+
+    func createProgressCircle(dayOfSefira: Int) {
         let progress = KDCircularProgress(frame: CGRectMake(0, 0, circleView.frame.size.width, circleView.frame.size.height))
         progress.translatesAutoresizingMaskIntoConstraints = false
         circleView.addSubview(progress)
@@ -78,19 +105,10 @@ class MainViewController: UIViewController {
         progress.gradientRotateSpeed = 2
         progress.roundedCorners = true
         progress.glowMode = .Forward
-        progress.angle = 360.0 * Double(dayOfSefira!)/100.0
+        progress.angle = 360.0 * Double(dayOfSefira)/100.0
         progress.trackColor = UIColor(rgba: "#0e386c")
         progress.setColors(UIColor(rgba: "#c19f69"))
-        
-        self.sefiraDay.sizeToFit()
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

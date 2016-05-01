@@ -1,0 +1,1972 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0336FE89B5FE34EA8FECB21B80B04386 /* CoreDataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC8D2ACF9A2AC502271B52EE77A41E0 /* CoreDataErrors.swift */; };
+		03728C699635A7A12C1A76C58D9BD0BE /* RequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C319AD036B58238564E4B08A02A5C6B8 /* RequestExtension.swift */; };
+		040AF03FC73C2E3523348565A72FF401 /* KCMolad.h in Headers */ = {isa = PBXBuildFile; fileRef = DC3D33237D828179CFC47A5DA265F049 /* KCMolad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04376529AFF2A832ABB614363F4D7F90 /* NSDateComponents+AllComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = C504D0FE8B6D8F32705163B57EF2C815 /* NSDateComponents+AllComponents.m */; };
+		04965D30D5D7CA1DA425F58451E25D9A /* KCAstronomicalCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E50C91C325F20246A5011E76B10413 /* KCAstronomicalCalendar+DateManipulation.m */; };
+		05E7804F6801148CD00F6361BFA42989 /* KCMolad.h in Headers */ = {isa = PBXBuildFile; fileRef = DC3D33237D828179CFC47A5DA265F049 /* KCMolad.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05EF31FA54A1E14C4275A9C728576578 /* KCDaf.h in Headers */ = {isa = PBXBuildFile; fileRef = C2137EA6F4F4016868E68EE40B8BB5B4 /* KCDaf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05FD7C156EAD3E0120CCB5B0E91FEF86 /* KosherCocoa-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B4D0408E1A05911377F4A0F2C068C8 /* KosherCocoa-iOS-dummy.m */; };
+		0614A0036DC27B9389DC9DC29CE3BD7E /* KCSefiraFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F070DEEAA8EDF72569B3A56FCDE424 /* KCSefiraFormatter.m */; };
+		0653834333F09F8F9C5ADCE1FC841BFB /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31570FE3D63CD919AC23369265098 /* NSCalendar+DateComparison.m */; };
+		07267EE92EF38623396998CA0BD60725 /* KosherCocoa-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0A561D189B7D79E2CBD21BF544ACA1 /* KosherCocoa-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0799170DC07A7B4A0E1D6AA84EC85028 /* NSCalendar+Juncture.h in Headers */ = {isa = PBXBuildFile; fileRef = 882512CBA174414AB76B78DD66F80F2C /* NSCalendar+Juncture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		080C3751B78ADFC9388F1C3710DB98C2 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = F750C79FB680684471E3BD87497A4DEF /* NSCalendar+Components.m */; };
+		0A3480AD500FF07B8296062F68E44296 /* KCParashatHashavuaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 393161D3FD25C9C41072EA806FB7BED7 /* KCParashatHashavuaCalculator.m */; };
+		0A51D64AACEEAC9C81D948AC874024A3 /* KCGeoLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C27F2AAC8CF254B7526030540A51A41 /* KCGeoLocation.m */; };
+		0ABC0327E5C19BB542A7E428440063CD /* NSCalendar+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = 1805FE7BF050589F678F572258E4FBCB /* NSCalendar+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AF1FD73EEF428600899A30913FA0C41 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91F98348E02CCB312209161CD65BB8B /* CoreData.swift */; };
+		0D38E751A1D08CC5BE3CC46484CF99A3 /* KCZman.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B9563694AC148E4E57A49BF5533561 /* KCZman.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DA7A0FD6570993CABC6C558B7C8BC45 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664A3623DC98F1E0517D675EC84E0A27 /* Storage.swift */; };
+		0FF5FD73B4393BA7483372D32216F092 /* NSDate+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = FDBEA1BDA40030BBBA37F9273D89B0A4 /* NSDate+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10B0E0248ECB0B231529030100951CD2 /* KosherCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = E0ABDC46919F209C906A67743694D96A /* KosherCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1193C0E21254A2EDD9F43DF452BE46C6 /* DirUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45486C9363D10E9A8132F6F4DC7451C /* DirUtils.swift */; };
+		1301ACE0B7F92A1E97BB71461FFE5BBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECF8D9C0FCFB859B28724DA1831A38 /* Foundation.framework */; };
+		176CFBD446E6843C07A25C35FB019CF2 /* NSDate+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F8077DC5736037EAB1F5624BB47B71 /* NSDate+Components.m */; };
+		184D4E68FCEB347DA4EF9405A1281A08 /* NSCalendar+Juncture.m in Sources */ = {isa = PBXBuildFile; fileRef = 14937800DFB1E9136EF273B316ACD286 /* NSCalendar+Juncture.m */; };
+		19524E1DE40A0415E20332EF54867765 /* Pods-Sefirah-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4CEC0E620AEF8C796F597EB21FBFD4 /* Pods-Sefirah-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19E099EFA4A6CF70932F8E88B91AE1C2 /* KCJewishCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DC4220E608D66013A026874DC051 /* KCJewishCalendar.m */; };
+		1AF92C577D9F96C5D1B0C9EC545F5AC1 /* NSCalendar+Ranges.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CEB7E6463CFFAD3A3E7C195813825 /* NSCalendar+Ranges.m */; };
+		1CC10DB0223AEB10F3BEDCDD27EE0C03 /* KCDaf.h in Headers */ = {isa = PBXBuildFile; fileRef = C2137EA6F4F4016868E68EE40B8BB5B4 /* KCDaf.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DAC31823B5C90823737D823AF04BA71 /* KCSunriseAndSunsetCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0C0F431BE80E537A8CE4CC4CF5F39 /* KCSunriseAndSunsetCalculator.m */; };
+		1DF6637AA14EE2BED455578524744AE8 /* SugarRecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FABE6B3F756FFF9602CE3CB52E493F /* SugarRecord-dummy.m */; };
+		209D28F3A25105593EBFC3C50AD43D46 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C485ABCF48102E2B722E43E852487E89 /* Error.swift */; };
+		22EBCEC29D597710DB7025E9957CBE35 /* NSCalendar+DateComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31570FE3D63CD919AC23369265098 /* NSCalendar+DateComparison.m */; };
+		28B58CAB049E87776E5FD7E77B785A35 /* KCSefiratHaomerCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A66CE3CD285CA2F39639761EA52784FF /* KCSefiratHaomerCalculator.m */; };
+		28F6BFEA3F2EC7924ED890E2E122E2A2 /* KCGeoLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 160049A7FBC9D71B61D7B49EE71390B7 /* KCGeoLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29612212D5678B2FA3D00135A3C55A3B /* NSCalendar+DateManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B96E63A80EEEB95BD68A6F31512B0B4D /* NSCalendar+DateManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AF26A3FD0FC8792772A07404BADFB69 /* KDCircularProgress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17632C128C9A3A54A5D7D0E488DAE187 /* KDCircularProgress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BE1FD8363D2B53FD414A35D4AB78238 /* Pods-Sefirah WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25D1BB997FEEA96E2D8EDF725CFB27AC /* Pods-Sefirah WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CB0B75D81A06D3E39DE7EEAF1D940D1 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DBD81842EF514F7107ADD056C7C36 /* Options.swift */; };
+		2CB5C89DF0C77BE31E46969F89C9E153 /* MBCalendarCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = C5169C6CD4E4CF311D434C6A6932CBCB /* MBCalendarCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DE344BCDCDA866D8890629AC6214C70 /* NSCalendar+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = F750C79FB680684471E3BD87497A4DEF /* NSCalendar+Components.m */; };
+		2F6C88F383B5DA3AA8B0652A74C74E10 /* KCBearing.h in Headers */ = {isa = PBXBuildFile; fileRef = 947BD54438DC43A6680AA182FE51A26E /* KCBearing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FFE52E2D721AC489426ED95B0390AB2 /* NSCalendar+Ranges.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CEB7E6463CFFAD3A3E7C195813825 /* NSCalendar+Ranges.m */; };
+		32A9F34594F737D833E24A34BB59795E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */; };
+		3439254F455A577E2E7E7B0938BDB2BE /* SugarRecord-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5774BA26399162CD392B350569F55A5 /* SugarRecord-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38288CC76CD2E08C95688F55BFA09E85 /* NSDate+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 890928FFB76F8CD6FF0DAA609F6EC139 /* NSDate+Description.m */; };
+		3981322CA81B96A730443D33F0474CED /* KCHebrewYear.h in Headers */ = {isa = PBXBuildFile; fileRef = 1285794D5356552EBAA546408166D92F /* KCHebrewYear.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A3F214E088A662CAA683B3FE366D2E2 /* KCDafYomiCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A13DB033D187C85068C9080CB61F69 /* KCDafYomiCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A489B92EF8A9AA29250174F3FAAD1B0 /* KCParasha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E48F47EAF357C0C64BD139E0B13FB4E /* KCParasha.m */; };
+		3A7A17E401EAF03F66C5785C7E1283C3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C270CD2A22CC02B069D0B732B937FCC /* Result.swift */; };
+		3F91E230A636C2B7A2525F635986F4FD /* KCAstronomical.h in Headers */ = {isa = PBXBuildFile; fileRef = FD205224A4F7B9B994B09246C9F23C40 /* KCAstronomical.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40B7274B2BFAD93A2109E38A0C8EFDC0 /* KCSunriseAndSunsetCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = BADB6C2A2C061A4E0DF604DF702DDD38 /* KCSunriseAndSunsetCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4236A057F9891F443D293E275711FA68 /* KCSefiratHaomerCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A66CE3CD285CA2F39639761EA52784FF /* KCSefiratHaomerCalculator.m */; };
+		43EC3A0537C32B421787CBFE8FBB0EC6 /* KCZmanimCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB0DE52835E6C945DB921C8C38A7B7 /* KCZmanimCalendar.m */; };
+		45032D2CC8A762749452697E93A47F5E /* NSDate+ConvenientDates.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B19FDBBDCCA9820A3D93B59B342EA60 /* NSDate+ConvenientDates.m */; };
+		454193BFCDD21C0D042716752A517FDC /* NSCalendar+Ranges.h in Headers */ = {isa = PBXBuildFile; fileRef = B83CB3093F67A4C5E7ECC86ABFF85357 /* NSCalendar+Ranges.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		464C26C1F892286FF2026387A72234B2 /* NSCalendar+hebrewYearTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3149DEDF8A996EF39FFB299384B9C356 /* NSCalendar+hebrewYearTypes.m */; };
+		470DD44D8F1184ACD41784EC3CAF05A0 /* KCZenith.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EBB486E724C236110399101D490422 /* KCZenith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		488E434D0AE52A6EBB9E1FC59062747C /* KCZmanimCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = C8661A251D1B5D2EDE6B696540C24589 /* KCZmanimCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49D1F7753DB3A3FC446A24DE5D67F11A /* KCZmanimCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = C8661A251D1B5D2EDE6B696540C24589 /* KCZmanimCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AFE9C456795B9E16901C3963BD92AB7 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812523E0955167D3AC86916414A7EBA /* Requestable.swift */; };
+		4D8C105AC5F3CFA28510C731EFBB9EB8 /* KCJewishCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF54DC4220E608D66013A026874DC051 /* KCJewishCalendar.m */; };
+		52C1135E59661A18854A9BF3A9144B69 /* KCAstronomicalCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B124ECBBC4E11D01901B7983384F4F /* KCAstronomicalCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		577ED4EC572E11CC219320CF492E3532 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589823B078E597309A65E0BC0680922E /* ResultType.swift */; };
+		5A6325D11DD588876552DD4A15D05BA1 /* KCParashatHashavuaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 393161D3FD25C9C41072EA806FB7BED7 /* KCParashatHashavuaCalculator.m */; };
+		5E04E77E31A955FDCC2013FE0C83DAB5 /* trigonometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1650A4C6F6924CB5BA9D92AAAB19A7 /* trigonometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F358D28CF9EE773C0EB23A7A760D587 /* KCSunriseAndSunsetCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0C0F431BE80E537A8CE4CC4CF5F39 /* KCSunriseAndSunsetCalculator.m */; };
+		6216987541D6C08CCF13940601043053 /* KDCircularProgress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF24EAC1B165671E95A027A428665444 /* KDCircularProgress-dummy.m */; };
+		6459BE9AF792035C1C193670F8DE6E45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECF8D9C0FCFB859B28724DA1831A38 /* Foundation.framework */; };
+		6555E287B6DB413C489A82A42BAFEEC1 /* Result-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D173966A201E79670AD26527AE19B432 /* Result-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		659B4C97CE5B99DAC19FDAA56D1C6989 /* KCJewishHoliday.h in Headers */ = {isa = PBXBuildFile; fileRef = 95FA47E5694C8E49738006D440E196A7 /* KCJewishHoliday.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6603EAF9C51DC6A97B8EC62A3406DBD3 /* KCSunriseAndSunsetCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = BADB6C2A2C061A4E0DF604DF702DDD38 /* KCSunriseAndSunsetCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66860CC1F3C32EFB8A725F176D59144E /* NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0635BA54A945A2D306533E72FD1E1B68 /* NSManagedObject.swift */; };
+		671D1BA10FB6A3B766CB6147B534A65D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */; };
+		67B0518D1EB97F4A2958CF06F39B7485 /* NSCalendar+DateComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = E753A8DBD197D3363EC27CEBD4BA5218 /* NSCalendar+DateComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67F65F909EF2966FBEE7D12D343D143C /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21C454AC6BEFA58D79F522E1763B50 /* NSManagedObjectContext.swift */; };
+		694F759E1ACBAB7A46CAB1420098646B /* KCSefiraFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DAE1A66EC84E4CE53EF5C2D90B4952C /* KCSefiraFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A34A1A1AB295CB183B75D18CE7A62B7 /* KCHebrewYear.h in Headers */ = {isa = PBXBuildFile; fileRef = 1285794D5356552EBAA546408166D92F /* KCHebrewYear.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C472B3611131F9D064FE0A5B4374F64 /* NSDate+ConvenientDates.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B19FDBBDCCA9820A3D93B59B342EA60 /* NSDate+ConvenientDates.m */; };
+		6DF87E10F0AA45B000B8772C2E0B6016 /* KCJewishHoliday.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E21C0EA6D9C65F0B00C22559394844 /* KCJewishHoliday.m */; };
+		6FBEE2CB3AF8D932170B7A51EF4C465D /* NSDate+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 890928FFB76F8CD6FF0DAA609F6EC139 /* NSDate+Description.m */; };
+		745600DFFFC390F57C78EDEC9754FC83 /* NSSortDescriptorConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F807BFB0D4F68B65912CDB65F5090D /* NSSortDescriptorConvertible.swift */; };
+		75201BF6F74955488607D69F77D15B1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */; };
+		77AE35A30ED1D3D15263FBB10916C331 /* NSDateComponents+AllComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = C504D0FE8B6D8F32705163B57EF2C815 /* NSDateComponents+AllComponents.m */; };
+		77EB41D3AED9BBB3E7AD842E7333A7F9 /* KCDafYomiCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 06A13DB033D187C85068C9080CB61F69 /* KCDafYomiCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		798D6D6C8C0EB7D3019B116D0772C246 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7F89555B7484509E0C41CA26FB5C2 /* NSCalendar+DateManipulation.m */; };
+		80587ACF8616FE93F337A85A03457E61 /* KCJewishHoliday.h in Headers */ = {isa = PBXBuildFile; fileRef = 95FA47E5694C8E49738006D440E196A7 /* KCJewishHoliday.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81BD4C594480983A807F9E5CB36E1B54 /* NSDate+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = FDBEA1BDA40030BBBA37F9273D89B0A4 /* NSDate+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		836F023C8BFD909FBBD2EA498B87A57C /* KCSefiratHaomerCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = FD98F0C5B63840BF01B094721FA6763E /* KCSefiratHaomerCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		838D8E49B5E37AEF99C04DB1FC15354F /* NSDate+Description.h in Headers */ = {isa = PBXBuildFile; fileRef = 835410D338EB1AA1DD2149FF7CEF99FD /* NSDate+Description.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8417C9A1241A6A99E215A097DA950683 /* NSCalendar+DateManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B96E63A80EEEB95BD68A6F31512B0B4D /* NSCalendar+DateManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8559A0D16C4C3A882B363CEA6BFD6221 /* KCSefiraFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DAE1A66EC84E4CE53EF5C2D90B4952C /* KCSefiraFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8880ED67C0093A5E4C427C902EAE66C3 /* KCAstronomicalCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F84611389900D989DEB459AF146AE4C5 /* KCAstronomicalCalendar.m */; };
+		88B121B25F1D96ABD624349840DEF23D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A123F6D0BD0AAD3D15E2FF0297CA9182 /* Result.framework */; };
+		8A2A3C3F0CF758C2047A6F53DA87FFBD /* NSCalendar+hebrewYearTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 85418D18D426DF9C17B23172AD8D6CDB /* NSCalendar+hebrewYearTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BBFDA8C90894FD635F6578D3A243BA2 /* KCGeoLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 160049A7FBC9D71B61D7B49EE71390B7 /* KCGeoLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E12534164E6284986EAA5EC5B7796BA /* KCConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5069D38C535EFCE9E67D6E1EC8CE980A /* KCConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E2AD71418ACBD251BB8FE636A2ACB94 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB2FEA50E51FBB645899130347A02D /* Entity.swift */; };
+		8ECEB2E8A1B8745521052A3468573D2C /* NSCalendar+DateComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = E753A8DBD197D3363EC27CEBD4BA5218 /* NSCalendar+DateComparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		913293FB4ADAE354F610EB067BEDF2F4 /* KCComplexZmanimCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5802E7F31C484C0D082B0D894A003BE2 /* KCComplexZmanimCalendar.m */; };
+		9267FE2626556CBBB2BBD6064D563944 /* KCAstronomicalCalendar+DateManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B73FDE9527CA2C161592ABD62DB6289B /* KCAstronomicalCalendar+DateManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		951A0C08FA7F70A82ADBB62BECDBFE55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */; };
+		96DBAEE130796C7FCA11B375BAAB75FA /* KCAstronomicalCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = F84611389900D989DEB459AF146AE4C5 /* KCAstronomicalCalendar.m */; };
+		9C956A1D46AD96762345FE201F4A129F /* KCDafYomiCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2880C7F3D2D3C05E3BF6C18FBD6902 /* KCDafYomiCalculator.m */; };
+		9DE0D82F170CF756CC276BBDBC63B41C /* Pods-Sefirah-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C23649B33237D672DA0906CB4E9FD26E /* Pods-Sefirah-dummy.m */; };
+		9F84961FB9777DB3D603922D26DFB703 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6FB1833D4CB83C24E9F15F1231A5A3 /* KDCircularProgress.swift */; };
+		A00EA64259B925FDCC122E8834F5C4BD /* KCSunCalculationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2ABA892BBAE35E44EBCC005686F7D2 /* KCSunCalculationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5E7ABFF00322042003CE0E6928294CD /* NSCalendar+Juncture.m in Sources */ = {isa = PBXBuildFile; fileRef = 14937800DFB1E9136EF273B316ACD286 /* NSCalendar+Juncture.m */; };
+		A62A37AF69E0380EB466E3AB256DCEF2 /* KCTractates.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FAED0E56283C39D6A23FBBA649A3DA /* KCTractates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6E295FD13B6148639A09147EDC447AF /* NSCalendar+hebrewYearTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3149DEDF8A996EF39FFB299384B9C356 /* NSCalendar+hebrewYearTypes.m */; };
+		A9E625746EC38BF1845A96666AFBB2F3 /* KCGeoLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C27F2AAC8CF254B7526030540A51A41 /* KCGeoLocation.m */; };
+		AB206918B46C7C99D991A6E262FDA56A /* KCTractates.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FAED0E56283C39D6A23FBBA649A3DA /* KCTractates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB271B71EA8394AAB1404D3BF94C8F61 /* KCJewishCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B566EBFEF8614A99A6A3A58B2967CD4 /* KCJewishCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADEEEA15CBFB8795F7A671BF4A9F18DF /* KCZenithExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 329F59228453001AEABE3EBF73DADE07 /* KCZenithExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE33237D783707627A622479BE07CF57 /* NSDate+ConvenientDates.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EF2513AA01E0585AE6B2D7CE413232 /* NSDate+ConvenientDates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFE392F64E9D8A0C2AA815747B0A38E8 /* KCComplexZmanimCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3399FB0463632F04F8E254F3B4C14F /* KCComplexZmanimCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AFEC153C84ECF4338EB7DB2E35B91BB4 /* KCDaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 9093CA15C88BAD4A717917698231C7E7 /* KCDaf.m */; };
+		B024597F27398A40A1F6775AE3546903 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E84048009B15FB4958102A40E10B461 /* CoreData.framework */; };
+		B132F27E4CE987C1130F84E6CCA2E8B9 /* KCJewishHolidays.h in Headers */ = {isa = PBXBuildFile; fileRef = 0339A335416EB35B776CBF3D0FC15216 /* KCJewishHolidays.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1FAAA92267A9B33288CE79D7CBC76D8 /* KCComplexZmanimCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B3399FB0463632F04F8E254F3B4C14F /* KCComplexZmanimCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B278451BB2363F897C299F6575BC52C9 /* KCJewishCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B566EBFEF8614A99A6A3A58B2967CD4 /* KCJewishCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B318792E82F4F6CDF3DDFB0F68E861D6 /* KCDafYomiCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2880C7F3D2D3C05E3BF6C18FBD6902 /* KCDafYomiCalculator.m */; };
+		B46AD9808DD2121824455EF35E5E346D /* NSDate+ConvenientDates.h in Headers */ = {isa = PBXBuildFile; fileRef = F3EF2513AA01E0585AE6B2D7CE413232 /* NSDate+ConvenientDates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B553A7B3547CACC6AF5F7C652D34C75A /* KCSunCalculationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2ABA892BBAE35E44EBCC005686F7D2 /* KCSunCalculationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7034AAAA9E9869744DEB3694D6DEB9B /* trigonometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1650A4C6F6924CB5BA9D92AAAB19A7 /* trigonometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8E711EE1D2F850226BF9A914D53070F /* KCParasha.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E48F47EAF357C0C64BD139E0B13FB4E /* KCParasha.m */; };
+		B8EA93C0865CAEC8EE4E63A61F8965D9 /* KCComplexZmanimCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5802E7F31C484C0D082B0D894A003BE2 /* KCComplexZmanimCalendar.m */; };
+		B9990C4D051050755C85BAC02BFAF759 /* KCZman.m in Sources */ = {isa = PBXBuildFile; fileRef = DEACC9FD40F952EF5C90A30BB89817B2 /* KCZman.m */; };
+		C0C9F7F6E7E4FF0C3890ECCAED806118 /* NSCalendar+hebrewYearTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 85418D18D426DF9C17B23172AD8D6CDB /* NSCalendar+hebrewYearTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C260A4C4C2AFAA0BBC7A5E7506CBDD18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5ECF8D9C0FCFB859B28724DA1831A38 /* Foundation.framework */; };
+		C31C9277AC41175C9B1057E10FBAE6C6 /* NSCalendar+Juncture.h in Headers */ = {isa = PBXBuildFile; fileRef = 882512CBA174414AB76B78DD66F80F2C /* NSCalendar+Juncture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4BEC320627B6BA7AE981E2700F70707 /* KCParashatHashavuaCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E77C41847D593B3225CA01A044725B1 /* KCParashatHashavuaCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C563D7EF1C3CCCAF84CA5B96989A258C /* NSDate+Description.h in Headers */ = {isa = PBXBuildFile; fileRef = 835410D338EB1AA1DD2149FF7CEF99FD /* NSDate+Description.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5B44EEE66F20B05352EBEA70CCEBEAF /* KCJewishHolidays.h in Headers */ = {isa = PBXBuildFile; fileRef = 0339A335416EB35B776CBF3D0FC15216 /* KCJewishHolidays.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5F8DF5D105ACBD7CCA4F1803894ECB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */; };
+		C8413E8EFD43A11D01F331B7BD948CA2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515219FD8C021A00AE5FA2A102793D8C /* Store.swift */; };
+		CAE781BFF96BFEE374BFEF6D57D90C6D /* Pods-Sefirah WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F4C72A96BAF9800F468D221CCA75061 /* Pods-Sefirah WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB05B091CAD0A10F55D9EA65B2EFB30D /* trigonometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CB115F1A7C98931F7E783462AF2E7F /* trigonometry.c */; };
+		CC038A5451F9DFED8CFCE8F6109EA634 /* KCAstronomicalCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E50C91C325F20246A5011E76B10413 /* KCAstronomicalCalendar+DateManipulation.m */; };
+		CC1640453208F801E97B4038AFCB579C /* NSPredicateConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAEF62E0E6F953198FB9D78696DF1C4 /* NSPredicateConvertible.swift */; };
+		CC9938824AA7763F2D4DFC1EA3792D64 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B48C8D8F858205D5A988F6CC440C5E /* Context.swift */; };
+		CD904C9EC5B28F6FEAF48251D5D58A59 /* NSCalendar+Components.h in Headers */ = {isa = PBXBuildFile; fileRef = 1805FE7BF050589F678F572258E4FBCB /* NSCalendar+Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDDF863FE805AB84D75377C365E0FE6C /* KCParasha.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3E1C7A250A001588E1BC674C28D2F5 /* KCParasha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2EA35BA22CB8D6D0E80F85D0D5945BD /* KCParashaReadings.h in Headers */ = {isa = PBXBuildFile; fileRef = 68FBFEAF33F988CF8B5E6F8A9BFD2C2E /* KCParashaReadings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3500C9EE00728DCB6D70A5F434EF1AE /* KosherCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = E0ABDC46919F209C906A67743694D96A /* KosherCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4061FC07C19AD72382860206909541B /* NSDateComponents+AllComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B36904D96B1F9516566ABF85A6D0E0 /* NSDateComponents+AllComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D53E0ABACD37437B866DFFFF850FEFB0 /* KCAstronomicalCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D05E6A5F231477D36CD87093B6754B /* KCAstronomicalCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D780D534E9682A293A2D8311FC53776D /* KCAstronomicalCalendar+DateManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = B73FDE9527CA2C161592ABD62DB6289B /* KCAstronomicalCalendar+DateManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8E83D49574AF95696A59925F58DE339 /* NSCalendar+Ranges.h in Headers */ = {isa = PBXBuildFile; fileRef = B83CB3093F67A4C5E7ECC86ABFF85357 /* NSCalendar+Ranges.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D995AA39247923FE99D4C1456747C59C /* KCSefiraFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F070DEEAA8EDF72569B3A56FCDE424 /* KCSefiraFormatter.m */; };
+		DA0405CD6AAFB317490B83714E73C96D /* KCConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 5069D38C535EFCE9E67D6E1EC8CE980A /* KCConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAF6F6C0476650AF52DADEFB3830847C /* KCAstronomical.h in Headers */ = {isa = PBXBuildFile; fileRef = FD205224A4F7B9B994B09246C9F23C40 /* KCAstronomical.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCA216A6D700BF06E9DF85F07A0C325E /* KosherCocoa-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B7784DAAC8B01074D74178921D7C99 /* KosherCocoa-watchOS-dummy.m */; };
+		DE4CAE08A3F0F938DE1198C2098AE954 /* CoreDataDefaultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F7A8F3A853A3BF4995CDD377BDF196 /* CoreDataDefaultStorage.swift */; };
+		DE4F16764D34A8B0E399E5B70FCBDC24 /* KCJewishHoliday.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E21C0EA6D9C65F0B00C22559394844 /* KCJewishHoliday.m */; };
+		E0149A7F7C3CC043CEB37A4E53321C27 /* KCAstronomicalCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = D1D05E6A5F231477D36CD87093B6754B /* KCAstronomicalCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E01CD46702318525846009F05C226BE2 /* trigonometry.c in Sources */ = {isa = PBXBuildFile; fileRef = 88CB115F1A7C98931F7E783462AF2E7F /* trigonometry.c */; };
+		E10995DEE0EC71873D75EBC2D8A88681 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC610AC4C83085CF6F3BA4E72717FF6 /* Request.swift */; };
+		E4D74C3E28CDCB7650F5595824C701C4 /* KCZenith.h in Headers */ = {isa = PBXBuildFile; fileRef = 31EBB486E724C236110399101D490422 /* KCZenith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56C2D771C7970ABF25C6C9EFAB18644 /* MBCalendarCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = C5169C6CD4E4CF311D434C6A6932CBCB /* MBCalendarCategories.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E97DCAB99E54D6BAFABEF9659A436BD6 /* KosherCocoa-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A46B5BADEBE9AED1A31A44464A7476FF /* KosherCocoa-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAE5787158B1A7582B1D1FA81B8C8824 /* KCZman.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B9563694AC148E4E57A49BF5533561 /* KCZman.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC778E73AC2C945E6C13B423CAE362B9 /* NSCalendar+DateManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F7F89555B7484509E0C41CA26FB5C2 /* NSCalendar+DateManipulation.m */; };
+		ECDD86A81C8CAF5CADCBA5A4782A7A83 /* KCParashaReadings.h in Headers */ = {isa = PBXBuildFile; fileRef = 68FBFEAF33F988CF8B5E6F8A9BFD2C2E /* KCParashaReadings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE56A6B3225A65C3220E30BFC9A267F1 /* KCParasha.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D3E1C7A250A001588E1BC674C28D2F5 /* KCParasha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2338E0F202E966162E00E736DE5B8AC /* KCBearing.h in Headers */ = {isa = PBXBuildFile; fileRef = 947BD54438DC43A6680AA182FE51A26E /* KCBearing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F249C237D52392C8A70434B605D306CD /* Pods-Sefirah WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB0031C6F633005079EEB5F9FC1670 /* Pods-Sefirah WatchKit App-dummy.m */; };
+		F381CF1AB31C3784A787A3772EE01124 /* KCZenithExtended.h in Headers */ = {isa = PBXBuildFile; fileRef = 329F59228453001AEABE3EBF73DADE07 /* KCZenithExtended.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5EE06EEAFE19902493DA5B8303226D0 /* KCZman.m in Sources */ = {isa = PBXBuildFile; fileRef = DEACC9FD40F952EF5C90A30BB89817B2 /* KCZman.m */; };
+		F831735B54323236C838F083A30D6E04 /* KCSefiratHaomerCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = FD98F0C5B63840BF01B094721FA6763E /* KCSefiratHaomerCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F936F1AF587F6FDF324297AF597B4907 /* Pods-Sefirah WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73EA25D0F00590E5E9D9D305A818A3ED /* Pods-Sefirah WatchKit Extension-dummy.m */; };
+		FA17B4C6582E1559A69388DF8A72CF8A /* KCAstronomicalCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B124ECBBC4E11D01901B7983384F4F /* KCAstronomicalCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA2C0E07AC2EC57A8A36A7FD631D2FFD /* Result-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D335326A0C4A30CF49820A6CB98E75 /* Result-dummy.m */; };
+		FA4A5A8464DE5897B845B7956254A6D0 /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E433D0147406513E71456D9E85C22 /* ObjectModel.swift */; };
+		FA6BD8050A57C3889C2DF2A79E6A070C /* NSManagedObjectMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EA86372BB17CE54F23036159F68A3 /* NSManagedObjectMemoryContext.swift */; };
+		FB473B2C48E29B7D1BE4C5F5D9204DB1 /* NSDate+Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F8077DC5736037EAB1F5624BB47B71 /* NSDate+Components.m */; };
+		FC26C6B1BC7B70DEC5C5B777692B134F /* ContextParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1F5D8555233E514A94218277C0E51 /* ContextParent.swift */; };
+		FCF2C0D8EF9B27795E8D8448226710EF /* KCDaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 9093CA15C88BAD4A717917698231C7E7 /* KCDaf.m */; };
+		FD1DE6DD22E795DE16C7D204C61AD75E /* KCParashatHashavuaCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E77C41847D593B3225CA01A044725B1 /* KCParashatHashavuaCalculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD326AEA16E35EC93D448EC44F2AFDA6 /* NSDateComponents+AllComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 84B36904D96B1F9516566ABF85A6D0E0 /* NSDateComponents+AllComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDC7B752704DB94DED7CA9AE6E91F00D /* KCZmanimCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB0DE52835E6C945DB921C8C38A7B7 /* KCZmanimCalendar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A58325B0B2907DCA3B380668D483740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 274969C6BA5CA1778D8D93DBC86AA455;
+			remoteInfo = Result;
+		};
+		36DE5DB63F23023997D008F1BC2FC3EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 274969C6BA5CA1778D8D93DBC86AA455;
+			remoteInfo = Result;
+		};
+		4F059C6224655A877753CDACEA4BEBBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDF243BD4A56CF1CE2F1074FEA9AD773;
+			remoteInfo = "KosherCocoa-iOS";
+		};
+		6D8570425B03102CB6FE4959F5CE1FDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EF23D366DB583D27EE8E43BE466A983;
+			remoteInfo = "KosherCocoa-watchOS";
+		};
+		8918F7A2FA7E102611CA87E2DE8E107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9558B32FB980ED0E42BF1BD3AEC626CE;
+			remoteInfo = KDCircularProgress;
+		};
+		AD13FB39C33BB55980AEC373278F2E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F19AF4254A4A3E1909A1FF938FC3D18C;
+			remoteInfo = SugarRecord;
+		};
+		BC41230B6CFDF29E4DF6FAA651D1062E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EF23D366DB583D27EE8E43BE466A983;
+			remoteInfo = "KosherCocoa-watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		001D2D2E6345C5F3BCE8EC6EBB1A51F5 /* Pods-Sefirah.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Sefirah.modulemap"; sourceTree = "<group>"; };
+		0339A335416EB35B776CBF3D0FC15216 /* KCJewishHolidays.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCJewishHolidays.h; path = KosherCocoa/Library/Headers/KCJewishHolidays.h; sourceTree = "<group>"; };
+		041293D374C360EE9E8D6569BFD54EEF /* KosherCocoa-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KosherCocoa-iOS-prefix.pch"; sourceTree = "<group>"; };
+		048EA86372BB17CE54F23036159F68A3 /* NSManagedObjectMemoryContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSManagedObjectMemoryContext.swift; path = SugarRecord/Source/CoreData/Extensions/NSManagedObjectMemoryContext.swift; sourceTree = "<group>"; };
+		05A2274BFC586D955B64B367F75BDF36 /* Pods-Sefirah WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sefirah WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		0635BA54A945A2D306533E72FD1E1B68 /* NSManagedObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSManagedObject.swift; path = SugarRecord/Source/CoreData/Extensions/NSManagedObject.swift; sourceTree = "<group>"; };
+		06A13DB033D187C85068C9080CB61F69 /* KCDafYomiCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCDafYomiCalculator.h; path = "KosherCocoa/Library/Core/Calendar/Daf Yomi/KCDafYomiCalculator.h"; sourceTree = "<group>"; };
+		07644B5887809FDF8BE27DAEA53D2A0D /* SugarRecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SugarRecord.xcconfig; sourceTree = "<group>"; };
+		0A6FB1833D4CB83C24E9F15F1231A5A3 /* KDCircularProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDCircularProgress.swift; path = KDCircularProgress/KDCircularProgress.swift; sourceTree = "<group>"; };
+		0B29E8463C9A5003D1A99736CBC53490 /* Pods-Sefirah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah.debug.xcconfig"; sourceTree = "<group>"; };
+		11672F87D64786657EE0114181254808 /* Pods-Sefirah WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sefirah WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11C489618383A1109B55010CC6294ED3 /* Pods-Sefirah WatchKit Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah WatchKit Extension-frameworks.sh"; sourceTree = "<group>"; };
+		1285794D5356552EBAA546408166D92F /* KCHebrewYear.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCHebrewYear.h; path = KosherCocoa/Library/Headers/KCHebrewYear.h; sourceTree = "<group>"; };
+		12B7784DAAC8B01074D74178921D7C99 /* KosherCocoa-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KosherCocoa-watchOS-dummy.m"; path = "../KosherCocoa-watchOS/KosherCocoa-watchOS-dummy.m"; sourceTree = "<group>"; };
+		13EA5BF8506909A49895D9C595DE7459 /* KDCircularProgress.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KDCircularProgress.xcconfig; sourceTree = "<group>"; };
+		14937800DFB1E9136EF273B316ACD286 /* NSCalendar+Juncture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+Juncture.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Juncture.m"; sourceTree = "<group>"; };
+		15E5513B01B005519A1DD3032DBCB811 /* Pods-Sefirah WatchKit App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah WatchKit App-frameworks.sh"; sourceTree = "<group>"; };
+		160049A7FBC9D71B61D7B49EE71390B7 /* KCGeoLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCGeoLocation.h; path = KosherCocoa/Library/Core/Solar/KCGeoLocation.h; sourceTree = "<group>"; };
+		17632C128C9A3A54A5D7D0E488DAE187 /* KDCircularProgress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDCircularProgress-umbrella.h"; sourceTree = "<group>"; };
+		17F070DEEAA8EDF72569B3A56FCDE424 /* KCSefiraFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCSefiraFormatter.m; path = KosherCocoa/Library/Core/Calendar/Sefira/KCSefiraFormatter.m; sourceTree = "<group>"; };
+		1805FE7BF050589F678F572258E4FBCB /* NSCalendar+Components.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+Components.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Components.h"; sourceTree = "<group>"; };
+		1C27F2AAC8CF254B7526030540A51A41 /* KCGeoLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCGeoLocation.m; path = KosherCocoa/Library/Core/Solar/KCGeoLocation.m; sourceTree = "<group>"; };
+		1F2880C7F3D2D3C05E3BF6C18FBD6902 /* KCDafYomiCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCDafYomiCalculator.m; path = "KosherCocoa/Library/Core/Calendar/Daf Yomi/KCDafYomiCalculator.m"; sourceTree = "<group>"; };
+		21F7A8F3A853A3BF4995CDD377BDF196 /* CoreDataDefaultStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataDefaultStorage.swift; path = SugarRecord/Source/CoreData/Storages/CoreDataDefaultStorage.swift; sourceTree = "<group>"; };
+		25D1BB997FEEA96E2D8EDF725CFB27AC /* Pods-Sefirah WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sefirah WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		2854103C9247CEF0CCC5DD578968B55B /* Pods_Sefirah_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BD970D2D4032C42EB3914CA0900CD4D /* KosherCocoa-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "KosherCocoa-watchOS.modulemap"; path = "../KosherCocoa-watchOS/KosherCocoa-watchOS.modulemap"; sourceTree = "<group>"; };
+		2C270CD2A22CC02B069D0B732B937FCC /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Result/Result.swift; sourceTree = "<group>"; };
+		2D3E1C7A250A001588E1BC674C28D2F5 /* KCParasha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCParasha.h; path = KosherCocoa/Library/Core/Calendar/Parasha/KCParasha.h; sourceTree = "<group>"; };
+		2F0D69796E3DA0B2F1912694F25264B3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FAEF62E0E6F953198FB9D78696DF1C4 /* NSPredicateConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSPredicateConvertible.swift; path = SugarRecord/Source/Foundation/Protocols/NSPredicateConvertible.swift; sourceTree = "<group>"; };
+		2FDD05F819F537A885028D9C490A30F4 /* Pods-Sefirah WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sefirah WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		3149DEDF8A996EF39FFB299384B9C356 /* NSCalendar+hebrewYearTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+hebrewYearTypes.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+hebrewYearTypes.m"; sourceTree = "<group>"; };
+		31EBB486E724C236110399101D490422 /* KCZenith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCZenith.h; path = KosherCocoa/Library/Headers/KCZenith.h; sourceTree = "<group>"; };
+		329F59228453001AEABE3EBF73DADE07 /* KCZenithExtended.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCZenithExtended.h; path = KosherCocoa/Library/Headers/KCZenithExtended.h; sourceTree = "<group>"; };
+		36DB05BD09B5CA17E11248CAE64B6F3C /* Pods-Sefirah WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		380C0D32260F82A16EA85AC0DC4E9332 /* Pods-Sefirah-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah-frameworks.sh"; sourceTree = "<group>"; };
+		393161D3FD25C9C41072EA806FB7BED7 /* KCParashatHashavuaCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCParashatHashavuaCalculator.m; path = KosherCocoa/Library/Core/Calendar/Parasha/KCParashatHashavuaCalculator.m; sourceTree = "<group>"; };
+		39B48C8D8F858205D5A988F6CC440C5E /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = SugarRecord/Source/Foundation/Protocols/Context.swift; sourceTree = "<group>"; };
+		39C98953C004CFC7BA2A21AD25701494 /* KosherCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KosherCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B19FDBBDCCA9820A3D93B59B342EA60 /* NSDate+ConvenientDates.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+ConvenientDates.m"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+ConvenientDates.m"; sourceTree = "<group>"; };
+		3B3399FB0463632F04F8E254F3B4C14F /* KCComplexZmanimCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCComplexZmanimCalendar.h; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCComplexZmanimCalendar.h; sourceTree = "<group>"; };
+		3F9CEB7E6463CFFAD3A3E7C195813825 /* NSCalendar+Ranges.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+Ranges.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Ranges.m"; sourceTree = "<group>"; };
+		44E50C91C325F20246A5011E76B10413 /* KCAstronomicalCalendar+DateManipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KCAstronomicalCalendar+DateManipulation.m"; path = "KosherCocoa/Library/Categories/KosherCocoa/KCAstronomicalCalendar+DateManipulation.m"; sourceTree = "<group>"; };
+		45401B057252A924C7353D97FF50CF36 /* Pods-Sefirah WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sefirah WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		45CCB90131C6471ED13680F5EF55E4CE /* KosherCocoa-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KosherCocoa-watchOS-prefix.pch"; path = "../KosherCocoa-watchOS/KosherCocoa-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		488941537E70C3331A8C084271ECCEF4 /* Pods-Sefirah WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Sefirah WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		4A28B31873FCDB521276DC7A993DFE9A /* KDCircularProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KDCircularProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A5DBD81842EF514F7107ADD056C7C36 /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = SugarRecord/Source/CoreData/Entities/Options.swift; sourceTree = "<group>"; };
+		4B9D3F2704FCD22EDA92EC358B93D565 /* KosherCocoa-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "KosherCocoa-iOS.modulemap"; sourceTree = "<group>"; };
+		4BFB0031C6F633005079EEB5F9FC1670 /* Pods-Sefirah WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sefirah WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		4C2ABA892BBAE35E44EBCC005686F7D2 /* KCSunCalculationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCSunCalculationTypes.h; path = KosherCocoa/Library/Headers/KCSunCalculationTypes.h; sourceTree = "<group>"; };
+		4E48F47EAF357C0C64BD139E0B13FB4E /* KCParasha.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCParasha.m; path = KosherCocoa/Library/Core/Calendar/Parasha/KCParasha.m; sourceTree = "<group>"; };
+		4E84048009B15FB4958102A40E10B461 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		5069D38C535EFCE9E67D6E1EC8CE980A /* KCConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCConstants.h; path = KosherCocoa/Library/Headers/KCConstants.h; sourceTree = "<group>"; };
+		515219FD8C021A00AE5FA2A102793D8C /* Store.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Store.swift; path = SugarRecord/Source/CoreData/Entities/Store.swift; sourceTree = "<group>"; };
+		529136F9D4EDED86B0AAE0E3066105F5 /* Result.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Result.modulemap; sourceTree = "<group>"; };
+		54F8077DC5736037EAB1F5624BB47B71 /* NSDate+Components.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Components.m"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+Components.m"; sourceTree = "<group>"; };
+		55D7362C204D778FA0A6AB651700130A /* KosherCocoa-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "KosherCocoa-watchOS.xcconfig"; path = "../KosherCocoa-watchOS/KosherCocoa-watchOS.xcconfig"; sourceTree = "<group>"; };
+		5802E7F31C484C0D082B0D894A003BE2 /* KCComplexZmanimCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCComplexZmanimCalendar.m; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCComplexZmanimCalendar.m; sourceTree = "<group>"; };
+		589823B078E597309A65E0BC0680922E /* ResultType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultType.swift; path = Result/ResultType.swift; sourceTree = "<group>"; };
+		5B62933160FEAB12D96180CC4C7CBCB7 /* Pods-Sefirah-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah-resources.sh"; sourceTree = "<group>"; };
+		6015BE3D07B9E15882AA0C5E7536E7BF /* Pods-Sefirah WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Sefirah WatchKit App.modulemap"; sourceTree = "<group>"; };
+		61D335326A0C4A30CF49820A6CB98E75 /* Result-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Result-dummy.m"; sourceTree = "<group>"; };
+		63F79ACB29FD08463C89D34D1E22AE3A /* KosherCocoa-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "KosherCocoa-iOS.xcconfig"; sourceTree = "<group>"; };
+		65F7F89555B7484509E0C41CA26FB5C2 /* NSCalendar+DateManipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+DateManipulation.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+DateManipulation.m"; sourceTree = "<group>"; };
+		664A3623DC98F1E0517D675EC84E0A27 /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = SugarRecord/Source/Foundation/Entities/Storage.swift; sourceTree = "<group>"; };
+		68FBFEAF33F988CF8B5E6F8A9BFD2C2E /* KCParashaReadings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCParashaReadings.h; path = KosherCocoa/Library/Headers/KCParashaReadings.h; sourceTree = "<group>"; };
+		6B1650A4C6F6924CB5BA9D92AAAB19A7 /* trigonometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = trigonometry.h; path = KosherCocoa/Library/Core/Utilities/trigonometry.h; sourceTree = "<group>"; };
+		6D0A561D189B7D79E2CBD21BF544ACA1 /* KosherCocoa-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KosherCocoa-iOS-umbrella.h"; sourceTree = "<group>"; };
+		6DCE08E65D2413A671FFB3EC5C4B40CD /* Pods-Sefirah-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sefirah-acknowledgements.plist"; sourceTree = "<group>"; };
+		6EC610AC4C83085CF6F3BA4E72717FF6 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = SugarRecord/Source/Foundation/Entities/Request.swift; sourceTree = "<group>"; };
+		6F4C72A96BAF9800F468D221CCA75061 /* Pods-Sefirah WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sefirah WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		6FA0C0F431BE80E537A8CE4CC4CF5F39 /* KCSunriseAndSunsetCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCSunriseAndSunsetCalculator.m; path = KosherCocoa/Library/Core/Solar/KCSunriseAndSunsetCalculator.m; sourceTree = "<group>"; };
+		7343B532BA677092EDF65D0531EF18A2 /* Pods-Sefirah WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		73EA25D0F00590E5E9D9D305A818A3ED /* Pods-Sefirah WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sefirah WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		73F807BFB0D4F68B65912CDB65F5090D /* NSSortDescriptorConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSSortDescriptorConvertible.swift; path = SugarRecord/Source/Foundation/Protocols/NSSortDescriptorConvertible.swift; sourceTree = "<group>"; };
+		77E21C0EA6D9C65F0B00C22559394844 /* KCJewishHoliday.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCJewishHoliday.m; path = KosherCocoa/Library/Core/Calendar/Chagim/KCJewishHoliday.m; sourceTree = "<group>"; };
+		792E433D0147406513E71456D9E85C22 /* ObjectModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectModel.swift; path = SugarRecord/Source/CoreData/Entities/ObjectModel.swift; sourceTree = "<group>"; };
+		7CE31570FE3D63CD919AC23369265098 /* NSCalendar+DateComparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+DateComparison.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+DateComparison.m"; sourceTree = "<group>"; };
+		7CE3A09C849761F5B7B97B10FB023EA7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835410D338EB1AA1DD2149FF7CEF99FD /* NSDate+Description.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Description.h"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+Description.h"; sourceTree = "<group>"; };
+		84B36904D96B1F9516566ABF85A6D0E0 /* NSDateComponents+AllComponents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateComponents+AllComponents.h"; path = "KosherCocoa/Library/Categories/Foundation/NSDateComponents/NSDateComponents+AllComponents.h"; sourceTree = "<group>"; };
+		85418D18D426DF9C17B23172AD8D6CDB /* NSCalendar+hebrewYearTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+hebrewYearTypes.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+hebrewYearTypes.h"; sourceTree = "<group>"; };
+		87B4D0408E1A05911377F4A0F2C068C8 /* KosherCocoa-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KosherCocoa-iOS-dummy.m"; sourceTree = "<group>"; };
+		8812523E0955167D3AC86916414A7EBA /* Requestable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Requestable.swift; path = SugarRecord/Source/Foundation/Protocols/Requestable.swift; sourceTree = "<group>"; };
+		882512CBA174414AB76B78DD66F80F2C /* NSCalendar+Juncture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+Juncture.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Juncture.h"; sourceTree = "<group>"; };
+		88B124ECBBC4E11D01901B7983384F4F /* KCAstronomicalCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCAstronomicalCalendar.h; path = KosherCocoa/Library/Core/Solar/KCAstronomicalCalendar.h; sourceTree = "<group>"; };
+		88CB115F1A7C98931F7E783462AF2E7F /* trigonometry.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = trigonometry.c; path = KosherCocoa/Library/Core/Utilities/trigonometry.c; sourceTree = "<group>"; };
+		890928FFB76F8CD6FF0DAA609F6EC139 /* NSDate+Description.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Description.m"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+Description.m"; sourceTree = "<group>"; };
+		8A6E8C3A71C72A3351505ADD21B03A7F /* SugarRecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SugarRecord-prefix.pch"; sourceTree = "<group>"; };
+		8B566EBFEF8614A99A6A3A58B2967CD4 /* KCJewishCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCJewishCalendar.h; path = KosherCocoa/Library/Core/Calendar/Chagim/KCJewishCalendar.h; sourceTree = "<group>"; };
+		8BD57D9E407F3068E6512F0F29402334 /* KDCircularProgress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KDCircularProgress.modulemap; sourceTree = "<group>"; };
+		9093CA15C88BAD4A717917698231C7E7 /* KCDaf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCDaf.m; path = "KosherCocoa/Library/Core/Calendar/Daf Yomi/KCDaf.m"; sourceTree = "<group>"; };
+		9152812510498375619D45BB17FC4B98 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../KosherCocoa-watchOS/Info.plist"; sourceTree = "<group>"; };
+		934806999478CA28ED1560C998151AA3 /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947BD54438DC43A6680AA182FE51A26E /* KCBearing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCBearing.h; path = KosherCocoa/Library/Headers/KCBearing.h; sourceTree = "<group>"; };
+		95FA47E5694C8E49738006D440E196A7 /* KCJewishHoliday.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCJewishHoliday.h; path = KosherCocoa/Library/Core/Calendar/Chagim/KCJewishHoliday.h; sourceTree = "<group>"; };
+		9AAB2FEA50E51FBB645899130347A02D /* Entity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = SugarRecord/Source/Foundation/Protocols/Entity.swift; sourceTree = "<group>"; };
+		9AF76F8F2FC39AFDC40CAD349472E0C4 /* SugarRecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SugarRecord.modulemap; sourceTree = "<group>"; };
+		9D198459F8136271BCAA172512DAD9FC /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DAE1A66EC84E4CE53EF5C2D90B4952C /* KCSefiraFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCSefiraFormatter.h; path = KosherCocoa/Library/Core/Calendar/Sefira/KCSefiraFormatter.h; sourceTree = "<group>"; };
+		9E77C41847D593B3225CA01A044725B1 /* KCParashatHashavuaCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCParashatHashavuaCalculator.h; path = KosherCocoa/Library/Core/Calendar/Parasha/KCParashatHashavuaCalculator.h; sourceTree = "<group>"; };
+		A123F6D0BD0AAD3D15E2FF0297CA9182 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A23C898AADA9E575DA7047DEBBF03F2C /* Result-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-prefix.pch"; sourceTree = "<group>"; };
+		A46B5BADEBE9AED1A31A44464A7476FF /* KosherCocoa-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KosherCocoa-watchOS-umbrella.h"; path = "../KosherCocoa-watchOS/KosherCocoa-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		A477154F1721E2DCDA046B94DC4398C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		A53329C0C419A4E11BB0E8961DA58F4C /* Pods-Sefirah WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Sefirah WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		A56641005E360CE09B64EBB54ABFED15 /* Pods_Sefirah.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5ECF8D9C0FCFB859B28724DA1831A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A66CE3CD285CA2F39639761EA52784FF /* KCSefiratHaomerCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCSefiratHaomerCalculator.m; path = KosherCocoa/Library/Core/Calendar/Sefira/KCSefiratHaomerCalculator.m; sourceTree = "<group>"; };
+		AF54DC4220E608D66013A026874DC051 /* KCJewishCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCJewishCalendar.m; path = KosherCocoa/Library/Core/Calendar/Chagim/KCJewishCalendar.m; sourceTree = "<group>"; };
+		B53BDFA289D85C50008E10C90E3D5F0A /* Pods-Sefirah-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Sefirah-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B73FDE9527CA2C161592ABD62DB6289B /* KCAstronomicalCalendar+DateManipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KCAstronomicalCalendar+DateManipulation.h"; path = "KosherCocoa/Library/Categories/KosherCocoa/KCAstronomicalCalendar+DateManipulation.h"; sourceTree = "<group>"; };
+		B83CB3093F67A4C5E7ECC86ABFF85357 /* NSCalendar+Ranges.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+Ranges.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Ranges.h"; sourceTree = "<group>"; };
+		B96E63A80EEEB95BD68A6F31512B0B4D /* NSCalendar+DateManipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+DateManipulation.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+DateManipulation.h"; sourceTree = "<group>"; };
+		BADB6C2A2C061A4E0DF604DF702DDD38 /* KCSunriseAndSunsetCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCSunriseAndSunsetCalculator.h; path = KosherCocoa/Library/Core/Solar/KCSunriseAndSunsetCalculator.h; sourceTree = "<group>"; };
+		C03E8CE83CDF81EA217DED6F6A263B98 /* SugarRecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SugarRecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B8598A7FEB11C0F75A3CDE5C013684 /* Result.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Result.xcconfig; sourceTree = "<group>"; };
+		C2137EA6F4F4016868E68EE40B8BB5B4 /* KCDaf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCDaf.h; path = "KosherCocoa/Library/Core/Calendar/Daf Yomi/KCDaf.h"; sourceTree = "<group>"; };
+		C23649B33237D672DA0906CB4E9FD26E /* Pods-Sefirah-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Sefirah-dummy.m"; sourceTree = "<group>"; };
+		C319AD036B58238564E4B08A02A5C6B8 /* RequestExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestExtension.swift; path = SugarRecord/Source/Foundation/Extensions/RequestExtension.swift; sourceTree = "<group>"; };
+		C45486C9363D10E9A8132F6F4DC7451C /* DirUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DirUtils.swift; path = SugarRecord/Source/Foundation/Utils/DirUtils.swift; sourceTree = "<group>"; };
+		C485ABCF48102E2B722E43E852487E89 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = SugarRecord/Source/Foundation/Errors/Error.swift; sourceTree = "<group>"; };
+		C504D0FE8B6D8F32705163B57EF2C815 /* NSDateComponents+AllComponents.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateComponents+AllComponents.m"; path = "KosherCocoa/Library/Categories/Foundation/NSDateComponents/NSDateComponents+AllComponents.m"; sourceTree = "<group>"; };
+		C5169C6CD4E4CF311D434C6A6932CBCB /* MBCalendarCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCalendarCategories.h; path = KosherCocoa/Library/Categories/Foundation/MBCalendarCategories.h; sourceTree = "<group>"; };
+		C7FAED0E56283C39D6A23FBBA649A3DA /* KCTractates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCTractates.h; path = KosherCocoa/Library/Headers/KCTractates.h; sourceTree = "<group>"; };
+		C8661A251D1B5D2EDE6B696540C24589 /* KCZmanimCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCZmanimCalendar.h; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCZmanimCalendar.h; sourceTree = "<group>"; };
+		C91F98348E02CCB312209161CD65BB8B /* CoreData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreData.swift; path = SugarRecord/Source/CoreData/Entities/CoreData.swift; sourceTree = "<group>"; };
+		C9A6DACC845F723378FC0ED53D7B1A30 /* Pods_Sefirah_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sefirah_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B9563694AC148E4E57A49BF5533561 /* KCZman.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCZman.h; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCZman.h; sourceTree = "<group>"; };
+		CC21C454AC6BEFA58D79F522E1763B50 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSManagedObjectContext.swift; path = SugarRecord/Source/CoreData/Extensions/NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		D173966A201E79670AD26527AE19B432 /* Result-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Result-umbrella.h"; sourceTree = "<group>"; };
+		D1D05E6A5F231477D36CD87093B6754B /* KCAstronomicalCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCAstronomicalCalculator.h; path = KosherCocoa/Library/Core/Solar/KCAstronomicalCalculator.h; sourceTree = "<group>"; };
+		D456F12611D6EB6CD47FC4E5638BB4B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D788B8C9516E83E129CD029042F91243 /* KDCircularProgress-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDCircularProgress-prefix.pch"; sourceTree = "<group>"; };
+		D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC3D33237D828179CFC47A5DA265F049 /* KCMolad.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCMolad.h; path = KosherCocoa/Library/Headers/KCMolad.h; sourceTree = "<group>"; };
+		DE9DC28D0E8341FDC53C19B80D72D9F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEACC9FD40F952EF5C90A30BB89817B2 /* KCZman.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCZman.m; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCZman.m; sourceTree = "<group>"; };
+		DF24EAC1B165671E95A027A428665444 /* KDCircularProgress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDCircularProgress-dummy.m"; sourceTree = "<group>"; };
+		DFA50D1B1F3D5885DF10D32C22F9CFE5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC8D2ACF9A2AC502271B52EE77A41E0 /* CoreDataErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreDataErrors.swift; path = SugarRecord/Source/CoreData/Errors/CoreDataErrors.swift; sourceTree = "<group>"; };
+		E0ABDC46919F209C906A67743694D96A /* KosherCocoa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KosherCocoa.h; path = KosherCocoa/KosherCocoa.h; sourceTree = "<group>"; };
+		E1E7C58F46A2B25348CFD02F33D77F39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5774BA26399162CD392B350569F55A5 /* SugarRecord-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SugarRecord-umbrella.h"; sourceTree = "<group>"; };
+		E753A8DBD197D3363EC27CEBD4BA5218 /* NSCalendar+DateComparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSCalendar+DateComparison.h"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+DateComparison.h"; sourceTree = "<group>"; };
+		E8FABE6B3F756FFF9602CE3CB52E493F /* SugarRecord-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SugarRecord-dummy.m"; sourceTree = "<group>"; };
+		EA4CEC0E620AEF8C796F597EB21FBFD4 /* Pods-Sefirah-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Sefirah-umbrella.h"; sourceTree = "<group>"; };
+		F10F5E83FD7D98AC1D796AA08F949914 /* Pods-Sefirah WatchKit Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah WatchKit Extension-resources.sh"; sourceTree = "<group>"; };
+		F3EF2513AA01E0585AE6B2D7CE413232 /* NSDate+ConvenientDates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+ConvenientDates.h"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+ConvenientDates.h"; sourceTree = "<group>"; };
+		F750C79FB680684471E3BD87497A4DEF /* NSCalendar+Components.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSCalendar+Components.m"; path = "KosherCocoa/Library/Categories/Foundation/NSCalendar/NSCalendar+Components.m"; sourceTree = "<group>"; };
+		F84611389900D989DEB459AF146AE4C5 /* KCAstronomicalCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCAstronomicalCalendar.m; path = KosherCocoa/Library/Core/Solar/KCAstronomicalCalendar.m; sourceTree = "<group>"; };
+		FA56675A6CB513F8DAF052ACA8EFDD93 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCB0DE52835E6C945DB921C8C38A7B7 /* KCZmanimCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KCZmanimCalendar.m; path = KosherCocoa/Library/Core/Calendar/Zmanim/KCZmanimCalendar.m; sourceTree = "<group>"; };
+		FCB1F5D8555233E514A94218277C0E51 /* ContextParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContextParent.swift; path = SugarRecord/Source/CoreData/Entities/ContextParent.swift; sourceTree = "<group>"; };
+		FD205224A4F7B9B994B09246C9F23C40 /* KCAstronomical.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCAstronomical.h; path = KosherCocoa/Library/Headers/KCAstronomical.h; sourceTree = "<group>"; };
+		FD98F0C5B63840BF01B094721FA6763E /* KCSefiratHaomerCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KCSefiratHaomerCalculator.h; path = KosherCocoa/Library/Core/Calendar/Sefira/KCSefiratHaomerCalculator.h; sourceTree = "<group>"; };
+		FDBEA1BDA40030BBBA37F9273D89B0A4 /* NSDate+Components.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Components.h"; path = "KosherCocoa/Library/Categories/Foundation/NSDate/NSDate+Components.h"; sourceTree = "<group>"; };
+		FDF57968C33993CE750977ABE61C3D0C /* Pods-Sefirah WatchKit App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Sefirah WatchKit App-resources.sh"; sourceTree = "<group>"; };
+		FE52A9ADEE50E6BB193AA8E9AA53A30A /* KosherCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KosherCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CD00268830CB53F4722E8903B492681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1301ACE0B7F92A1E97BB71461FFE5BBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CACDE7DF021F1DD6E6BC843FD0A0178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75201BF6F74955488607D69F77D15B1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E70284E70850D65484058BA52CF4BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A9F34594F737D833E24A34BB59795E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6482D5B7B2488225E6640513B6A60DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B024597F27398A40A1F6775AE3546903 /* CoreData.framework in Frameworks */,
+				951A0C08FA7F70A82ADBB62BECDBFE55 /* Foundation.framework in Frameworks */,
+				88B121B25F1D96ABD624349840DEF23D /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71204C1908D203DCB043F06ED07137FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6459BE9AF792035C1C193670F8DE6E45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84930B26C3EBABF4F66269F199C7144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671D1BA10FB6A3B766CB6147B534A65D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D687F89D61EA8916D1816774630C362A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F8DF5D105ACBD7CCA4F1803894ECB0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9C2E956F3F3A9DBF3EE6AC0C1D4553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C260A4C4C2AFAA0BBC7A5E7506CBDD18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12BA1F8AF995D131E04C83DC9D53D8C8 /* Pods-Sefirah */ = {
+			isa = PBXGroup;
+			children = (
+				D456F12611D6EB6CD47FC4E5638BB4B6 /* Info.plist */,
+				001D2D2E6345C5F3BCE8EC6EBB1A51F5 /* Pods-Sefirah.modulemap */,
+				B53BDFA289D85C50008E10C90E3D5F0A /* Pods-Sefirah-acknowledgements.markdown */,
+				6DCE08E65D2413A671FFB3EC5C4B40CD /* Pods-Sefirah-acknowledgements.plist */,
+				C23649B33237D672DA0906CB4E9FD26E /* Pods-Sefirah-dummy.m */,
+				380C0D32260F82A16EA85AC0DC4E9332 /* Pods-Sefirah-frameworks.sh */,
+				5B62933160FEAB12D96180CC4C7CBCB7 /* Pods-Sefirah-resources.sh */,
+				EA4CEC0E620AEF8C796F597EB21FBFD4 /* Pods-Sefirah-umbrella.h */,
+				0B29E8463C9A5003D1A99736CBC53490 /* Pods-Sefirah.debug.xcconfig */,
+				934806999478CA28ED1560C998151AA3 /* Pods-Sefirah.release.xcconfig */,
+			);
+			name = "Pods-Sefirah";
+			path = "Target Support Files/Pods-Sefirah";
+			sourceTree = "<group>";
+		};
+		2CD8D5EDBF83DC20B75043155AC51962 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12BA1F8AF995D131E04C83DC9D53D8C8 /* Pods-Sefirah */,
+				EE842B1190CF07D25FFC079B68943756 /* Pods-Sefirah WatchKit App */,
+				F80C407B329A4AB3B17D635E65299749 /* Pods-Sefirah WatchKit Extension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3AB5B7FA1E3BE4E54E4D3B07BF1BA104 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				A5ECF8D9C0FCFB859B28724DA1831A38 /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		68CEF5E0D0D99F4E7BDE5AAE059AAD77 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F0D69796E3DA0B2F1912694F25264B3 /* Info.plist */,
+				9AF76F8F2FC39AFDC40CAD349472E0C4 /* SugarRecord.modulemap */,
+				07644B5887809FDF8BE27DAEA53D2A0D /* SugarRecord.xcconfig */,
+				E8FABE6B3F756FFF9602CE3CB52E493F /* SugarRecord-dummy.m */,
+				8A6E8C3A71C72A3351505ADD21B03A7F /* SugarRecord-prefix.pch */,
+				E5774BA26399162CD392B350569F55A5 /* SugarRecord-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SugarRecord";
+			sourceTree = "<group>";
+		};
+		72C9C476A51AD457664044C02D3A8A04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B9315EB64EB924B12C1CC8E0F4F9373 /* KDCircularProgress */,
+				DA4AD7F9D2AD66D63A346BAD646190E5 /* KosherCocoa */,
+				B4C00975E8BD2709732F769F2E2350B1 /* Result */,
+				989C24D8029E439C57292EEE6F2EE998 /* SugarRecord */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A4820A875EFDB72AE5D9980D2AC5F63 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4E84048009B15FB4958102A40E10B461 /* CoreData.framework */,
+				D7FC3D7645A0732A3A927145705B1116 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				9F7C6240025D9CB8110652A28C878B71 /* Frameworks */,
+				72C9C476A51AD457664044C02D3A8A04 /* Pods */,
+				A0C7D8116AE25ED082720439F77419A2 /* Products */,
+				2CD8D5EDBF83DC20B75043155AC51962 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B9315EB64EB924B12C1CC8E0F4F9373 /* KDCircularProgress */ = {
+			isa = PBXGroup;
+			children = (
+				0A6FB1833D4CB83C24E9F15F1231A5A3 /* KDCircularProgress.swift */,
+				B6AB984951ACE1AD4745186176B36A77 /* Support Files */,
+			);
+			path = KDCircularProgress;
+			sourceTree = "<group>";
+		};
+		989C24D8029E439C57292EEE6F2EE998 /* SugarRecord */ = {
+			isa = PBXGroup;
+			children = (
+				C71F1BD743BBF9B07E610F441641A25B /* CoreData */,
+				68CEF5E0D0D99F4E7BDE5AAE059AAD77 /* Support Files */,
+			);
+			path = SugarRecord;
+			sourceTree = "<group>";
+		};
+		9ED17011F71AF8E706D0FE236E0A3ADE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7CE3A09C849761F5B7B97B10FB023EA7 /* Info.plist */,
+				9152812510498375619D45BB17FC4B98 /* Info.plist */,
+				4B9D3F2704FCD22EDA92EC358B93D565 /* KosherCocoa-iOS.modulemap */,
+				63F79ACB29FD08463C89D34D1E22AE3A /* KosherCocoa-iOS.xcconfig */,
+				87B4D0408E1A05911377F4A0F2C068C8 /* KosherCocoa-iOS-dummy.m */,
+				041293D374C360EE9E8D6569BFD54EEF /* KosherCocoa-iOS-prefix.pch */,
+				6D0A561D189B7D79E2CBD21BF544ACA1 /* KosherCocoa-iOS-umbrella.h */,
+				2BD970D2D4032C42EB3914CA0900CD4D /* KosherCocoa-watchOS.modulemap */,
+				55D7362C204D778FA0A6AB651700130A /* KosherCocoa-watchOS.xcconfig */,
+				12B7784DAAC8B01074D74178921D7C99 /* KosherCocoa-watchOS-dummy.m */,
+				45CCB90131C6471ED13680F5EF55E4CE /* KosherCocoa-watchOS-prefix.pch */,
+				A46B5BADEBE9AED1A31A44464A7476FF /* KosherCocoa-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KosherCocoa-iOS";
+			sourceTree = "<group>";
+		};
+		9F7C6240025D9CB8110652A28C878B71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A123F6D0BD0AAD3D15E2FF0297CA9182 /* Result.framework */,
+				7A4820A875EFDB72AE5D9980D2AC5F63 /* iOS */,
+				3AB5B7FA1E3BE4E54E4D3B07BF1BA104 /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0C7D8116AE25ED082720439F77419A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A28B31873FCDB521276DC7A993DFE9A /* KDCircularProgress.framework */,
+				39C98953C004CFC7BA2A21AD25701494 /* KosherCocoa.framework */,
+				FE52A9ADEE50E6BB193AA8E9AA53A30A /* KosherCocoa.framework */,
+				A56641005E360CE09B64EBB54ABFED15 /* Pods_Sefirah.framework */,
+				C9A6DACC845F723378FC0ED53D7B1A30 /* Pods_Sefirah_WatchKit_App.framework */,
+				2854103C9247CEF0CCC5DD578968B55B /* Pods_Sefirah_WatchKit_Extension.framework */,
+				9D198459F8136271BCAA172512DAD9FC /* Result.framework */,
+				C03E8CE83CDF81EA217DED6F6A263B98 /* SugarRecord.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A44A1524A7452D37B305B57E35C73303 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE9DC28D0E8341FDC53C19B80D72D9F8 /* Info.plist */,
+				529136F9D4EDED86B0AAE0E3066105F5 /* Result.modulemap */,
+				C1B8598A7FEB11C0F75A3CDE5C013684 /* Result.xcconfig */,
+				61D335326A0C4A30CF49820A6CB98E75 /* Result-dummy.m */,
+				A23C898AADA9E575DA7047DEBBF03F2C /* Result-prefix.pch */,
+				D173966A201E79670AD26527AE19B432 /* Result-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Result";
+			sourceTree = "<group>";
+		};
+		B4C00975E8BD2709732F769F2E2350B1 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2C270CD2A22CC02B069D0B732B937FCC /* Result.swift */,
+				589823B078E597309A65E0BC0680922E /* ResultType.swift */,
+				A44A1524A7452D37B305B57E35C73303 /* Support Files */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		B6AB984951ACE1AD4745186176B36A77 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7C58F46A2B25348CFD02F33D77F39 /* Info.plist */,
+				8BD57D9E407F3068E6512F0F29402334 /* KDCircularProgress.modulemap */,
+				13EA5BF8506909A49895D9C595DE7459 /* KDCircularProgress.xcconfig */,
+				DF24EAC1B165671E95A027A428665444 /* KDCircularProgress-dummy.m */,
+				D788B8C9516E83E129CD029042F91243 /* KDCircularProgress-prefix.pch */,
+				17632C128C9A3A54A5D7D0E488DAE187 /* KDCircularProgress-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KDCircularProgress";
+			sourceTree = "<group>";
+		};
+		C71F1BD743BBF9B07E610F441641A25B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				39B48C8D8F858205D5A988F6CC440C5E /* Context.swift */,
+				FCB1F5D8555233E514A94218277C0E51 /* ContextParent.swift */,
+				C91F98348E02CCB312209161CD65BB8B /* CoreData.swift */,
+				21F7A8F3A853A3BF4995CDD377BDF196 /* CoreDataDefaultStorage.swift */,
+				DFC8D2ACF9A2AC502271B52EE77A41E0 /* CoreDataErrors.swift */,
+				C45486C9363D10E9A8132F6F4DC7451C /* DirUtils.swift */,
+				9AAB2FEA50E51FBB645899130347A02D /* Entity.swift */,
+				C485ABCF48102E2B722E43E852487E89 /* Error.swift */,
+				0635BA54A945A2D306533E72FD1E1B68 /* NSManagedObject.swift */,
+				CC21C454AC6BEFA58D79F522E1763B50 /* NSManagedObjectContext.swift */,
+				048EA86372BB17CE54F23036159F68A3 /* NSManagedObjectMemoryContext.swift */,
+				2FAEF62E0E6F953198FB9D78696DF1C4 /* NSPredicateConvertible.swift */,
+				73F807BFB0D4F68B65912CDB65F5090D /* NSSortDescriptorConvertible.swift */,
+				792E433D0147406513E71456D9E85C22 /* ObjectModel.swift */,
+				4A5DBD81842EF514F7107ADD056C7C36 /* Options.swift */,
+				6EC610AC4C83085CF6F3BA4E72717FF6 /* Request.swift */,
+				8812523E0955167D3AC86916414A7EBA /* Requestable.swift */,
+				C319AD036B58238564E4B08A02A5C6B8 /* RequestExtension.swift */,
+				664A3623DC98F1E0517D675EC84E0A27 /* Storage.swift */,
+				515219FD8C021A00AE5FA2A102793D8C /* Store.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		DA4AD7F9D2AD66D63A346BAD646190E5 /* KosherCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				FD205224A4F7B9B994B09246C9F23C40 /* KCAstronomical.h */,
+				D1D05E6A5F231477D36CD87093B6754B /* KCAstronomicalCalculator.h */,
+				88B124ECBBC4E11D01901B7983384F4F /* KCAstronomicalCalendar.h */,
+				F84611389900D989DEB459AF146AE4C5 /* KCAstronomicalCalendar.m */,
+				B73FDE9527CA2C161592ABD62DB6289B /* KCAstronomicalCalendar+DateManipulation.h */,
+				44E50C91C325F20246A5011E76B10413 /* KCAstronomicalCalendar+DateManipulation.m */,
+				947BD54438DC43A6680AA182FE51A26E /* KCBearing.h */,
+				3B3399FB0463632F04F8E254F3B4C14F /* KCComplexZmanimCalendar.h */,
+				5802E7F31C484C0D082B0D894A003BE2 /* KCComplexZmanimCalendar.m */,
+				5069D38C535EFCE9E67D6E1EC8CE980A /* KCConstants.h */,
+				C2137EA6F4F4016868E68EE40B8BB5B4 /* KCDaf.h */,
+				9093CA15C88BAD4A717917698231C7E7 /* KCDaf.m */,
+				06A13DB033D187C85068C9080CB61F69 /* KCDafYomiCalculator.h */,
+				1F2880C7F3D2D3C05E3BF6C18FBD6902 /* KCDafYomiCalculator.m */,
+				160049A7FBC9D71B61D7B49EE71390B7 /* KCGeoLocation.h */,
+				1C27F2AAC8CF254B7526030540A51A41 /* KCGeoLocation.m */,
+				1285794D5356552EBAA546408166D92F /* KCHebrewYear.h */,
+				8B566EBFEF8614A99A6A3A58B2967CD4 /* KCJewishCalendar.h */,
+				AF54DC4220E608D66013A026874DC051 /* KCJewishCalendar.m */,
+				95FA47E5694C8E49738006D440E196A7 /* KCJewishHoliday.h */,
+				77E21C0EA6D9C65F0B00C22559394844 /* KCJewishHoliday.m */,
+				0339A335416EB35B776CBF3D0FC15216 /* KCJewishHolidays.h */,
+				DC3D33237D828179CFC47A5DA265F049 /* KCMolad.h */,
+				2D3E1C7A250A001588E1BC674C28D2F5 /* KCParasha.h */,
+				4E48F47EAF357C0C64BD139E0B13FB4E /* KCParasha.m */,
+				68FBFEAF33F988CF8B5E6F8A9BFD2C2E /* KCParashaReadings.h */,
+				9E77C41847D593B3225CA01A044725B1 /* KCParashatHashavuaCalculator.h */,
+				393161D3FD25C9C41072EA806FB7BED7 /* KCParashatHashavuaCalculator.m */,
+				9DAE1A66EC84E4CE53EF5C2D90B4952C /* KCSefiraFormatter.h */,
+				17F070DEEAA8EDF72569B3A56FCDE424 /* KCSefiraFormatter.m */,
+				FD98F0C5B63840BF01B094721FA6763E /* KCSefiratHaomerCalculator.h */,
+				A66CE3CD285CA2F39639761EA52784FF /* KCSefiratHaomerCalculator.m */,
+				4C2ABA892BBAE35E44EBCC005686F7D2 /* KCSunCalculationTypes.h */,
+				BADB6C2A2C061A4E0DF604DF702DDD38 /* KCSunriseAndSunsetCalculator.h */,
+				6FA0C0F431BE80E537A8CE4CC4CF5F39 /* KCSunriseAndSunsetCalculator.m */,
+				C7FAED0E56283C39D6A23FBBA649A3DA /* KCTractates.h */,
+				31EBB486E724C236110399101D490422 /* KCZenith.h */,
+				329F59228453001AEABE3EBF73DADE07 /* KCZenithExtended.h */,
+				C9B9563694AC148E4E57A49BF5533561 /* KCZman.h */,
+				DEACC9FD40F952EF5C90A30BB89817B2 /* KCZman.m */,
+				C8661A251D1B5D2EDE6B696540C24589 /* KCZmanimCalendar.h */,
+				FBCB0DE52835E6C945DB921C8C38A7B7 /* KCZmanimCalendar.m */,
+				E0ABDC46919F209C906A67743694D96A /* KosherCocoa.h */,
+				C5169C6CD4E4CF311D434C6A6932CBCB /* MBCalendarCategories.h */,
+				1805FE7BF050589F678F572258E4FBCB /* NSCalendar+Components.h */,
+				F750C79FB680684471E3BD87497A4DEF /* NSCalendar+Components.m */,
+				E753A8DBD197D3363EC27CEBD4BA5218 /* NSCalendar+DateComparison.h */,
+				7CE31570FE3D63CD919AC23369265098 /* NSCalendar+DateComparison.m */,
+				B96E63A80EEEB95BD68A6F31512B0B4D /* NSCalendar+DateManipulation.h */,
+				65F7F89555B7484509E0C41CA26FB5C2 /* NSCalendar+DateManipulation.m */,
+				85418D18D426DF9C17B23172AD8D6CDB /* NSCalendar+hebrewYearTypes.h */,
+				3149DEDF8A996EF39FFB299384B9C356 /* NSCalendar+hebrewYearTypes.m */,
+				882512CBA174414AB76B78DD66F80F2C /* NSCalendar+Juncture.h */,
+				14937800DFB1E9136EF273B316ACD286 /* NSCalendar+Juncture.m */,
+				B83CB3093F67A4C5E7ECC86ABFF85357 /* NSCalendar+Ranges.h */,
+				3F9CEB7E6463CFFAD3A3E7C195813825 /* NSCalendar+Ranges.m */,
+				FDBEA1BDA40030BBBA37F9273D89B0A4 /* NSDate+Components.h */,
+				54F8077DC5736037EAB1F5624BB47B71 /* NSDate+Components.m */,
+				F3EF2513AA01E0585AE6B2D7CE413232 /* NSDate+ConvenientDates.h */,
+				3B19FDBBDCCA9820A3D93B59B342EA60 /* NSDate+ConvenientDates.m */,
+				835410D338EB1AA1DD2149FF7CEF99FD /* NSDate+Description.h */,
+				890928FFB76F8CD6FF0DAA609F6EC139 /* NSDate+Description.m */,
+				84B36904D96B1F9516566ABF85A6D0E0 /* NSDateComponents+AllComponents.h */,
+				C504D0FE8B6D8F32705163B57EF2C815 /* NSDateComponents+AllComponents.m */,
+				88CB115F1A7C98931F7E783462AF2E7F /* trigonometry.c */,
+				6B1650A4C6F6924CB5BA9D92AAAB19A7 /* trigonometry.h */,
+				9ED17011F71AF8E706D0FE236E0A3ADE /* Support Files */,
+			);
+			path = KosherCocoa;
+			sourceTree = "<group>";
+		};
+		EE842B1190CF07D25FFC079B68943756 /* Pods-Sefirah WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DFA50D1B1F3D5885DF10D32C22F9CFE5 /* Info.plist */,
+				6015BE3D07B9E15882AA0C5E7536E7BF /* Pods-Sefirah WatchKit App.modulemap */,
+				45401B057252A924C7353D97FF50CF36 /* Pods-Sefirah WatchKit App-acknowledgements.markdown */,
+				2FDD05F819F537A885028D9C490A30F4 /* Pods-Sefirah WatchKit App-acknowledgements.plist */,
+				4BFB0031C6F633005079EEB5F9FC1670 /* Pods-Sefirah WatchKit App-dummy.m */,
+				15E5513B01B005519A1DD3032DBCB811 /* Pods-Sefirah WatchKit App-frameworks.sh */,
+				FDF57968C33993CE750977ABE61C3D0C /* Pods-Sefirah WatchKit App-resources.sh */,
+				25D1BB997FEEA96E2D8EDF725CFB27AC /* Pods-Sefirah WatchKit App-umbrella.h */,
+				7343B532BA677092EDF65D0531EF18A2 /* Pods-Sefirah WatchKit App.debug.xcconfig */,
+				36DB05BD09B5CA17E11248CAE64B6F3C /* Pods-Sefirah WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-Sefirah WatchKit App";
+			path = "Target Support Files/Pods-Sefirah WatchKit App";
+			sourceTree = "<group>";
+		};
+		F80C407B329A4AB3B17D635E65299749 /* Pods-Sefirah WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA56675A6CB513F8DAF052ACA8EFDD93 /* Info.plist */,
+				488941537E70C3331A8C084271ECCEF4 /* Pods-Sefirah WatchKit Extension.modulemap */,
+				11672F87D64786657EE0114181254808 /* Pods-Sefirah WatchKit Extension-acknowledgements.markdown */,
+				05A2274BFC586D955B64B367F75BDF36 /* Pods-Sefirah WatchKit Extension-acknowledgements.plist */,
+				73EA25D0F00590E5E9D9D305A818A3ED /* Pods-Sefirah WatchKit Extension-dummy.m */,
+				11C489618383A1109B55010CC6294ED3 /* Pods-Sefirah WatchKit Extension-frameworks.sh */,
+				F10F5E83FD7D98AC1D796AA08F949914 /* Pods-Sefirah WatchKit Extension-resources.sh */,
+				6F4C72A96BAF9800F468D221CCA75061 /* Pods-Sefirah WatchKit Extension-umbrella.h */,
+				A477154F1721E2DCDA046B94DC4398C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */,
+				A53329C0C419A4E11BB0E8961DA58F4C /* Pods-Sefirah WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-Sefirah WatchKit Extension";
+			path = "Target Support Files/Pods-Sefirah WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B1FD4225978C8F76A47FDE1ACA853B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE781BFF96BFEE374BFEF6D57D90C6D /* Pods-Sefirah WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E71CDB84FB1B758A81DB0CF036A12C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3439254F455A577E2E7E7B0938BDB2BE /* SugarRecord-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8669B452E99EF8E7E6079C1A487D3A51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF6F6C0476650AF52DADEFB3830847C /* KCAstronomical.h in Headers */,
+				E0149A7F7C3CC043CEB37A4E53321C27 /* KCAstronomicalCalculator.h in Headers */,
+				9267FE2626556CBBB2BBD6064D563944 /* KCAstronomicalCalendar+DateManipulation.h in Headers */,
+				FA17B4C6582E1559A69388DF8A72CF8A /* KCAstronomicalCalendar.h in Headers */,
+				F2338E0F202E966162E00E736DE5B8AC /* KCBearing.h in Headers */,
+				AFE392F64E9D8A0C2AA815747B0A38E8 /* KCComplexZmanimCalendar.h in Headers */,
+				8E12534164E6284986EAA5EC5B7796BA /* KCConstants.h in Headers */,
+				1CC10DB0223AEB10F3BEDCDD27EE0C03 /* KCDaf.h in Headers */,
+				77EB41D3AED9BBB3E7AD842E7333A7F9 /* KCDafYomiCalculator.h in Headers */,
+				8BBFDA8C90894FD635F6578D3A243BA2 /* KCGeoLocation.h in Headers */,
+				3981322CA81B96A730443D33F0474CED /* KCHebrewYear.h in Headers */,
+				AB271B71EA8394AAB1404D3BF94C8F61 /* KCJewishCalendar.h in Headers */,
+				659B4C97CE5B99DAC19FDAA56D1C6989 /* KCJewishHoliday.h in Headers */,
+				C5B44EEE66F20B05352EBEA70CCEBEAF /* KCJewishHolidays.h in Headers */,
+				05E7804F6801148CD00F6361BFA42989 /* KCMolad.h in Headers */,
+				CDDF863FE805AB84D75377C365E0FE6C /* KCParasha.h in Headers */,
+				D2EA35BA22CB8D6D0E80F85D0D5945BD /* KCParashaReadings.h in Headers */,
+				C4BEC320627B6BA7AE981E2700F70707 /* KCParashatHashavuaCalculator.h in Headers */,
+				8559A0D16C4C3A882B363CEA6BFD6221 /* KCSefiraFormatter.h in Headers */,
+				836F023C8BFD909FBBD2EA498B87A57C /* KCSefiratHaomerCalculator.h in Headers */,
+				A00EA64259B925FDCC122E8834F5C4BD /* KCSunCalculationTypes.h in Headers */,
+				40B7274B2BFAD93A2109E38A0C8EFDC0 /* KCSunriseAndSunsetCalculator.h in Headers */,
+				AB206918B46C7C99D991A6E262FDA56A /* KCTractates.h in Headers */,
+				470DD44D8F1184ACD41784EC3CAF05A0 /* KCZenith.h in Headers */,
+				F381CF1AB31C3784A787A3772EE01124 /* KCZenithExtended.h in Headers */,
+				EAE5787158B1A7582B1D1FA81B8C8824 /* KCZman.h in Headers */,
+				49D1F7753DB3A3FC446A24DE5D67F11A /* KCZmanimCalendar.h in Headers */,
+				E97DCAB99E54D6BAFABEF9659A436BD6 /* KosherCocoa-watchOS-umbrella.h in Headers */,
+				10B0E0248ECB0B231529030100951CD2 /* KosherCocoa.h in Headers */,
+				E56C2D771C7970ABF25C6C9EFAB18644 /* MBCalendarCategories.h in Headers */,
+				0ABC0327E5C19BB542A7E428440063CD /* NSCalendar+Components.h in Headers */,
+				8ECEB2E8A1B8745521052A3468573D2C /* NSCalendar+DateComparison.h in Headers */,
+				8417C9A1241A6A99E215A097DA950683 /* NSCalendar+DateManipulation.h in Headers */,
+				8A2A3C3F0CF758C2047A6F53DA87FFBD /* NSCalendar+hebrewYearTypes.h in Headers */,
+				C31C9277AC41175C9B1057E10FBAE6C6 /* NSCalendar+Juncture.h in Headers */,
+				D8E83D49574AF95696A59925F58DE339 /* NSCalendar+Ranges.h in Headers */,
+				0FF5FD73B4393BA7483372D32216F092 /* NSDate+Components.h in Headers */,
+				AE33237D783707627A622479BE07CF57 /* NSDate+ConvenientDates.h in Headers */,
+				C563D7EF1C3CCCAF84CA5B96989A258C /* NSDate+Description.h in Headers */,
+				D4061FC07C19AD72382860206909541B /* NSDateComponents+AllComponents.h in Headers */,
+				B7034AAAA9E9869744DEB3694D6DEB9B /* trigonometry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B592E14535BFD5C96368D532560284C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19524E1DE40A0415E20332EF54867765 /* Pods-Sefirah-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCDD6CE1BD3EEAF846F9EB4EA1EA611B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F91E230A636C2B7A2525F635986F4FD /* KCAstronomical.h in Headers */,
+				D53E0ABACD37437B866DFFFF850FEFB0 /* KCAstronomicalCalculator.h in Headers */,
+				D780D534E9682A293A2D8311FC53776D /* KCAstronomicalCalendar+DateManipulation.h in Headers */,
+				52C1135E59661A18854A9BF3A9144B69 /* KCAstronomicalCalendar.h in Headers */,
+				2F6C88F383B5DA3AA8B0652A74C74E10 /* KCBearing.h in Headers */,
+				B1FAAA92267A9B33288CE79D7CBC76D8 /* KCComplexZmanimCalendar.h in Headers */,
+				DA0405CD6AAFB317490B83714E73C96D /* KCConstants.h in Headers */,
+				05EF31FA54A1E14C4275A9C728576578 /* KCDaf.h in Headers */,
+				3A3F214E088A662CAA683B3FE366D2E2 /* KCDafYomiCalculator.h in Headers */,
+				28F6BFEA3F2EC7924ED890E2E122E2A2 /* KCGeoLocation.h in Headers */,
+				6A34A1A1AB295CB183B75D18CE7A62B7 /* KCHebrewYear.h in Headers */,
+				B278451BB2363F897C299F6575BC52C9 /* KCJewishCalendar.h in Headers */,
+				80587ACF8616FE93F337A85A03457E61 /* KCJewishHoliday.h in Headers */,
+				B132F27E4CE987C1130F84E6CCA2E8B9 /* KCJewishHolidays.h in Headers */,
+				040AF03FC73C2E3523348565A72FF401 /* KCMolad.h in Headers */,
+				EE56A6B3225A65C3220E30BFC9A267F1 /* KCParasha.h in Headers */,
+				ECDD86A81C8CAF5CADCBA5A4782A7A83 /* KCParashaReadings.h in Headers */,
+				FD1DE6DD22E795DE16C7D204C61AD75E /* KCParashatHashavuaCalculator.h in Headers */,
+				694F759E1ACBAB7A46CAB1420098646B /* KCSefiraFormatter.h in Headers */,
+				F831735B54323236C838F083A30D6E04 /* KCSefiratHaomerCalculator.h in Headers */,
+				B553A7B3547CACC6AF5F7C652D34C75A /* KCSunCalculationTypes.h in Headers */,
+				6603EAF9C51DC6A97B8EC62A3406DBD3 /* KCSunriseAndSunsetCalculator.h in Headers */,
+				A62A37AF69E0380EB466E3AB256DCEF2 /* KCTractates.h in Headers */,
+				E4D74C3E28CDCB7650F5595824C701C4 /* KCZenith.h in Headers */,
+				ADEEEA15CBFB8795F7A671BF4A9F18DF /* KCZenithExtended.h in Headers */,
+				0D38E751A1D08CC5BE3CC46484CF99A3 /* KCZman.h in Headers */,
+				488E434D0AE52A6EBB9E1FC59062747C /* KCZmanimCalendar.h in Headers */,
+				07267EE92EF38623396998CA0BD60725 /* KosherCocoa-iOS-umbrella.h in Headers */,
+				D3500C9EE00728DCB6D70A5F434EF1AE /* KosherCocoa.h in Headers */,
+				2CB5C89DF0C77BE31E46969F89C9E153 /* MBCalendarCategories.h in Headers */,
+				CD904C9EC5B28F6FEAF48251D5D58A59 /* NSCalendar+Components.h in Headers */,
+				67B0518D1EB97F4A2958CF06F39B7485 /* NSCalendar+DateComparison.h in Headers */,
+				29612212D5678B2FA3D00135A3C55A3B /* NSCalendar+DateManipulation.h in Headers */,
+				C0C9F7F6E7E4FF0C3890ECCAED806118 /* NSCalendar+hebrewYearTypes.h in Headers */,
+				0799170DC07A7B4A0E1D6AA84EC85028 /* NSCalendar+Juncture.h in Headers */,
+				454193BFCDD21C0D042716752A517FDC /* NSCalendar+Ranges.h in Headers */,
+				81BD4C594480983A807F9E5CB36E1B54 /* NSDate+Components.h in Headers */,
+				B46AD9808DD2121824455EF35E5E346D /* NSDate+ConvenientDates.h in Headers */,
+				838D8E49B5E37AEF99C04DB1FC15354F /* NSDate+Description.h in Headers */,
+				FD326AEA16E35EC93D448EC44F2AFDA6 /* NSDateComponents+AllComponents.h in Headers */,
+				5E04E77E31A955FDCC2013FE0C83DAB5 /* trigonometry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4A27FC8C76EECA0E53FFE4D45A76B78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE1FD8363D2B53FD414A35D4AB78238 /* Pods-Sefirah WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E675ACE6463941581D4EDFBDC81EB225 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6555E287B6DB413C489A82A42BAFEEC1 /* Result-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF2DE94EE6BCDE632CAD5ECC3AD38D90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF26A3FD0FC8792772A07404BADFB69 /* KDCircularProgress-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1255D273C4B5D6E97CE6AB1BFC7F194A /* Pods-Sefirah WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD947AE2E55542BF34608262491DBD5 /* Build configuration list for PBXNativeTarget "Pods-Sefirah WatchKit Extension" */;
+			buildPhases = (
+				6269201D98814A8A6A927B550F571ED1 /* Sources */,
+				2CD00268830CB53F4722E8903B492681 /* Frameworks */,
+				0B1FD4225978C8F76A47FDE1ACA853B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35EEC8238EDC9251C33EE65F970711F0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sefirah WatchKit Extension";
+			productName = "Pods-Sefirah WatchKit Extension";
+			productReference = 2854103C9247CEF0CCC5DD578968B55B /* Pods_Sefirah_WatchKit_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		274969C6BA5CA1778D8D93DBC86AA455 /* Result */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B065DE2433AE3BF623E3E50643775DA /* Build configuration list for PBXNativeTarget "Result" */;
+			buildPhases = (
+				27A846B99582057199B86DE3AF87A08D /* Sources */,
+				D687F89D61EA8916D1816774630C362A /* Frameworks */,
+				E675ACE6463941581D4EDFBDC81EB225 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Result;
+			productName = Result;
+			productReference = 9D198459F8136271BCAA172512DAD9FC /* Result.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3D970461593C8867376EB72F65195CC0 /* Pods-Sefirah WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A7F63DD3ECBE55EF634B0ADB8B1B993 /* Build configuration list for PBXNativeTarget "Pods-Sefirah WatchKit App" */;
+			buildPhases = (
+				3FF3073058DE7913025FB75567F96499 /* Sources */,
+				DD9C2E956F3F3A9DBF3EE6AC0C1D4553 /* Frameworks */,
+				E4A27FC8C76EECA0E53FFE4D45A76B78 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA1C10A980C3A813D809206618C16148 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sefirah WatchKit App";
+			productName = "Pods-Sefirah WatchKit App";
+			productReference = C9A6DACC845F723378FC0ED53D7B1A30 /* Pods_Sefirah_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		473DFA6B2AEEDDC0FBDA53B7134CA4C5 /* Pods-Sefirah */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7409D2EFA407FAFECE095C591333DA2F /* Build configuration list for PBXNativeTarget "Pods-Sefirah" */;
+			buildPhases = (
+				671108FCFD26A128C263E60E27356074 /* Sources */,
+				53E70284E70850D65484058BA52CF4BA /* Frameworks */,
+				9B592E14535BFD5C96368D532560284C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AC34ADD23BDA4D54F1BF83ADB8FAF0F /* PBXTargetDependency */,
+				6DF162D499CF94CEE5DC2CACC921B2BA /* PBXTargetDependency */,
+				A7C3E6B48EB067D899DC148B3EBC3D0E /* PBXTargetDependency */,
+				7C3914CA9AD6EF338817B57A24123391 /* PBXTargetDependency */,
+			);
+			name = "Pods-Sefirah";
+			productName = "Pods-Sefirah";
+			productReference = A56641005E360CE09B64EBB54ABFED15 /* Pods_Sefirah.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5EF23D366DB583D27EE8E43BE466A983 /* KosherCocoa-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D278AF8E3F9CFF73FBF614452F3DD37 /* Build configuration list for PBXNativeTarget "KosherCocoa-watchOS" */;
+			buildPhases = (
+				89C5555F2BEE2E4C84FADC9347A93740 /* Sources */,
+				71204C1908D203DCB043F06ED07137FC /* Frameworks */,
+				8669B452E99EF8E7E6079C1A487D3A51 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KosherCocoa-watchOS";
+			productName = "KosherCocoa-watchOS";
+			productReference = FE52A9ADEE50E6BB193AA8E9AA53A30A /* KosherCocoa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9558B32FB980ED0E42BF1BD3AEC626CE /* KDCircularProgress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 435F959228447A8BAB2744820828990E /* Build configuration list for PBXNativeTarget "KDCircularProgress" */;
+			buildPhases = (
+				511970D55C34F108A4F93E36FF7A7BEA /* Sources */,
+				4CACDE7DF021F1DD6E6BC843FD0A0178 /* Frameworks */,
+				FF2DE94EE6BCDE632CAD5ECC3AD38D90 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KDCircularProgress;
+			productName = KDCircularProgress;
+			productReference = 4A28B31873FCDB521276DC7A993DFE9A /* KDCircularProgress.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F19AF4254A4A3E1909A1FF938FC3D18C /* SugarRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E9E9083C0A41A0E3B5C601A829C29C1 /* Build configuration list for PBXNativeTarget "SugarRecord" */;
+			buildPhases = (
+				C638CFB87CB9CB64696360B8E846E818 /* Sources */,
+				6482D5B7B2488225E6640513B6A60DDB /* Frameworks */,
+				0E71CDB84FB1B758A81DB0CF036A12C3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				571050920414B2E809BF17B3C6C09B2C /* PBXTargetDependency */,
+			);
+			name = SugarRecord;
+			productName = SugarRecord;
+			productReference = C03E8CE83CDF81EA217DED6F6A263B98 /* SugarRecord.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FDF243BD4A56CF1CE2F1074FEA9AD773 /* KosherCocoa-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2227EFF7DCD72AB8761FB1AB0ED30794 /* Build configuration list for PBXNativeTarget "KosherCocoa-iOS" */;
+			buildPhases = (
+				2C11E15D5268AB548DA2891426425083 /* Sources */,
+				B84930B26C3EBABF4F66269F199C7144 /* Frameworks */,
+				DCDD6CE1BD3EEAF846F9EB4EA1EA611B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KosherCocoa-iOS";
+			productName = "KosherCocoa-iOS";
+			productReference = 39C98953C004CFC7BA2A21AD25701494 /* KosherCocoa.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A0C7D8116AE25ED082720439F77419A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9558B32FB980ED0E42BF1BD3AEC626CE /* KDCircularProgress */,
+				FDF243BD4A56CF1CE2F1074FEA9AD773 /* KosherCocoa-iOS */,
+				5EF23D366DB583D27EE8E43BE466A983 /* KosherCocoa-watchOS */,
+				473DFA6B2AEEDDC0FBDA53B7134CA4C5 /* Pods-Sefirah */,
+				3D970461593C8867376EB72F65195CC0 /* Pods-Sefirah WatchKit App */,
+				1255D273C4B5D6E97CE6AB1BFC7F194A /* Pods-Sefirah WatchKit Extension */,
+				274969C6BA5CA1778D8D93DBC86AA455 /* Result */,
+				F19AF4254A4A3E1909A1FF938FC3D18C /* SugarRecord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A846B99582057199B86DE3AF87A08D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C0E07AC2EC57A8A36A7FD631D2FFD /* Result-dummy.m in Sources */,
+				3A7A17E401EAF03F66C5785C7E1283C3 /* Result.swift in Sources */,
+				577ED4EC572E11CC219320CF492E3532 /* ResultType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C11E15D5268AB548DA2891426425083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC038A5451F9DFED8CFCE8F6109EA634 /* KCAstronomicalCalendar+DateManipulation.m in Sources */,
+				8880ED67C0093A5E4C427C902EAE66C3 /* KCAstronomicalCalendar.m in Sources */,
+				913293FB4ADAE354F610EB067BEDF2F4 /* KCComplexZmanimCalendar.m in Sources */,
+				AFEC153C84ECF4338EB7DB2E35B91BB4 /* KCDaf.m in Sources */,
+				9C956A1D46AD96762345FE201F4A129F /* KCDafYomiCalculator.m in Sources */,
+				A9E625746EC38BF1845A96666AFBB2F3 /* KCGeoLocation.m in Sources */,
+				19E099EFA4A6CF70932F8E88B91AE1C2 /* KCJewishCalendar.m in Sources */,
+				6DF87E10F0AA45B000B8772C2E0B6016 /* KCJewishHoliday.m in Sources */,
+				B8E711EE1D2F850226BF9A914D53070F /* KCParasha.m in Sources */,
+				5A6325D11DD588876552DD4A15D05BA1 /* KCParashatHashavuaCalculator.m in Sources */,
+				0614A0036DC27B9389DC9DC29CE3BD7E /* KCSefiraFormatter.m in Sources */,
+				28B58CAB049E87776E5FD7E77B785A35 /* KCSefiratHaomerCalculator.m in Sources */,
+				1DAC31823B5C90823737D823AF04BA71 /* KCSunriseAndSunsetCalculator.m in Sources */,
+				F5EE06EEAFE19902493DA5B8303226D0 /* KCZman.m in Sources */,
+				43EC3A0537C32B421787CBFE8FBB0EC6 /* KCZmanimCalendar.m in Sources */,
+				05FD7C156EAD3E0120CCB5B0E91FEF86 /* KosherCocoa-iOS-dummy.m in Sources */,
+				2DE344BCDCDA866D8890629AC6214C70 /* NSCalendar+Components.m in Sources */,
+				22EBCEC29D597710DB7025E9957CBE35 /* NSCalendar+DateComparison.m in Sources */,
+				798D6D6C8C0EB7D3019B116D0772C246 /* NSCalendar+DateManipulation.m in Sources */,
+				A6E295FD13B6148639A09147EDC447AF /* NSCalendar+hebrewYearTypes.m in Sources */,
+				184D4E68FCEB347DA4EF9405A1281A08 /* NSCalendar+Juncture.m in Sources */,
+				1AF92C577D9F96C5D1B0C9EC545F5AC1 /* NSCalendar+Ranges.m in Sources */,
+				FB473B2C48E29B7D1BE4C5F5D9204DB1 /* NSDate+Components.m in Sources */,
+				45032D2CC8A762749452697E93A47F5E /* NSDate+ConvenientDates.m in Sources */,
+				6FBEE2CB3AF8D932170B7A51EF4C465D /* NSDate+Description.m in Sources */,
+				04376529AFF2A832ABB614363F4D7F90 /* NSDateComponents+AllComponents.m in Sources */,
+				E01CD46702318525846009F05C226BE2 /* trigonometry.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FF3073058DE7913025FB75567F96499 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F249C237D52392C8A70434B605D306CD /* Pods-Sefirah WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		511970D55C34F108A4F93E36FF7A7BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6216987541D6C08CCF13940601043053 /* KDCircularProgress-dummy.m in Sources */,
+				9F84961FB9777DB3D603922D26DFB703 /* KDCircularProgress.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6269201D98814A8A6A927B550F571ED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F936F1AF587F6FDF324297AF597B4907 /* Pods-Sefirah WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		671108FCFD26A128C263E60E27356074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE0D82F170CF756CC276BBDBC63B41C /* Pods-Sefirah-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C5555F2BEE2E4C84FADC9347A93740 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04965D30D5D7CA1DA425F58451E25D9A /* KCAstronomicalCalendar+DateManipulation.m in Sources */,
+				96DBAEE130796C7FCA11B375BAAB75FA /* KCAstronomicalCalendar.m in Sources */,
+				B8EA93C0865CAEC8EE4E63A61F8965D9 /* KCComplexZmanimCalendar.m in Sources */,
+				FCF2C0D8EF9B27795E8D8448226710EF /* KCDaf.m in Sources */,
+				B318792E82F4F6CDF3DDFB0F68E861D6 /* KCDafYomiCalculator.m in Sources */,
+				0A51D64AACEEAC9C81D948AC874024A3 /* KCGeoLocation.m in Sources */,
+				4D8C105AC5F3CFA28510C731EFBB9EB8 /* KCJewishCalendar.m in Sources */,
+				DE4F16764D34A8B0E399E5B70FCBDC24 /* KCJewishHoliday.m in Sources */,
+				3A489B92EF8A9AA29250174F3FAAD1B0 /* KCParasha.m in Sources */,
+				0A3480AD500FF07B8296062F68E44296 /* KCParashatHashavuaCalculator.m in Sources */,
+				D995AA39247923FE99D4C1456747C59C /* KCSefiraFormatter.m in Sources */,
+				4236A057F9891F443D293E275711FA68 /* KCSefiratHaomerCalculator.m in Sources */,
+				5F358D28CF9EE773C0EB23A7A760D587 /* KCSunriseAndSunsetCalculator.m in Sources */,
+				B9990C4D051050755C85BAC02BFAF759 /* KCZman.m in Sources */,
+				FDC7B752704DB94DED7CA9AE6E91F00D /* KCZmanimCalendar.m in Sources */,
+				DCA216A6D700BF06E9DF85F07A0C325E /* KosherCocoa-watchOS-dummy.m in Sources */,
+				080C3751B78ADFC9388F1C3710DB98C2 /* NSCalendar+Components.m in Sources */,
+				0653834333F09F8F9C5ADCE1FC841BFB /* NSCalendar+DateComparison.m in Sources */,
+				EC778E73AC2C945E6C13B423CAE362B9 /* NSCalendar+DateManipulation.m in Sources */,
+				464C26C1F892286FF2026387A72234B2 /* NSCalendar+hebrewYearTypes.m in Sources */,
+				A5E7ABFF00322042003CE0E6928294CD /* NSCalendar+Juncture.m in Sources */,
+				2FFE52E2D721AC489426ED95B0390AB2 /* NSCalendar+Ranges.m in Sources */,
+				176CFBD446E6843C07A25C35FB019CF2 /* NSDate+Components.m in Sources */,
+				6C472B3611131F9D064FE0A5B4374F64 /* NSDate+ConvenientDates.m in Sources */,
+				38288CC76CD2E08C95688F55BFA09E85 /* NSDate+Description.m in Sources */,
+				77AE35A30ED1D3D15263FBB10916C331 /* NSDateComponents+AllComponents.m in Sources */,
+				CB05B091CAD0A10F55D9EA65B2EFB30D /* trigonometry.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C638CFB87CB9CB64696360B8E846E818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9938824AA7763F2D4DFC1EA3792D64 /* Context.swift in Sources */,
+				FC26C6B1BC7B70DEC5C5B777692B134F /* ContextParent.swift in Sources */,
+				0AF1FD73EEF428600899A30913FA0C41 /* CoreData.swift in Sources */,
+				DE4CAE08A3F0F938DE1198C2098AE954 /* CoreDataDefaultStorage.swift in Sources */,
+				0336FE89B5FE34EA8FECB21B80B04386 /* CoreDataErrors.swift in Sources */,
+				1193C0E21254A2EDD9F43DF452BE46C6 /* DirUtils.swift in Sources */,
+				8E2AD71418ACBD251BB8FE636A2ACB94 /* Entity.swift in Sources */,
+				209D28F3A25105593EBFC3C50AD43D46 /* Error.swift in Sources */,
+				66860CC1F3C32EFB8A725F176D59144E /* NSManagedObject.swift in Sources */,
+				67F65F909EF2966FBEE7D12D343D143C /* NSManagedObjectContext.swift in Sources */,
+				FA6BD8050A57C3889C2DF2A79E6A070C /* NSManagedObjectMemoryContext.swift in Sources */,
+				CC1640453208F801E97B4038AFCB579C /* NSPredicateConvertible.swift in Sources */,
+				745600DFFFC390F57C78EDEC9754FC83 /* NSSortDescriptorConvertible.swift in Sources */,
+				FA4A5A8464DE5897B845B7956254A6D0 /* ObjectModel.swift in Sources */,
+				2CB0B75D81A06D3E39DE7EEAF1D940D1 /* Options.swift in Sources */,
+				E10995DEE0EC71873D75EBC2D8A88681 /* Request.swift in Sources */,
+				4AFE9C456795B9E16901C3963BD92AB7 /* Requestable.swift in Sources */,
+				03728C699635A7A12C1A76C58D9BD0BE /* RequestExtension.swift in Sources */,
+				0DA7A0FD6570993CABC6C558B7C8BC45 /* Storage.swift in Sources */,
+				C8413E8EFD43A11D01F331B7BD948CA2 /* Store.swift in Sources */,
+				1DF6637AA14EE2BED455578524744AE8 /* SugarRecord-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		35EEC8238EDC9251C33EE65F970711F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KosherCocoa-watchOS";
+			target = 5EF23D366DB583D27EE8E43BE466A983 /* KosherCocoa-watchOS */;
+			targetProxy = 6D8570425B03102CB6FE4959F5CE1FDA /* PBXContainerItemProxy */;
+		};
+		571050920414B2E809BF17B3C6C09B2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Result;
+			target = 274969C6BA5CA1778D8D93DBC86AA455 /* Result */;
+			targetProxy = 36DE5DB63F23023997D008F1BC2FC3EE /* PBXContainerItemProxy */;
+		};
+		6DF162D499CF94CEE5DC2CACC921B2BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KosherCocoa-iOS";
+			target = FDF243BD4A56CF1CE2F1074FEA9AD773 /* KosherCocoa-iOS */;
+			targetProxy = 4F059C6224655A877753CDACEA4BEBBB /* PBXContainerItemProxy */;
+		};
+		7AC34ADD23BDA4D54F1BF83ADB8FAF0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KDCircularProgress;
+			target = 9558B32FB980ED0E42BF1BD3AEC626CE /* KDCircularProgress */;
+			targetProxy = 8918F7A2FA7E102611CA87E2DE8E107B /* PBXContainerItemProxy */;
+		};
+		7C3914CA9AD6EF338817B57A24123391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SugarRecord;
+			target = F19AF4254A4A3E1909A1FF938FC3D18C /* SugarRecord */;
+			targetProxy = AD13FB39C33BB55980AEC373278F2E4C /* PBXContainerItemProxy */;
+		};
+		A7C3E6B48EB067D899DC148B3EBC3D0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Result;
+			target = 274969C6BA5CA1778D8D93DBC86AA455 /* Result */;
+			targetProxy = 2A58325B0B2907DCA3B380668D483740 /* PBXContainerItemProxy */;
+		};
+		FA1C10A980C3A813D809206618C16148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "KosherCocoa-watchOS";
+			target = 5EF23D366DB583D27EE8E43BE466A983 /* KosherCocoa-watchOS */;
+			targetProxy = BC41230B6CFDF29E4DF6FAA651D1062E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		053A40852082EEE8587C75E04073549B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D7362C204D778FA0A6AB651700130A /* KosherCocoa-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KosherCocoa-watchOS/KosherCocoa-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KosherCocoa-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KosherCocoa-watchOS/KosherCocoa-watchOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KosherCocoa;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		06156186B9D0697ADC513F8CE826FEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A53329C0C419A4E11BB0E8961DA58F4C /* Pods-Sefirah WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah WatchKit Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah_WatchKit_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		3A39F8D31E62DF471BF3A0B8574A69AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7343B532BA677092EDF65D0531EF18A2 /* Pods-Sefirah WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah WatchKit App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah_WatchKit_App;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		3E8DC9486810E749642EE545D18324CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1B8598A7FEB11C0F75A3CDE5C013684 /* Result.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Result/Result-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Result/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Result/Result.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Result;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		499711C2D23B7FF76684283FA5A8290B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07644B5887809FDF8BE27DAEA53D2A0D /* SugarRecord.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SugarRecord/SugarRecord-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SugarRecord/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SugarRecord/SugarRecord.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SugarRecord;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		57D2B38FF15EA5CF5DDFD4E329DA4C7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		6C24C8D5301AED1D18BCF212BFF64B68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DB05BD09B5CA17E11248CAE64B6F3C /* Pods-Sefirah WatchKit App.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah WatchKit App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah WatchKit App/Pods-Sefirah WatchKit App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah_WatchKit_App;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		6DBC395F83950E43E0CB863A8C6C325A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		78AE5F616FA3B16390C7215730013539 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F79ACB29FD08463C89D34D1E22AE3A /* KosherCocoa-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KosherCocoa-iOS/KosherCocoa-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KosherCocoa-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KosherCocoa-iOS/KosherCocoa-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KosherCocoa;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85CBF11A1FF2A962CFA7919271195D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B29E8463C9A5003D1A99736CBC53490 /* Pods-Sefirah.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah/Pods-Sefirah.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91B5F749B1527A1F736348790E5920BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EA5BF8506909A49895D9C595DE7459 /* KDCircularProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KDCircularProgress/KDCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KDCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KDCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6E8A22FF7E2C31318100495C969A532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63F79ACB29FD08463C89D34D1E22AE3A /* KosherCocoa-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KosherCocoa-iOS/KosherCocoa-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KosherCocoa-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KosherCocoa-iOS/KosherCocoa-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KosherCocoa;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB7EF05C4E1DB3654F94753F809D6F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 934806999478CA28ED1560C998151AA3 /* Pods-Sefirah.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah/Pods-Sefirah.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C2A193FBA896E34822E1BA51895BA061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EA5BF8506909A49895D9C595DE7459 /* KDCircularProgress.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KDCircularProgress/KDCircularProgress-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KDCircularProgress/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KDCircularProgress/KDCircularProgress.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KDCircularProgress;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DBF00202093D46AEF434035981030C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A477154F1721E2DCDA046B94DC4398C4 /* Pods-Sefirah WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Sefirah WatchKit Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Sefirah_WatchKit_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E04C72EA979514B9559C08531044D072 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1B8598A7FEB11C0F75A3CDE5C013684 /* Result.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Result/Result-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Result/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Result/Result.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Result;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E21303267D48C0CC5C3DF73AE28F3C19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D7362C204D778FA0A6AB651700130A /* KosherCocoa-watchOS.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KosherCocoa-watchOS/KosherCocoa-watchOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KosherCocoa-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KosherCocoa-watchOS/KosherCocoa-watchOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KosherCocoa;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		EBA11F38092951C5431333A3C5B19122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07644B5887809FDF8BE27DAEA53D2A0D /* SugarRecord.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SugarRecord/SugarRecord-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SugarRecord/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SugarRecord/SugarRecord.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SugarRecord;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2227EFF7DCD72AB8761FB1AB0ED30794 /* Build configuration list for PBXNativeTarget "KosherCocoa-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78AE5F616FA3B16390C7215730013539 /* Debug */,
+				A6E8A22FF7E2C31318100495C969A532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DBC395F83950E43E0CB863A8C6C325A /* Debug */,
+				57D2B38FF15EA5CF5DDFD4E329DA4C7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A7F63DD3ECBE55EF634B0ADB8B1B993 /* Build configuration list for PBXNativeTarget "Pods-Sefirah WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A39F8D31E62DF471BF3A0B8574A69AE /* Debug */,
+				6C24C8D5301AED1D18BCF212BFF64B68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		435F959228447A8BAB2744820828990E /* Build configuration list for PBXNativeTarget "KDCircularProgress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2A193FBA896E34822E1BA51895BA061 /* Debug */,
+				91B5F749B1527A1F736348790E5920BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D278AF8E3F9CFF73FBF614452F3DD37 /* Build configuration list for PBXNativeTarget "KosherCocoa-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E21303267D48C0CC5C3DF73AE28F3C19 /* Debug */,
+				053A40852082EEE8587C75E04073549B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD947AE2E55542BF34608262491DBD5 /* Build configuration list for PBXNativeTarget "Pods-Sefirah WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBF00202093D46AEF434035981030C7E /* Debug */,
+				06156186B9D0697ADC513F8CE826FEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7409D2EFA407FAFECE095C591333DA2F /* Build configuration list for PBXNativeTarget "Pods-Sefirah" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85CBF11A1FF2A962CFA7919271195D24 /* Debug */,
+				AB7EF05C4E1DB3654F94753F809D6F72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E9E9083C0A41A0E3B5C601A829C29C1 /* Build configuration list for PBXNativeTarget "SugarRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA11F38092951C5431333A3C5B19122 /* Debug */,
+				499711C2D23B7FF76684283FA5A8290B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B065DE2433AE3BF623E3E50643775DA /* Build configuration list for PBXNativeTarget "Result" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E8DC9486810E749642EE545D18324CA /* Debug */,
+				E04C72EA979514B9559C08531044D072 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

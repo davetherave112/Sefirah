@@ -37,12 +37,18 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.jesiegel.Sefirah.watchkitapp</string>
+			<string>com.jesiegel.SefiratHaomer.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DorianCLM-Book.ttf</string>
+		<string>DorianCLM-BookItalic.ttf</string>
+		<string>ShmulikCLM.ttf</string>
+	</array>
 </dict>
 </plist>

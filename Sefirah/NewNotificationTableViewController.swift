@@ -62,8 +62,11 @@ class NewNotificationTableViewController: UITableViewController {
         timeFormatter.dateStyle = .NoStyle
         timeFormatter.timeStyle = .ShortStyle
 
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NewNotificationTableViewController.localeChanged(_:)), name: NSCurrentLocaleDidChangeNotification, object: nil)
     }
+    
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -174,7 +177,7 @@ class NewNotificationTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return (indexPathIsPicker(indexPath) ? pickerCellRowHeight : tableView.rowHeight)
+        return (indexPathIsPicker(indexPath) ? pickerCellRowHeight : 55)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
