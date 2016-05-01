@@ -10,7 +10,7 @@
             <objects>
                 <controller identifier="progressController" title="Progress" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
-                        <imageView alignment="left" image="day0" id="SBA-gv-rxP"/>
+                        <imageView width="1" widthAdjustment="-5" alignment="center" verticalAlignment="center" image="day0" contentMode="scaleAspectFit" id="SBA-gv-rxP"/>
                     </items>
                     <connections>
                         <outlet property="progressImage" destination="SBA-gv-rxP" id="bUC-5x-nJW"/>
@@ -114,9 +114,14 @@
                                                 <items>
                                                     <group width="1" height="32" alignment="left" spacing="4" id="JRU-oR-djS">
                                                         <items>
-                                                            <label alignment="left" verticalAlignment="center" text="Option" id="CSH-AY-DjT"/>
-                                                            <imageView alignment="right" verticalAlignment="center" hidden="YES" image="check" id="tbs-GX-Bhe"/>
+                                                            <label alignment="left" verticalAlignment="center" text="Option" minimumScaleFactor="0.59999999999999998" id="CSH-AY-DjT"/>
+                                                            <group width="23" height="17" alignment="right" verticalAlignment="center" id="URG-HL-j67">
+                                                                <items>
+                                                                    <imageView alignment="right" verticalAlignment="center" hidden="YES" image="check" id="tbs-GX-Bhe"/>
+                                                                </items>
+                                                            </group>
                                                         </items>
+                                                        <edgeInsets key="margins" left="0.0" right="0.0" top="4" bottom="4"/>
                                                     </group>
                                                 </items>
                                             </group>
