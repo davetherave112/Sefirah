@@ -25,16 +25,26 @@
             <objects>
                 <controller identifier="textController" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.40000000000000002" id="UZn-wh-wb1">
-                            <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                        </label>
+                        <group alignment="left" spacing="4" id="GQu-yk-Rai">
+                            <items>
+                                <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.40000000000000002" id="UZn-wh-wb1">
+                                    <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="10" right="10" top="2" bottom="2"/>
+                        </group>
                     </items>
                     <menu key="menu" id="lLB-pF-fU0">
                         <items>
                             <menuItem title="Language" image="alef" id="Zax-8e-ysF">
                                 <connections>
                                     <action selector="languageSettings" destination="IdI-Zv-Rhq" id="ik0-xZ-GFP"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Prayer Options" image="book" id="lV6-3H-V2n">
+                                <connections>
+                                    <action selector="prayerOptions" destination="IdI-Zv-Rhq" id="Drf-vO-8Uz"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -85,7 +95,48 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="206" y="393"/>
+            <point key="canvasLocation" x="466" y="389"/>
+        </scene>
+        <!--Close-->
+        <scene sceneID="BSx-c5-crs">
+            <objects>
+                <controller identifier="PrayerOptionsController" title="Close" id="v23-7x-PzM" customClass="PrayerOptionsInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="W1g-4k-gSK">
+                            <items>
+                                <tableRow identifier="PrayerOptionRow" id="03a-Xh-USd" customClass="PrayerOptionsRowController" customModule="Sefirah_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="bf4-Ye-bYA">
+                                        <items>
+                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="rIi-Ym-WkD">
+                                                <color key="color" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </separator>
+                                            <group alignment="left" layout="vertical" spacing="0.0" id="mmY-ZH-idA">
+                                                <items>
+                                                    <group width="1" height="32" alignment="left" spacing="4" id="JRU-oR-djS">
+                                                        <items>
+                                                            <label alignment="left" verticalAlignment="center" text="Language" id="CSH-AY-DjT"/>
+                                                            <imageView alignment="right" verticalAlignment="center" hidden="YES" image="check" id="tbs-GX-Bhe"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="checkImage" destination="tbs-GX-Bhe" id="zXK-mv-9Fp"/>
+                                        <outlet property="prayerLabel" destination="CSH-AY-DjT" id="eLq-jq-hDT"/>
+                                        <outlet property="separator" destination="rIi-Ym-WkD" id="QTj-CO-6g6"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="prayerOptionsTable" destination="W1g-4k-gSK" id="zl0-xn-GPi"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="687" y="389"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

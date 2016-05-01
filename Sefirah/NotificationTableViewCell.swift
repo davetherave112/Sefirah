@@ -27,12 +27,10 @@ class NotificationTableViewCell: UITableViewCell {
     var notification: Notification!
     var delegate: UITableView?
     
+    //TODO: Check switch is properly set
     @IBAction func switchChanged(sender: UISwitch) {
-        let toggleSwitch = sender as! UISwitch
-        let indexPath = delegate?.indexPathForCell(self)
+        let toggleSwitch = sender
         if !toggleSwitch.on {
-            //sender.setOn(false, animated: true)
-            
             do {
                try db.operation { (context, save) throws -> Void in
                     self.notification.enabled = false
@@ -42,14 +40,6 @@ class NotificationTableViewCell: UITableViewCell {
             catch {
                 //TODO: There was an error in the operation
             }
-            
-            /*
-            var notificationsDict = NotificationManager.sharedInstance.getNotificationsDictionary()!
-            let date = notificationsDict[self.nameLabel.text!]![true]
-            notificationsDict[self.nameLabel.text!] = [false: date!]
-            let keyedArch = NSKeyedArchiver.archivedDataWithRootObject(notificationsDict)
-            NSUserDefaults.standardUserDefaults().setObject(keyedArch, forKey: "Notifications")
-            */
             
             let allNotifications: [UILocalNotification] = NotificationManager.sharedInstance.getAllNotifications()
             for notification in allNotifications {
@@ -69,16 +59,6 @@ class NotificationTableViewCell: UITableViewCell {
             catch {
                 //TODO: There was an error in the operation
             }
-            /*
-            //sender.setOn(true, animated: true)
-            if let notifications = (NSUserDefaults.standardUserDefaults().objectForKey("Notifications"))  {
-                var notificationsDict = NotificationManager.sharedInstance.getNotificationsDictionary()!
-                let date = notificationsDict[self.nameLabel.text!]![false]
-                notificationsDict[self.nameLabel.text!] = [true: date!]
-                let keyedArch = NSKeyedArchiver.archivedDataWithRootObject(notificationsDict)
-                NSUserDefaults.standardUserDefaults().setObject(keyedArch, forKey: "Notifications")
-            }
-            */
         }
     }
     
