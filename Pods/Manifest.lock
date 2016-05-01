@@ -1,0 +1,31 @@
+PODS:
+  - KDCircularProgress (1.4.0)
+  - KosherCocoa (3.0.6)
+  - Result (1.0.2)
+  - SugarRecord/CoreData (2.2.5):
+    - Result (~> 1.0)
+
+DEPENDENCIES:
+  - KDCircularProgress
+  - KosherCocoa (from `git@github.com:MosheBerman/KosherCocoa.git`, commit `5376523`)
+  - SugarRecord/CoreData
+
+EXTERNAL SOURCES:
+  KosherCocoa:
+    :commit: '5376523'
+    :git: git@github.com:MosheBerman/KosherCocoa.git
+
+CHECKOUT OPTIONS:
+  KosherCocoa:
+    :commit: '5376523'
+    :git: git@github.com:MosheBerman/KosherCocoa.git
+
+SPEC CHECKSUMS:
+  KDCircularProgress: f5770bbd83da909bf6cd96c2dea0b8bae45ec774
+  KosherCocoa: 135cca36db10094abd0f691d4860b48f2e4aa951
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  SugarRecord: ccccf3fd03b8eb2d09e815b144fbd1baf08be82f
+
+PODFILE CHECKSUM: 2c3f68ce29ee609c7bd95c66906a13344d6a0519
+
+COCOAPODS: 1.0.0.beta.8
