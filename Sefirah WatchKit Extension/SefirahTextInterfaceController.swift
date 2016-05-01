@@ -21,6 +21,10 @@ class SefirahTextInterfaceController: WKInterfaceController {
         self.presentControllerWithName("LanguagesController", context: nil)
     }
     
+    @IBAction func prayerOptions() {
+        self.presentControllerWithName("PrayerOptionsController", context: nil)
+    }
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

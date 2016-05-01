@@ -60,6 +60,8 @@
 		D0493EC01CD3364400C4D3F8 /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24CF03D9AD9CAD948176D8549BCC384B /* ShmulikCLM.ttf */; };
 		D070BF781CD5EC9000A9B9C1 /* LanguageSettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070BF771CD5EC9000A9B9C1 /* LanguageSettingsInterfaceController.swift */; };
 		D070BF7A1CD5F26200A9B9C1 /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070BF791CD5F26200A9B9C1 /* LanguageRowController.swift */; };
+		D070BF7D1CD5FF8700A9B9C1 /* PrayerOptionsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070BF7C1CD5FF8700A9B9C1 /* PrayerOptionsRowController.swift */; };
+		D070BF7F1CD602F800A9B9C1 /* PrayerOptionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070BF7E1CD602F800A9B9C1 /* PrayerOptionsInterfaceController.swift */; };
 		D214B5AB70BA14C8C3C06FA87FBFF717 /* SefirahTextInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567C6677C54996BB585D3A23EAAC8518 /* SefirahTextInterfaceController.swift */; };
 		D5B4245DB249F0CFC73EBB216794BD77 /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB6ED615BB76320F7C900244FB9A3A59 /* DorianCLM-Book.ttf */; };
 		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
@@ -163,6 +165,8 @@
 		CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D070BF771CD5EC9000A9B9C1 /* LanguageSettingsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSettingsInterfaceController.swift; sourceTree = "<group>"; };
 		D070BF791CD5F26200A9B9C1 /* LanguageRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageRowController.swift; sourceTree = "<group>"; };
+		D070BF7C1CD5FF8700A9B9C1 /* PrayerOptionsRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsRowController.swift; sourceTree = "<group>"; };
+		D070BF7E1CD602F800A9B9C1 /* PrayerOptionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsInterfaceController.swift; sourceTree = "<group>"; };
 		D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
 		DB14A18FCBF7E5D1D7E513DCE88190BF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		DBE3407B7D29B1A7556A03F9F856220A /* Sefirah WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit Extension.entitlements"; sourceTree = "<group>"; };
@@ -359,9 +363,19 @@
 				557F3097070E3ED5A241DE3F0F1E72A2 /* GlanceController.swift */,
 				B46DBB44B2FC7DEBDE74EA8A4B387120 /* NotificationController.swift */,
 				D070BF771CD5EC9000A9B9C1 /* LanguageSettingsInterfaceController.swift */,
-				D070BF791CD5F26200A9B9C1 /* LanguageRowController.swift */,
+				D070BF7E1CD602F800A9B9C1 /* PrayerOptionsInterfaceController.swift */,
+				D070BF7B1CD5FF6600A9B9C1 /* Row Controllers */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D070BF7B1CD5FF6600A9B9C1 /* Row Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D070BF791CD5F26200A9B9C1 /* LanguageRowController.swift */,
+				D070BF7C1CD5FF8700A9B9C1 /* PrayerOptionsRowController.swift */,
+			);
+			name = "Row Controllers";
 			sourceTree = "<group>";
 		};
 		E5F1B76F7BE686F3159BB29BF4838BFB = {
@@ -723,9 +737,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE4F539E93B2E309C578109B148A05E /* ComplicationController.swift in Sources */,
+				D070BF7F1CD602F800A9B9C1 /* PrayerOptionsInterfaceController.swift in Sources */,
 				96C229E12B22B8B868CA362E68DA844B /* ExtensionDelegate.swift in Sources */,
 				2FCB1D2A06A127FDE29E6EC010D37D6B /* GlanceController.swift in Sources */,
 				D070BF781CD5EC9000A9B9C1 /* LanguageSettingsInterfaceController.swift in Sources */,
+				D070BF7D1CD5FF8700A9B9C1 /* PrayerOptionsRowController.swift in Sources */,
 				D070BF7A1CD5F26200A9B9C1 /* LanguageRowController.swift in Sources */,
 				DD7154CCFCE9AEDD910B279ACA7E321A /* MainInterfaceController.swift in Sources */,
 				30617029DA68F863650068E0A8116D57 /* NotificationController.swift in Sources */,

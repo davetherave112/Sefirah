@@ -13,9 +13,12 @@ import CoreLocation
 
 class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     
+    //TODO: Add last recorded day to NSUserDefaults for use case when no location services available
+    
     let adjustedDay = SefiraDayWatch.sharedInstance
     @IBOutlet var progressImage: WKInterfaceImage!
-
+    var imageDisplayed: Bool = false
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
 
@@ -40,7 +43,6 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         adjustedDay.locationManager.stopUpdatingLocation()
         adjustedDay.setAdjustedSefiraDay(locValue)
-        //let userDefaults = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
         if let dayOfSefira = adjustedDay.sefiraDate {
             self.setProgress(dayOfSefira, animate: true)
         }
@@ -52,10 +54,11 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     
     
     func setProgress(dayOfSefira: Int, animate: Bool) {
-        if animate {
+        if animate && !imageDisplayed {
             let range = NSRange.init(location: 0, length: dayOfSefira + 1)
             self.progressImage.setImageNamed("day")
             progressImage.startAnimatingWithImagesInRange(range, duration: 0.7, repeatCount: 1)
+            self.imageDisplayed = true
         } else {
             self.progressImage.setImageNamed("day\(dayOfSefira)")
         }
