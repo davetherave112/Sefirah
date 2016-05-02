@@ -22,13 +22,19 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         if let date = message["date"] as? NSDate {
-            self.calendarView.selectDate(date)
             let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
             if var dates = selectedDates {
-                dates.append(date)
+                dates.append(getDateOnly(date))
                 NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
             } else {
                 NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
+            }
+            dispatch_async(dispatch_get_main_queue()) {
+                self.calendarView.selectDate(date)
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                tabBarItem.badgeValue = nil
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
         }
     }
@@ -37,7 +43,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         if let needData = message["need_data"] as? Bool {
             if needData {
                 let dates = self.calendarView.selectedDates as! [NSDate]
-                if dates.contains(NSDate()) {
+                if dates.contains(self.getDateOnly(NSDate())) {
                     replyHandler(["is_selected": true])
                 } else {
                     replyHandler(["is_selected": false])
@@ -54,17 +60,30 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             watchSession!.delegate = self
             watchSession!.activateSession()
         }
+
+        self.calendarView.delegate = self
+        self.calendarView.appearance.headerMinimumDissolvedAlpha = 0.0;
+        self.calendarView.clipsToBounds = true
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.calendarView.titleSelectionColor = UIColor(rgba: "#0E386C")
+        self.calendarView.subtitleSelectionColor = UIColor(rgba: "#0E386C")
         
         if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
             for date in selectedDates {
                 self.calendarView.selectDate(date)
             }
+            if !selectedDates.contains(self.getDateOnly(NSDate())) {
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                tabBarItem.badgeValue = nil
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            }
         }
-        
-        self.calendarView.delegate = self
-        self.calendarView.appearance.headerMinimumDissolvedAlpha = 0.0;
-        self.calendarView.clipsToBounds = true
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,12 +122,18 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         }
         
-        do {
-            try watchSession?.updateApplicationContext(
-                ["message" : date]
-            )
-        } catch let error as NSError {
-            NSLog("Updating the context failed: " + error.localizedDescription)
+        if let session = watchSession {
+            if session.reachable {
+                session.sendMessage(["message" : date], replyHandler: nil, errorHandler: nil)
+            } else {
+                do {
+                    try watchSession?.updateApplicationContext(
+                        ["message" : date]
+                    )
+                } catch let error as NSError {
+                    NSLog("Updating the context failed: " + error.localizedDescription)
+                }
+            }
         }
     }
     
@@ -129,12 +154,18 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             UIApplication.sharedApplication().applicationIconBadgeNumber = 1
         }
         
-        do {
-            try watchSession?.updateApplicationContext(
-                ["deselect" : date]
-            )
-        } catch let error as NSError {
-            NSLog("Updating the context failed: " + error.localizedDescription)
+        if let session = watchSession {
+            if session.reachable {
+                session.sendMessage(["deselect" : date], replyHandler: nil, errorHandler: nil)
+            } else {
+                do {
+                    try watchSession?.updateApplicationContext(
+                        ["deselect" : date]
+                    )
+                } catch let error as NSError {
+                    NSLog("Updating the context failed: " + error.localizedDescription)
+                }
+            }
         }
     }
     

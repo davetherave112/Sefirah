@@ -49,6 +49,11 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        if NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay") > 0 {
+            let dayOfSefira = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+            SefiraDayWatch.sharedInstance.sefiraDate = dayOfSefira
+            self.setProgress(dayOfSefira, animate: true)
+        }
         print(error)
     }
     

@@ -30,26 +30,15 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
             session = WCSession.defaultSession()
             let todaysDate = NSDate()
             let todaysCount = KCSefiratHaomerCalculator.dayOfSefiraForDate(todaysDate)
-            if let sefiraDate = SefiraDayWatch.sharedInstance.sefiraDate{
+            if let sefiraDate = SefiraDayWatch.sharedInstance.sefiraDate {
                 if todaysCount ==  sefiraDate {
                     let date = todaysDate
                     let flags: NSCalendarUnit = [.Year, .Month, .Day]
                     let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
                     let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-                    session!.sendMessage(["date": date], replyHandler: nil, errorHandler: nil)
+                    session!.sendMessage(["date": dateOnly!], replyHandler: nil, errorHandler: nil)
                     self.countLabel.setText("Well Done! You've already counted today.")
                     self.countButton.setHidden(true)
-                        /*
-                        , replyHandler: { response in
-                        if let dates = response["dates"] as? [NSDate] {
-                            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
-                            self.countLabel.setText("Well Done! You've already counted today.")
-                            self.countButton.setHidden(true)
-                        }
-                    }, errorHandler: { error in
-                        print(error)
-                    })
-                    */
                 }
             } else {
                 //TODO: handle error
@@ -57,6 +46,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
+    /*
     /** Called on the delegate of the receiver. Will be called on startup if an applicationContext is available. */
     func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
         if let message : NSDate = applicationContext["message"] as? NSDate {
@@ -80,6 +70,35 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
             }
         }
     }
+    */
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        if let message : NSDate = message["message"] as? NSDate {
+            let date = NSDate()
+            let flags: NSCalendarUnit = [.Year, .Month, .Day]
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            if message == dateOnly {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.countButton.setHidden(true)
+                    self.countLabel.setText("Well Done! You've already counted today.")
+                }
+            }
+        }
+        if let message : NSDate = message["deselect"] as? NSDate {
+            let date = NSDate()
+            let flags: NSCalendarUnit = [.Year, .Month, .Day]
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            if message == dateOnly {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.countButton.setHidden(false)
+                    self.countLabel.setText("Count before you forget!")
+                }
+            }
+        }
+
+    }
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -96,11 +115,15 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         session!.sendMessage(["need_data": true], replyHandler: { response in
             if let isSelected = response["is_selected"] as? Bool {
                 if isSelected {
-                    self.countButton.setHidden(true)
-                    self.countLabel.setText("Well Done! You've already counted today.")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.countButton.setHidden(true)
+                        self.countLabel.setText("Well Done! You've already counted today.")
+                    }
                 } else {
-                    self.countButton.setHidden(false)
-                    self.countLabel.setText("Count before you forget!")
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.countButton.setHidden(false)
+                        self.countLabel.setText("Count before you forget!")
+                    }
                 }
             }
         }, errorHandler: { error in
