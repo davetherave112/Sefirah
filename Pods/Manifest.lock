@@ -1,4 +1,5 @@
 PODS:
+  - FSCalendar (2.1.0)
   - KDCircularProgress (1.4.0)
   - KosherCocoa (3.0.6)
   - Result (1.0.2)
@@ -6,6 +7,7 @@ PODS:
     - Result (~> 1.0)
 
 DEPENDENCIES:
+  - FSCalendar
   - KDCircularProgress
   - KosherCocoa (from `git@github.com:MosheBerman/KosherCocoa.git`, commit `5376523`)
   - SugarRecord/CoreData
@@ -21,11 +23,12 @@ CHECKOUT OPTIONS:
     :git: git@github.com:MosheBerman/KosherCocoa.git
 
 SPEC CHECKSUMS:
+  FSCalendar: d8b9dddaf96fff7621a33b110763d981bb01bc04
   KDCircularProgress: f5770bbd83da909bf6cd96c2dea0b8bae45ec774
   KosherCocoa: 135cca36db10094abd0f691d4860b48f2e4aa951
   Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
   SugarRecord: ccccf3fd03b8eb2d09e815b144fbd1baf08be82f
 
-PODFILE CHECKSUM: 2c3f68ce29ee609c7bd95c66906a13344d6a0519
+PODFILE CHECKSUM: 4de43e5df5105feaa4433cf6630ab27f48697bc3
 
 COCOAPODS: 1.0.0.beta.8

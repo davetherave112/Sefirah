@@ -77,19 +77,11 @@ class NewNotificationTableViewController: UITableViewController {
     
     func create(sender: AnyObject) {
         let textField = tableView.viewWithTag(kTextFieldTag) as! UITextField
-        let repeatSwitch = tableView.viewWithTag(10) as! UISwitch
-        var repeatAlert: Bool?
-        if repeatSwitch.on {
-            repeatAlert = true
-        } else {
-            repeatAlert = false
-        }
-        
         let name = textField.text
         
         if !name!.isEmpty {
             if let date = mergeTimeAndDate() {
-                NotificationManager.sharedInstance.scheduleLocal(name!, fireDate: date, repeatAlert: repeatAlert!)
+                NotificationManager.sharedInstance.scheduleLocal(name!, fireDate: date, repeatAlert: true)
                 let tabBarController = self.presentingViewController as! UITabBarController
                 let navController = tabBarController.selectedViewController as! UINavigationController
                 let notificationsVC = navController.viewControllers.last as! NotificationsTableViewController
@@ -183,7 +175,7 @@ class NewNotificationTableViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

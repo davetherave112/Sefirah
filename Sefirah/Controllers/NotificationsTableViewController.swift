@@ -61,8 +61,18 @@ class NotificationsTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.notifications.count > 0 {
+            self.tableView.backgroundView = nil
+        } else {
+            let backgroundView = UIView(frame: CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height))
+            let noDataLabel: UILabel = UILabel(frame: CGRectMake(0, 0, backgroundView.bounds.size.width, backgroundView.bounds.size.height/2))
+            noDataLabel.text = "You Have No Notifications"
+            noDataLabel.textColor = UIColor(red: 22.0/255.0, green: 106.0/255.0, blue: 176.0/255.0, alpha: 1.0)
+            noDataLabel.textAlignment = NSTextAlignment.Center
+            backgroundView.addSubview(noDataLabel)
+            self.tableView.backgroundView = backgroundView
+        }
         return self.notifications.count
-        
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

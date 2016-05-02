@@ -51,10 +51,44 @@
                     </menu>
                     <connections>
                         <outlet property="sefriahTextLabel" destination="UZn-wh-wb1" id="58f-F6-ccl"/>
+                        <segue destination="aad-Bl-OtK" kind="relationship" relationship="nextPage" id="Lra-z1-q1l"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="466" y="113"/>
+        </scene>
+        <!--Tracker-->
+        <scene sceneID="RYV-bR-lRi">
+            <objects>
+                <controller title="Tracker" id="aad-Bl-OtK" customClass="TrackerInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" id="mtV-Qr-dxM">
+                            <items>
+                                <label alignment="left" text="Count before you forget!" numberOfLines="0" id="jfr-Na-XxD">
+                                    <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="4" right="4" top="4" bottom="0.0"/>
+                        </group>
+                        <group alignment="center" verticalAlignment="center" spacing="10" id="mi6-nd-lQ4">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" backgroundImage="checkmark" id="Mbn-Tv-WiJ">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="trackOmerDay" destination="aad-Bl-OtK" id="9zf-3f-bZL"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="countButton" destination="Mbn-Tv-WiJ" id="ZkO-5L-ecg"/>
+                        <outlet property="countLabel" destination="jfr-Na-XxD" id="TZ2-29-zz6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="718" y="113"/>
         </scene>
         <!--Close-->
         <scene sceneID="ahe-jX-1Ih">

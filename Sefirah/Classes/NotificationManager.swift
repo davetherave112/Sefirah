@@ -13,18 +13,6 @@ import KosherCocoa
 import CoreData
 import SugarRecord
 
-// WIP - create native notifications
-enum NativeNotifications: Int {
-    case Tzeis = 0
-    
-    var description: String {
-        switch self {
-        case .Tzeis:
-            return "Tzeis"
-        }
-    }
-}
-
 class NotificationManager: NSObject, CLLocationManagerDelegate {
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreData.Store.Named("db")
@@ -85,6 +73,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
 
         scheduleTzeis(locValue)
+
     }
 
     func scheduleTzeis(location: CLLocationCoordinate2D) {
@@ -100,11 +89,24 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         let calendar: KCZmanimCalendar = KCZmanimCalendar.init(location: location)
         let tzeis = calendar.tzais()
         
-        scheduleLocal("Tzeis", fireDate: tzeis, repeatAlert: true)
+        
+        let savedValues = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Int]
+        for value in savedValues {
+            let tzeisOption = Tzeis(rawValue: value)
+            let notificationName = tzeisOption?.notificationName
+            let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+            let notificationExists = notifications?.filter({($0.userInfo!["name"] as! String) == notificationName})
+            if notificationExists?.count > 0 {
+                print("notification exists")
+            } else {
+                let fireDate = tzeis.dateByAddingTimeInterval(Double(tzeisOption!.rawValue))
+                scheduleLocal(notificationName!, fireDate: fireDate, repeatAlert: false, tzeis: true)
+            }
+        }
         
     }
     
-    func scheduleLocal(name: String, fireDate: NSDate, repeatAlert: Bool) {
+    func scheduleLocal(name: String, fireDate: NSDate, repeatAlert: Bool, tzeis: Bool = false) {
         let notification = UILocalNotification()
         notification.fireDate = fireDate
         if repeatAlert {
@@ -115,15 +117,18 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["name": name]
         
-        Notification.createNotification(name, fireDate: fireDate, enabled: true, repeatAlert: repeatAlert) { success, error in
-            
-            if let error = error {
-                //TODO: handle error
-                return
-            } else {
-                UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        if tzeis {
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        } else {
+            Notification.createNotification(name, fireDate: fireDate, enabled: true, repeatAlert: repeatAlert) { success, error in
+                
+                if let error = error {
+                    //TODO: handle error
+                    return
+                } else {
+                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                }
             }
         }
-    
     }
 }

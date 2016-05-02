@@ -8,31 +8,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationCell" selectionStyle="default" indentationWidth="10" rowHeight="116" id="CIm-Mh-01g" customClass="NotificationTableViewCell" customModule="Sefirah" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NotificationCell" selectionStyle="none" indentationWidth="10" rowHeight="116" id="CIm-Mh-01g" customClass="NotificationTableViewCell" customModule="Sefirah" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="511" height="116"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CIm-Mh-01g" id="XWC-aI-zSa">
                 <rect key="frame" x="0.0" y="0.0" width="511" height="115.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bS6-YL-kO0">
-                        <rect key="frame" x="454" y="42" width="51" height="31"/>
-                        <connections>
-                            <action selector="switchChanged:" destination="CIm-Mh-01g" eventType="valueChanged" id="cLz-F0-rla"/>
-                        </connections>
-                    </switch>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imd-ds-4In">
-                        <rect key="frame" x="8" y="40.5" width="438" height="35.5"/>
+                        <rect key="frame" x="8" y="40" width="438" height="35.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-fA-IpU">
-                                <rect key="frame" x="0.0" y="21" width="438" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgg-Sc-QmM">
                                 <rect key="frame" x="0.0" y="0.0" width="438" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlM-fA-IpU">
+                                <rect key="frame" x="0.0" y="21" width="438" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,6 +43,12 @@
                             <constraint firstAttribute="trailing" secondItem="Fgg-Sc-QmM" secondAttribute="trailing" id="xNN-HY-KZq"/>
                         </constraints>
                     </view>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bS6-YL-kO0">
+                        <rect key="frame" x="454" y="42" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchChanged:" destination="CIm-Mh-01g" eventType="valueChanged" id="cLz-F0-rla"/>
+                        </connections>
+                    </switch>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Imd-ds-4In" firstAttribute="centerY" secondItem="XWC-aI-zSa" secondAttribute="centerY" id="JoP-Dy-LZV"/>

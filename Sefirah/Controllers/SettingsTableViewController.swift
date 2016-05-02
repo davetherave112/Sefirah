@@ -16,6 +16,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var selectedNusach: UILabel!
     @IBOutlet weak var prayerOptions: UILabel!
     @IBOutlet weak var notificationCount: UILabel!
+    @IBOutlet weak var tzeisOptions: UILabel!
     
     lazy var db: CoreDataDefaultStorage = {
         let store = CoreData.Store.Named("db")
@@ -42,6 +43,8 @@ class SettingsTableViewController: UITableViewController {
         self.selectedLanguage.text = NSUserDefaults.standardUserDefaults().stringForKey("Language")
         self.selectedNusach.text = NSUserDefaults.standardUserDefaults().stringForKey("Nusach")
         self.prayerOptions.text = (NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]).joinWithSeparator(", ")
+        let tzeisTimes = (NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Int]).map({Tzeis(rawValue: $0)!.description})
+        self.tzeisOptions.text = tzeisTimes.joinWithSeparator(", ")
         
         var notifications: [Notification] = []
         do {
