@@ -9,11 +9,23 @@
 import Foundation
 import CoreLocation
 import KosherCocoa
+import ClockKit
 
 class SefiraDayWatch: NSObject {
     static let sharedInstance = SefiraDayWatch()
     
-    var sefiraDate: Int?
+    var sefiraDate: Int? {
+        didSet {
+            let complicationServer = CLKComplicationServer.sharedInstance()
+            if let activeComplications = complicationServer.activeComplications {
+                for complication in activeComplications {
+                    complicationServer.reloadTimelineForComplication(complication)
+                }
+            }
+        }
+    }
+    var tzeis: NSDate?
+    var lastRecordedLocation: KCGeoLocation?
     
     let locationManager: CLLocationManager = CLLocationManager()
     
@@ -35,9 +47,10 @@ class SefiraDayWatch: NSObject {
         let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
         
         let jewishCalendar = KCJewishCalendar(location: location)
-        let sunset = jewishCalendar.sunset()
-        
-        self.sefiraDate = self.workingDateAdjustedForSunset(sunset)
+        self.tzeis = jewishCalendar.tzais()
+        self.lastRecordedLocation = location
+    
+        self.sefiraDate = self.workingDateAdjustedForSunset(tzeis!)
         NSUserDefaults.standardUserDefaults().setInteger(self.sefiraDate!, forKey: "LastRecordedDay")
         
     }

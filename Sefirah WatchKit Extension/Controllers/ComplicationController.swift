@@ -20,11 +20,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        handler(KCSefiratHaomerCalculator.dateOfSixteenNissanForYearOfDate(NSDate()))
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        let startDate = KCSefiratHaomerCalculator.dateOfSixteenNissanForYearOfDate(NSDate())
+        let endDate = startDate.dateByAddingTimeInterval(60*60*24*50)
+        handler(endDate)
     }
     
     func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
@@ -39,79 +41,145 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             extensionDelegate.setupWCDelegate()
         }
         
-        // Call the handler with the current timeline entry
-        if complication.family == .CircularSmall {
-            let template = CLKComplicationTemplateCircularSmallRingText()
-            template.textProvider = CLKSimpleTextProvider(text: getCurrentDay())
-            template.ringStyle = CLKComplicationRingStyle.Closed
-            template.fillFraction = getCurrentProgress()
-            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
-            handler(timelineEntry)
-        } else if complication.family == .UtilitarianSmall {
-            let template = CLKComplicationTemplateUtilitarianSmallRingText()
-            let textProvider = CLKSimpleTextProvider(text: getCurrentDay())
-            template.textProvider = textProvider
-            template.ringStyle = CLKComplicationRingStyle.Closed
-            template.fillFraction = getCurrentProgress()
-            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
-            handler(timelineEntry)
-        } else if complication.family == .ModularSmall {
-            let template = CLKComplicationTemplateModularSmallRingText()
-            let textProvider = CLKSimpleTextProvider(text: getCurrentDay())
-            template.textProvider = textProvider
-            template.ringStyle = CLKComplicationRingStyle.Closed
-            template.fillFraction = getCurrentProgress()
-            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
-            handler(timelineEntry)
+        if let entry = self.getTemplate(complication) {
+            handler(entry)
         } else {
             handler(nil)
         }
-        
-        // Call the handler with the current timeline entry
-        handler(nil)
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries prior to the given date
-        handler(nil)
+        var entries: [CLKComplicationTimelineEntry] = []
+        var beforeDate = self.getDateOnly(date)
+        if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
+            for n in 0..<limit {
+                var calendar = KCZmanimCalendar(location: location)
+                calendar.workingDate = beforeDate.dateByAddingTimeInterval(-1 * (60*60*24))
+                beforeDate = calendar.workingDate
+                let tzeis = calendar.tzais()
+                let entry = self.getTemplate(complication, date: tzeis, offset: n)
+                entries.append(entry!)
+            }
+            handler(entries)
+        } else {
+            handler(nil)
+        }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries after to the given date
-        handler(nil)
+        var entries: [CLKComplicationTimelineEntry] = []
+        var afterDate = self.getDateOnly(date)
+        if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
+            for n in 0..<limit {
+                var calendar = KCZmanimCalendar(location: location)
+                calendar.workingDate = afterDate.dateByAddingTimeInterval(60*60*24)
+                afterDate = calendar.workingDate
+                let tzeis = calendar.tzais()
+                let entry = self.getTemplate(complication, date: tzeis, offset: n)
+                entries.append(entry!)
+            }
+            handler(entries)
+        } else {
+            handler(nil)
+        }
+        
     }
     
     // MARK: - Update Scheduling
     
     func getNextRequestedUpdateDateWithHandler(handler: (NSDate?) -> Void) {
         // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-        handler(nil);
+        handler(NSDate(timeIntervalSinceNow: 60*60*12));
     }
     
     // MARK: - Placeholder Templates
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        var template: CLKComplicationTemplate? = nil
+        switch complication.family {
+        case .ModularSmall:
+            let modularTemplate = CLKComplicationTemplateModularSmallRingText()
+            modularTemplate.textProvider = CLKSimpleTextProvider(text: "--")
+            modularTemplate.fillFraction = 0
+            modularTemplate.ringStyle = CLKComplicationRingStyle.Closed
+            template = modularTemplate
+        case .ModularLarge:
+            template = nil
+        case .UtilitarianSmall:
+            let modularTemplate = CLKComplicationTemplateUtilitarianSmallRingText()
+            modularTemplate.textProvider = CLKSimpleTextProvider(text: "--")
+            modularTemplate.fillFraction = 0
+            modularTemplate.ringStyle = CLKComplicationRingStyle.Closed
+            template = modularTemplate
+        case .UtilitarianLarge:
+            template = nil
+        case .CircularSmall:
+            let modularTemplate = CLKComplicationTemplateCircularSmallRingText()
+            modularTemplate.textProvider = CLKSimpleTextProvider(text: "--")
+            modularTemplate.fillFraction = 0
+            modularTemplate.ringStyle = CLKComplicationRingStyle.Closed
+            template = modularTemplate
+        }
+        handler(template)
     }
     
-    func getCurrentDay() -> String {
+    func getCurrentDay(offset: Int) -> String {
         // This would be used to retrieve current day
         // for display on the watch. For testing, this always returns a
         // constant.
         
         //return String(KCSefiratHaomerCalculator.dayOfSefira())
         
-        if let extensionDelegate = (WKExtension.sharedExtension().delegate as? ExtensionDelegate) {
-            return String(extensionDelegate.omerCount)
+        if let dayOfSefira = SefiraDayWatch.sharedInstance.sefiraDate {
+            return String(dayOfSefira + offset)
         } else {
             return "--"
         }
     }
-    
+        
+    func getTemplate(complication: CLKComplication, date: NSDate = NSDate(), offset: Int = 0) -> CLKComplicationTimelineEntry? {
+        let currentDay = getCurrentDay(offset)
+        if complication.family == .CircularSmall {
+            let template = CLKComplicationTemplateCircularSmallRingText()
+            template.textProvider = CLKSimpleTextProvider(text: currentDay)
+            template.ringStyle = CLKComplicationRingStyle.Closed
+            template.fillFraction = getCurrentProgress()
+            let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+            return timelineEntry
+        } else if complication.family == .UtilitarianSmall {
+            let template = CLKComplicationTemplateUtilitarianSmallRingText()
+            let textProvider = CLKSimpleTextProvider(text: currentDay)
+            template.textProvider = textProvider
+            template.ringStyle = CLKComplicationRingStyle.Closed
+            template.fillFraction = getCurrentProgress()
+            let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+            return timelineEntry
+        } else if complication.family == .ModularSmall {
+            let template = CLKComplicationTemplateModularSmallRingText()
+            let textProvider = CLKSimpleTextProvider(text: currentDay)
+            template.textProvider = textProvider
+            template.ringStyle = CLKComplicationRingStyle.Closed
+            template.fillFraction = getCurrentProgress()
+            let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+            return timelineEntry
+        } else {
+            return nil
+        }
+    }
+
+    func getDateOnly(date: NSDate) -> NSDate {
+        let flags: NSCalendarUnit = [.Year, .Month, .Day]
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+        return dateOnly!
+    }
+
     func getCurrentProgress() -> Float {
-        if let extensionDelegate = (WKExtension.sharedExtension().delegate as? ExtensionDelegate) {
-            return Float(extensionDelegate.omerCount)!/49
+        if let dayOfSefira = SefiraDayWatch.sharedInstance.sefiraDate {
+            return Float(dayOfSefira)/50
         } else {
             return 0
         }
