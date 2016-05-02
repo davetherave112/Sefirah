@@ -9,14 +9,51 @@
 import UIKit
 import FSCalendar
 import KosherCocoa
+import WatchConnectivity
 
-class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+@available(iOS 9.0, *)
+class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, WCSessionDelegate {
 
     @IBOutlet weak var calendarView: FSCalendar!
     let firstDayOfOmer = KCSefiratHaomerCalculator.dateOfSixteenNissanForYearOfDate(NSDate())
     
+    // Our WatchConnectivity Session for communicating with the watchOS app
+    var watchSession : WCSession?
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        if let date = message["date"] as? NSDate {
+            self.calendarView.selectDate(date)
+            let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
+            if var dates = selectedDates {
+                dates.append(date)
+                NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            } else {
+                NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
+            }
+        }
+    }
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        if let needData = message["need_data"] as? Bool {
+            if needData {
+                let dates = self.calendarView.selectedDates as! [NSDate]
+                if dates.contains(NSDate()) {
+                    replyHandler(["is_selected": true])
+                } else {
+                    replyHandler(["is_selected": false])
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(WCSession.isSupported()){
+            watchSession = WCSession.defaultSession()
+            watchSession!.delegate = self
+            watchSession!.activateSession()
+        }
         
         if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
             for date in selectedDates {
@@ -53,19 +90,38 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
         let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
         if var dates = selectedDates {
-            if dates.contains(date) {
-                let index = dates.indexOf(date)
-                dates.removeAtIndex(index!)
-            } else {
-                dates.append(date)
-            }
+            dates.append(date)
             NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
         } else {
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
         
+        do {
+            try watchSession?.updateApplicationContext(
+                ["message" : date]
+            )
+        } catch let error as NSError {
+            NSLog("Updating the context failed: " + error.localizedDescription)
+        }
     }
     
+    func calendar(calendar: FSCalendar, didDeselectDate date: NSDate) {
+        let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
+        if var dates = selectedDates {
+            if dates.contains(date) {
+                let index = dates.indexOf(date)
+                dates.removeAtIndex(index!)
+                NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            }
+        }
+        do {
+            try watchSession?.updateApplicationContext(
+                ["deselect" : date]
+            )
+        } catch let error as NSError {
+            NSLog("Updating the context failed: " + error.localizedDescription)
+        }
+    }
     
     func maximumDateForCalendar(calendar: FSCalendar) -> NSDate {
         let calendar = NSCalendar.currentCalendar()

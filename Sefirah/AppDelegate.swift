@@ -10,12 +10,24 @@ import UIKit
 import KosherCocoa
 import CoreLocation
 import CoreData
+import WatchConnectivity
 
+@available(iOS 9.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    /*
+    var session: WCSession? {
+        didSet {
+            if let session = session {
+                session.delegate = self
+                session.activateSession()
+            }
+        }
+    }
+    */
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Register the preference defaults early.
@@ -25,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
             "ScheduleTzeis": true,
         ])
+        
+        /*
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+        }
+        */
         
         UITabBar.appearance().tintColor = UIColor(rgba: "#C19F69")
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
@@ -117,26 +135,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    /*
- setStatusBarColor(UIColor *color)
- {
- id statusBarWindow = [[UIApplication sharedApplication] valueForKey:@"statusBarWindow"];
- id statusBar = [statusBarWindow valueForKey:@"statusBar"];
- 
- SEL setForegroundColor_sel = NSSelectorFromString(@"setForegroundColor:");
- if([statusBar respondsToSelector:setForegroundColor_sel]) {
- // iOS 7+
- [statusBar performSelector:setForegroundColor_sel withObject:[UIColor colorWithRed:235/255.0 green:116/255.0 blue:35/255.0 alpha:1.0]];
- return YES;
- } else {
- return NO;
- }
- }
- */
-    
-    
-    
 
+}
+
+@available(iOS 9.0, *)
+extension AppDelegate: WCSessionDelegate {
+   /*
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
+        if let date = message["date"] as? NSDate {
+            if var dates = selectedDates {
+                dates.append(date)
+                NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            } else {
+                NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
+            }
+            replyHandler(["dates": NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates")!])
+        }
+        if let needData = message["need_data"] as? Bool {
+            if needData {
+                if let dates = selectedDates {
+                    replyHandler(["dates": dates])
+                }
+            }
+        }
+    }
+    */
 }
 
