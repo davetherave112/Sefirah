@@ -46,32 +46,6 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
-    /*
-    /** Called on the delegate of the receiver. Will be called on startup if an applicationContext is available. */
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]){
-        if let message : NSDate = applicationContext["message"] as? NSDate {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if message == dateOnly {
-                self.countButton.setHidden(true)
-                self.countLabel.setText("Well Done! You've already counted today.")
-            }
-        }
-        if let message : NSDate = applicationContext["deselect"] as? NSDate {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if message == dateOnly {
-                self.countButton.setHidden(false)
-                self.countLabel.setText("Count before you forget!")
-            }
-        }
-    }
-    */
-    
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         if let message : NSDate = message["message"] as? NSDate {
             let date = NSDate()

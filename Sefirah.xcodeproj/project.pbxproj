@@ -51,7 +51,6 @@
 		93EDA27A2092101BE4A15975F5CD9433 /* SefiraDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */; };
 		9456E52608FA3123AEFAE8439263D4BF /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C91F6E25ABCD0403D72B611F9BCF91 /* NotificationTableViewCell.swift */; };
 		96C229E12B22B8B868CA362E68DA844B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0891D13817AC8FE7CA7E7132EA5548D4 /* ExtensionDelegate.swift */; };
-		96C8B5074EA39A32081FFF62C5C11A26 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */; };
 		98567C246AB6F216FFC6FCDCC6E03312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D0E154956DD8B0F897B4DE354C27304 /* Assets.xcassets */; };
 		9A95BAC51332BEBAD66FA890D7EA1D87 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E268EDE9C6F92C0C23831365D8F81 /* Pods_Sefirah.framework */; };
 		A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */; };
@@ -149,7 +148,6 @@
 		550206918C1ECA17D8F3EB053673DC6E /* Sefirah WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit App.entitlements"; sourceTree = "<group>"; };
 		591903883EFFF2F7DF4BBB8F7C398219 /* Sefirah WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sefirah WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		59208083A54833E465B88FF6254741DB /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		60B301665038AA7130366FB0071BA064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SefiraDay.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 			children = (
 				F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */,
 				EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */,
-				5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */,
 				EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */,
 				8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */,
 				26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */,
@@ -756,7 +753,6 @@
 			files = (
 				AAA1C0C60CE9033800F2E828188F6EF5 /* ComplicationController.swift in Sources */,
 				96C229E12B22B8B868CA362E68DA844B /* ExtensionDelegate.swift in Sources */,
-				96C8B5074EA39A32081FFF62C5C11A26 /* GlanceController.swift in Sources */,
 				D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */,
 				5D7EDEEE51F8E0BCA25FEE9C18C5F988 /* LanguageSettingsInterfaceController.swift in Sources */,
 				E5E687F51B9AFC8D08F31F8BE9E74D97 /* MainInterfaceController.swift in Sources */,
