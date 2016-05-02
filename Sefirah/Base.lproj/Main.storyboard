@@ -550,14 +550,15 @@
             </objects>
             <point key="canvasLocation" x="3501" y="385"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="pEk-LQ-4vg">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c7v-zp-9YU" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c7v-zp-9YU" customClass="MainTabBarViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SKN-gb-VsG">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6qu-I4-MsQ"/>

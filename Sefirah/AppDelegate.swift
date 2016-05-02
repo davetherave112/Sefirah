@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "ScheduleTzeis": true,
         ])
         
-        UITabBar.appearance().tintColor = UIColor(rgba: "#0A366D")
+        UITabBar.appearance().tintColor = UIColor(rgba: "#C19F69")
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         
         NotificationManager.sharedInstance.getLocation()
@@ -117,6 +117,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    /*
+ setStatusBarColor(UIColor *color)
+ {
+ id statusBarWindow = [[UIApplication sharedApplication] valueForKey:@"statusBarWindow"];
+ id statusBar = [statusBarWindow valueForKey:@"statusBar"];
+ 
+ SEL setForegroundColor_sel = NSSelectorFromString(@"setForegroundColor:");
+ if([statusBar respondsToSelector:setForegroundColor_sel]) {
+ // iOS 7+
+ [statusBar performSelector:setForegroundColor_sel withObject:[UIColor colorWithRed:235/255.0 green:116/255.0 blue:35/255.0 alpha:1.0]];
+ return YES;
+ } else {
+ return NO;
+ }
+ }
+ */
+    
+    
     
 
 }

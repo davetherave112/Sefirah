@@ -62,6 +62,7 @@
 		C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */; };
 		CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		D0C471831CD6CEE7009D65FC /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C471821CD6CEE7009D65FC /* MainTabBarViewController.swift */; };
 		D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */; };
 		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
@@ -165,6 +166,7 @@
 		CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShmulikCLM.ttf; sourceTree = "<group>"; };
 		CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DorianCLM-BookItalic.ttf"; sourceTree = "<group>"; };
+		D0C471821CD6CEE7009D65FC /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
 		DBE3407B7D29B1A7556A03F9F856220A /* Sefirah WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		DEC57FC7C7056A6ED9C5221FFB66A215 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +284,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4AB14C56B2B34785E7DDC603B0C5BE36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		4FE9131A7790936C42AC93E02614E91C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +302,22 @@
 				63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */,
 				159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */,
 				2A0AD3F29526A80369B42678026205CB /* SettingsTableViewController.swift */,
+				D0C471821CD6CEE7009D65FC /* MainTabBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		986D9899D00EE68A09D1E30491A06C38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */,
+				EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */,
+				5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */,
+				EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */,
+				8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */,
+				26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */,
+				054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */,
+				544E11F11E2025C772C6476CD2E43995 /* SefirahTextInterfaceController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,16 +353,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		D97009287101E310998FDDABC11BD50B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */,
-				D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */,
-				CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		C993568F36F4827CE4444959A47AB24A /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,36 +361,14 @@
 			path = Nibs;
 			sourceTree = "<group>";
 		};
-		4AB14C56B2B34785E7DDC603B0C5BE36 /* Classes */ = {
+		D97009287101E310998FDDABC11BD50B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */,
+				B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */,
+				D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */,
+				CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		986D9899D00EE68A09D1E30491A06C38 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */,
-				EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */,
-				5E7B2D7C5DCD99745651848F8A40446D /* GlanceController.swift */,
-				EA1B61A4142E5CFEA5795722B30B89CE /* LanguageSettingsInterfaceController.swift */,
-				8BA48A1A61645F7652E8DAA5588DB6A5 /* MainInterfaceController.swift */,
-				26E0E3FAD2F28A255DBAED2CBD8A1499 /* NotificationController.swift */,
-				054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */,
-				544E11F11E2025C772C6476CD2E43995 /* SefirahTextInterfaceController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */,
-				EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */,
-			);
-			path = "Row Controllers";
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		E5F1B76F7BE686F3159BB29BF4838BFB = {
@@ -397,6 +391,15 @@
 				72E0D77EA1A801249E1CADD6D8004433 /* _Notification.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F8A4FEDD51ECD68B6A7FBB39D418F67E /* Row Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */,
+				EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */,
+			);
+			path = "Row Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,6 +718,7 @@
 				0E2088A63734F804BE33CAE7C995D28E /* AppDelegate.swift in Sources */,
 				E48B94100D91D74CCE2D293A99891780 /* LanguagesTableViewController.swift in Sources */,
 				73ECC088926F477EA1FFF7B05DEBE7B9 /* MainViewController.swift in Sources */,
+				D0C471831CD6CEE7009D65FC /* MainTabBarViewController.swift in Sources */,
 				5437B2D1C32A7891B8BC3D2902FFCC32 /* Model.xcdatamodeld in Sources */,
 				9030EC3EC17448C8865EBBAB22412441 /* NewNotificationTableViewController.swift in Sources */,
 				ABC1FEC8CF0C622AF4F312C9308454DB /* Notification.swift in Sources */,

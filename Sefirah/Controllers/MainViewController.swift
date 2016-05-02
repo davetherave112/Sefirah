@@ -24,10 +24,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     var formatter = KCSefiraFormatter()
     var sefiraDayNumber: SefiraDay?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         locationManager.delegate = self
         self.sefiraDayNumber = SefiraDay(locationManager: locationManager)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
