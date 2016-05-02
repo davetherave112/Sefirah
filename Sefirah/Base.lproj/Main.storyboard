@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="DorianCLM-Book.ttf">
@@ -132,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="64"/>
+            <point key="canvasLocation" x="1026" y="-442"/>
         </scene>
         <!--Settings-->
         <scene sceneID="HQr-TP-aXa">
@@ -141,7 +142,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="10o-4k-a7D">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Language Settings" footerTitle="Setting the Nusach will only have an effect if Language is set to Hebrew." id="e2h-db-QBz">
                                 <cells>
@@ -279,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVV-b9-v8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970" y="724"/>
+            <point key="canvasLocation" x="1836" y="952"/>
         </scene>
         <!--PrayerOptions-->
         <scene sceneID="Ec1-UA-6JA">
@@ -317,7 +318,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qe-xu-LRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805" y="1062"/>
+            <point key="canvasLocation" x="2723" y="1328"/>
         </scene>
         <!--New Notification-->
         <scene sceneID="dcs-qQ-5fu">
@@ -442,7 +443,7 @@
                     </date>
                 </datePicker>
             </objects>
-            <point key="canvasLocation" x="4313" y="1742"/>
+            <point key="canvasLocation" x="4283" y="2044"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="7bs-GR-BIi">
@@ -471,7 +472,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNs-Ja-bc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3501" y="1062"/>
+            <point key="canvasLocation" x="3489" y="1328"/>
         </scene>
         <!--Language-->
         <scene sceneID="f4h-bQ-ITc">
@@ -510,7 +511,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAY-vk-0Iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805" y="385"/>
+            <point key="canvasLocation" x="2723" y="641"/>
         </scene>
         <!--Nusach-->
         <scene sceneID="1zY-5n-wPn">
@@ -548,7 +549,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNY-yy-C3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3501" y="385"/>
+            <point key="canvasLocation" x="3489" y="641"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="pEk-LQ-4vg">
@@ -562,18 +563,101 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6qu-I4-MsQ"/>
-                        <segue destination="sMU-hQ-QWc" kind="relationship" relationship="viewControllers" id="8iJ-RQ-usW"/>
+                        <segue destination="9ih-hP-0if" kind="relationship" relationship="viewControllers" id="jQO-WM-S6e"/>
+                        <segue destination="sMU-hQ-QWc" kind="relationship" relationship="viewControllers" id="qks-4c-saq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L44-uG-UJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="365"/>
+            <point key="canvasLocation" x="295" y="371"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="2G7-UZ-yej">
+            <objects>
+                <viewController id="9ih-hP-0if" customClass="CalendarViewController" customModule="Sefirah" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZnX-4U-sHT"/>
+                        <viewControllerLayoutGuide type="bottom" id="cE5-xf-ho1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U4G-uT-JZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5R-qZ-QiR" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="28" width="560" height="481"/>
+                                <color key="backgroundColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e5R-qZ-QiR" secondAttribute="height" multiplier="15:8" constant="-341.875" id="vs8-ll-Z6X"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="subtitleTodayColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fakedSelectedDay">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fakeSubtitles" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="useVeryShortWeekdaySymbols" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                        <color key="value" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="subtitleSelectionColor">
+                                        <color key="value" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
+                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="subtitleTextSize">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9ih-hP-0if" id="ubc-bZ-7jp"/>
+                                    <outlet property="delegate" destination="9ih-hP-0if" id="Ust-t5-c8W"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e5R-qZ-QiR" firstAttribute="top" secondItem="ZnX-4U-sHT" secondAttribute="bottom" constant="8" id="4ft-0a-TK1"/>
+                            <constraint firstItem="e5R-qZ-QiR" firstAttribute="trailing" secondItem="U4G-uT-JZ4" secondAttribute="trailingMargin" id="Mvf-qS-Eod"/>
+                            <constraint firstItem="e5R-qZ-QiR" firstAttribute="leading" secondItem="U4G-uT-JZ4" secondAttribute="leadingMargin" id="Pul-1b-CML"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="Tracker" image="calendar" selectedImage="calendar" id="g0l-oK-gXb"/>
+                    <connections>
+                        <outlet property="calendarView" destination="e5R-qZ-QiR" id="eHa-sa-dDP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raK-ba-qRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="257"/>
         </scene>
         <!--Settings-->
         <scene sceneID="InZ-yj-p8R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sMU-hQ-QWc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Settings" image="settings" selectedImage="settings" id="LFZ-oH-zdz"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Settings" image="settings" selectedImage="settings" id="LFZ-oH-zdz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GyG-ZF-202">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -591,7 +675,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIw-mp-Qe7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="724"/>
+            <point key="canvasLocation" x="1026" y="952"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mWX-VZ-C8K">
@@ -614,10 +698,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAV-hx-cLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3501" y="1742"/>
+            <point key="canvasLocation" x="3489" y="2044"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="28" height="32"/>
         <image name="home" width="30" height="31"/>
         <image name="settings" width="30" height="30"/>
     </resources>

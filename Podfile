@@ -11,6 +11,7 @@ target 'Sefirah' do
 	pod 'KosherCocoa', :git => 'git@github.com:MosheBerman/KosherCocoa.git', :commit => '5376523'
     pod "KDCircularProgress"
 	pod "SugarRecord/CoreData"
+	pod 'FSCalendar'
 end
 
 target 'Sefirah WatchKit App' do
