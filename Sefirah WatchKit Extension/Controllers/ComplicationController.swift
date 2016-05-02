@@ -54,7 +54,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         var beforeDate = self.getDateOnly(date)
         if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
             for n in 0..<limit {
-                var calendar = KCZmanimCalendar(location: location)
+                let calendar = KCZmanimCalendar(location: location)
                 calendar.workingDate = beforeDate.dateByAddingTimeInterval(-1 * (60*60*24))
                 beforeDate = calendar.workingDate
                 let tzeis = calendar.tzais()
@@ -73,7 +73,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         var afterDate = self.getDateOnly(date)
         if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
             for n in 0..<limit {
-                var calendar = KCZmanimCalendar(location: location)
+                let calendar = KCZmanimCalendar(location: location)
                 calendar.workingDate = afterDate.dateByAddingTimeInterval(60*60*24)
                 afterDate = calendar.workingDate
                 let tzeis = calendar.tzais()
