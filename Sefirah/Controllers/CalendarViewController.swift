@@ -96,6 +96,13 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
         
+        if date == self.getDateOnly(NSDate()) {
+            let tabBarController = self.tabBarController
+            let tabBarItem = tabBarController!.tabBar.items![1]
+            tabBarItem.badgeValue = nil
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        }
+        
         do {
             try watchSession?.updateApplicationContext(
                 ["message" : date]
@@ -114,6 +121,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
             }
         }
+        
+        if date == self.getDateOnly(NSDate()) {
+            let tabBarController = self.tabBarController
+            let tabBarItem = tabBarController!.tabBar.items![1]
+            tabBarItem.badgeValue = "1"
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+        }
+        
         do {
             try watchSession?.updateApplicationContext(
                 ["deselect" : date]
@@ -133,5 +148,11 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         return self.firstDayOfOmer
     }
     
+    func getDateOnly(date: NSDate) -> NSDate {
+        let flags: NSCalendarUnit = [.Year, .Month, .Day]
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+        return dateOnly!
+    }
 
 }

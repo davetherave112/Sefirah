@@ -16,6 +16,8 @@ import WatchConnectivity
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //TODO: check badge number updated according to Tzeis
+    
     var window: UIWindow?
 
     /*
@@ -35,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "Language" : Languages.English.rawValue,
             "Nusach" : Nusach.Ashkenaz.rawValue,
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
-            "ScheduleTzeis": true,
+            "Tzeis": [Tzeis.FifteenBefore.rawValue]
         ])
         
         /*
@@ -50,6 +52,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationManager.sharedInstance.getLocation()
         
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
+            let date = NSDate()
+            let flags: NSCalendarUnit = [.Year, .Month, .Day]
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            if !selectedDates.contains(dateOnly!) {
+                let tabBarItem = (self.window?.rootViewController as! MainTabBarViewController).tabBar.items![1]
+                tabBarItem.badgeValue = "1"
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+            }
+        } else {
+            let tabBarItem = (self.window?.rootViewController as! MainTabBarViewController).tabBar.items![1]
+            tabBarItem.badgeValue = "1"
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

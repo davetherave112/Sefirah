@@ -64,6 +64,8 @@
 		C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */; };
 		CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		D042CDBE1CD7A4650055FCE6 /* TzeisNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042CDBD1CD7A4650055FCE6 /* TzeisNotificationsTableViewController.swift */; };
+		D042CDC01CD7ABF20055FCE6 /* TzeisNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042CDBF1CD7ABF20055FCE6 /* TzeisNotificationTableViewCell.swift */; };
 		D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */; };
 		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
@@ -171,6 +173,8 @@
 		CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ShmulikCLM.ttf; sourceTree = "<group>"; };
 		CF4C80D3E579943C312E2CB7F83C5CF0 /* Sefirah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sefirah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DorianCLM-BookItalic.ttf"; sourceTree = "<group>"; };
+		D042CDBD1CD7A4650055FCE6 /* TzeisNotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TzeisNotificationsTableViewController.swift; sourceTree = "<group>"; };
+		D042CDBF1CD7ABF20055FCE6 /* TzeisNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TzeisNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		D2D408E3E59470263AE9B48AAF1F052C /* Pods-Sefirah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sefirah.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah.release.xcconfig"; sourceTree = "<group>"; };
 		DBE3407B7D29B1A7556A03F9F856220A /* Sefirah WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Sefirah WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		DEC57FC7C7056A6ED9C5221FFB66A215 /* LanguagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagesTableViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 				63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */,
 				159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */,
 				2A0AD3F29526A80369B42678026205CB /* SettingsTableViewController.swift */,
+				D042CDBD1CD7A4650055FCE6 /* TzeisNotificationsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */,
 				591903883EFFF2F7DF4BBB8F7C398219 /* Sefirah WatchKit App-Bridging-Header.h */,
 				4961115A03C964CB449101A196BD00C0 /* Settings.swift */,
+				D042CDBF1CD7ABF20055FCE6 /* TzeisNotificationTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D042CDBE1CD7A4650055FCE6 /* TzeisNotificationsTableViewController.swift in Sources */,
 				0E2088A63734F804BE33CAE7C995D28E /* AppDelegate.swift in Sources */,
 				6BDF6FCE3808EA5D6C6D467C7F4DDE75 /* CalendarViewController.swift in Sources */,
 				E48B94100D91D74CCE2D293A99891780 /* LanguagesTableViewController.swift in Sources */,
@@ -732,6 +739,7 @@
 				6C1E329F02A634E918F23BC39C09078D /* NotificationManager.swift in Sources */,
 				9456E52608FA3123AEFAE8439263D4BF /* NotificationTableViewCell.swift in Sources */,
 				EC6DCCCBBAD5FCF6C517163F380A7EE7 /* NotificationsTableViewController.swift in Sources */,
+				D042CDC01CD7ABF20055FCE6 /* TzeisNotificationTableViewCell.swift in Sources */,
 				D7B4852EAFCEF1F5D49295CD9E8D4470 /* NusachTableViewController.swift in Sources */,
 				2EEC944E9A6BDE6DE6AE01F65EECA71C /* PrayerOptionsTableViewController.swift in Sources */,
 				93EDA27A2092101BE4A15975F5CD9433 /* SefiraDay.swift in Sources */,

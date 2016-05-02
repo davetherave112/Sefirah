@@ -9,6 +9,69 @@
 import Foundation
 import KosherCocoa
 
+
+enum Tzeis: Int {
+    case FifteenBefore = -15
+    case ThirtyBefore = -30
+    case FortyFiveBefore = -45
+    case HourBefore = -60
+    case FifteenAfter = 15
+    case ThirtyAfter = 30
+    case FortyFiveAfter = 45
+    case HourAfter = 60
+    case AtTzeis = 0
+    
+    var description: String {
+        switch self {
+        case .AtTzeis:
+            return "0 Minutes (At Tzeis)"
+        case .FifteenBefore:
+            return "15 Minutes"
+        case .ThirtyBefore:
+            return "30 Minutes"
+        case .FortyFiveBefore:
+            return "45 Minutes"
+        case .HourBefore:
+            return "1 Hour"
+        case .FifteenAfter:
+            return "15 Minutes"
+        case .ThirtyAfter:
+            return "30 Minutes"
+        case .FortyFiveAfter:
+            return "45 Minutes"
+        case .HourAfter:
+            return "1 Hour"
+        }
+    }
+
+    var notificationName: String {
+        switch self {
+        case .AtTzeis:
+            return "tzeis-0"
+        case .FifteenBefore:
+            return "tzeis-15-before"
+        case .ThirtyBefore:
+            return "tzeis-30-before"
+        case .FortyFiveBefore:
+            return "tzeis-45-before"
+        case .HourBefore:
+            return "tzeis-hour-before"
+        case .FifteenAfter:
+            return "tzeis-15-after"
+        case .ThirtyAfter:
+            return "tzeis-30-after"
+        case .FortyFiveAfter:
+            return "tzeis-45-after"
+        case .HourAfter:
+            return "tzeis-hour-after"
+        }
+    }
+    
+    static let allValues = [FifteenBefore, ThirtyBefore, FortyFiveBefore, HourBefore, FifteenAfter, ThirtyAfter, FortyFiveAfter, HourAfter, AtTzeis]
+    static let beforeValues = [.AtTzeis, FifteenBefore, ThirtyBefore, FortyFiveBefore, HourBefore]
+    static let afterValues = [FifteenAfter, ThirtyAfter, FortyFiveAfter, HourAfter]
+}
+
 enum Languages: String {
     case English = "English"
     case Hebrew = "Hebrew"
