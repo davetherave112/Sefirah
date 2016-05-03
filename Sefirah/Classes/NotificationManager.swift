@@ -117,6 +117,8 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["name": name]
         
+        
+        
         if tzeis {
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         } else {

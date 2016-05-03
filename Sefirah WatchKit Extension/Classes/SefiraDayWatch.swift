@@ -26,6 +26,7 @@ class SefiraDayWatch: NSObject {
     }
     var tzeis: NSDate?
     var lastRecordedLocation: KCGeoLocation?
+    var lastRecordedCLLocation: CLLocationCoordinate2D?
     
     let locationManager: CLLocationManager = CLLocationManager()
     
@@ -44,11 +45,12 @@ class SefiraDayWatch: NSObject {
     }
     
     func setAdjustedSefiraDay(location: CLLocationCoordinate2D) {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        let locationKC = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
         
-        let jewishCalendar = KCJewishCalendar(location: location)
+        self.lastRecordedCLLocation = location
+        let jewishCalendar = KCJewishCalendar(location: locationKC)
         self.tzeis = jewishCalendar.tzais()
-        self.lastRecordedLocation = location
+        self.lastRecordedLocation = locationKC
     
         self.sefiraDate = self.workingDateAdjustedForSunset(tzeis!)
         NSUserDefaults.standardUserDefaults().setInteger(self.sefiraDate!, forKey: "LastRecordedDay")

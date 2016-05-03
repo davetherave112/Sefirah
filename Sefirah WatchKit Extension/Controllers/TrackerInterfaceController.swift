@@ -25,21 +25,42 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
+    func setAdjustedSefiraDay(location: CLLocationCoordinate2D) -> Int {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        
+        let jewishCalendar = KCJewishCalendar(location: location)
+        let tzeis = jewishCalendar.tzais()
+        
+        return self.workingDateAdjustedForSunset(tzeis!)
+        
+        
+    }
+    
+    func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
+        
+        let isAfterSunset = sunset.timeIntervalSinceNow < 0
+        
+        var sefiraCount: Int?
+        if (isAfterSunset) {
+            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira() + 1
+        } else {
+            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira()
+        }
+        
+        return sefiraCount!
+    }
+    
     @IBAction func trackOmerDay() {
         if WCSession.isSupported() {
             session = WCSession.defaultSession()
-            let todaysDate = NSDate()
-            let todaysCount = KCSefiratHaomerCalculator.dayOfSefiraForDate(todaysDate)
             if let sefiraDate = SefiraDayWatch.sharedInstance.sefiraDate {
-                if todaysCount ==  sefiraDate {
-                    let date = todaysDate
-                    let flags: NSCalendarUnit = [.Year, .Month, .Day]
-                    let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-                    let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-                    session!.sendMessage(["date": dateOnly!], replyHandler: nil, errorHandler: nil)
-                    self.countLabel.setText("Well Done! You've already counted today.")
-                    self.countButton.setHidden(true)
-                }
+                let date = NSDate()
+                let flags: NSCalendarUnit = [.Year, .Month, .Day]
+                let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+                let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+                session!.sendMessage(["date": dateOnly!], replyHandler: nil, errorHandler: nil)
+                self.countLabel.setText("Well Done! You've already counted today.")
+                self.countButton.setHidden(true)
             } else {
                 //TODO: handle error
             }
