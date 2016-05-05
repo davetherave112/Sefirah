@@ -133,7 +133,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         //return String(KCSefiratHaomerCalculator.dayOfSefira())
         
-        if let dayOfSefira = SefiraDayWatch.sharedInstance.sefiraDate {
+        let dayOfSefira = KCSefiratHaomerCalculator.dayOfSefiraForDate(NSDate())
+        if dayOfSefira > 0 {
             return String(dayOfSefira + offset)
         } else {
             return "--"
@@ -145,23 +146,29 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if complication.family == .CircularSmall {
             let template = CLKComplicationTemplateCircularSmallRingText()
             template.textProvider = CLKSimpleTextProvider(text: currentDay)
+            template.textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.ringStyle = CLKComplicationRingStyle.Closed
+            template.tintColor = UIColor(rgba: "#C19F69")
             template.fillFraction = getCurrentProgress()
             let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
             return timelineEntry
         } else if complication.family == .UtilitarianSmall {
             let template = CLKComplicationTemplateUtilitarianSmallRingText()
             let textProvider = CLKSimpleTextProvider(text: currentDay)
+            textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.textProvider = textProvider
             template.ringStyle = CLKComplicationRingStyle.Closed
+            template.tintColor = UIColor(rgba: "#C19F69")
             template.fillFraction = getCurrentProgress()
             let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
             return timelineEntry
         } else if complication.family == .ModularSmall {
             let template = CLKComplicationTemplateModularSmallRingText()
             let textProvider = CLKSimpleTextProvider(text: currentDay)
+            textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.textProvider = textProvider
             template.ringStyle = CLKComplicationRingStyle.Closed
+            template.tintColor = UIColor(rgba: "#C19F69")
             template.fillFraction = getCurrentProgress()
             let timelineEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
             return timelineEntry

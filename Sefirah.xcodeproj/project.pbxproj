@@ -65,6 +65,7 @@
 		C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */; };
 		CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		D0D8039B1CDB2F05006B14A9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */; };
 		D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */; };
 		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
@@ -757,6 +758,7 @@
 				5D7EDEEE51F8E0BCA25FEE9C18C5F988 /* LanguageSettingsInterfaceController.swift in Sources */,
 				E5E687F51B9AFC8D08F31F8BE9E74D97 /* MainInterfaceController.swift in Sources */,
 				728DD3124921641337D8D93232C2FD88 /* NotificationController.swift in Sources */,
+				D0D8039B1CDB2F05006B14A9 /* UIColorExtension.swift in Sources */,
 				A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */,
 				78A4EFA1E519E75833246E568C2007C2 /* PrayerOptionsRowController.swift in Sources */,
 				18FFFA4A084381C7DC70ADBF3AE958AC /* SefiraDayWatch.swift in Sources */,
