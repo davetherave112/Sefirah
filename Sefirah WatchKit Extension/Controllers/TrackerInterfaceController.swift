@@ -15,6 +15,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
 
     @IBOutlet var countLabel: WKInterfaceLabel!
     @IBOutlet var countButton: WKInterfaceButton!
+    var selectAllPressed: Bool = false
     
     var session: WCSession? {
         didSet {
@@ -40,9 +41,17 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func countAllDaysThroughToday() {
         if WCSession.isSupported() {
             session = WCSession.defaultSession()
-            session!.sendMessage(["select_all": true], replyHandler: nil, errorHandler: nil)
-            self.countLabel.setText("Well Done! You've already counted today.")
-            self.countButton.setHidden(true)
+            self.selectAllPressed = true
+            session!.sendMessage(["select_all": true], replyHandler: { response in
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.countLabel.setText("Well Done! You've already counted today.")
+                    self.countButton.setHidden(true)
+                    self.selectAllPressed = false
+                }
+            }, errorHandler: { error in
+                print(error)
+                self.selectAllPressed = false
+            })
         }
     }
     
@@ -129,8 +138,10 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        let needData = !self.selectAllPressed
+        
         session = WCSession.defaultSession()
-        session!.sendMessage(["need_data": true], replyHandler: { response in
+        session!.sendMessage(["need_data": needData], replyHandler: { response in
             if let isSelected = response["is_selected"] as? Bool {
                 if isSelected {
                     dispatch_async(dispatch_get_main_queue()) {

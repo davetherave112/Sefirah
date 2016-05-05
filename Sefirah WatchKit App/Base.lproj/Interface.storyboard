@@ -10,20 +10,27 @@
             <objects>
                 <controller identifier="progressController" title="Progress" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
-                        <imageView width="1" widthAdjustment="-5" alignment="center" verticalAlignment="center" image="day0" contentMode="scaleAspectFit" id="SBA-gv-rxP"/>
+                        <group width="1" height="1" alignment="center" backgroundImage="time0" contentMode="scaleAspectFit" layout="vertical" id="euG-b5-LFC">
+                            <items>
+                                <label width="0.69999999999999996" alignment="center" verticalAlignment="center" text="Time Remaining" textAlignment="center" numberOfLines="2" id="gxf-nU-5vh">
+                                    <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="progressImage" destination="SBA-gv-rxP" id="bUC-5x-nJW"/>
+                        <outlet property="progressGroup" destination="euG-b5-LFC" id="5z2-IQ-TIX"/>
+                        <outlet property="timeLabel" destination="gxf-nU-5vh" id="sbh-JB-0qq"/>
                         <segue destination="IdI-Zv-Rhq" kind="relationship" relationship="nextPage" id="tJd-lC-piR"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="206" y="113"/>
         </scene>
-        <!--Text-->
+        <!--Prayer Text-->
         <scene sceneID="qfk-Ag-MEM">
             <objects>
-                <controller identifier="textController" title="Text" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                <controller identifier="textController" title="Prayer Text" id="IdI-Zv-Rhq" customClass="SefirahTextInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
                         <group alignment="left" spacing="4" id="GQu-yk-Rai">
                             <items>

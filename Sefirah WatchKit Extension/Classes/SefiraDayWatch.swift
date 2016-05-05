@@ -57,6 +57,12 @@ class SefiraDayWatch: NSObject {
         
     }
     
+    class func getTzeis(location: CLLocationCoordinate2D) -> NSDate {
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        let jewishCalendar = KCJewishCalendar(location: KClocation)
+        return jewishCalendar.tzais()
+    }
+    
     func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
         
         let isAfterSunset = sunset.timeIntervalSinceNow < 0

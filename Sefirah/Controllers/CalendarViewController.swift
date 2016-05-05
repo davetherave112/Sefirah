@@ -10,12 +10,14 @@ import UIKit
 import FSCalendar
 import KosherCocoa
 import WatchConnectivity
+import CoreLocation
 
 @available(iOS 9.0, *)
-class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, WCSessionDelegate {
+class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, WCSessionDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var calendarView: FSCalendar!
     let firstDayOfOmer = KCSefiratHaomerCalculator.dateOfSixteenNissanForYearOfDate(NSDate())
+    let locationManager = SefiraDay.sharedInstance.locationManager
     
     // Our WatchConnectivity Session for communicating with the watchOS app
     var watchSession : WCSession?
@@ -37,28 +39,47 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
         }
-        if let selectAll = message["select_all"] as? Bool {
-            if selectAll {
-                let dateOnly = self.getDateOnly(self.firstDayOfOmer)
-                if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-                    let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
-                    let range = self.daysBetween(dateOnly, dt2: SefiraDay.dateAdjustedForHebrewCalendar(location, date: adjustedDate))
-                    dispatch_async(dispatch_get_main_queue()) {
-                        for n in 0..<range {
-                            let dayComponent = NSDateComponents()
-                            dayComponent.day = n
-                            let calendar = NSCalendar.currentCalendar()
-                            let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly, options: NSCalendarOptions(rawValue: 0))!
-                            self.calendarView.selectDate(adjustedDate)
-                        }
-                        let tabBarController = self.tabBarController
-                        let tabBarItem = tabBarController!.tabBar.items![1]
-                        tabBarItem.badgeValue = nil
-                        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-                    }
-                }
+    }
+    
+    func selectAll() {
+        let dateOnly = self.getDateOnly(self.firstDayOfOmer)
+        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+            let range = self.daysBetween(dateOnly, dt2: SefiraDay.dateAdjustedForHebrewCalendar(location, date: adjustedDate))
+            var dates: [NSDate] = []
+            for n in 0..<range {
+                let dayComponent = NSDateComponents()
+                dayComponent.day = n
+                let calendar = NSCalendar.currentCalendar()
+                let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly, options: NSCalendarOptions(rawValue: 0))!
+                
+                dates.append(adjustedDate)
             }
+            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            dispatch_async(dispatch_get_main_queue()) {
+                for date in dates {
+                    self.calendarView.selectDate(date)
+                }
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                tabBarItem.badgeValue = nil
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            }
+        } else {
+            locationManager.delegate = self
+            SefiraDay.sharedInstance.getLocation()
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = locations.last!.coordinate
+        SefiraDay.sharedInstance.lastRecordedCLLocation = locValue
+        locationManager.stopUpdatingLocation()
+        self.selectAll()
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
     }
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
@@ -78,6 +99,12 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 } else {
                     replyHandler(["is_selected": false])
                 }
+            }
+        }
+        if let selectAll = message["select_all"] as? Bool {
+            if selectAll {
+                self.selectAll()
+                replyHandler(["is_selected": true])
             }
         }
     }

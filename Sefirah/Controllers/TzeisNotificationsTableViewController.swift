@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TzeisNotificationsTableViewController: UITableViewController {
+class TzeisNotificationsTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     let identifier = "TzeisCell"
     let tzeisBefore = Tzeis.beforeValues
     let tzeisAfter = Tzeis.afterValues
+    let locationManager = SefiraDay.sharedInstance.locationManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,27 @@ class TzeisNotificationsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if SefiraDay.sharedInstance.lastRecordedCLLocation == nil {
+            //locationManager.delegate = self
+            //SefiraDay.sharedInstance.getLocation()
+        }
+    }
+    
+    /*
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue: CLLocationCoordinate2D = locations.last!.coordinate
+        locationManager.delegate = self
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+    }
+    */
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,6 +101,8 @@ class TzeisNotificationsTableViewController: UITableViewController {
                 let timeString: String = timeFormatter.stringFromDate(tzeis)
                 cell.detailTextLabel?.text = timeString
                 cell.textLabel?.text = "Local Time"
+            } else {
+                SefiraDay.sharedInstance.getLocation()
             }
             return cell
         }

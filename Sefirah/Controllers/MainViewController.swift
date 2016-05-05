@@ -20,16 +20,15 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     var dayOfSefira: Int?
-    let locationManager = CLLocationManager()
     var formatter = KCSefiraFormatter()
     let adjustedDay = SefiraDay.sharedInstance
-    
+    let locationManager = SefiraDay.sharedInstance.locationManager
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        adjustedDay.locationManager.delegate = self
+        locationManager.delegate = self
         
     }
     
@@ -63,6 +62,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         locationManager.stopUpdatingLocation()
+        
         self.dayOfSefira = adjustedDay.setAdjustedSefiraDay(locValue)
         NSUserDefaults.standardUserDefaults().setInteger(dayOfSefira!, forKey: "LastRecordedDay")
         setSefiraText(dayOfSefira!)
