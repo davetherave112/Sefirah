@@ -117,6 +117,19 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         
     }
     
+    func calendar(calendar: FSCalendar, shouldSelectDate date: NSDate) -> Bool {
+        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+            if date.compare(adjustedDate) == .OrderedDescending {
+                return false
+            } else {
+                return true
+            }
+        } else {
+            return true
+        }
+    }
+    
     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
         let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
         if var dates = selectedDates {
