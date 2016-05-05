@@ -37,6 +37,15 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         return isAfterSunset
     }
     
+    @IBAction func countAllDaysThroughToday() {
+        if WCSession.isSupported() {
+            session = WCSession.defaultSession()
+            session!.sendMessage(["select_all": true], replyHandler: nil, errorHandler: nil)
+            self.countLabel.setText("Well Done! You've already counted today.")
+            self.countButton.setHidden(true)
+        }
+    }
+    
     @IBAction func trackOmerDay() {
         if WCSession.isSupported() {
             session = WCSession.defaultSession()

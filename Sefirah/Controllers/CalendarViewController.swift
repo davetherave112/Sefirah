@@ -37,6 +37,28 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
         }
+        if let selectAll = message["select_all"] as? Bool {
+            if selectAll {
+                let dateOnly = self.getDateOnly(self.firstDayOfOmer)
+                if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+                    let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+                    let range = self.daysBetween(dateOnly, dt2: SefiraDay.dateAdjustedForHebrewCalendar(location, date: adjustedDate))
+                    dispatch_async(dispatch_get_main_queue()) {
+                        for n in 0..<range {
+                            let dayComponent = NSDateComponents()
+                            dayComponent.day = n
+                            let calendar = NSCalendar.currentCalendar()
+                            let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly, options: NSCalendarOptions(rawValue: 0))!
+                            self.calendarView.selectDate(adjustedDate)
+                        }
+                        let tabBarController = self.tabBarController
+                        let tabBarItem = tabBarController!.tabBar.items![1]
+                        tabBarItem.badgeValue = nil
+                        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                    }
+                }
+            }
+        }
     }
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
@@ -213,6 +235,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
         let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
         return dateOnly!
+    }
+
+    
+    func daysBetween(dt1: NSDate, dt2: NSDate) -> Int {
+        let unitFlags = NSCalendarUnit.Day
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(unitFlags, fromDate: dt1, toDate: dt2, options: NSCalendarOptions(rawValue: 0))
+        return components.day + 1
     }
 
 }

@@ -82,6 +82,15 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="0m4-Hn-32F">
+                        <items>
+                            <menuItem title="Count All" icon="accept" id="p8U-dZ-ocs">
+                                <connections>
+                                    <action selector="countAllDaysThroughToday" destination="aad-Bl-OtK" id="zx8-QS-kd8"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="countButton" destination="Mbn-Tv-WiJ" id="ZkO-5L-ecg"/>
                         <outlet property="countLabel" destination="jfr-Na-XxD" id="TZ2-29-zz6"/>

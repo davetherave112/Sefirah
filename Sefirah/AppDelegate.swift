@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Register the preference defaults early.
         NSUserDefaults.standardUserDefaults().registerDefaults([
-            "Language" : Languages.English.rawValue,
+            "Language" : Languages.Hebrew.rawValue,
             "Nusach" : Nusach.Ashkenaz.rawValue,
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
             "Tzeis": [Tzeis.FifteenBefore.rawValue]
