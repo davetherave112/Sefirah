@@ -60,7 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let flags: NSCalendarUnit = [.Year, .Month, .Day]
             let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
             let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if !selectedDates.contains(dateOnly!) {
+            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(SefiraDay.sharedInstance.lastRecordedCLLocation!, date: dateOnly!)
+            if !selectedDates.contains(adjustedDate) {
                 let tabBarItem = (self.window?.rootViewController as! MainTabBarViewController).tabBar.items![1]
                 tabBarItem.badgeValue = "1"
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 1

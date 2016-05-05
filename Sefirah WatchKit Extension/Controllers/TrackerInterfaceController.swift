@@ -68,7 +68,16 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
             let date = NSDate()
             let flags: NSCalendarUnit = [.Year, .Month, .Day]
             let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
+                if self.isAfterSunset(location) {
+                    let dayComponent = NSDateComponents()
+                    dayComponent.day = 1
+                    let calendar = NSCalendar.currentCalendar()
+                    let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
+                    dateOnly = nextDate
+                }
+            }
             if message == dateOnly {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.countButton.setHidden(true)
@@ -80,7 +89,16 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
             let date = NSDate()
             let flags: NSCalendarUnit = [.Year, .Month, .Day]
             let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
+                if self.isAfterSunset(location) {
+                    let dayComponent = NSDateComponents()
+                    dayComponent.day = 1
+                    let calendar = NSCalendar.currentCalendar()
+                    let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
+                    dateOnly = nextDate
+                }
+            }
             if message == dateOnly {
                 dispatch_async(dispatch_get_main_queue()) {
                     self.countButton.setHidden(false)

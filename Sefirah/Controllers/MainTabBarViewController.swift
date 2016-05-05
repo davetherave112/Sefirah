@@ -16,14 +16,13 @@ class MainTabBarViewController: UITabBarController {
         self.setStatusBarColor(UIColor(rgba: "#0E386C"))
         // Do any additional setup after loading the view.
         if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if !selectedDates.contains(dateOnly!) {
-                let tabBarItem = self.tabBar.items![1]
-                tabBarItem.badgeValue = "1"
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+            if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+                let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+                if !selectedDates.contains(adjustedDate) {
+                    let tabBarItem = self.tabBar.items![1]
+                    tabBarItem.badgeValue = "1"
+                    UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+                }
             }
         } else {
             let tabBarItem = self.tabBar.items![1]

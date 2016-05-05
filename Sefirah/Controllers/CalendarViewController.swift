@@ -42,8 +42,16 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
         if let needData = message["need_data"] as? Bool {
             if needData {
+                var date = NSDate()
                 let dates = self.calendarView.selectedDates as! [NSDate]
-                if dates.contains(self.getDateOnly(NSDate())) {
+                if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+                    let tzeis = SefiraDay.getTzeis(location)
+                    if tzeis.timeIntervalSinceNow < 0 {
+                        date = date.dateByAddingTimeInterval(60*60*12)
+                    }
+                }
+                
+                if dates.contains(self.getDateOnly(date)) {
                     replyHandler(["is_selected": true])
                 } else {
                     replyHandler(["is_selected": false])
@@ -77,11 +85,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             for date in selectedDates {
                 self.calendarView.selectDate(date)
             }
-            if !selectedDates.contains(self.getDateOnly(NSDate())) {
-                let tabBarController = self.tabBarController
-                let tabBarItem = tabBarController!.tabBar.items![1]
-                tabBarItem.badgeValue = nil
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+                let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+                if !selectedDates.contains(adjustedDate) {
+                    let tabBarController = self.tabBarController
+                    let tabBarItem = tabBarController!.tabBar.items![1]
+                    tabBarItem.badgeValue = nil
+                    UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                }
             }
         }
     }
@@ -114,24 +125,26 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         } else {
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
-        
-        if date == self.getDateOnly(NSDate()) {
-            let tabBarController = self.tabBarController
-            let tabBarItem = tabBarController!.tabBar.items![1]
-            tabBarItem.badgeValue = nil
-            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-        }
-        
-        if let session = watchSession {
-            if session.reachable {
-                session.sendMessage(["message" : date], replyHandler: nil, errorHandler: nil)
-            } else {
-                do {
-                    try watchSession?.updateApplicationContext(
-                        ["message" : date]
-                    )
-                } catch let error as NSError {
-                    NSLog("Updating the context failed: " + error.localizedDescription)
+        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+            if date == self.getDateOnly(adjustedDate) {
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                tabBarItem.badgeValue = nil
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+            }
+            
+            if let session = watchSession {
+                if session.reachable {
+                    session.sendMessage(["message" : date], replyHandler: nil, errorHandler: nil)
+                } else {
+                    do {
+                        try watchSession?.updateApplicationContext(
+                            ["message" : date]
+                        )
+                    } catch let error as NSError {
+                        NSLog("Updating the context failed: " + error.localizedDescription)
+                    }
                 }
             }
         }
@@ -147,23 +160,26 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             }
         }
         
-        if date == self.getDateOnly(NSDate()) {
-            let tabBarController = self.tabBarController
-            let tabBarItem = tabBarController!.tabBar.items![1]
-            tabBarItem.badgeValue = "1"
-            UIApplication.sharedApplication().applicationIconBadgeNumber = 1
-        }
-        
-        if let session = watchSession {
-            if session.reachable {
-                session.sendMessage(["deselect" : date], replyHandler: nil, errorHandler: nil)
-            } else {
-                do {
-                    try watchSession?.updateApplicationContext(
-                        ["deselect" : date]
-                    )
-                } catch let error as NSError {
-                    NSLog("Updating the context failed: " + error.localizedDescription)
+        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
+            if date == self.getDateOnly(adjustedDate) {
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                tabBarItem.badgeValue = "1"
+                UIApplication.sharedApplication().applicationIconBadgeNumber = 1
+            }
+            
+            if let session = watchSession {
+                if session.reachable {
+                    session.sendMessage(["deselect" : date], replyHandler: nil, errorHandler: nil)
+                } else {
+                    do {
+                        try watchSession?.updateApplicationContext(
+                            ["deselect" : date]
+                        )
+                    } catch let error as NSError {
+                        NSLog("Updating the context failed: " + error.localizedDescription)
+                    }
                 }
             }
         }

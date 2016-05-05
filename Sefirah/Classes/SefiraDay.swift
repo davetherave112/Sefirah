@@ -45,6 +45,29 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
         
     }
     
+    
+    class func dateAdjustedForHebrewCalendar(location: CLLocationCoordinate2D, date: NSDate) -> NSDate {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        
+        var adjustedDate = date
+        let jewishCalendar = KCJewishCalendar(location: location)
+        let tzeis = jewishCalendar.tzais()
+        
+        let isAfterSunset = tzeis.timeIntervalSinceNow < 0
+        
+        if isAfterSunset {
+            let flags: NSCalendarUnit = [.Year, .Month, .Day]
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: adjustedDate)
+            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+            let dayComponent = NSDateComponents()
+            dayComponent.day = 1
+            let calendar = NSCalendar.currentCalendar()
+            adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))!
+        }
+        
+        return adjustedDate
+    }
+    
     class func getTzeis(location: CLLocationCoordinate2D) -> NSDate {
         let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
         let jewishCalendar = KCJewishCalendar(location: KClocation)
