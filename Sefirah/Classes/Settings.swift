@@ -98,7 +98,7 @@ enum Options: String {
     case LeshaimYichud = "Leshaim Yichud"
     case Ribono = "Ribono"
     
-    static let allValues = [Aleinu, Ana, Beracha, Harachaman, Lamenatzaiach, LeshaimYichud, Ribono]
+    static let allValues = [LeshaimYichud, Beracha, Harachaman, Lamenatzaiach, Ana, Ribono, Aleinu]
     static let optionValues = [Aleinu.rawValue: KCSefiraPrayerAddition.Aleinu,
                                Ana.rawValue: KCSefiraPrayerAddition.Ana,
                                Beracha.rawValue: KCSefiraPrayerAddition.Beracha,
