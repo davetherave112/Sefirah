@@ -39,7 +39,7 @@ class SettingsTableViewController: UITableViewController {
         self.selectedLanguage.text = NSUserDefaults.standardUserDefaults().stringForKey("Language")
         self.selectedNusach.text = NSUserDefaults.standardUserDefaults().stringForKey("Nusach")
         self.prayerOptions.text = (NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]).joinWithSeparator(", ")
-        let tzeisTimes = (NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Int]).map({Tzeis(rawValue: $0)!.description})
+        let tzeisTimes = (NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]).map({Tzeis(rawValue: $0)!.description})
         self.tzeisOptions.text = tzeisTimes.joinWithSeparator(", ")
         
         var notifications: [Notification] = []

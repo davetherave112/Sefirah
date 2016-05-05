@@ -22,15 +22,14 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     var dayOfSefira: Int?
     let locationManager = CLLocationManager()
     var formatter = KCSefiraFormatter()
-    var sefiraDayNumber: SefiraDay?
+    let adjustedDay = SefiraDay.sharedInstance
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationManager.delegate = self
-        self.sefiraDayNumber = SefiraDay(locationManager: locationManager)
+        adjustedDay.locationManager.delegate = self
         
     }
     
@@ -41,7 +40,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         formatter = KCSefiraFormatter()
 
-        sefiraDayNumber!.getLocation()
+        adjustedDay.getLocation()
         
         formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
         formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!
@@ -64,7 +63,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         locationManager.stopUpdatingLocation()
-        self.dayOfSefira = sefiraDayNumber!.setAdjustedSefiraDay(locValue)
+        self.dayOfSefira = adjustedDay.setAdjustedSefiraDay(locValue)
         NSUserDefaults.standardUserDefaults().setInteger(dayOfSefira!, forKey: "LastRecordedDay")
         setSefiraText(dayOfSefira!)
         createProgressCircle(dayOfSefira!)

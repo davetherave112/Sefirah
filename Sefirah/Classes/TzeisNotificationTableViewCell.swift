@@ -20,7 +20,7 @@ class TzeisNotificationTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let activeNotifications = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Int]
+        let activeNotifications = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
         let rawValue = tzeisNotification!.rawValue
         if activeNotifications.contains(rawValue) {
             self.accessoryType = .Checkmark

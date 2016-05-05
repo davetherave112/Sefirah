@@ -25,29 +25,16 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         }
     }
     
-    func setAdjustedSefiraDay(location: CLLocationCoordinate2D) -> Int {
+    
+    func isAfterSunset(location: CLLocationCoordinate2D) -> Bool {
         let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
         
         let jewishCalendar = KCJewishCalendar(location: location)
         let tzeis = jewishCalendar.tzais()
         
-        return self.workingDateAdjustedForSunset(tzeis!)
+        let isAfterSunset = tzeis.timeIntervalSinceNow < 0
         
-        
-    }
-    
-    func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
-        
-        let isAfterSunset = sunset.timeIntervalSinceNow < 0
-        
-        var sefiraCount: Int?
-        if (isAfterSunset) {
-            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira() + 1
-        } else {
-            sefiraCount = KCSefiratHaomerCalculator.dayOfSefira()
-        }
-        
-        return sefiraCount!
+        return isAfterSunset
     }
     
     @IBAction func trackOmerDay() {
@@ -57,7 +44,16 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
                 let date = NSDate()
                 let flags: NSCalendarUnit = [.Year, .Month, .Day]
                 let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-                let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+                var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+                if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
+                    if self.isAfterSunset(location) {
+                        let dayComponent = NSDateComponents()
+                        dayComponent.day = 1
+                        let calendar = NSCalendar.currentCalendar()
+                        let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
+                        dateOnly = nextDate
+                    }
+                }
                 session!.sendMessage(["date": dateOnly!], replyHandler: nil, errorHandler: nil)
                 self.countLabel.setText("Well Done! You've already counted today.")
                 self.countButton.setHidden(true)
@@ -124,36 +120,6 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
         }, errorHandler: { error in
             print(error)
         })
-        
-        
-        /*
-        let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
-        if let dates = selectedDates {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if dates.contains(dateOnly!) {
-                self.countButton.setHidden(true)
-                self.countLabel.setText("Well Done! You've already counted today.")
-            } else {
-                self.countButton.setHidden(false)
-                self.countLabel.setText("Count before you forget!")
-            }
-        } else {
-            self.countButton.setHidden(false)
-            self.countLabel.setText("Count before you forget!")
-            session = WCSession.defaultSession()
-            session!.sendMessage(["need_data": true], replyHandler: {(response) -> Void in
-                if let dates = response["dates"] as? [NSDate] {
-                    NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
-                }
-                }, errorHandler: { (error) -> Void in
-                    print(error)
-            })
-        }
-        */
-        
     }
     
     override func didAppear() {

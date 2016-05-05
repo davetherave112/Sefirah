@@ -85,21 +85,27 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         
         let timeZone = NSTimeZone.localTimeZone()
         let location: KCGeoLocation = KCGeoLocation.init(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: timeZone)
-        
         let calendar: KCZmanimCalendar = KCZmanimCalendar.init(location: location)
-        let tzeis = calendar.tzais()
+        
+        var tzeis = calendar.tzais()
+        
+        if tzeis.timeIntervalSinceNow < 0 {
+            let adjustedDate = calendar.workingDate.dateByAddingTimeInterval(60*60*12)
+            calendar.workingDate = adjustedDate
+            tzeis = calendar.tzais()
+        }
         
         
-        let savedValues = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Int]
+        let savedValues = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
         for value in savedValues {
             let tzeisOption = Tzeis(rawValue: value)
             let notificationName = tzeisOption?.notificationName
             let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
             let notificationExists = notifications?.filter({($0.userInfo!["name"] as! String) == notificationName})
             if notificationExists?.count > 0 {
-                print("notification exists")
+                print("")
             } else {
-                let fireDate = tzeis.dateByAddingTimeInterval(Double(tzeisOption!.rawValue))
+                let fireDate = tzeis.dateByAddingTimeInterval(Double(tzeisOption!.rawValue * 60))
                 scheduleLocal(notificationName!, fireDate: fireDate, repeatAlert: false, tzeis: true)
             }
         }
@@ -113,7 +119,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
             notification.repeatInterval = NSCalendarUnit.Day
         }
         notification.alertBody = "This is a reminder to count Sefirat Ha'omer tonight/today!"
-        notification.timeZone = NSTimeZone.localTimeZone()
+        //notification.timeZone = NSTimeZone.localTimeZone()
         notification.soundName = UILocalNotificationDefaultSoundName
         notification.userInfo = ["name": name]
         
@@ -131,6 +137,12 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
                     UIApplication.sharedApplication().scheduleLocalNotification(notification)
                 }
             }
+        }
+        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
+            let timeFormatter = NSDateFormatter()
+            timeFormatter.setLocalizedDateFormatFromTemplate("hh/mm a")
+            let timeString: String = timeFormatter.stringFromDate(notification.fireDate!)
+            print(timeString)
         }
     }
 }

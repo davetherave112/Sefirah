@@ -10,16 +10,16 @@ import Foundation
 import KosherCocoa
 
 
-enum Tzeis: Int {
-    case FifteenBefore = -15
-    case ThirtyBefore = -30
-    case FortyFiveBefore = -45
-    case HourBefore = -60
-    case FifteenAfter = 15
-    case ThirtyAfter = 30
-    case FortyFiveAfter = 45
-    case HourAfter = 60
-    case AtTzeis = 0
+enum Tzeis: Double {
+    case FifteenBefore = -15.0
+    case ThirtyBefore = -30.0
+    case FortyFiveBefore = -45.0
+    case HourBefore = -60.0
+    case FifteenAfter = 15.0
+    case ThirtyAfter = 30.0
+    case FortyFiveAfter = 45.0
+    case HourAfter = 60.0
+    case AtTzeis = 0.0
     
     var description: String {
         switch self {

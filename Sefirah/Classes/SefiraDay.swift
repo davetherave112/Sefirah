@@ -11,12 +11,11 @@ import CoreLocation
 import KosherCocoa
 
 class SefiraDay: NSObject, CLLocationManagerDelegate {
+    static let sharedInstance = SefiraDay()
     
-    let locationManager: CLLocationManager
+    let locationManager: CLLocationManager = CLLocationManager()
+    var lastRecordedCLLocation: CLLocationCoordinate2D?
     
-    init(locationManager: CLLocationManager) {
-        self.locationManager = locationManager
-    }
 
     func getLocation() {
         // Ask for Authorisation from the User.
@@ -37,13 +36,19 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
     }
     
     func setAdjustedSefiraDay(location: CLLocationCoordinate2D) -> Int {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
-        
-        let jewishCalendar = KCJewishCalendar(location: location)
-        let sunset = jewishCalendar.sunset()
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        self.lastRecordedCLLocation = location
+        let jewishCalendar = KCJewishCalendar(location: KClocation)
+        let sunset = jewishCalendar.tzais()
         
         return self.workingDateAdjustedForSunset(sunset)
         
+    }
+    
+    class func getTzeis(location: CLLocationCoordinate2D) -> NSDate {
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        let jewishCalendar = KCJewishCalendar(location: KClocation)
+        return jewishCalendar.tzais()
     }
     
     func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
