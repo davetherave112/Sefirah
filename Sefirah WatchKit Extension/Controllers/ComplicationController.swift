@@ -55,13 +55,13 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
             for n in 0..<limit {
                 let calendar = KCZmanimCalendar(location: location)
-                calendar.workingDate = beforeDate.dateByAddingTimeInterval(-1 * (60*60*24))
-                beforeDate = calendar.workingDate
+                calendar.workingDate = beforeDate.dateByAddingTimeInterval(-1 * (60*60*24) * Double(n))
+                //beforeDate = calendar.workingDate
                 let tzeis = calendar.tzais()
-                let entry = self.getTemplate(complication, date: tzeis, offset: n)
+                let entry = self.getTemplate(complication, date: tzeis, offset: 1)
                 entries.append(entry!)
             }
-            handler(entries)
+            handler(entries.reverse())
         } else {
             handler(nil)
         }
@@ -74,10 +74,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if let location = SefiraDayWatch.sharedInstance.lastRecordedLocation {
             for n in 0..<limit {
                 let calendar = KCZmanimCalendar(location: location)
-                calendar.workingDate = afterDate.dateByAddingTimeInterval(60*60*24)
-                afterDate = calendar.workingDate
+                calendar.workingDate = afterDate.dateByAddingTimeInterval(Double(n)*60*60*24)
+                //afterDate = calendar.workingDate
                 let tzeis = calendar.tzais()
-                let entry = self.getTemplate(complication, date: tzeis, offset: n)
+                let entry = self.getTemplate(complication, date: tzeis, offset: 1)
                 entries.append(entry!)
             }
             handler(entries)
@@ -140,12 +140,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             return "--"
         }
     }
+    
+    func getDifferentDay(date: NSDate) -> Int {
+        return KCSefiratHaomerCalculator.dayOfSefiraForDate(date)
+    }
         
     func getTemplate(complication: CLKComplication, date: NSDate = NSDate(), offset: Int = 0) -> CLKComplicationTimelineEntry? {
-        let currentDay = getCurrentDay(offset)
+        let currentDay = getDifferentDay(date)
         if complication.family == .CircularSmall {
             let template = CLKComplicationTemplateCircularSmallRingText()
-            template.textProvider = CLKSimpleTextProvider(text: currentDay)
+            template.textProvider = CLKSimpleTextProvider(text: "\(currentDay + offset)")
             template.textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.ringStyle = CLKComplicationRingStyle.Closed
             template.tintColor = UIColor(rgba: "#C19F69")
@@ -154,7 +158,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             return timelineEntry
         } else if complication.family == .UtilitarianSmall {
             let template = CLKComplicationTemplateUtilitarianSmallRingText()
-            let textProvider = CLKSimpleTextProvider(text: currentDay)
+            let textProvider = CLKSimpleTextProvider(text: "\(currentDay + offset)")
             textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.textProvider = textProvider
             template.ringStyle = CLKComplicationRingStyle.Closed
@@ -164,7 +168,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             return timelineEntry
         } else if complication.family == .ModularSmall {
             let template = CLKComplicationTemplateModularSmallRingText()
-            let textProvider = CLKSimpleTextProvider(text: currentDay)
+            let textProvider = CLKSimpleTextProvider(text: "\(currentDay + offset)")
             textProvider.tintColor = UIColor(rgba: "#C19F69")
             template.textProvider = textProvider
             template.ringStyle = CLKComplicationRingStyle.Closed

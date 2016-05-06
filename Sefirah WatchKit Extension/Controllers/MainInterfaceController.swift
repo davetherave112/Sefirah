@@ -35,7 +35,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         self.setProgress(adjustedDay.sefiraDate, animate: true)
-        
+        adjustedDay.getLocation()
     }
 
     override func didDeactivate() {
@@ -55,8 +55,10 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         if NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay") > 0 {
             let dayOfSefira = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
-            SefiraDayWatch.sharedInstance.sefiraDate = dayOfSefira
-            self.setProgress(dayOfSefira, animate: true)
+            if SefiraDayWatch.sharedInstance.sefiraDate == nil {
+                SefiraDayWatch.sharedInstance.sefiraDate = dayOfSefira
+                self.setProgress(dayOfSefira, animate: true)
+            }
         }
         print(error)
     }
@@ -94,7 +96,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
                 }
                 self.progressGroup.setBackgroundImageNamed("time")
                 progressGroup.startAnimatingWithImagesInRange(range!, duration: 0.7, repeatCount: 1)
-                self.timeLabel.setText(timeString)
+                self.timeLabel.setText("Remaining:" + timeString)
             }
             self.lastRemainingInterval = Int(length)
         } else {

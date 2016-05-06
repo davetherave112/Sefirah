@@ -17,7 +17,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
         NSUserDefaults.standardUserDefaults().registerDefaults([
-            "Language" : Languages.English.rawValue,
+            "Language" : Languages.Hebrew.rawValue,
             "Nusach" : Nusach.Ashkenaz.rawValue,
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
             "ScheduleTzeis": true,
@@ -36,12 +36,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     
     func setupWCDelegate() {
         if WCSession.isSupported() {
-            
-            let watchSession = WCSession.defaultSession()
-            if watchSession.delegate as? ExtensionDelegate != self {
-                watchSession.delegate = self
-                watchSession.activateSession()
-            }
+          WCSession.defaultSession().activateSession()
         }
     }
 

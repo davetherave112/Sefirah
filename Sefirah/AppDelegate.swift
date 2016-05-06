@@ -40,12 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "Tzeis": [Tzeis.FifteenBefore.rawValue]
         ])
         
-        /*
-        if WCSession.isSupported() {
-            session = WCSession.defaultSession()
-        }
-        */
-        
+
         UITabBar.appearance().tintColor = UIColor(rgba: "#C19F69")
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         

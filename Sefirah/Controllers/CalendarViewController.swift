@@ -112,11 +112,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
-            watchSession!.delegate = self
-            watchSession!.activateSession()
-        }
 
         self.calendarView.delegate = self
         self.calendarView.appearance.headerMinimumDissolvedAlpha = 0.0;
@@ -126,6 +121,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         
         self.calendarView.titleSelectionColor = UIColor(rgba: "#0E386C")
         self.calendarView.subtitleSelectionColor = UIColor(rgba: "#0E386C")
@@ -143,6 +139,16 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                     UIApplication.sharedApplication().applicationIconBadgeNumber = 0
                 }
             }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if(WCSession.isSupported()){
+            watchSession = WCSession.defaultSession()
+            watchSession!.delegate = self
+            watchSession!.activateSession()
         }
     }
 

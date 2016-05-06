@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--Progress-->
+        <!--Time Left-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="progressController" title="Progress" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
+                <controller identifier="progressController" title="Time Left" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="Sefirah_WatchKit_Extension">
                     <items>
                         <group width="1" height="1" alignment="center" backgroundImage="time0" contentMode="scaleAspectFit" layout="vertical" id="euG-b5-LFC">
                             <items>

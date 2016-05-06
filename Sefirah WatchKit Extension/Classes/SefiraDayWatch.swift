@@ -16,10 +16,12 @@ class SefiraDayWatch: NSObject {
     
     var sefiraDate: Int? {
         didSet {
-            let complicationServer = CLKComplicationServer.sharedInstance()
-            if let activeComplications = complicationServer.activeComplications {
-                for complication in activeComplications {
-                    complicationServer.reloadTimelineForComplication(complication)
+            if oldValue != self.sefiraDate {
+                let complicationServer = CLKComplicationServer.sharedInstance()
+                if let activeComplications = complicationServer.activeComplications {
+                    for complication in activeComplications {
+                        complicationServer.reloadTimelineForComplication(complication)
+                    }
                 }
             }
         }
