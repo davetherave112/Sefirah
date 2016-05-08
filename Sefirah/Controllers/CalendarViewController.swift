@@ -13,64 +13,52 @@ import WatchConnectivity
 import CoreLocation
 
 @available(iOS 9.0, *)
-class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate, WCSessionDelegate, CLLocationManagerDelegate {
+class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCalendarDataSource, FSCalendarDelegate, WCSessionDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var calendarView: FSCalendar!
     let firstDayOfOmer = KCSefiratHaomerCalculator.dateOfSixteenNissanForYearOfDate(NSDate())
     let locationManager = SefiraDay.sharedInstance.locationManager
     
-    // Our WatchConnectivity Session for communicating with the watchOS app
-    var watchSession : WCSession?
-    
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        if let date = message["date"] as? NSDate {
-            let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
-            if var dates = selectedDates {
-                dates.append(getDateOnly(date))
-                NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
-            } else {
-                NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
+    func messageWasReceived(dataSource: DataSource) {
+        switch dataSource.date {
+        case .Selected(let date):
+            self.selectDate(date)
+        case .SelectAll(let selectAll):
+            if selectAll {
+                self.selectAll()
             }
-            dispatch_async(dispatch_get_main_queue()) {
-                self.calendarView.selectDate(date)
-                let tabBarController = self.tabBarController
-                let tabBarItem = tabBarController!.tabBar.items![1]
-                tabBarItem.badgeValue = nil
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-            }
+        case .Unknown:
+            //TODO: handle error
+            break
+        default:
+            //TODO: handle error
+            break
         }
     }
     
-    func selectAll() {
-        let dateOnly = self.getDateOnly(self.firstDayOfOmer)
-        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
-            let range = self.daysBetween(dateOnly, dt2: SefiraDay.dateAdjustedForHebrewCalendar(location, date: adjustedDate))
-            var dates: [NSDate] = []
-            for n in 0..<range {
-                let dayComponent = NSDateComponents()
-                dayComponent.day = n
-                let calendar = NSCalendar.currentCalendar()
-                let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly, options: NSCalendarOptions(rawValue: 0))!
-                
-                dates.append(adjustedDate)
-            }
-            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
-            dispatch_async(dispatch_get_main_queue()) {
-                for date in dates {
-                    self.calendarView.selectDate(date)
+    func messageWasReceivedWithHandler(dataSource: DataSource, replyHandler: ([String : AnyObject]) -> Void) {
+        switch dataSource.date {
+        case .NeedData(let needData):
+            if needData {
+                let dates = self.calendarView.selectedDates as! [NSDate]
+                let adjustedDate = self.getAdjustedDateOnly(NSDate())
+                if dates.contains(adjustedDate) {
+                    replyHandler(["is_selected": true])
+                } else {
+                    replyHandler(["is_selected": false])
                 }
-                let tabBarController = self.tabBarController
-                let tabBarItem = tabBarController!.tabBar.items![1]
-                tabBarItem.badgeValue = nil
-                UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
-        } else {
-            locationManager.delegate = self
-            SefiraDay.sharedInstance.getLocation()
+        case .Unknown:
+            //TODO: handle error
+            replyHandler(["is_selected": false])
+            break
+        default:
+            //TODO: handle error
+            replyHandler(["is_selected": false])
+            break
         }
     }
-    
+
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         SefiraDay.sharedInstance.lastRecordedCLLocation = locValue
@@ -80,33 +68,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print(error)
-    }
-    
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
-        if let needData = message["need_data"] as? Bool {
-            if needData {
-                var date = NSDate()
-                let dates = self.calendarView.selectedDates as! [NSDate]
-                if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-                    let tzeis = SefiraDay.getTzeis(location)
-                    if tzeis.timeIntervalSinceNow < 0 {
-                        date = date.dateByAddingTimeInterval(60*60*12)
-                    }
-                }
-                
-                if dates.contains(self.getDateOnly(date)) {
-                    replyHandler(["is_selected": true])
-                } else {
-                    replyHandler(["is_selected": false])
-                }
-            }
-        }
-        if let selectAll = message["select_all"] as? Bool {
-            if selectAll {
-                self.selectAll()
-                replyHandler(["is_selected": true])
-            }
-        }
     }
     
     override func viewDidLoad() {
@@ -122,6 +83,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
         
         self.calendarView.titleSelectionColor = UIColor(rgba: "#0E386C")
         self.calendarView.subtitleSelectionColor = UIColor(rgba: "#0E386C")
@@ -131,12 +93,15 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 self.calendarView.selectDate(date)
             }
             if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-                let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
-                if !selectedDates.contains(adjustedDate) {
-                    let tabBarController = self.tabBarController
-                    let tabBarItem = tabBarController!.tabBar.items![1]
+                let adjustedDate = self.getAdjustedDateOnly(NSDate())
+                let tabBarController = self.tabBarController
+                let tabBarItem = tabBarController!.tabBar.items![1]
+                if selectedDates.contains(adjustedDate) {
                     tabBarItem.badgeValue = nil
                     UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+                } else {
+                    tabBarItem.badgeValue = "1"
+                    UIApplication.sharedApplication().applicationIconBadgeNumber = 1
                 }
             }
         }
@@ -145,13 +110,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if(WCSession.isSupported()){
-            watchSession = WCSession.defaultSession()
-            watchSession!.delegate = self
-            watchSession!.activateSession()
-        }
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        WatchSessionManager.sharedManager.removeDataSourceChangedDelegate(self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -193,28 +159,23 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         } else {
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
-        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
-            if date == self.getDateOnly(adjustedDate) {
+        if SefiraDay.sharedInstance.lastRecordedCLLocation != nil {
+            if date == self.getAdjustedDateOnly(NSDate()) {
                 let tabBarController = self.tabBarController
                 let tabBarItem = tabBarController!.tabBar.items![1]
                 tabBarItem.badgeValue = nil
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 0
             }
             
-            if let session = watchSession {
-                if session.reachable {
-                    session.sendMessage(["message" : date], replyHandler: nil, errorHandler: nil)
-                } else {
-                    do {
-                        try watchSession?.updateApplicationContext(
-                            ["message" : date]
-                        )
-                    } catch let error as NSError {
-                        NSLog("Updating the context failed: " + error.localizedDescription)
-                    }
-                }
+            do {
+                // passing data via WatchSessionManager's updateApplicationContext here!
+                try WatchSessionManager.sharedManager.updateApplicationContext(["selected" : date])
+            } catch {
+                //TODO: handle error
             }
+        } else {
+            locationManager.delegate = self
+            SefiraDay.sharedInstance.getLocation()
         }
     }
     
@@ -228,28 +189,23 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             }
         }
         
-        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
-            let adjustedDate = SefiraDay.dateAdjustedForHebrewCalendar(location, date: NSDate())
-            if date == self.getDateOnly(adjustedDate) {
+        if SefiraDay.sharedInstance.lastRecordedCLLocation != nil {
+            if date == self.getAdjustedDateOnly(NSDate()) {
                 let tabBarController = self.tabBarController
                 let tabBarItem = tabBarController!.tabBar.items![1]
                 tabBarItem.badgeValue = "1"
                 UIApplication.sharedApplication().applicationIconBadgeNumber = 1
             }
             
-            if let session = watchSession {
-                if session.reachable {
-                    session.sendMessage(["deselect" : date], replyHandler: nil, errorHandler: nil)
-                } else {
-                    do {
-                        try watchSession?.updateApplicationContext(
-                            ["deselect" : date]
-                        )
-                    } catch let error as NSError {
-                        NSLog("Updating the context failed: " + error.localizedDescription)
-                    }
-                }
+            do {
+                // passing data via WatchSessionManager's updateApplicationContext here!
+                try WatchSessionManager.sharedManager.updateApplicationContext(["deselected" : date])
+            } catch {
+                //TODO: handle error
             }
+        } else {
+            locationManager.delegate = self
+            SefiraDay.sharedInstance.getLocation()
         }
     }
     
@@ -263,19 +219,84 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         return self.firstDayOfOmer
     }
     
-    func getDateOnly(date: NSDate) -> NSDate {
+    func getAdjustedDateOnly(date: NSDate) -> NSDate {
         let flags: NSCalendarUnit = [.Year, .Month, .Day]
         let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-        let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-        return dateOnly!
+        var adjustedDateOnly = NSCalendar.currentCalendar().dateFromComponents(components)!
+        if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
+            if self.isAfterSunset(location, date: date) {
+                let dayComponent = NSDateComponents()
+                dayComponent.day = 1
+                let calendar = NSCalendar.currentCalendar()
+                let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: adjustedDateOnly, options: NSCalendarOptions(rawValue: 0))
+                adjustedDateOnly = nextDate!
+            }
+        }
+        return adjustedDateOnly
     }
-
+    
+    func isAfterSunset(location: CLLocationCoordinate2D, date: NSDate) -> Bool {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        
+        let jewishCalendar = KCJewishCalendar(location: location)
+        jewishCalendar.workingDate = date
+        let tzeis = jewishCalendar.tzais()
+        
+        let isAfterSunset = tzeis.timeIntervalSinceDate(date) < 0
+        
+        return isAfterSunset
+    }
     
     func daysBetween(dt1: NSDate, dt2: NSDate) -> Int {
         let unitFlags = NSCalendarUnit.Day
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components(unitFlags, fromDate: dt1, toDate: dt2, options: NSCalendarOptions(rawValue: 0))
         return components.day + 1
+    }
+    
+    func selectDate(date: NSDate) {
+        let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
+        if var dates = selectedDates {
+            dates.append(date)
+            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+        } else {
+            NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
+        }
+        self.calendarView.selectDate(date)
+        let tabBarController = self.tabBarController
+        let tabBarItem = tabBarController!.tabBar.items![1]
+        tabBarItem.badgeValue = nil
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+    }
+    
+    func selectAll() {
+        let omerDate = self.firstDayOfOmer
+        let flags: NSCalendarUnit = [.Year, .Month, .Day]
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: omerDate)
+        let omerDateOnly = NSCalendar.currentCalendar().dateFromComponents(components)!
+        if SefiraDay.sharedInstance.lastRecordedCLLocation != nil {
+            let adjustedDate = self.getAdjustedDateOnly(NSDate())
+            let range = self.daysBetween(omerDateOnly, dt2: adjustedDate)
+            var dates: [NSDate] = []
+            for n in 0..<range {
+                let dayComponent = NSDateComponents()
+                dayComponent.day = n
+                let calendar = NSCalendar.currentCalendar()
+                let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: omerDateOnly, options: NSCalendarOptions(rawValue: 0))!
+                dates.append(adjustedDate)
+            }
+            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            for date in dates {
+                self.calendarView.selectDate(date)
+            }
+            let tabBarController = self.tabBarController
+            let tabBarItem = tabBarController!.tabBar.items![1]
+            tabBarItem.badgeValue = nil
+            UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        } else {
+            locationManager.delegate = self
+            SefiraDay.sharedInstance.getLocation()
+        }
     }
 
 }

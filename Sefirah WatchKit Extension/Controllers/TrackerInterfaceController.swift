@@ -11,162 +11,128 @@ import Foundation
 import WatchConnectivity
 import KosherCocoa
 
-class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate {
+class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, DataSourceChangedDelegate {
 
     @IBOutlet var countLabel: WKInterfaceLabel!
     @IBOutlet var countButton: WKInterfaceButton!
     var selectAllPressed: Bool = false
     
-    var session: WCSession? {
-        didSet {
-            if let session = session {
-                session.delegate = self
-                session.activateSession()
-            }
-        }
-    }
-    
-    
-    func isAfterSunset(location: CLLocationCoordinate2D) -> Bool {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
-        
-        let jewishCalendar = KCJewishCalendar(location: location)
-        let tzeis = jewishCalendar.tzais()
-        
-        let isAfterSunset = tzeis.timeIntervalSinceNow < 0
-        
-        return isAfterSunset
-    }
-    
     @IBAction func countAllDaysThroughToday() {
-        if WCSession.isSupported() {
-            session = WCSession.defaultSession()
-            self.selectAllPressed = true
-            session!.sendMessage(["select_all": true], replyHandler: { response in
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.countLabel.setText("Well Done! You've already counted today.")
-                    self.countButton.setHidden(true)
-                    self.selectAllPressed = false
-                }
-            }, errorHandler: { error in
-                print(error)
-                self.selectAllPressed = false
-            })
-        }
+        WatchSessionManager.sharedManager.sendMessage(["SelectAll": true])
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
+        self.setCounted(true)
     }
     
     @IBAction func trackOmerDay() {
-        if WCSession.isSupported() {
-            session = WCSession.defaultSession()
-            if let sefiraDate = SefiraDayWatch.sharedInstance.sefiraDate {
-                let date = NSDate()
-                let flags: NSCalendarUnit = [.Year, .Month, .Day]
-                let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-                var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-                if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
-                    if self.isAfterSunset(location) {
-                        let dayComponent = NSDateComponents()
-                        dayComponent.day = 1
-                        let calendar = NSCalendar.currentCalendar()
-                        let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
-                        dateOnly = nextDate
-                    }
-                }
-                session!.sendMessage(["date": dateOnly!], replyHandler: nil, errorHandler: nil)
-                self.countLabel.setText("Well Done! You've already counted today.")
-                self.countButton.setHidden(true)
-            } else {
-                //TODO: handle error
-            }
-        }
-    }
-    
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        if let message : NSDate = message["message"] as? NSDate {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
-                if self.isAfterSunset(location) {
-                    let dayComponent = NSDateComponents()
-                    dayComponent.day = 1
-                    let calendar = NSCalendar.currentCalendar()
-                    let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
-                    dateOnly = nextDate
-                }
-            }
-            if message == dateOnly {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.countButton.setHidden(true)
-                    self.countLabel.setText("Well Done! You've already counted today.")
-                }
-            }
-        }
-        if let message : NSDate = message["deselect"] as? NSDate {
-            let date = NSDate()
-            let flags: NSCalendarUnit = [.Year, .Month, .Day]
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-            var dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
-            if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
-                if self.isAfterSunset(location) {
-                    let dayComponent = NSDateComponents()
-                    dayComponent.day = 1
-                    let calendar = NSCalendar.currentCalendar()
-                    let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))
-                    dateOnly = nextDate
-                }
-            }
-            if message == dateOnly {
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.countButton.setHidden(false)
-                    self.countLabel.setText("Count before you forget!")
-                }
-            }
-        }
-
+        let adjustedDate = self.getAdjustedDateOnly(NSDate())
+        WatchSessionManager.sharedManager.sendMessage(["SelectedDate": adjustedDate])
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
+        self.setCounted(true)
     }
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
+        self.requestUpdatedData()
     }
 
-    
-    
+
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let needData = !self.selectAllPressed
+        let counted = NSUserDefaults.standardUserDefaults().boolForKey("Counted")
+        self.setCounted(counted)
         
-        session = WCSession.defaultSession()
-        session!.sendMessage(["need_data": needData], replyHandler: { response in
-            if let isSelected = response["is_selected"] as? Bool {
-                if isSelected {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.countButton.setHidden(true)
-                        self.countLabel.setText("Well Done! You've already counted today.")
-                    }
-                } else {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.countButton.setHidden(false)
-                        self.countLabel.setText("Count before you forget!")
-                    }
-                }
-            }
-        }, errorHandler: { error in
-            print(error)
-        })
     }
+    
     
     override func didAppear() {
         super.didAppear()
+        
+        let counted = NSUserDefaults.standardUserDefaults().boolForKey("Counted")
+        self.setCounted(counted)
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+        //WatchSessionManager.sharedManager.removeDataSourceChangedDelegate(self)
+        
         super.didDeactivate()
     }
     
+    func setCounted(counted: Bool) {
+        if counted {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.countButton.setHidden(true)
+                self.countLabel.setText("Well Done! You've already counted today.")
+            }
+        } else {
+            dispatch_async(dispatch_get_main_queue()) {
+                self.countButton.setHidden(false)
+                self.countLabel.setText("Count before you forget!")
+            }
+        }
+    }
+    
+    func requestUpdatedData() {
+        WatchSessionManager.sharedManager.sendMessage(["NeedData": true], replyHandler: { response in
+                if let isSelected = response["is_selected"] as? Bool {
+                    if isSelected != NSUserDefaults.standardUserDefaults().boolForKey("Counted") {
+                        self.setCounted(isSelected)
+                    }
+                }
+            }, errorHandler:  { error in
+                print(error)
+        })
+    }
+    
+    func getAdjustedDateOnly(date: NSDate) -> NSDate {
+        let flags: NSCalendarUnit = [.Year, .Month, .Day]
+        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        var adjustedDateOnly = NSCalendar.currentCalendar().dateFromComponents(components)!
+        if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
+            if self.isAfterSunset(location, date: date) {
+                let dayComponent = NSDateComponents()
+                dayComponent.day = 1
+                let calendar = NSCalendar.currentCalendar()
+                let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: adjustedDateOnly, options: NSCalendarOptions(rawValue: 0))
+                adjustedDateOnly = nextDate!
+            }
+        }
+        return adjustedDateOnly
+    }
+    
+    func isAfterSunset(location: CLLocationCoordinate2D, date: NSDate) -> Bool {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+        
+        let jewishCalendar = KCJewishCalendar(location: location)
+        jewishCalendar.workingDate = date
+        let tzeis = jewishCalendar.tzais()
+        
+        let isAfterSunset = tzeis.timeIntervalSinceDate(date) < 0
+        
+        return isAfterSunset
+    }
+    
+    func dataSourceDidUpdate(dataSource: DataSource) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        switch dataSource.date {
+        case .Selected(let date):
+            let shouldSelect = (date == self.getAdjustedDateOnly(NSDate()))
+            if shouldSelect {
+                userDefaults.setBool(true, forKey: "Counted")
+                self.setCounted(true)
+            }
+        case .Deselected(let date):
+            let shouldDeselect = (date == self.getAdjustedDateOnly(NSDate()))
+            if shouldDeselect {
+                userDefaults.setBool(false, forKey: "Counted")
+                self.setCounted(false)
+            }
+        case .Unknown:
+            //TODO: handle error
+            break
+        }
+    }
 }
