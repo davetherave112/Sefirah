@@ -33,6 +33,7 @@
 		3FC6F2C9A77866115D5886C09FDEB000 /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
 		41296E18494E113C2EE1CF6480907CE3 /* Pods_Sefirah_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B6D1C8CF9B577C678BA25E5A271056 /* Pods_Sefirah_WatchKit_App.framework */; };
 		4BAAB0C8EF0BE19BBD9F07271B59C68E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
+		4C843CB4DC2D075CF9BEA4B027CD1E5B /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965C765D3F1396D399FF20646654B3D /* WatchSessionManager.swift */; };
 		519D29333E0E9508BEB53235A65B9B0B /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
 		5437B2D1C32A7891B8BC3D2902FFCC32 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8705ECE112416693757F2A9E5E80AFB /* Model.xcdatamodeld */; };
 		550565EE88E8B69E9B5018CFB891C080 /* TzeisNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95596458E98A2C0BB4B51C133DF25FF8 /* TzeisNotificationTableViewCell.swift */; };
@@ -46,6 +47,7 @@
 		75783599791BB58424EC8F22D39AFAB2 /* ShmulikCLM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA6A9974C599B23EF782A843CA68AB04 /* ShmulikCLM.ttf */; };
 		7803282BD7D780BED3A4B289DA5BB37A /* TzeisNotificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C4AD27A58B4006CE020ABEEC30F0D /* TzeisNotificationsTableViewController.swift */; };
 		78A4EFA1E519E75833246E568C2007C2 /* PrayerOptionsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA83E13E018BDC99790A8B16AC29A2BC /* PrayerOptionsRowController.swift */; };
+		80B19DAEE782D9048C92C17901133BA2 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */; };
 		9030EC3EC17448C8865EBBAB22412441 /* NewNotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23263B26C7715669FC8A7885C55BAD0 /* NewNotificationTableViewController.swift */; };
 		93BED4814B98D3E79385D13F1FF1BAD1 /* DorianCLM-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B718137B2565F1C724DB63CB13C5EFC9 /* DorianCLM-Book.ttf */; };
 		93EDA27A2092101BE4A15975F5CD9433 /* SefiraDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */; };
@@ -55,6 +57,7 @@
 		9A95BAC51332BEBAD66FA890D7EA1D87 /* Pods_Sefirah.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1E268EDE9C6F92C0C23831365D8F81 /* Pods_Sefirah.framework */; };
 		A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054CBF78D18EB80E3A1F211CF4BA81F6 /* PrayerOptionsInterfaceController.swift */; };
 		A7CAE737318D1506B905CE33B03213A9 /* Sefirah WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01380C96913712275C13C9F7A3EF1AE9 /* Sefirah WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A92D051B6D2C88B7751F432B9EBFD893 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E3B1FB3C0543E134AC542469E1A4DC /* WatchSessionManager.swift */; };
 		AA458E10767DCD6335FA550FBB48AFB6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */; };
 		AA771D00DA7E01E4F5E08B9E52C0D8D1 /* Sefirah WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 209EAE38A21312C3C9C46E7BF5BF5F60 /* Sefirah WatchKit App.app */; };
 		AAA1C0C60CE9033800F2E828188F6EF5 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD47340BDEE9AC257118DE2602C824 /* ComplicationController.swift */; };
@@ -65,7 +68,6 @@
 		C8CFF0C1F254FE014F45EE640CC828D7 /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		CD2A57F5B986CDF1AFD1A4D2D39190BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */; };
 		CDF6B24120784D620C3195B6EEDD1A00 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4961115A03C964CB449101A196BD00C0 /* Settings.swift */; };
-		D0D8039B1CDB2F05006B14A9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806D861B7320E49014829AC1E2FD4494 /* UIColorExtension.swift */; };
 		D2075EA27F0C159F057A17BBEF26CFFD /* DorianCLM-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D03FDA73990FA9B7DD997510A1705104 /* DorianCLM-BookItalic.ttf */; };
 		D2085C1A970D2753FC8B865820BF59BA /* LanguageRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */; };
 		D668451FB1B49871D3F82CBCED84E7CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AF862ED4889B315C65512A293F8F44 /* LaunchScreen.storyboard */; };
@@ -131,6 +133,7 @@
 		12356388D7442F8D3EE665A3E2B43B9B /* LanguageRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageRowController.swift; sourceTree = "<group>"; };
 		1506E35CCFC4B5003E8394421E16C297 /* NotificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewController.swift; sourceTree = "<group>"; };
 		159F9E3AD6A2886D716A69A32D0BE0EE /* PrayerOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerOptionsTableViewController.swift; sourceTree = "<group>"; };
+		1965C765D3F1396D399FF20646654B3D /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		1B15CE34F7797AFD0E834D9683EB3A7E /* v1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v1.0.xcdatamodel; sourceTree = "<group>"; };
 		1DC5DFD3C5C03516D5FF31F3E7E4D118 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		1E1AFB256C5A82932957D3121BF1DCDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		60BF01550EA95057627FD9DA1DF7263E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6163B880561DE6F54EF314BEF0F16D96 /* SefiraDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SefiraDay.swift; sourceTree = "<group>"; };
 		63F11FB6E5B28525818FEBB7762D4660 /* NusachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NusachTableViewController.swift; sourceTree = "<group>"; };
+		66E3B1FB3C0543E134AC542469E1A4DC /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		70022424B84AC2B5FDB82BA51D1FE62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71BCAA03A826671A7E3AFF8231362494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72E0D77EA1A801249E1CADD6D8004433 /* _Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Notification.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				A2822CFC9E2FB5FF305577DA91B8CEB9 /* SefiraDayWatch.swift */,
+				66E3B1FB3C0543E134AC542469E1A4DC /* WatchSessionManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				591903883EFFF2F7DF4BBB8F7C398219 /* Sefirah WatchKit App-Bridging-Header.h */,
 				4961115A03C964CB449101A196BD00C0 /* Settings.swift */,
 				95596458E98A2C0BB4B51C133DF25FF8 /* TzeisNotificationTableViewCell.swift */,
+				1965C765D3F1396D399FF20646654B3D /* WatchSessionManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -744,6 +750,7 @@
 				550565EE88E8B69E9B5018CFB891C080 /* TzeisNotificationTableViewCell.swift in Sources */,
 				7803282BD7D780BED3A4B289DA5BB37A /* TzeisNotificationsTableViewController.swift in Sources */,
 				AA458E10767DCD6335FA550FBB48AFB6 /* UIColorExtension.swift in Sources */,
+				4C843CB4DC2D075CF9BEA4B027CD1E5B /* WatchSessionManager.swift in Sources */,
 				B2A6E1169203361213FA748EC7B0EFF4 /* _Notification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -758,13 +765,14 @@
 				5D7EDEEE51F8E0BCA25FEE9C18C5F988 /* LanguageSettingsInterfaceController.swift in Sources */,
 				E5E687F51B9AFC8D08F31F8BE9E74D97 /* MainInterfaceController.swift in Sources */,
 				728DD3124921641337D8D93232C2FD88 /* NotificationController.swift in Sources */,
-				D0D8039B1CDB2F05006B14A9 /* UIColorExtension.swift in Sources */,
 				A01114E726B83989D599AA1E3315F420 /* PrayerOptionsInterfaceController.swift in Sources */,
 				78A4EFA1E519E75833246E568C2007C2 /* PrayerOptionsRowController.swift in Sources */,
 				18FFFA4A084381C7DC70ADBF3AE958AC /* SefiraDayWatch.swift in Sources */,
 				B8A9BA6027927798CCFBA3C3B5A53562 /* SefirahTextInterfaceController.swift in Sources */,
 				4BAAB0C8EF0BE19BBD9F07271B59C68E /* Settings.swift in Sources */,
 				35C97FCE01C9F43328074FE0BD30AA22 /* TrackerInterfaceController.swift in Sources */,
+				80B19DAEE782D9048C92C17901133BA2 /* UIColorExtension.swift in Sources */,
+				A92D051B6D2C88B7751F432B9EBFD893 /* WatchSessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

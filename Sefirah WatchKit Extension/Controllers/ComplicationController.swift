@@ -37,10 +37,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         
-        if let extensionDelegate = (WKExtension.sharedExtension().delegate as? ExtensionDelegate) {
-            extensionDelegate.setupWCDelegate()
-        }
-        
         if let entry = self.getTemplate(complication) {
             handler(entry)
         } else {
