@@ -13,7 +13,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setStatusBarColor(UIColor(rgba: "#0E386C"))
+        self.setStatusBarColor(UIColor(rgba: "#161543"))
         // Do any additional setup after loading the view.
         if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
             if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
@@ -38,11 +38,11 @@ class MainTabBarViewController: UITabBarController {
     
     override func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
         if item.tag == 0 {
-            self.setStatusBarColor(UIColor(rgba: "#0E386C"))
+            self.setStatusBarColor(UIColor(rgba: "#161543"))
         } else if item.tag == 1 {
-            self.setStatusBarColor(UIColor(rgba: "#C19F69"))
+            self.setStatusBarColor(UIColor(rgba: "#ab8454"))
         } else if item.tag == 2 {
-            self.setStatusBarColor(UIColor(rgba: "#C19F69"))
+            self.setStatusBarColor(UIColor(rgba: "#ab8454"))
         }
     }
     

@@ -36,11 +36,11 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbt-8T-SgY">
                                                         <rect key="frame" x="74" y="73" width="33.5" height="33.5"/>
                                                         <fontDescription key="fontDescription" name="DorianCLM-Book" family="Dorian CLM" pointSize="24"/>
-                                                        <color key="textColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.086274509803921567" green="0.082352941176470587" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="jbt-8T-SgY" firstAttribute="centerY" secondItem="Vxg-Wp-cWr" secondAttribute="centerY" id="4Vx-ia-Ip8"/>
                                                     <constraint firstAttribute="width" secondItem="Vxg-Wp-cWr" secondAttribute="height" multiplier="1:1" id="GJM-ai-dk0"/>
@@ -79,7 +79,7 @@
                                                 </variation>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.51764705882352935" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="23" id="2tQ-Tl-KVi"/>
                                             <constraint firstItem="90z-Gu-CQc" firstAttribute="top" secondItem="Vxg-Wp-cWr" secondAttribute="bottom" constant="10" id="EIo-eZ-3vQ"/>
@@ -104,7 +104,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.75686274509803919" green="0.62352941176470589" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hfI-Rs-bd6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6ZC-s1-Yyq"/>
                             <constraint firstItem="amM-9W-Zrl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="cBP-U6-C5T"/>
@@ -624,7 +624,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SKN-gb-VsG">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509803921567" green="0.082352941176470587" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6qu-I4-MsQ"/>
@@ -650,7 +650,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5R-qZ-QiR" customClass="FSCalendar">
                                 <rect key="frame" x="20" y="28" width="560" height="481"/>
-                                <color key="backgroundColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="e5R-qZ-QiR" secondAttribute="height" multiplier="15:8" constant="-341.875" id="vs8-ll-Z6X"/>
                                 </constraints>
@@ -658,36 +658,36 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="subtitleTodayColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="fakedSelectedDay">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="fakeSubtitles" value="YES"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="useVeryShortWeekdaySymbols" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
-                                        <color key="value" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.086274509803921567" green="0.082352941176470587" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="subtitleSelectionColor">
-                                        <color key="value" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
-                                        <color key="value" red="0.75686274509999996" green="0.62352941179999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="subtitleTextSize">
                                         <real key="value" value="-1"/>
@@ -699,7 +699,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="e5R-qZ-QiR" firstAttribute="top" secondItem="ZnX-4U-sHT" secondAttribute="bottom" constant="8" id="4ft-0a-TK1"/>
                             <constraint firstItem="e5R-qZ-QiR" firstAttribute="trailing" secondItem="U4G-uT-JZ4" secondAttribute="trailingMargin" id="Mvf-qS-Eod"/>
@@ -725,7 +725,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>

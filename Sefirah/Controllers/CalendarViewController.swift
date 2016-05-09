@@ -85,8 +85,8 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
         
         WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
         
-        self.calendarView.titleSelectionColor = UIColor(rgba: "#0E386C")
-        self.calendarView.subtitleSelectionColor = UIColor(rgba: "#0E386C")
+        self.calendarView.titleSelectionColor = UIColor(rgba: "#161543")
+        self.calendarView.subtitleSelectionColor = UIColor(rgba: "#161543")
         
         if let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate] {
             for date in selectedDates {
