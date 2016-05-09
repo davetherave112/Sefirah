@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-
+    // blue - 161543
+    // gold - ab8454
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Register the preference defaults early.
         NSUserDefaults.standardUserDefaults().registerDefaults([
@@ -31,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ])
         
         WatchSessionManager.sharedManager.startSession()
-        UITabBar.appearance().tintColor = UIColor(rgba: "#C19F69")
+        UITabBar.appearance().tintColor = UIColor(rgba: "#ab8454")
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
         
         NotificationManager.sharedInstance.getLocation()

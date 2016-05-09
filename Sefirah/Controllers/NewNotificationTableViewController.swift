@@ -45,11 +45,11 @@ class NewNotificationTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         let cancelButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(cancel))
-        cancelButton.tintColor = UIColor(rgba: "#C19F69")
+        cancelButton.tintColor = UIColor(rgba: "#ab8454")
         self.navigationItem.leftBarButtonItem = cancelButton;
         
         let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: #selector(create))
-        createButton.tintColor = UIColor(rgba: "#C19F69")
+        createButton.tintColor = UIColor(rgba: "#ab8454")
         self.navigationItem.rightBarButtonItem = createButton;
         
         // setup our data source

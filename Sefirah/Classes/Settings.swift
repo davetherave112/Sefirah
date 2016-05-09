@@ -83,7 +83,7 @@ enum Languages: String {
 enum Nusach: String {
     case Ashkenaz = "Ashkenaz"
     case Sefard = "Sefard"
-    case Sephardic = "Sephardic"
+    case Sephardic = "Edot Hamizrach"
     
     static let allValues = [Ashkenaz, Sefard, Sephardic]
     static let nusachValues = [Ashkenaz.rawValue: KCSefiraCustom.Ashkenaz, Sefard.rawValue: .Sefard, Sephardic.rawValue: .Sephardic]

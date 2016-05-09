@@ -115,8 +115,8 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         progress.roundedCorners = true
         progress.glowMode = .Forward
         progress.angle = 360.0 * Double(dayOfSefira)/100.0
-        progress.trackColor = UIColor(rgba: "#0e386c")
-        progress.setColors(UIColor(rgba: "#c19f69"))
+        progress.trackColor = UIColor(rgba: "#161543")
+        progress.setColors(UIColor(rgba: "#ab8454"))
     }
 
 }
