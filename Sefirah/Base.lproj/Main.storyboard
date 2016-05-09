@@ -34,8 +34,8 @@
                                                 <rect key="frame" x="210" y="50" width="180" height="180"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbt-8T-SgY">
-                                                        <rect key="frame" x="74" y="73" width="33.5" height="33.5"/>
-                                                        <fontDescription key="fontDescription" name="DorianCLM-Book" family="Dorian CLM" pointSize="24"/>
+                                                        <rect key="frame" x="68.5" y="67.5" width="44.5" height="44.5"/>
+                                                        <fontDescription key="fontDescription" name="DorianCLM-Book" family="Dorian CLM" pointSize="32"/>
                                                         <color key="textColor" red="0.086274509803921567" green="0.082352941176470587" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -63,7 +63,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content="Placeholder">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.043137254899999998" green="0.2156862745" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="17" name="LucidaGrande"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -747,10 +747,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tdk-aG-4yu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.054901960780000002" green="0.21960784310000001" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.086274509799999996" green="0.08235294118" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.75686274509999996" green="0.62352941179999999" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.6705882353" green="0.51764705879999995" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

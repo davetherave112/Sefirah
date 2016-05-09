@@ -15,15 +15,17 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
 
     @IBOutlet var countLabel: WKInterfaceLabel!
     @IBOutlet var countButton: WKInterfaceButton!
-    var selectAllPressed: Bool = false
+    var countSent: Bool = false
     
     @IBAction func countAllDaysThroughToday() {
+        self.countSent = true
         WatchSessionManager.sharedManager.sendMessage(["SelectAll": true])
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
         self.setCounted(true)
     }
     
     @IBAction func trackOmerDay() {
+        self.countSent = true
         let adjustedDate = self.getAdjustedDateOnly(NSDate())
         WatchSessionManager.sharedManager.sendMessage(["SelectedDate": adjustedDate])
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
@@ -34,7 +36,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         super.awakeWithContext(context)
         
         WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
-        self.requestUpdatedData()
+        //self.requestUpdatedData()
     }
 
 
@@ -43,7 +45,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         super.willActivate()
         
         let counted = NSUserDefaults.standardUserDefaults().boolForKey("Counted")
-        self.setCounted(counted)
+        self.requestUpdatedData()
         
     }
     
@@ -78,8 +80,14 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
     func requestUpdatedData() {
         WatchSessionManager.sharedManager.sendMessage(["NeedData": true], replyHandler: { response in
                 if let isSelected = response["is_selected"] as? Bool {
-                    if isSelected != NSUserDefaults.standardUserDefaults().boolForKey("Counted") {
-                        self.setCounted(isSelected)
+                    if (isSelected != NSUserDefaults.standardUserDefaults().boolForKey("Counted")) {
+                        if self.countSent == true {
+                            self.setCounted(NSUserDefaults.standardUserDefaults().boolForKey("Counted"))
+                            self.countSent = false
+                        } else {
+                            self.setCounted(isSelected)
+                            NSUserDefaults.standardUserDefaults().setBool(isSelected, forKey: "Counted")
+                        }
                     }
                 }
             }, errorHandler:  { error in

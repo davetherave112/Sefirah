@@ -115,7 +115,7 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        WatchSessionManager.sharedManager.removeDataSourceChangedDelegate(self)
+        //WatchSessionManager.sharedManager.removeDataSourceChangedDelegate(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -154,8 +154,10 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
         let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
         if var dates = selectedDates {
-            dates.append(date)
-            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            if !dates.contains(date) {
+                dates.append(date)
+                NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+            }
         } else {
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
@@ -255,10 +257,13 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
     }
     
     func selectDate(date: NSDate) {
-        let selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
-        if var dates = selectedDates {
-            dates.append(date)
-            NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
+        var selectedDates = NSUserDefaults.standardUserDefaults().arrayForKey("SelectedDates") as? [NSDate]
+        let adjustedDate = self.getAdjustedDateOnly(date)
+        if selectedDates != nil {
+            if !selectedDates!.contains(adjustedDate) {
+                selectedDates!.append(adjustedDate)
+                NSUserDefaults.standardUserDefaults().setObject(selectedDates!, forKey: "SelectedDates")
+            }
         } else {
             NSUserDefaults.standardUserDefaults().setObject([date], forKey: "SelectedDates")
         }
@@ -283,7 +288,9 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
                 dayComponent.day = n
                 let calendar = NSCalendar.currentCalendar()
                 let adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: omerDateOnly, options: NSCalendarOptions(rawValue: 0))!
-                dates.append(adjustedDate)
+                if !dates.contains(adjustedDate) {
+                    dates.append(adjustedDate)
+                }
             }
             NSUserDefaults.standardUserDefaults().setObject(dates, forKey: "SelectedDates")
             for date in dates {
