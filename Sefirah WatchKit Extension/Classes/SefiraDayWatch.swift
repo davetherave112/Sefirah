@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import KosherCocoa
 import ClockKit
+import WatchKit
 
 class SefiraDayWatch: NSObject {
     static let sharedInstance = SefiraDayWatch()
@@ -32,17 +33,19 @@ class SefiraDayWatch: NSObject {
     
     let locationManager: CLLocationManager = CLLocationManager()
     
-    func getLocation() {
+    func getLocation() -> Bool {
         // Ask for Authorisation from the User.
-        //locationManager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
         
         // For use in foreground
-        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
             locationManager.requestLocation()
-            
+            return true
+        } else {
+            return false
         }
     }
     
@@ -78,4 +81,5 @@ class SefiraDayWatch: NSObject {
         
         return sefiraCount!
     }
+    
 }

@@ -15,13 +15,9 @@ import WatchConnectivity
 @available(iOS 9.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    //TODO: check badge number updated according to Tzeis
     
     var window: UIWindow?
 
-    // blue - 161543
-    // gold - ab8454
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Register the preference defaults early.
         NSUserDefaults.standardUserDefaults().registerDefaults([
@@ -34,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WatchSessionManager.sharedManager.startSession()
         UITabBar.appearance().tintColor = UIColor(rgba: "#ab8454")
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
+        
+        let notifications = Notification.fetchAllNotifications()
+        let tzeis = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
+        
+        if notifications.count == 0 && tzeis.count == 1 {
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
         
         NotificationManager.sharedInstance.getLocation()
         

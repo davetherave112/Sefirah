@@ -27,7 +27,23 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
 
         
         adjustedDay.locationManager.delegate = self
-        adjustedDay.getLocation()
+        let success = adjustedDay.getLocation()
+        if !success {
+            self.showPopup()
+        }
+        
+    }
+    
+    func showPopup(){
+        
+        let h0 = { print("ok")}
+        
+        //let action1 = WKAlertAction(title: "Approve", style: .Default, handler:h0)
+        //let action2 = WKAlertAction(title: "Decline", style: .Destructive) {}
+        let action3 = WKAlertAction(title: "Cancel", style: .Cancel) {}
+        
+        presentAlertControllerWithTitle("Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .ActionSheet, actions: [action3])
+        
         
     }
 
@@ -35,7 +51,10 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         self.setProgress(adjustedDay.sefiraDate, animate: true)
-        adjustedDay.getLocation()
+        let success = adjustedDay.getLocation()
+        if !success {
+            self.showPopup()
+        }
     }
 
     override func didDeactivate() {
@@ -100,7 +119,10 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
             }
             self.lastRemainingInterval = Int(length)
         } else {
-            adjustedDay.getLocation()
+            let success = adjustedDay.getLocation()
+            if !success {
+                self.showPopup()
+            }
             self.progressGroup.setBackgroundImageNamed("time0")
         }
         
@@ -138,6 +160,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         
         return timeString
     }
+
 
 
 }

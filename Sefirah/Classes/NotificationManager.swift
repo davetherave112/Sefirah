@@ -41,10 +41,10 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     
     func getLocation() {
         // Ask for Authorisation from the User.
-        //locationManager.requestAlwaysAuthorization()
+        locationManager.requestAlwaysAuthorization()
         
         // For use in foreground
-        locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -59,6 +59,8 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
             } else {
                 locationManager.startUpdatingLocation()
             }
+            
+        } else {
             
         }
     }
@@ -95,6 +97,7 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
             tzeis = calendar.tzais()
         }
         
+        //UIApplication.sharedApplication().cancelAllLocalNotifications()
         
         let savedValues = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
         for value in savedValues {
@@ -129,7 +132,6 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         } else {
             Notification.createNotification(name, fireDate: fireDate, enabled: true, repeatAlert: repeatAlert) { success, error in
-                
                 if let error = error {
                     //TODO: handle error
                     return
