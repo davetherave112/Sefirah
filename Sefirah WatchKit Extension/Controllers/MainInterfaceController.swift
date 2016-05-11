@@ -21,45 +21,33 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     @IBOutlet var progressImage: WKInterfaceImage!
     var imageDisplayed: Bool = false
     var lastRemainingInterval: Int?
+    var success: Bool?
+    var alertDisplayed = false
+    
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
 
         
         adjustedDay.locationManager.delegate = self
-        let success = adjustedDay.getLocation()
-        if !success {
-            self.showPopup()
-        }
+        success = adjustedDay.getLocation()
         
     }
     
-    func showPopup(){
-        
-        let h0 = { print("ok")}
-        
-        //let action1 = WKAlertAction(title: "Approve", style: .Default, handler:h0)
-        //let action2 = WKAlertAction(title: "Decline", style: .Destructive) {}
-        let action3 = WKAlertAction(title: "Cancel", style: .Cancel) {}
-        
-        presentAlertControllerWithTitle("Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .ActionSheet, actions: [action3])
-        
-        
-    }
+    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-        self.setProgress(adjustedDay.sefiraDate, animate: true)
-        let success = adjustedDay.getLocation()
-        if !success {
-            self.showPopup()
-        }
+        
+        
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -119,10 +107,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
             }
             self.lastRemainingInterval = Int(length)
         } else {
-            let success = adjustedDay.getLocation()
-            if !success {
-                self.showPopup()
-            }
+            adjustedDay.getLocation()
             self.progressGroup.setBackgroundImageNamed("time0")
         }
         

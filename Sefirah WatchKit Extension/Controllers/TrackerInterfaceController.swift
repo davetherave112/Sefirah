@@ -37,9 +37,10 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         
         WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
         //self.requestUpdatedData()
+    
     }
 
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

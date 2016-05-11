@@ -22,7 +22,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],
             "ScheduleTzeis": true,
         ])
-        
+    
         WatchSessionManager.sharedManager.startSession()
     }
 

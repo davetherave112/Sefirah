@@ -17,7 +17,7 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
     var lastRecordedCLLocation: CLLocationCoordinate2D?
     
 
-    func getLocation() {
+    func getLocation() -> Bool {
         // Ask for Authorisation from the User.
         locationManager.requestAlwaysAuthorization()
         
@@ -25,13 +25,20 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-            if #available(iOS 9.0, *) {
-                locationManager.requestLocation()
+            let status = CLLocationManager.authorizationStatus()
+            if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+                locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+                if #available(iOS 9.0, *) {
+                    locationManager.requestLocation()
+                } else {
+                    locationManager.startUpdatingLocation()
+                }
+                return true
             } else {
-                locationManager.startUpdatingLocation()
+                return false
             }
-            
+        } else {
+            return false
         }
     }
     

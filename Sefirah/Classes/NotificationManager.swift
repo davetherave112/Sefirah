@@ -60,8 +60,6 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
                 locationManager.startUpdatingLocation()
             }
             
-        } else {
-            
         }
     }
     

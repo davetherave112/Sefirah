@@ -16,6 +16,8 @@ class SefirahTextInterfaceController: WKInterfaceController {
     var formatter = KCSefiraFormatter()
     @IBOutlet var sefriahTextLabel: WKInterfaceLabel!
     let adjustedDay = SefiraDayWatch.sharedInstance
+    var displayedAlert: Bool = false
+    var wasOwnView: Bool = false
     
     @IBAction func languageSettings() {
         self.presentControllerWithName("LanguagesController", context: nil)
@@ -29,8 +31,22 @@ class SefirahTextInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         self.formatter = KCSefiraFormatter()
+        
 
     }
+    
+    func showPopup() {
+
+        let action = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.Cancel, handler: {
+            if self.wasOwnView {
+                self.displayedAlert = true;
+                self.dismissController();
+            }
+        })
+        self.presentAlertControllerWithTitle("Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .ActionSheet, actions: [action])
+    }
+    
+    
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -45,12 +61,38 @@ class SefirahTextInterfaceController: WKInterfaceController {
         } else {
             self.setSefiraText(1, formatter: formatter)
         }
+        
+        let success = SefiraDayWatch.sharedInstance.getLocation()
+        if !success && (!self.displayedAlert || !self.wasOwnView) {
+            self.showPopup()
+        }
+        
+    }
+    
+    override func didAppear() {
+        super.didAppear()
+        
+        if !self.wasOwnView {
+            self.wasOwnView = true
+        } else {
+            self.displayedAlert = false
+            self.wasOwnView = false
+        }
+        
     }
 
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        
+        let success = SefiraDayWatch.sharedInstance.getLocation()
+        if !success && !self.wasOwnView {
+            self.showPopup()
+        }
+        
+        
     }
+
 
     func setSefiraText(dayOfSefira: Int, formatter: KCSefiraFormatter) {
         let userDefaults = NSUserDefaults.standardUserDefaults()

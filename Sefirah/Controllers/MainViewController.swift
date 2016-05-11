@@ -39,7 +39,12 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
         formatter = KCSefiraFormatter()
 
-        adjustedDay.getLocation()
+        let success = adjustedDay.getLocation()
+        if !success {
+            let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
         
         formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
         formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!

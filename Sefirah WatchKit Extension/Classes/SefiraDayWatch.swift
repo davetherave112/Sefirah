@@ -41,9 +41,14 @@ class SefiraDayWatch: NSObject {
         //locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
-            locationManager.requestLocation()
-            return true
+            let status = CLLocationManager.authorizationStatus()
+            if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+                locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
+                locationManager.requestLocation()
+                return true
+            } else {
+                return false
+            }
         } else {
             return false
         }

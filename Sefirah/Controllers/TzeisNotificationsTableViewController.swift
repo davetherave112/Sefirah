@@ -102,7 +102,12 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
                 cell.detailTextLabel?.text = timeString
                 cell.textLabel?.text = "Local Time"
             } else {
-                SefiraDay.sharedInstance.getLocation()
+                let success = SefiraDay.sharedInstance.getLocation()
+                if !success {
+                    let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
             }
             return cell
         }

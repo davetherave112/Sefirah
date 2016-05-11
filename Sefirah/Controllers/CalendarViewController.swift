@@ -177,7 +177,12 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
             }
         } else {
             locationManager.delegate = self
-            SefiraDay.sharedInstance.getLocation()
+            let success = SefiraDay.sharedInstance.getLocation()
+            if !success {
+                let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -207,7 +212,12 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
             }
         } else {
             locationManager.delegate = self
-            SefiraDay.sharedInstance.getLocation()
+            let success = SefiraDay.sharedInstance.getLocation()
+            if !success {
+                let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -302,7 +312,12 @@ class CalendarViewController: UIViewController, DataSourceChangedDelegate, FSCal
             UIApplication.sharedApplication().applicationIconBadgeNumber = 0
         } else {
             locationManager.delegate = self
-            SefiraDay.sharedInstance.getLocation()
+            let success = SefiraDay.sharedInstance.getLocation()
+            if !success {
+                let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         }
     }
 
