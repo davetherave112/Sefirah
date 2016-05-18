@@ -40,6 +40,8 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        self.setProgress(true)
+        
         
     }
     
@@ -71,7 +73,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     }
     
     
-    func setProgress(dayOfSefira: Int?, animate: Bool) {
+    func setProgress(animate: Bool) {
         if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
             let interval = self.timeInterval(location)
             let seconds = Double(interval * -1)
@@ -112,7 +114,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         }
         
         if let extensionDelegate = (WKExtension.sharedExtension().delegate as? ExtensionDelegate) {
-            extensionDelegate.omerCount = String(dayOfSefira)
+            extensionDelegate.omerCount = String(adjustedDay.sefiraDate)
         }
     }
     

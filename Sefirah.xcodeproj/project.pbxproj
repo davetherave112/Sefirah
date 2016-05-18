@@ -432,6 +432,7 @@
 				F02B130C81690918CB703FD4BAFBC5F5 /* Embed Watch Content */,
 				EC6EDD0C26E7C14EEB18DD9863E28E6B /* 📦 Embed Pods Frameworks */,
 				5E7C7332510FB883D90C8B94F66604BE /* 📦 Copy Pods Resources */,
+				D028DD5F1CEAA84B000C3276 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -693,6 +694,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		D028DD5F1CEAA84B000C3276 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Mark WARNINGs and SERIOUSs as warnings and TODOs as errors in RELEASE builds excluding the Vendor and Third Party directories.\n\nif which XcodeIssueGenerator >/dev/null; then\n  XcodeIssueGenerator -b RELEASE -w \"WARNING, SERIOUS\" -e TODO -x \"Vendor/, Third Party/\"\nelse\n  echo \"warning: XcodeIssueGenerator is not installed.\"\nfi";
 		};
 		E78CB5FDAA5C86F3D93942910334ED8D /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
