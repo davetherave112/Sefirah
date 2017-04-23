@@ -15,8 +15,8 @@ class LanguageSettingsInterfaceController: WKInterfaceController {
     @IBOutlet var languagesTable: WKInterfaceTable!
     var languages = Languages.allValues
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         loadTableData()
     }
@@ -24,7 +24,7 @@ class LanguageSettingsInterfaceController: WKInterfaceController {
     func loadTableData() {
         self.languagesTable.setNumberOfRows(languages.count, withRowType: "LanguageRow")
         for index in 0..<languagesTable.numberOfRows {
-            if let controller = languagesTable.rowControllerAtIndex(index) as? LanguageRowController {
+            if let controller = languagesTable.rowController(at: index) as? LanguageRowController {
                 controller.language = languages[index]
             }
         }
@@ -40,9 +40,9 @@ class LanguageSettingsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let language = languages[rowIndex]
-        NSUserDefaults.standardUserDefaults().setValue(language.rawValue, forKey: "Language")
+        UserDefaults.standard.setValue(language.rawValue, forKey: "Language")
         loadTableData()
         
     }

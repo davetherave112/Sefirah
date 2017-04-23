@@ -338,7 +338,7 @@
     {
         custom = 0;
     }
-
+    
     if (language < composite.count)
     {
         NSArray <NSArray <NSString *> *> *customs = composite[language];
@@ -393,10 +393,6 @@
     UIFont *smallerFont = [UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
     UIFont *font = [UIFont preferredFontForTextStyle: UIFontTextStyleBody];
     UIFont *subheadFont = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    UIFont *shmulikFontXL = [UIFont fontWithName:@"ShmulikCLM" size:26];
-    UIFont *shmulikFontLarge = [UIFont fontWithName:@"ShmulikCLM" size:22];
-    UIFont *shmulikFontRegular = [UIFont fontWithName:@"ShmulikCLM" size:18];
-    
     
     if(!paragraphStyle)
     {
@@ -409,7 +405,7 @@
     {
         attributes = @{
                        NSParagraphStyleAttributeName : paragraphStyle,
-                       NSFontAttributeName : shmulikFontRegular //font
+                       NSFontAttributeName : font
                        };
     }
     
@@ -437,58 +433,25 @@
         [output appendAttributedString:leshaim];
     }
     
-    static NSDictionary *berachaAttributes = nil;
-    
-    if(!berachaAttributes)
-    {
-        berachaAttributes = @{
-                       NSParagraphStyleAttributeName : paragraphStyle,
-                       NSFontAttributeName : shmulikFontLarge //font
-                       };
-    }
-    
     if (showBeracha)
     {
-        beracha = [[NSMutableAttributedString alloc] initWithString:@"בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו, וְצִוָּֽנוּ עַל סְפִירַת הָעֹֽמֶר" attributes:berachaAttributes];
-        if (showLeshaim) {
-            [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
-        } else {
-            [output appendAttributedString:[[NSAttributedString alloc] initWithString:@""]];
-        }
+        beracha = [[NSMutableAttributedString alloc] initWithString:@"בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָֽׁנוּ בְּמִצְוֹתָיו, וְצִוָּֽנוּ עַל סְפִירַת הָעֹֽמֶר" attributes:attributes];
+        
+        [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
         [output appendAttributedString:beracha];
     }
     
     NSMutableParagraphStyle *centeredStyle = [[NSMutableParagraphStyle alloc] init];
     centeredStyle.alignment = NSTextAlignmentCenter;
     
-    
-    //static NSDictionary *countAttributes = nil; remove so language change updates shadow offset
-    NSDictionary *countAttributes = nil;
+    static NSDictionary *countAttributes = nil;
     
     if(!countAttributes)
     {
-        
-#if TARGET_OS_IOS
-        NSShadow *shadow = [[NSShadow alloc] init];
-        if (self.language == KCSefiraLanguageHebrew) {
-            shadow.shadowOffset = CGSizeMake(1.0, 1.0);
-        } else {
-            shadow.shadowOffset = CGSizeMake(-1.0, 1.0);
-        }
-        
-        shadow.shadowColor = [UIColor blackColor];
         countAttributes = @{
                             NSParagraphStyleAttributeName : centeredStyle,
-                            NSFontAttributeName : shmulikFontXL,
-                            NSShadowAttributeName : shadow
+                            NSFontAttributeName : countFont
                             };
-#else
-        countAttributes = @{
-                            NSParagraphStyleAttributeName : centeredStyle,
-                            NSFontAttributeName : shmulikFontXL
-                            };
-#endif
-        
     }
     
     NSString *plainTextCountString = [self countStringFromInteger:integer];
@@ -496,22 +459,11 @@
     if (plainTextCountString != nil)
     {
         NSAttributedString *countString = [[NSAttributedString alloc] initWithString:plainTextCountString attributes:countAttributes];
-        
         if(output.length > 0)
         {
-            [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n\n\n"]];
+            [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
         }
         [output appendAttributedString:countString];
-    }
-    
-    static NSDictionary *harachamanAttributes = nil;
-    
-    if(!harachamanAttributes)
-    {
-        harachamanAttributes = @{
-                              NSParagraphStyleAttributeName : paragraphStyle,
-                              NSFontAttributeName : shmulikFontLarge //font
-                              };
     }
     
     if (showHarachaman)
@@ -519,14 +471,14 @@
         
         if (self.custom == KCSefiraCustomSephardic)
         {
-            harachaman = [[NSMutableAttributedString alloc] initWithString:@"הָרַחֲמָן הוּא יִבְנֶה בֵּית הַמִקְדָשׁ, ְויַחֲזֵיר הָעֲבוֹדָה לִמְקוֹמָה בִּמְהֵרָה בְיָמֵינוּ. אָמֵן" attributes: harachamanAttributes];
+            harachaman = [[NSMutableAttributedString alloc] initWithString:@"הָרַחֲמָן הוּא יִבְנֶה בֵּית הַמִקְדָשׁ, ְויַחֲזֵיר הָעֲבוֹדָה לִמְקוֹמָה בִּמְהֵרָה בְיָמֵינוּ. אָמֵן" attributes: attributes];
         }
         else
         {
-            harachaman = [[NSMutableAttributedString alloc] initWithString:@"הָרַחֲמָן הוּא יַחֲזִיר לָֽנוּ עֲבוֹדַת בֵּית הַמִּקְדָּשׁ לִמְקוֹמָהּ, בִּמְהֵרָה בְיָמֵֽינוּ אָמֵן סֶֽלָה." attributes: harachamanAttributes];
+            harachaman = [[NSMutableAttributedString alloc] initWithString:@"הָרַחֲמָן הוּא יַחֲזִיר לָֽנוּ עֲבוֹדַת בֵּית הַמִּקְדָּשׁ לִמְקוֹמָהּ, בִּמְהֵרָה בְיָמֵֽינוּ אָמֵן סֶֽלָה." attributes: attributes];
         }
         
-        [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n\n\n"]];
+        [output appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n"]];
         [output appendAttributedString:harachaman];
     }
     
@@ -570,7 +522,6 @@
     if (showRibono)
     {
         
-
         NSString *trait = [self kabbalisticTraitFromInteger:integer];
         
         NSString *ribonoText = [NSString stringWithFormat:@"רִבּוֹנוֹ  שֶׁל עוֹלָם, אַתָּה צִוִּיתָֽנוּ עַל יְדֵי מֹשֶׁה עַבְדֶּֽךָ לִסְפּוֹר סְפִירַת הָעֹֽמֶר, כְּדֵי לְטַהֲרֵֽנוּ מִקְּלִפּוֹתֵֽינוּ וּמִטֻּמְאוֹתֵֽינוּ, כְּמוֹ שֶׁכָּתַֽבְתָּ בְּתוֹרָתֶֽךָ: וּסְפַרְתֶּם לָכֶם מִמָּחֳרַת הַשַּׁבָּת מִיּוֹם הֲבִיאֲכֶם אֶת עֹֽמֶר הַתְּנוּפָה, שֶֽׁבַע שַׁבָּתוֹת תְּמִימֹת תִּהְיֶֽינָה, עַד מִמָּחֳרַת הַשַּׁבָּת הַשְּׁבִיעִת תִּסְפְּרוּ חֲמִשִּׁים יוֹם, כְּדֵי שֶׁיִּטָּהֲרוּ נַפְשׁוֹת עַמְּךָ יִשְׂרָאֵל מִזֻּהֲמָתָם. וּבְכֵן יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְיָ אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁבִּזְכוּת סְפִירַת הָעֹֽמֶר שֶׁסָּפַֽרְתִּי הַיּוֹם, יְתֻקַּן מַה שֶּׁפָּגַֽמְתִּי בִּסְפִירָה %@ וְאֶטָּהֵר וְאֶתְקַדֵּשׁ בִּקְדֻשָּׁה שֶׁל מַֽעְלָה, וְעַל יְדֵי זֶה יֻשְׁפַּע שֶֽׁפַע רַב בְּכָל הָעוֹלָמוֹת, וּלְתַקֵּן אֶת נַפְשׁוֹתֵֽינוּ וְרוּחוֹתֵֽינוּ וְנִשְׁמוֹתֵֽינוּ מִכָּל סִיג וּפְגַם, וּלְטַהֲרֵֽנוּ וּלְקַדְּשֵֽׁנוּ בִּקְדֻשָּׁתְךָ הָעֶלְיוֹנָה, אָמֵן סֶֽלָה.", trait];
@@ -656,7 +607,7 @@
                         ],
                     /** English */
                     @[
-                        _englishStrings
+                        @[_englishStrings]
                         ],
                     /** Transliterated. */
                     @[_ashkenazTransliteratedStrings,

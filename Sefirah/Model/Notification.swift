@@ -1,59 +1,58 @@
 import Foundation
-import CoreData
 import SugarRecord
 
 @objc(Notification)
-public class Notification: _Notification {
+open class Notification: _Notification {
 	
     static var db: CoreDataDefaultStorage = {
-        let store = CoreData.Store.Named("db")
-        let bundle = NSBundle(forClass: Notification.classForCoder())
-        let model = CoreData.ObjectModel.Merged([bundle])
+        let store = CoreDataStore.named("db")
+        let bundle = Bundle(for: Notification.classForCoder())
+        let model = CoreDataObjectModel.merged([bundle])
         let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
         return defaultStorage
     }()
     
     class func fetchAllNotifications() -> [Notification] {
-        let notifications: [Notification] = try! Notification.db.fetch(Request<Notification>())
+        let notifications: [Notification] = try! Notification.db.fetch(FetchRequest<Notification>())
         return notifications
     }
     
-    class func createNotification(name: String, fireDate: NSDate, enabled: Bool, repeatAlert: Bool, completionHandler: (success: Bool, error: NSError?) -> ()) {
+    class func createNotification(_ name: String, fireDate: Date, enabled: Bool, repeatAlert: Bool, completionHandler: @escaping (_ success: Bool, _ error: NSError?) -> ()) {
         do {
             try Notification.db.operation { (context, save) throws -> Void in
-                let notificationExists: Bool = try! context.request(Notification.self).filteredWith("name", equalTo: name).fetch().count > 0
+                let notificationExists: Bool = try! context.request(Notification.self).filtered(with: "name", equalTo: name).fetch().count > 0
                 
                 if !notificationExists {
                     let newNotification: Notification = try! context.create()
                     newNotification.name = name
                     newNotification.date = fireDate
                     newNotification.enabled = true
-                    newNotification.repeatAlert = repeatAlert
+                    newNotification.repeatAlert = repeatAlert as NSNumber?
                     save()
-                    completionHandler(success: true, error: nil)
+                    completionHandler(true, nil)
                 } else {
-                    let userInfo: [NSObject : AnyObject] =
+                    let userInfo: [AnyHashable: Any] =
                         [
                             NSLocalizedDescriptionKey :  NSLocalizedString("Error", value: "Please choose a different name for your notification.", comment: ""),
                             NSLocalizedFailureReasonErrorKey : NSLocalizedString("Error", value: "A notification with this name already exists.", comment: "")
                         ]
                     let error = NSError(domain: "NotificationDomain", code: 422, userInfo: userInfo)
-                    completionHandler(success: false, error: error)
+                    completionHandler(false, error)
                 }
             }
         }
         catch let error as NSError {
-            completionHandler(success: false, error: error)
+            completionHandler(false, error)
         }
     }
     
     
     class func destroyExpiredNotifications() -> Bool {
-        let currentDate = NSDate()
-        let predicate: NSPredicate = NSPredicate(format: "(date < %@) AND (repeatAlert != %@)", currentDate, true)
+        let currentDate = Date()
+        let predicate: NSPredicate = NSPredicate(format: "(date < %@) AND (repeatAlert != %@)", currentDate as CVarArg, true as CVarArg)
         do {
             try Notification.db.operation { (context, save) -> Void in
-                let expired: [Notification]? = try! context.request(Notification.self).filteredWith(predicate: predicate).fetch()
+                let expired: [Notification]? = try! context.request(Notification.self).filtered(with: predicate).fetch()
                 if let expired = expired {
                     try! context.remove(expired)
                     save()

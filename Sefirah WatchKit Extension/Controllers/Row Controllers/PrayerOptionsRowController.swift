@@ -17,7 +17,7 @@ class PrayerOptionsRowController: NSObject {
         didSet {
             if let prayerOption = prayerOption {
                 prayerLabel.setText(prayerOption.rawValue)
-                let selectedOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]
+                let selectedOptions = UserDefaults.standard.array(forKey: "Options") as! [String]
                 if selectedOptions.contains(prayerOption.rawValue) {
                     self.checkImage.setHidden(false)
                 }

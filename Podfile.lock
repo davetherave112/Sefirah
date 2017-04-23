@@ -1,34 +1,40 @@
 PODS:
-  - FSCalendar (2.1.0)
-  - KDCircularProgress (1.4.0)
+  - FSCalendar (2.4.0)
+  - KDCircularProgress (1.5.2)
   - KosherCocoa (3.0.6)
-  - Result (1.0.2)
-  - SugarRecord/CoreData (2.2.5):
-    - Result (~> 1.0)
+  - Result (3.0.0)
+  - SugarRecord/CoreData (3.0.0):
+    - Result (~> 3.0)
 
 DEPENDENCIES:
-  - FSCalendar
+  - FSCalendar (from `git@github.com:WenchaoD/FSCalendar.git`, commit `15789aa1755ca4619b644e5343e83bdf2d01414d`)
   - KDCircularProgress
   - KosherCocoa (from `git@github.com:MosheBerman/KosherCocoa.git`, commit `5376523`)
   - SugarRecord/CoreData
 
 EXTERNAL SOURCES:
+  FSCalendar:
+    :commit: 15789aa1755ca4619b644e5343e83bdf2d01414d
+    :git: git@github.com:WenchaoD/FSCalendar.git
   KosherCocoa:
     :commit: '5376523'
     :git: git@github.com:MosheBerman/KosherCocoa.git
 
 CHECKOUT OPTIONS:
+  FSCalendar:
+    :commit: 15789aa1755ca4619b644e5343e83bdf2d01414d
+    :git: git@github.com:WenchaoD/FSCalendar.git
   KosherCocoa:
     :commit: '5376523'
     :git: git@github.com:MosheBerman/KosherCocoa.git
 
 SPEC CHECKSUMS:
-  FSCalendar: d8b9dddaf96fff7621a33b110763d981bb01bc04
-  KDCircularProgress: f5770bbd83da909bf6cd96c2dea0b8bae45ec774
+  FSCalendar: a9a02ab39a385b5a25bae2f96b50204292154a82
+  KDCircularProgress: 12f677b2deb02409ab48c6cae1898d146b8ad549
   KosherCocoa: 135cca36db10094abd0f691d4860b48f2e4aa951
-  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
-  SugarRecord: ccccf3fd03b8eb2d09e815b144fbd1baf08be82f
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  SugarRecord: c17d4a17b257cac4c4355b2790685b1e49b32de3
 
-PODFILE CHECKSUM: 4de43e5df5105feaa4433cf6630ab27f48697bc3
+PODFILE CHECKSUM: a6fc3001ee687dda3dad122118014c5ac97432d1
 
-COCOAPODS: 1.0.0.beta.8
+COCOAPODS: 1.0.1

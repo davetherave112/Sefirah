@@ -71,6 +71,4 @@
 
 + (NSInteger)dayOfSefiraForDate:(NSDate *)date;
 
-+ (NSDate *)dateOfSixteenNissanForYearOfDate:(NSDate *)date;
-
 @end

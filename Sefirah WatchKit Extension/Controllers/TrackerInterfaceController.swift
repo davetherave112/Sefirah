@@ -12,6 +12,12 @@ import WatchConnectivity
 import KosherCocoa
 
 class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, DataSourceChangedDelegate {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print(activationState)
+    }
+
 
     @IBOutlet var countLabel: WKInterfaceLabel!
     @IBOutlet var countButton: WKInterfaceButton!
@@ -19,21 +25,21 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
     
     @IBAction func countAllDaysThroughToday() {
         self.countSent = true
-        WatchSessionManager.sharedManager.sendMessage(["SelectAll": true])
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
+        WatchSessionManager.sharedManager.sendMessage(["SelectAll": true as AnyObject])
+        UserDefaults.standard.set(true, forKey: "Counted")
         self.setCounted(true)
     }
     
     @IBAction func trackOmerDay() {
         self.countSent = true
-        let adjustedDate = self.getAdjustedDateOnly(NSDate())
-        WatchSessionManager.sharedManager.sendMessage(["SelectedDate": adjustedDate])
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "Counted")
+        let adjustedDate = self.getAdjustedDateOnly(Date())
+        WatchSessionManager.sharedManager.sendMessage(["SelectedDate": adjustedDate as AnyObject])
+        UserDefaults.standard.set(true, forKey: "Counted")
         self.setCounted(true)
     }
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         WatchSessionManager.sharedManager.addDataSourceChangedDelegate(self)
         //self.requestUpdatedData()
@@ -45,7 +51,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let counted = NSUserDefaults.standardUserDefaults().boolForKey("Counted")
+        let counted = UserDefaults.standard.bool(forKey: "Counted")
         self.requestUpdatedData()
         
     }
@@ -54,7 +60,7 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
     override func didAppear() {
         super.didAppear()
         
-        let counted = NSUserDefaults.standardUserDefaults().boolForKey("Counted")
+        let counted = UserDefaults.standard.bool(forKey: "Counted")
         self.setCounted(counted)
     }
 
@@ -64,14 +70,14 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         super.didDeactivate()
     }
     
-    func setCounted(counted: Bool) {
+    func setCounted(_ counted: Bool) {
         if counted {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.countButton.setHidden(true)
                 self.countLabel.setText("Well Done! You've already counted today.")
             }
         } else {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.countButton.setHidden(false)
                 self.countLabel.setText("Count before you forget!")
             }
@@ -79,15 +85,15 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
     }
     
     func requestUpdatedData() {
-        WatchSessionManager.sharedManager.sendMessage(["NeedData": true], replyHandler: { response in
+        WatchSessionManager.sharedManager.sendMessage(["NeedData": true as AnyObject], replyHandler: { response in
                 if let isSelected = response["is_selected"] as? Bool {
-                    if (isSelected != NSUserDefaults.standardUserDefaults().boolForKey("Counted")) {
+                    if (isSelected != UserDefaults.standard.bool(forKey: "Counted")) {
                         if self.countSent == true {
-                            self.setCounted(NSUserDefaults.standardUserDefaults().boolForKey("Counted"))
+                            self.setCounted(UserDefaults.standard.bool(forKey: "Counted"))
                             self.countSent = false
                         } else {
                             self.setCounted(isSelected)
-                            NSUserDefaults.standardUserDefaults().setBool(isSelected, forKey: "Counted")
+                            UserDefaults.standard.set(isSelected, forKey: "Counted")
                         }
                     }
                 }
@@ -96,50 +102,50 @@ class TrackerInterfaceController: WKInterfaceController, WCSessionDelegate, Data
         })
     }
     
-    func getAdjustedDateOnly(date: NSDate) -> NSDate {
-        let flags: NSCalendarUnit = [.Year, .Month, .Day]
-        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-        var adjustedDateOnly = NSCalendar.currentCalendar().dateFromComponents(components)!
+    func getAdjustedDateOnly(_ date: Date) -> Date {
+        let flags: NSCalendar.Unit = [.year, .month, .day]
+        let components = (Calendar.current as NSCalendar).components(flags, from: date)
+        var adjustedDateOnly = Calendar.current.date(from: components)!
         if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
             if self.isAfterSunset(location, date: date) {
-                let dayComponent = NSDateComponents()
+                var dayComponent = DateComponents()
                 dayComponent.day = 1
-                let calendar = NSCalendar.currentCalendar()
-                let nextDate = calendar.dateByAddingComponents(dayComponent, toDate: adjustedDateOnly, options: NSCalendarOptions(rawValue: 0))
+                let calendar = Calendar.current
+                let nextDate = (calendar as NSCalendar).date(byAdding: dayComponent, to: adjustedDateOnly, options: NSCalendar.Options(rawValue: 0))
                 adjustedDateOnly = nextDate!
             }
         }
         return adjustedDateOnly
     }
     
-    func isAfterSunset(location: CLLocationCoordinate2D, date: NSDate) -> Bool {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    func isAfterSunset(_ location: CLLocationCoordinate2D, date: Date) -> Bool {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         
         let jewishCalendar = KCJewishCalendar(location: location)
-        jewishCalendar.workingDate = date
-        let tzeis = jewishCalendar.tzais()
+        jewishCalendar?.workingDate = date
+        let tzeis = jewishCalendar?.tzais()
         
-        let isAfterSunset = tzeis.timeIntervalSinceDate(date) < 0
+        let isAfterSunset = tzeis!.timeIntervalSince(date) < 0
         
         return isAfterSunset
     }
     
-    func dataSourceDidUpdate(dataSource: DataSource) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+    func dataSourceDidUpdate(_ dataSource: DataSource) {
+        let userDefaults = UserDefaults.standard
         switch dataSource.date {
-        case .Selected(let date):
-            let shouldSelect = (date == self.getAdjustedDateOnly(NSDate()))
+        case .selected(let date):
+            let shouldSelect = (date == self.getAdjustedDateOnly(Date()))
             if shouldSelect {
-                userDefaults.setBool(true, forKey: "Counted")
+                userDefaults.set(true, forKey: "Counted")
                 self.setCounted(true)
             }
-        case .Deselected(let date):
-            let shouldDeselect = (date == self.getAdjustedDateOnly(NSDate()))
+        case .deselected(let date):
+            let shouldDeselect = (date == self.getAdjustedDateOnly(Date()))
             if shouldDeselect {
-                userDefaults.setBool(false, forKey: "Counted")
+                userDefaults.set(false, forKey: "Counted")
                 self.setCounted(false)
             }
-        case .Unknown:
+        case .unknown:
             //TODO: handle error
             break
         }

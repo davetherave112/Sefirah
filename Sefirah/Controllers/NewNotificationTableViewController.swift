@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l <= r
+  default:
+    return !(rhs < lhs)
+  }
+}
+
 
 class NewNotificationTableViewController: UITableViewController {
 
@@ -27,13 +47,13 @@ class NewNotificationTableViewController: UITableViewController {
     let kSwitchCellID     = "switchCell";
     
     var dataArray: [[String: AnyObject]] = []
-    var dateFormatter = NSDateFormatter()
-    var timeFormatter = NSDateFormatter()
+    var dateFormatter = DateFormatter()
+    var timeFormatter = DateFormatter()
     
     var currentSelectedDate: String?
     var currentSelectedTime: String?
     // keep track which indexPath points to the cell with UIDatePicker
-    var datePickerIndexPath: NSIndexPath?
+    var datePickerIndexPath: IndexPath?
     
     var pickerCellRowHeight: CGFloat = 216
     
@@ -44,28 +64,28 @@ class NewNotificationTableViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
         
-        let cancelButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(cancel))
+        let cancelButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancel))
         cancelButton.tintColor = UIColor(rgba: "#ab8454")
         self.navigationItem.leftBarButtonItem = cancelButton;
         
-        let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: #selector(create))
+        let createButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(create))
         createButton.tintColor = UIColor(rgba: "#ab8454")
         self.navigationItem.rightBarButtonItem = createButton;
         
         // setup our data source
-        let itemOne = [kTitleKey : "Date", kDateKey : NSDate()]
-        let itemTwo = [kTitleKey : "Time", kDateKey : NSDate()]
+        let itemOne = [kTitleKey : "Date", kDateKey : Date()] as [String : Any]
+        let itemTwo = [kTitleKey : "Time", kDateKey : Date()] as [String : Any]
 
-        dataArray = [itemOne, itemTwo]
+        dataArray = [itemOne as Dictionary<String, AnyObject>, itemTwo as Dictionary<String, AnyObject>]
         
-        dateFormatter.dateStyle = .MediumStyle // show short-style date format
-        dateFormatter.timeStyle = .NoStyle
+        dateFormatter.dateStyle = .medium // show short-style date format
+        dateFormatter.timeStyle = .none
         
-        timeFormatter.dateStyle = .NoStyle
-        timeFormatter.timeStyle = .ShortStyle
+        timeFormatter.dateStyle = .none
+        timeFormatter.timeStyle = .short
 
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(NewNotificationTableViewController.localeChanged(_:)), name: NSCurrentLocaleDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(NewNotificationTableViewController.localeChanged(_:)), name: NSLocale.currentLocaleDidChangeNotification, object: nil)
     }
     
    
@@ -75,7 +95,7 @@ class NewNotificationTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func create(sender: AnyObject) {
+    func create(_ sender: AnyObject) {
         let textField = tableView.viewWithTag(kTextFieldTag) as! UITextField
         let name = textField.text
         
@@ -85,7 +105,7 @@ class NewNotificationTableViewController: UITableViewController {
                 let tabBarController = self.presentingViewController as! UITabBarController
                 let navController = tabBarController.selectedViewController as! UINavigationController
                 let notificationsVC = navController.viewControllers.last as! NotificationsTableViewController
-                self.dismissViewControllerAnimated(true, completion: {
+                self.dismiss(animated: true, completion: {
                     notificationsVC.tableView.reloadData()
                 })
             } else {
@@ -94,12 +114,12 @@ class NewNotificationTableViewController: UITableViewController {
         }
     }
     
-    func mergeTimeAndDate() -> NSDate? {
-        let df = NSDateFormatter()
+    func mergeTimeAndDate() -> Date? {
+        let df = DateFormatter()
         df.dateFormat = "MMM dd, yyyy hh:mm a"
         if currentSelectedDate != nil && currentSelectedTime != nil {
             let dateString = currentSelectedDate! + " " + currentSelectedTime!
-            if let dateFromString = df.dateFromString(dateString) {
+            if let dateFromString = df.date(from: dateString) {
                 return dateFromString
             } else {
                 return nil
@@ -109,21 +129,21 @@ class NewNotificationTableViewController: UITableViewController {
         }
     }
     
-    func cancel(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    func cancel(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func localeChanged(notif: NSNotification) {
+    func localeChanged(_ notif: Foundation.Notification) {
         tableView.reloadData()
     }
     
     // Check if cell has picker
-    func hasPickerForIndexPath(indexPath: NSIndexPath) -> Bool {
+    func hasPickerForIndexPath(_ indexPath: IndexPath) -> Bool {
         var hasDatePicker = false
         
-        let targetedRow = indexPath.row + 1
+        let targetedRow = (indexPath as NSIndexPath).row + 1
         
-        let checkDatePickerCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: targetedRow, inSection: 1))
+        let checkDatePickerCell = tableView.cellForRow(at: IndexPath(row: targetedRow, section: 1))
         let checkDatePicker = checkDatePickerCell?.viewWithTag(kDatePickerTag)
         
         hasDatePicker = checkDatePicker != nil
@@ -133,14 +153,14 @@ class NewNotificationTableViewController: UITableViewController {
     // Match above cell
     func updateDatePicker() {
         if let indexPath = datePickerIndexPath {
-            let associatedDatePickerCell = tableView.cellForRowAtIndexPath(indexPath)
+            let associatedDatePickerCell = tableView.cellForRow(at: indexPath)
             if let targetedDatePicker = associatedDatePickerCell?.viewWithTag(kDatePickerTag) as! UIDatePicker? {
-                let itemData = dataArray[self.datePickerIndexPath!.row - 1]
-                targetedDatePicker.setDate(itemData[kDateKey] as! NSDate, animated: false)
-                if indexPath.row - 1 == kDateRow {
-                    targetedDatePicker.datePickerMode = .Date
-                } else if indexPath.row - 1 == kTimeRow {
-                    targetedDatePicker.datePickerMode = .Time
+                let itemData = dataArray[(self.datePickerIndexPath! as NSIndexPath).row - 1]
+                targetedDatePicker.setDate(itemData[kDateKey] as! Date, animated: false)
+                if (indexPath as NSIndexPath).row - 1 == kDateRow {
+                    targetedDatePicker.datePickerMode = .date
+                } else if (indexPath as NSIndexPath).row - 1 == kTimeRow {
+                    targetedDatePicker.datePickerMode = .time
                 }
             }
         }
@@ -150,18 +170,18 @@ class NewNotificationTableViewController: UITableViewController {
         return datePickerIndexPath != nil
     }
     
-    func indexPathIsPicker(indexPath: NSIndexPath) -> Bool {
-        return inlineDatePickerShowing() && datePickerIndexPath?.row == indexPath.row && indexPath.section == 1
+    func indexPathIsPicker(_ indexPath: IndexPath) -> Bool {
+        return inlineDatePickerShowing() && (datePickerIndexPath as NSIndexPath?)?.row == (indexPath as NSIndexPath).row && (indexPath as NSIndexPath).section == 1
     }
     
     /*! Determines if the given indexPath points to a cell that contains the start/end dates.
      
      @param indexPath The indexPath to check if it represents start/end date cell.
      */
-    func indexPathHasDate(indexPath: NSIndexPath) -> Bool {
+    func indexPathHasDate(_ indexPath: IndexPath) -> Bool {
         var hasDate = false
         
-        if ((indexPath.row == kDateRow) || (indexPath.row == kTimeRow || (inlineDatePickerShowing() && (indexPath.row == kTimeRow + 1)))) && (indexPath.section == 1) {
+        if (((indexPath as NSIndexPath).row == kDateRow) || ((indexPath as NSIndexPath).row == kTimeRow || (inlineDatePickerShowing() && ((indexPath as NSIndexPath).row == kTimeRow + 1)))) && ((indexPath as NSIndexPath).section == 1) {
             hasDate = true
         }
         return hasDate
@@ -170,15 +190,15 @@ class NewNotificationTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (indexPathIsPicker(indexPath) ? pickerCellRowHeight : 55)
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 1
@@ -197,7 +217,7 @@ class NewNotificationTableViewController: UITableViewController {
     
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell?
         
         var cellID = kOtherCellID
@@ -210,19 +230,19 @@ class NewNotificationTableViewController: UITableViewController {
         } else if indexPathHasDate(indexPath) {
             // the indexPath is one that contains the date information
             cellID = kDateCellID       // the start/end date cells
-        } else if indexPath.section == 2 {
+        } else if (indexPath as NSIndexPath).section == 2 {
             cellID = kSwitchCellID
         }
         
-        cell = tableView.dequeueReusableCellWithIdentifier(cellID)
+        cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         
         
         // if we have a date picker open whose cell is above the cell we want to update,
         // then we have one more cell than the model allows - makes sure we're not updating a picker cell
         //
         
-        var modelRow = indexPath.row
-        if (datePickerIndexPath != nil && datePickerIndexPath?.row <= indexPath.row) {
+        var modelRow = (indexPath as NSIndexPath).row
+        if (datePickerIndexPath != nil && (datePickerIndexPath as NSIndexPath?)?.row <= (indexPath as NSIndexPath).row) {
             modelRow -= 1
         }
         
@@ -230,13 +250,13 @@ class NewNotificationTableViewController: UITableViewController {
         
         if cellID == kDateCellID {
             cell?.textLabel?.text = itemData[kTitleKey] as? String
-            if indexPath.row == kDateRow {
-                let date = itemData[kDateKey] as! NSDate
-                cell?.detailTextLabel?.text = self.dateFormatter.stringFromDate(date)
+            if (indexPath as NSIndexPath).row == kDateRow {
+                let date = itemData[kDateKey] as! Date
+                cell?.detailTextLabel?.text = self.dateFormatter.string(from: date)
                 currentSelectedDate = cell?.detailTextLabel?.text
-            } else if indexPath.row == kTimeRow {
-                let date = itemData[kDateKey] as! NSDate
-                cell?.detailTextLabel?.text = self.timeFormatter.stringFromDate(date)
+            } else if (indexPath as NSIndexPath).row == kTimeRow {
+                let date = itemData[kDateKey] as! Date
+                cell?.detailTextLabel?.text = self.timeFormatter.string(from: date)
                 currentSelectedTime = cell?.detailTextLabel?.text
                 
             }
@@ -251,18 +271,18 @@ class NewNotificationTableViewController: UITableViewController {
      
      @param indexPath The indexPath to reveal the UIDatePicker.
      */
-    func toggleDatePickerForSelectedIndexPath(indexPath: NSIndexPath) {
+    func toggleDatePickerForSelectedIndexPath(_ indexPath: IndexPath) {
         tableView.beginUpdates()
         
-        let indexPaths = [NSIndexPath(forRow: indexPath.row + 1, inSection: 1)]
+        let indexPaths = [IndexPath(row: (indexPath as NSIndexPath).row + 1, section: 1)]
         
         // check if 'indexPath' has an attached date picker below it
         if hasPickerForIndexPath(indexPath) {
             // found a picker below it, so remove it
-            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Fade)
+            tableView.deleteRows(at: indexPaths, with: .fade)
         } else {
             // didn't find a picker below it, so we should insert it
-            tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Fade)
+            tableView.insertRows(at: indexPaths, with: .fade)
         }
         tableView.endUpdates()
     }
@@ -271,35 +291,35 @@ class NewNotificationTableViewController: UITableViewController {
      
      @param indexPath The indexPath to reveal the UIDatePicker.
      */
-    func displayInlineDatePickerForRowAtIndexPath(indexPath: NSIndexPath) {
+    func displayInlineDatePickerForRowAtIndexPath(_ indexPath: IndexPath) {
         
         // display the date picker inline with the table content
         tableView.beginUpdates()
         
         var before = false // indicates if the date picker is below "indexPath", help us determine which row to reveal
         if inlineDatePickerShowing() {
-            before = datePickerIndexPath?.row < indexPath.row
+            before = (datePickerIndexPath as NSIndexPath?)?.row < (indexPath as NSIndexPath).row
         }
         
-        let sameCellClicked = (datePickerIndexPath?.row == indexPath.row + 1)
+        let sameCellClicked = ((datePickerIndexPath as NSIndexPath?)?.row == (indexPath as NSIndexPath).row + 1)
         
         // remove any date picker cell if it exists
         if self.inlineDatePickerShowing() {
-            tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: datePickerIndexPath!.row, inSection: 1)], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [IndexPath(row: (datePickerIndexPath! as NSIndexPath).row, section: 1)], with: .fade)
             datePickerIndexPath = nil
         }
         
         if !sameCellClicked {
             // hide the old date picker and display the new one
-            let rowToReveal = (before ? indexPath.row - 1 : indexPath.row)
-            let indexPathToReveal = NSIndexPath(forRow: rowToReveal, inSection: 1)
+            let rowToReveal = (before ? (indexPath as NSIndexPath).row - 1 : (indexPath as NSIndexPath).row)
+            let indexPathToReveal = IndexPath(row: rowToReveal, section: 1)
             
             toggleDatePickerForSelectedIndexPath(indexPathToReveal)
-            datePickerIndexPath = NSIndexPath(forRow: indexPathToReveal.row + 1, inSection: 1)
+            datePickerIndexPath = IndexPath(row: (indexPathToReveal as NSIndexPath).row + 1, section: 1)
         }
         
         // always deselect the row containing the start or end date
-        tableView.deselectRowAtIndexPath(indexPath, animated:true)
+        tableView.deselectRow(at: indexPath, animated:true)
         
         tableView.endUpdates()
         
@@ -309,13 +329,13 @@ class NewNotificationTableViewController: UITableViewController {
     
     
     // MARK: - UITableViewDelegate
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let cell = tableView.cellForRow(at: indexPath)
         if cell?.reuseIdentifier == kDateCellID {
             displayInlineDatePickerForRowAtIndexPath(indexPath)
         } else {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
@@ -328,33 +348,33 @@ class NewNotificationTableViewController: UITableViewController {
      */
     
     
-    @IBAction func dateAction(sender: UIDatePicker) {
+    @IBAction func dateAction(_ sender: UIDatePicker) {
         
-        var targetedCellIndexPath: NSIndexPath?
+        var targetedCellIndexPath: IndexPath?
         
         if self.inlineDatePickerShowing() {
             // inline date picker: update the cell's date "above" the date picker cell
             //
-            targetedCellIndexPath = NSIndexPath(forRow: datePickerIndexPath!.row - 1, inSection: 1)
+            targetedCellIndexPath = IndexPath(row: (datePickerIndexPath! as NSIndexPath).row - 1, section: 1)
         } else {
             // external date picker: update the current "selected" cell's date
             targetedCellIndexPath = tableView.indexPathForSelectedRow!
         }
         
-        let cell = tableView.cellForRowAtIndexPath(targetedCellIndexPath!)
+        let cell = tableView.cellForRow(at: targetedCellIndexPath!)
         let targetedDatePicker = sender
         
         // update our data model
-        var itemData = dataArray[targetedCellIndexPath!.row]
-        itemData[kDateKey] = targetedDatePicker.date
-        dataArray[targetedCellIndexPath!.row] = itemData
+        var itemData = dataArray[(targetedCellIndexPath! as NSIndexPath).row]
+        itemData[kDateKey] = targetedDatePicker.date as AnyObject?
+        dataArray[(targetedCellIndexPath! as NSIndexPath).row] = itemData
         
         // update the cell's date string
-        if targetedCellIndexPath!.row == kDateRow {
-            cell?.detailTextLabel?.text = dateFormatter.stringFromDate(targetedDatePicker.date)
+        if (targetedCellIndexPath! as NSIndexPath).row == kDateRow {
+            cell?.detailTextLabel?.text = dateFormatter.string(from: targetedDatePicker.date)
             currentSelectedDate = cell?.detailTextLabel?.text
-        } else if targetedCellIndexPath!.row == kTimeRow {
-            cell?.detailTextLabel?.text = timeFormatter.stringFromDate(targetedDatePicker.date)
+        } else if (targetedCellIndexPath! as NSIndexPath).row == kTimeRow {
+            cell?.detailTextLabel?.text = timeFormatter.string(from: targetedDatePicker.date)
             currentSelectedTime = cell?.detailTextLabel?.text
         }
         

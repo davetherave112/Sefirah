@@ -19,9 +19,9 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var tzeisOptions: UILabel!
     
     lazy var db: CoreDataDefaultStorage = {
-        let store = CoreData.Store.Named("db")
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let model = CoreData.ObjectModel.Merged([bundle])
+        let store = CoreDataStore.named("db")
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
         let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
         return defaultStorage
     }()
@@ -33,19 +33,19 @@ class SettingsTableViewController: UITableViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.selectedLanguage.text = NSUserDefaults.standardUserDefaults().stringForKey("Language")
-        self.selectedNusach.text = NSUserDefaults.standardUserDefaults().stringForKey("Nusach")
-        self.prayerOptions.text = (NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]).joinWithSeparator(", ")
-        let tzeisTimes = (NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]).map({Tzeis(rawValue: $0)!.description})
-        self.tzeisOptions.text = tzeisTimes.joinWithSeparator(", ")
+        self.selectedLanguage.text = UserDefaults.standard.string(forKey: "Language")
+        self.selectedNusach.text = UserDefaults.standard.string(forKey: "Nusach")
+        self.prayerOptions.text = (UserDefaults.standard.array(forKey: "Options") as! [String]).joined(separator: ", ")
+        let tzeisTimes = (UserDefaults.standard.array(forKey: "Tzeis") as! [Double]).map({Tzeis(rawValue: $0)!.description})
+        self.tzeisOptions.text = tzeisTimes.joined(separator: ", ")
         
         var notifications: [Notification] = []
         do {
             try db.operation { (context, save) throws -> Void in
-                notifications = try context.fetch(Request<Notification>())
+                notifications = try context.fetch(FetchRequest<Notification>())
             }
         }
         catch {

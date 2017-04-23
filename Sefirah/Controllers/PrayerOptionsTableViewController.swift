@@ -24,48 +24,48 @@ class PrayerOptionsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Options.allValues.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("OptionsCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OptionsCell", for: indexPath)
         
-        cell.textLabel!.text = Options.allValues[indexPath.row].rawValue
-        let selectedOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]
-        if selectedOptions.contains(Options.allValues[indexPath.row].rawValue) {
-            cell.accessoryType = .Checkmark
+        cell.textLabel!.text = Options.allValues[(indexPath as NSIndexPath).row].rawValue
+        let selectedOptions = UserDefaults.standard.array(forKey: "Options") as! [String]
+        if selectedOptions.contains(Options.allValues[(indexPath as NSIndexPath).row].rawValue) {
+            cell.accessoryType = .checkmark
         }
 
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        if cell?.accessoryType == .Checkmark {
-            cell?.accessoryType = .None
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.accessoryType == .checkmark {
+            cell?.accessoryType = .none
         } else {
-            cell?.accessoryType = .Checkmark
+            cell?.accessoryType = .checkmark
         }
-        let options = Options.allValues[indexPath.row].rawValue
+        let options = Options.allValues[(indexPath as NSIndexPath).row].rawValue
         
-        var savedOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]
-        if cell?.accessoryType == .Checkmark {
+        var savedOptions = UserDefaults.standard.array(forKey: "Options") as! [String]
+        if cell?.accessoryType == .checkmark {
             savedOptions.append(options)
         } else {
-            let index = savedOptions.indexOf(Options.allValues[indexPath.row].rawValue)
-            savedOptions.removeAtIndex(index!)
+            let index = savedOptions.index(of: Options.allValues[(indexPath as NSIndexPath).row].rawValue)
+            savedOptions.remove(at: index!)
         }
         
-        NSUserDefaults.standardUserDefaults().setValue(savedOptions, forKey: "Options")
+        UserDefaults.standard.setValue(savedOptions, forKey: "Options")
         self.tableView.reloadData()
     }
     

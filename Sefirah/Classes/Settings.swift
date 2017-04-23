@@ -11,65 +11,65 @@ import KosherCocoa
 
 
 enum Tzeis: Double {
-    case FifteenBefore = -15.0
-    case ThirtyBefore = -30.0
-    case FortyFiveBefore = -45.0
-    case HourBefore = -60.0
-    case FifteenAfter = 15.0
-    case ThirtyAfter = 30.0
-    case FortyFiveAfter = 45.0
-    case HourAfter = 60.0
-    case AtTzeis = 0.0
+    case fifteenBefore = -15.0
+    case thirtyBefore = -30.0
+    case fortyFiveBefore = -45.0
+    case hourBefore = -60.0
+    case fifteenAfter = 15.0
+    case thirtyAfter = 30.0
+    case fortyFiveAfter = 45.0
+    case hourAfter = 60.0
+    case atTzeis = 0.0
     
     var description: String {
         switch self {
-        case .AtTzeis:
+        case .atTzeis:
             return "0 Minutes (At Tzeis)"
-        case .FifteenBefore:
+        case .fifteenBefore:
             return "15 Minutes"
-        case .ThirtyBefore:
+        case .thirtyBefore:
             return "30 Minutes"
-        case .FortyFiveBefore:
+        case .fortyFiveBefore:
             return "45 Minutes"
-        case .HourBefore:
+        case .hourBefore:
             return "1 Hour"
-        case .FifteenAfter:
+        case .fifteenAfter:
             return "15 Minutes"
-        case .ThirtyAfter:
+        case .thirtyAfter:
             return "30 Minutes"
-        case .FortyFiveAfter:
+        case .fortyFiveAfter:
             return "45 Minutes"
-        case .HourAfter:
+        case .hourAfter:
             return "1 Hour"
         }
     }
 
     var notificationName: String {
         switch self {
-        case .AtTzeis:
+        case .atTzeis:
             return "tzeis-0"
-        case .FifteenBefore:
+        case .fifteenBefore:
             return "tzeis-15-before"
-        case .ThirtyBefore:
+        case .thirtyBefore:
             return "tzeis-30-before"
-        case .FortyFiveBefore:
+        case .fortyFiveBefore:
             return "tzeis-45-before"
-        case .HourBefore:
+        case .hourBefore:
             return "tzeis-hour-before"
-        case .FifteenAfter:
+        case .fifteenAfter:
             return "tzeis-15-after"
-        case .ThirtyAfter:
+        case .thirtyAfter:
             return "tzeis-30-after"
-        case .FortyFiveAfter:
+        case .fortyFiveAfter:
             return "tzeis-45-after"
-        case .HourAfter:
+        case .hourAfter:
             return "tzeis-hour-after"
         }
     }
     
-    static let allValues = [FifteenBefore, ThirtyBefore, FortyFiveBefore, HourBefore, FifteenAfter, ThirtyAfter, FortyFiveAfter, HourAfter, AtTzeis]
-    static let beforeValues = [.AtTzeis, FifteenBefore, ThirtyBefore, FortyFiveBefore, HourBefore]
-    static let afterValues = [FifteenAfter, ThirtyAfter, FortyFiveAfter, HourAfter]
+    static let allValues = [fifteenBefore, thirtyBefore, fortyFiveBefore, hourBefore, fifteenAfter, thirtyAfter, fortyFiveAfter, hourAfter, atTzeis]
+    static let beforeValues = [.atTzeis, fifteenBefore, thirtyBefore, fortyFiveBefore, hourBefore]
+    static let afterValues = [fifteenAfter, thirtyAfter, fortyFiveAfter, hourAfter]
 }
 
 enum Languages: String {
@@ -77,7 +77,7 @@ enum Languages: String {
     case Hebrew = "Hebrew"
     
     static let allValues = [English, Hebrew]
-    static let languageValues = [English.rawValue: KCSefiraLanguage.LanguageEnglish, Hebrew.rawValue: KCSefiraLanguage.LanguageHebrew]
+    static let languageValues = [English.rawValue: KCSefiraLanguage.languageEnglish, Hebrew.rawValue: KCSefiraLanguage.languageHebrew]
 }
 
 enum Nusach: String {
@@ -86,7 +86,7 @@ enum Nusach: String {
     case Sephardic = "Edot Hamizrach"
     
     static let allValues = [Ashkenaz, Sefard, Sephardic]
-    static let nusachValues = [Ashkenaz.rawValue: KCSefiraCustom.Ashkenaz, Sefard.rawValue: .Sefard, Sephardic.rawValue: .Sephardic]
+    static let nusachValues = [Ashkenaz.rawValue: KCSefiraCustom.ashkenaz, Sefard.rawValue: .sefard, Sephardic.rawValue: .sephardic]
 }
 
 enum Options: String {
@@ -99,11 +99,11 @@ enum Options: String {
     case Ribono = "Ribono"
     
     static let allValues = [LeshaimYichud, Beracha, Harachaman, Lamenatzaiach, Ana, Ribono, Aleinu]
-    static let optionValues = [Aleinu.rawValue: KCSefiraPrayerAddition.Aleinu,
-                               Ana.rawValue: KCSefiraPrayerAddition.Ana,
-                               Beracha.rawValue: KCSefiraPrayerAddition.Beracha,
-                               Harachaman.rawValue: KCSefiraPrayerAddition.Harachaman,
-                               Lamenatzaiach.rawValue: KCSefiraPrayerAddition.Lamenatzaiach,
-                               LeshaimYichud.rawValue: KCSefiraPrayerAddition.LeshaimYichud,
-                               Ribono.rawValue: KCSefiraPrayerAddition.Ribono]
+    static let optionValues = [Aleinu.rawValue: KCSefiraPrayerAddition.aleinu,
+                               Ana.rawValue: KCSefiraPrayerAddition.ana,
+                               Beracha.rawValue: KCSefiraPrayerAddition.beracha,
+                               Harachaman.rawValue: KCSefiraPrayerAddition.harachaman,
+                               Lamenatzaiach.rawValue: KCSefiraPrayerAddition.lamenatzaiach,
+                               LeshaimYichud.rawValue: KCSefiraPrayerAddition.leshaimYichud,
+                               Ribono.rawValue: KCSefiraPrayerAddition.ribono]
 }

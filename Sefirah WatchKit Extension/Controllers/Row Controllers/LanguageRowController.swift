@@ -17,7 +17,7 @@ class LanguageRowController: NSObject {
         didSet {
             if let language = language {
                 languageLabel.setText(language.rawValue)
-                let selectedLanguage = Languages(rawValue: NSUserDefaults.standardUserDefaults().stringForKey("Language")!)
+                let selectedLanguage = Languages(rawValue: UserDefaults.standard.string(forKey: "Language")!)
                 if selectedLanguage == language {
                     self.checkImage.setHidden(false)
                 }

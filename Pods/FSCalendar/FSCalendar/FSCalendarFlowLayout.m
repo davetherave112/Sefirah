@@ -9,7 +9,7 @@
 #import "FSCalendarFlowLayout.h"
 #import "FSCalendarDynamicHeader.h"
 #import "FSCalendar.h"
-#import "UIView+FSExtension.h"
+#import "FSCalendarExtensions.h"
 #import <objc/runtime.h>
 
 @implementation FSCalendarFlowLayout
@@ -38,7 +38,7 @@
         
         self.headerReferenceSize = CGSizeZero;
         
-        CGFloat padding = self.calendar.preferredWeekdayHeight*0.1;
+        CGFloat padding = self.calendar.preferredPadding;
         if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
             padding = FSCalendarFloor(padding);
             rowHeight = FSCalendarFloor(rowHeight*2)*0.5; // Round to nearest multiple of 0.5. e.g. (16.8->16.5),(16.2->16.0)

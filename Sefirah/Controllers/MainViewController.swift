@@ -32,30 +32,30 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let userDefaults = UserDefaults.standard
         
         formatter = KCSefiraFormatter()
 
         let success = adjustedDay.getLocation()
         if !success {
-            let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
         
-        formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
-        formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!
+        formatter.language = Languages.languageValues[userDefaults.string(forKey: "Language")!]!
+        formatter.custom = Nusach.nusachValues[userDefaults.string(forKey: "Nusach")!]!
         
-        let lastRecordedDay = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+        let lastRecordedDay = UserDefaults.standard.integer(forKey: "LastRecordedDay")
         self.setSefiraText(lastRecordedDay)
         self.createProgressCircle(lastRecordedDay)
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.scrollView.contentSize = CGSize(width: self.scrollView.bounds.width, height: self.sefiraDay.frame.maxY + 50)
@@ -64,20 +64,20 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
                 
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         locationManager.stopUpdatingLocation()
         
         self.dayOfSefira = adjustedDay.setAdjustedSefiraDay(locValue)
-        NSUserDefaults.standardUserDefaults().setInteger(dayOfSefira!, forKey: "LastRecordedDay")
+        UserDefaults.standard.set(dayOfSefira!, forKey: "LastRecordedDay")
         setSefiraText(dayOfSefira!)
         createProgressCircle(dayOfSefira!)
         
     }
 
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // Recover from no location services available
-        let lastRecordedDay = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+        let lastRecordedDay = UserDefaults.standard.integer(forKey: "LastRecordedDay")
         if lastRecordedDay > 0 {
             setSefiraText(lastRecordedDay)
             createProgressCircle(lastRecordedDay)
@@ -91,25 +91,25 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     }
 
     
-    func setSefiraText(dayOfSefira: Int) {
-        let prayerOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options")!
+    func setSefiraText(_ dayOfSefira: Int) {
+        let prayerOptions = UserDefaults.standard.array(forKey: "Options")!
         var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
         for option in prayerOptions {
             prayers = prayers.union(Options.optionValues[option as! String]!)
         }
         
-        self.sefiraDay.attributedText = formatter.countStringFromInteger(dayOfSefira, withPrayers: prayers)
+        self.sefiraDay.attributedText = formatter.countString(from: dayOfSefira, withPrayers: prayers)
         self.progressLabel.text = "\(dayOfSefira)"
     }
 
-    func createProgressCircle(dayOfSefira: Int) {
-        let progress = KDCircularProgress(frame: CGRectMake(0, 0, circleView.frame.size.width, circleView.frame.size.height))
+    func createProgressCircle(_ dayOfSefira: Int) {
+        let progress = KDCircularProgress(frame: CGRect(x: 0, y: 0, width: circleView.frame.size.width, height: circleView.frame.size.height))
         progress.translatesAutoresizingMaskIntoConstraints = false
         circleView.addSubview(progress)
-        let constraint1 = NSLayoutConstraint(item: self.circleView, attribute: .Leading, relatedBy: .Equal, toItem: progress, attribute: .Leading, multiplier: 1.0, constant: 0)
-        let constraint2 = NSLayoutConstraint(item: self.circleView, attribute: .Trailing, relatedBy: .Equal, toItem: progress, attribute: .Trailing, multiplier: 1.0, constant: 0)
-        let constraint3 = NSLayoutConstraint(item: self.circleView, attribute: .Top, relatedBy: .Equal, toItem: progress, attribute: .Top, multiplier: 1.0, constant: 0)
-        let constraint4 = NSLayoutConstraint(item: self.circleView, attribute: .Bottom, relatedBy: .Equal, toItem: progress, attribute: .Bottom, multiplier: 1.0, constant: 0)
+        let constraint1 = NSLayoutConstraint(item: self.circleView, attribute: .leading, relatedBy: .equal, toItem: progress, attribute: .leading, multiplier: 1.0, constant: 0)
+        let constraint2 = NSLayoutConstraint(item: self.circleView, attribute: .trailing, relatedBy: .equal, toItem: progress, attribute: .trailing, multiplier: 1.0, constant: 0)
+        let constraint3 = NSLayoutConstraint(item: self.circleView, attribute: .top, relatedBy: .equal, toItem: progress, attribute: .top, multiplier: 1.0, constant: 0)
+        let constraint4 = NSLayoutConstraint(item: self.circleView, attribute: .bottom, relatedBy: .equal, toItem: progress, attribute: .bottom, multiplier: 1.0, constant: 0)
         self.circleView.addConstraints([constraint1, constraint2, constraint3, constraint4])
         progress.startAngle = -90
         progress.progressThickness = 0.2
@@ -118,10 +118,10 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
         progress.center = view.center
         progress.gradientRotateSpeed = 2
         progress.roundedCorners = true
-        progress.glowMode = .Forward
+        progress.glowMode = .forward
         progress.angle = 360.0 * Double(dayOfSefira)/100.0
         progress.trackColor = UIColor(rgba: "#161543")
-        progress.setColors(UIColor(rgba: "#ab8454"))
+        progress.set(colors: UIColor(rgba: "#ab8454"))
     }
 
 }

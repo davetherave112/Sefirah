@@ -425,14 +425,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 47314BE852AC0ED3C79CBE424BDD0BB4 /* Build configuration list for PBXNativeTarget "Sefirah" */;
 			buildPhases = (
-				59585740AB322112594A398FA9AFB081 /* 📦 Check Pods Manifest.lock */,
+				59585740AB322112594A398FA9AFB081 /* [CP] Check Pods Manifest.lock */,
 				A35D9231924B206EAB0956CE1F73ADD8 /* Sources */,
 				1E296FB86B99FA24A0F456194798BBCD /* Frameworks */,
 				29DAE51DD775D5244EF24077E69FDA42 /* Resources */,
 				F02B130C81690918CB703FD4BAFBC5F5 /* Embed Watch Content */,
-				EC6EDD0C26E7C14EEB18DD9863E28E6B /* 📦 Embed Pods Frameworks */,
-				5E7C7332510FB883D90C8B94F66604BE /* 📦 Copy Pods Resources */,
-				D028DD5F1CEAA84B000C3276 /* ShellScript */,
+				EC6EDD0C26E7C14EEB18DD9863E28E6B /* [CP] Embed Pods Frameworks */,
+				5E7C7332510FB883D90C8B94F66604BE /* [CP] Copy Pods Resources */,
+				AE07D05F38D36077BDB504F4076C8B25 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -448,11 +448,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A7F3BB4933FA6BE947FBE96F3973524 /* Build configuration list for PBXNativeTarget "Sefirah WatchKit App" */;
 			buildPhases = (
-				237D2AADAD8D7E6EDFFB4D22A9BF36BD /* 📦 Check Pods Manifest.lock */,
+				237D2AADAD8D7E6EDFFB4D22A9BF36BD /* [CP] Check Pods Manifest.lock */,
 				8A1E22323D0FCABE5D7E97B3BCB3E6C0 /* Resources */,
 				D24B7889C82A05B7B22129C5E13AE1F8 /* Embed App Extensions */,
 				3E5D15CE9150B68177D2EA4FD5DD60A9 /* Frameworks */,
-				3477336F43CDB337F0188FBDD36296D2 /* 📦 Copy Pods Resources */,
+				3477336F43CDB337F0188FBDD36296D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,12 +468,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A5AC13ED55CD9F6FCA784CFD74E2F3C /* Build configuration list for PBXNativeTarget "Sefirah WatchKit Extension" */;
 			buildPhases = (
-				B8CE17CD16C3C1A5FB1E4114A0D54ACC /* 📦 Check Pods Manifest.lock */,
+				B8CE17CD16C3C1A5FB1E4114A0D54ACC /* [CP] Check Pods Manifest.lock */,
 				CA699061B93CFEF29444761734DDB418 /* Sources */,
 				D790E6E9133D46A2640F781549CC5585 /* Frameworks */,
 				A626BF629A10B9AFEA62E73F62D2F5C4 /* Resources */,
-				1295A4B6A586F1A3BC2CF12DF6E7D713 /* 📦 Embed Pods Frameworks */,
-				E78CB5FDAA5C86F3D93942910334ED8D /* 📦 Copy Pods Resources */,
+				1295A4B6A586F1A3BC2CF12DF6E7D713 /* [CP] Embed Pods Frameworks */,
+				E78CB5FDAA5C86F3D93942910334ED8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -497,6 +497,7 @@
 					2251D053A723C356E4A41443E79E6014 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = H7QACAK68J;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -509,6 +510,7 @@
 					3D1F71ABD21E82DD349B36719F7A67C6 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = H7QACAK68J;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -518,6 +520,7 @@
 					EFF376459A71A064ACA6705CC0F3A300 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = H7QACAK68J;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -592,14 +595,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1295A4B6A586F1A3BC2CF12DF6E7D713 /* 📦 Embed Pods Frameworks */ = {
+		1295A4B6A586F1A3BC2CF12DF6E7D713 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,14 +610,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		237D2AADAD8D7E6EDFFB4D22A9BF36BD /* 📦 Check Pods Manifest.lock */ = {
+		237D2AADAD8D7E6EDFFB4D22A9BF36BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,14 +625,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		3477336F43CDB337F0188FBDD36296D2 /* 📦 Copy Pods Resources */ = {
+		3477336F43CDB337F0188FBDD36296D2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,14 +653,14 @@
 			shellPath = /bin/sh;
 			shellScript = "mogenerator -m Sefirah/Model.xcdatamodeld -O Sefirah/Model --swift --template-var arc=true";
 		};
-		59585740AB322112594A398FA9AFB081 /* 📦 Check Pods Manifest.lock */ = {
+		59585740AB322112594A398FA9AFB081 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,14 +668,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5E7C7332510FB883D90C8B94F66604BE /* 📦 Copy Pods Resources */ = {
+		5E7C7332510FB883D90C8B94F66604BE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,22 +683,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah/Pods-Sefirah-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B8CE17CD16C3C1A5FB1E4114A0D54ACC /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D028DD5F1CEAA84B000C3276 /* ShellScript */ = {
+		AE07D05F38D36077BDB504F4076C8B25 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -708,14 +696,29 @@
 			shellPath = /bin/sh;
 			shellScript = "# Mark WARNINGs and SERIOUSs as warnings and TODOs as errors in RELEASE builds excluding the Vendor and Third Party directories.\n\nif which XcodeIssueGenerator >/dev/null; then\n  XcodeIssueGenerator -b RELEASE -w \"WARNING, SERIOUS\" -e TODO -x \"Vendor/, Third Party/\"\nelse\n  echo \"warning: XcodeIssueGenerator is not installed.\"\nfi";
 		};
-		E78CB5FDAA5C86F3D93942910334ED8D /* 📦 Copy Pods Resources */ = {
+		B8CE17CD16C3C1A5FB1E4114A0D54ACC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E78CB5FDAA5C86F3D93942910334ED8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,14 +726,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sefirah WatchKit Extension/Pods-Sefirah WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC6EDD0C26E7C14EEB18DD9863E28E6B /* 📦 Embed Pods Frameworks */ = {
+		EC6EDD0C26E7C14EEB18DD9863E28E6B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -890,6 +893,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -917,6 +921,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -938,6 +943,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah WatchKit App-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -1003,6 +1009,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -1022,6 +1029,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
@@ -1043,6 +1051,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Sefirah/Sefirah WatchKit App-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};

@@ -25,8 +25,8 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
     var alertDisplayed = false
     
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
 
         
         adjustedDay.locationManager.delegate = self
@@ -52,28 +52,28 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
         
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         adjustedDay.locationManager.stopUpdatingLocation()
         adjustedDay.setAdjustedSefiraDay(locValue)
         if let dayOfSefira = adjustedDay.sefiraDate {
-            self.setProgress(dayOfSefira, animate: true)
+            self.setProgress(true)
         }
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        if NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay") > 0 {
-            let dayOfSefira = NSUserDefaults.standardUserDefaults().integerForKey("LastRecordedDay")
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        if UserDefaults.standard.integer(forKey: "LastRecordedDay") > 0 {
+            let dayOfSefira = UserDefaults.standard.integer(forKey: "LastRecordedDay")
             if SefiraDayWatch.sharedInstance.sefiraDate == nil {
                 SefiraDayWatch.sharedInstance.sefiraDate = dayOfSefira
-                self.setProgress(dayOfSefira, animate: true)
+                self.setProgress(true)
             }
         }
         print(error)
     }
     
     
-    func setProgress(animate: Bool) {
+    func setProgress(_ animate: Bool) {
         if let location = SefiraDayWatch.sharedInstance.lastRecordedCLLocation {
             let interval = self.timeInterval(location)
             let seconds = Double(interval * -1)
@@ -84,7 +84,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
             if animate && !imageDisplayed {
                 let range = NSRange.init(location: 0, length: Int(length))
                 self.progressGroup.setBackgroundImageNamed("time")
-                progressGroup.startAnimatingWithImagesInRange(range, duration: 0.7, repeatCount: 1)
+                progressGroup.startAnimatingWithImages(in: range, duration: 0.7, repeatCount: 1)
                 self.timeLabel.setText("Remaining:" + timeString)
                 self.imageDisplayed = true
             } else if !animate && !imageDisplayed {
@@ -104,7 +104,7 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
                     range = NSRange.init(location: 0, length: Int(length))
                 }
                 self.progressGroup.setBackgroundImageNamed("time")
-                progressGroup.startAnimatingWithImagesInRange(range!, duration: 0.7, repeatCount: 1)
+                progressGroup.startAnimatingWithImages(in: range!, duration: 0.7, repeatCount: 1)
                 self.timeLabel.setText("Remaining:" + timeString)
             }
             self.lastRemainingInterval = Int(length)
@@ -113,35 +113,35 @@ class MainInterfaceController: WKInterfaceController, CLLocationManagerDelegate 
             self.progressGroup.setBackgroundImageNamed("time0")
         }
         
-        if let extensionDelegate = (WKExtension.sharedExtension().delegate as? ExtensionDelegate) {
-            extensionDelegate.omerCount = String(adjustedDay.sefiraDate)
+        if let extensionDelegate = (WKExtension.shared().delegate as? ExtensionDelegate) {
+            extensionDelegate.omerCount = String(describing: adjustedDay.sefiraDate)
         }
     }
     
-    func timeInterval(location: CLLocationCoordinate2D) -> NSTimeInterval {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    func timeInterval(_ location: CLLocationCoordinate2D) -> TimeInterval {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         
         let jewishCalendar = KCJewishCalendar(location: location)
-        var tzeis = jewishCalendar.tzais()
-        let current = NSDate()
+        var tzeis = jewishCalendar?.tzais()
+        let current = Date()
         
-        if tzeis.timeIntervalSinceNow < 0 {
-            let adjustedDate = jewishCalendar.workingDate.dateByAddingTimeInterval(60*60*12)
-            jewishCalendar.workingDate = adjustedDate
-            tzeis = jewishCalendar.tzais()
+        if tzeis!.timeIntervalSinceNow < 0.0 {
+            let adjustedDate = jewishCalendar?.workingDate.addingTimeInterval(60*60*12)
+            jewishCalendar?.workingDate = adjustedDate
+            tzeis = jewishCalendar?.tzais()
         }
         
-        let difference = current.timeIntervalSinceDate(tzeis)
+        let difference = current.timeIntervalSince(tzeis!)
         
         return difference
 
     }
     
-    func timeIntervalToString(interval: NSTimeInterval) -> String {
+    func timeIntervalToString(_ interval: TimeInterval) -> String {
         var work = interval * -1
-        let seconds = work % 60
+        let seconds = work.truncatingRemainder(dividingBy: 60)
         work /= 60
-        let minutes = work % 60
+        let minutes = work.truncatingRemainder(dividingBy: 60)
         let hours = work / 60
         let timeString = String(format: "%0.2d:%0.2d", Int(hours), Int(minutes))
         

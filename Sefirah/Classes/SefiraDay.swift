@@ -26,7 +26,7 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             let status = CLLocationManager.authorizationStatus()
-            if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+            if status == .authorizedAlways || status == .authorizedWhenInUse {
                 locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
                 if #available(iOS 9.0, *) {
                     locationManager.requestLocation()
@@ -42,46 +42,46 @@ class SefiraDay: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    func setAdjustedSefiraDay(location: CLLocationCoordinate2D) -> Int {
-        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    func setAdjustedSefiraDay(_ location: CLLocationCoordinate2D) -> Int {
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         self.lastRecordedCLLocation = location
         let jewishCalendar = KCJewishCalendar(location: KClocation)
-        let sunset = jewishCalendar.tzais()
+        let sunset = jewishCalendar?.tzais()
         
-        return self.workingDateAdjustedForSunset(sunset)
+        return self.workingDateAdjustedForSunset(sunset!)
         
     }
     
     
-    class func dateAdjustedForHebrewCalendar(location: CLLocationCoordinate2D, date: NSDate) -> NSDate {
-        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    class func dateAdjustedForHebrewCalendar(_ location: CLLocationCoordinate2D, date: Date) -> Date {
+        let location = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         
-        let flags: NSCalendarUnit = [.Year, .Month, .Day]
-        let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
-        let dateOnly = NSCalendar.currentCalendar().dateFromComponents(components)
+        let flags: NSCalendar.Unit = [.year, .month, .day]
+        let components = (Calendar.current as NSCalendar).components(flags, from: date)
+        let dateOnly = Calendar.current.date(from: components)
         var adjustedDate = dateOnly
         let jewishCalendar = KCJewishCalendar(location: location)
-        let tzeis = jewishCalendar.tzais()
+        let tzeis = jewishCalendar?.tzais()
         
-        let isAfterSunset = tzeis.timeIntervalSinceNow < 0
+        let isAfterSunset = tzeis!.timeIntervalSinceNow < 0
         
         if isAfterSunset {
-            let dayComponent = NSDateComponents()
+            var dayComponent = DateComponents()
             dayComponent.day = 1
-            let calendar = NSCalendar.currentCalendar()
-            adjustedDate = calendar.dateByAddingComponents(dayComponent, toDate: dateOnly!, options: NSCalendarOptions(rawValue: 0))!
+            let calendar = Calendar.current
+            adjustedDate = (calendar as NSCalendar).date(byAdding: dayComponent, to: dateOnly!, options: NSCalendar.Options(rawValue: 0))!
         }
         
         return adjustedDate!
     }
     
-    class func getTzeis(location: CLLocationCoordinate2D) -> NSDate {
-        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    class func getTzeis(_ location: CLLocationCoordinate2D) -> Date {
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         let jewishCalendar = KCJewishCalendar(location: KClocation)
-        return jewishCalendar.tzais()
+        return jewishCalendar!.tzais()
     }
     
-    func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
+    func workingDateAdjustedForSunset(_ sunset: Date) -> Int {
         
         let isAfterSunset = sunset.timeIntervalSinceNow < 0
         

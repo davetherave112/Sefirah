@@ -23,42 +23,42 @@ class NusachTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Nusach.allValues.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("NusachCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NusachCell", for: indexPath)
         
-        cell.textLabel!.text = Nusach.allValues[indexPath.row].rawValue
-        let selectedNusach = Nusach(rawValue: NSUserDefaults.standardUserDefaults().stringForKey("Nusach")!)
-        if selectedNusach == Nusach.allValues[indexPath.row] {
-            cell.accessoryType = .Checkmark
+        cell.textLabel!.text = Nusach.allValues[(indexPath as NSIndexPath).row].rawValue
+        let selectedNusach = Nusach(rawValue: UserDefaults.standard.string(forKey: "Nusach")!)
+        if selectedNusach == Nusach.allValues[(indexPath as NSIndexPath).row] {
+            cell.accessoryType = .checkmark
         } else {
-            cell.accessoryType = .None
+            cell.accessoryType = .none
         }
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        cell?.accessoryType = .Checkmark
-        let nusach = Nusach.allValues[indexPath.row].rawValue
-        NSUserDefaults.standardUserDefaults().setValue(nusach, forKey: "Nusach")
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+        let nusach = Nusach.allValues[(indexPath as NSIndexPath).row].rawValue
+        UserDefaults.standard.setValue(nusach, forKey: "Nusach")
         self.tableView.reloadData()
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .None
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
 
 

@@ -9,7 +9,7 @@
 import WatchConnectivity
 
 protocol DataSourceChangedDelegate {
-    func dataSourceDidUpdate(dataSource: DataSource)
+    func dataSourceDidUpdate(_ dataSource: DataSource)
 }
 
 struct DataSource {
@@ -17,48 +17,54 @@ struct DataSource {
     let date: SefiraDate
     
     enum SefiraDate {
-        case Selected(NSDate)
-        case Deselected(NSDate)
-        case Unknown
+        case selected(Date)
+        case deselected(Date)
+        case unknown
     }
     
     init(data: [String : AnyObject]) {
-        if let selectedDate = data["selected"] as? NSDate {
-            date = SefiraDate.Selected(selectedDate)
-        } else if let deselectedDate = data["deselected"] as? NSDate {
-            date = SefiraDate.Deselected(deselectedDate)
+        if let selectedDate = data["selected"] as? Date {
+            date = SefiraDate.selected(selectedDate)
+        } else if let deselectedDate = data["deselected"] as? Date {
+            date = SefiraDate.deselected(deselectedDate)
         } else {
-            date = SefiraDate.Unknown
+            date = SefiraDate.unknown
         }
     }
 }
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print(activationState)
+    }
+
     
     static let sharedManager = WatchSessionManager()
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
     
-    private let session: WCSession = WCSession.defaultSession()
+    fileprivate let session: WCSession = WCSession.default()
     
     func startSession() {
         session.delegate = self
-        session.activateSession()
+        session.activate()
     }
     
     // keeps track of all the dataSourceChangedDelegates
-    private var dataSourceChangedDelegates = [DataSourceChangedDelegate]()
+    fileprivate var dataSourceChangedDelegates = [DataSourceChangedDelegate]()
     
     // adds / removes dataSourceChangedDelegates from the array
-    func addDataSourceChangedDelegate<T where T: DataSourceChangedDelegate, T: Equatable>(delegate: T) {
+    func addDataSourceChangedDelegate<T>(_ delegate: T) where T: DataSourceChangedDelegate, T: Equatable {
         dataSourceChangedDelegates.append(delegate)
     }
     
-    func removeDataSourceChangedDelegate<T where T: DataSourceChangedDelegate, T: Equatable>(delegate: T) {
-        for (index, dataSourceDelegate) in dataSourceChangedDelegates.enumerate() {
-            if let dataSourceDelegate = dataSourceDelegate as? T where dataSourceDelegate == delegate {
-                dataSourceChangedDelegates.removeAtIndex(index)
+    func removeDataSourceChangedDelegate<T>(_ delegate: T) where T: DataSourceChangedDelegate, T: Equatable {
+        for (index, dataSourceDelegate) in dataSourceChangedDelegates.enumerated() {
+            if let dataSourceDelegate = dataSourceDelegate as? T , dataSourceDelegate == delegate {
+                dataSourceChangedDelegates.remove(at: index)
                 break
             }
         }
@@ -71,7 +77,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
 extension WatchSessionManager {
     
     // Sender
-    func updateApplicationContext(applicationContext: [String : AnyObject]) throws {
+    func updateApplicationContext(_ applicationContext: [String : AnyObject]) throws {
         do {
             try session.updateApplicationContext(applicationContext)
         } catch let error {
@@ -80,9 +86,9 @@ extension WatchSessionManager {
     }
     
     // Receiver
-    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         //dispatch_async(dispatch_get_main_queue()) { [weak self] in
-            self.dataSourceChangedDelegates.forEach { $0.dataSourceDidUpdate(DataSource(data: applicationContext))}
+            self.dataSourceChangedDelegates.forEach { $0.dataSourceDidUpdate(DataSource(data: applicationContext as [String : AnyObject]))}
         //}
     }
 }
@@ -93,19 +99,19 @@ extension WatchSessionManager {
 extension WatchSessionManager {
     
     // Sender
-    func transferUserInfo(userInfo: [String : AnyObject]) -> WCSessionUserInfoTransfer? {
+    func transferUserInfo(_ userInfo: [String : AnyObject]) -> WCSessionUserInfoTransfer? {
         return session.transferUserInfo(userInfo)
     }
     
-    func session(session: WCSession, didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {
+    @objc(session:didFinishUserInfoTransfer:error:) func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         // implement this on the sender if you need to confirm that
         // the user info did in fact transfer
     }
     
     // Receiver
-    func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any]) {
         // handle receiving user info
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             // make sure to put on the main queue to update UI!
         }
     }
@@ -116,18 +122,18 @@ extension WatchSessionManager {
 extension WatchSessionManager {
     
     // Sender
-    func transferFile(file: NSURL, metadata: [String : AnyObject]) -> WCSessionFileTransfer? {
+    func transferFile(_ file: URL, metadata: [String : AnyObject]) -> WCSessionFileTransfer? {
         return session.transferFile(file, metadata: metadata)
     }
     
-    func session(session: WCSession, didFinishFileTransfer fileTransfer: WCSessionFileTransfer, error: NSError?) {
+    @objc(session:didFinishFileTransfer:error:) func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
         // handle filed transfer completion
     }
     
     // Receiver
-    func session(session: WCSession, didReceiveFile file: WCSessionFile) {
+    @objc(session:didReceiveFile:) func session(_ session: WCSession, didReceive file: WCSessionFile) {
         // handle receiving file
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             // make sure to put on the main queue to update UI!
         }
     }
@@ -138,15 +144,15 @@ extension WatchSessionManager {
 extension WatchSessionManager {
     
     // Live messaging! App has to be reachable
-    private var validReachableSession: WCSession? {
-        if session.reachable {
+    fileprivate var validReachableSession: WCSession? {
+        if session.isReachable {
             return session
         }
         return nil
     }
     
-    func sessionReachabilityDidChange(session: WCSession) {
-        if session.reachable {
+    func sessionReachabilityDidChange(_ session: WCSession) {
+        if session.isReachable {
             
         } else {
             //TODO: prompt user to unlock device
@@ -155,31 +161,31 @@ extension WatchSessionManager {
     
     // Sender
     
-    func sendMessage(message: [String : AnyObject],
-                     replyHandler: (([String : AnyObject]) -> Void)? = nil,
+    func sendMessage(_ message: [String : AnyObject],
+                     replyHandler: (([String : Any]) -> Void)? = nil,
                      errorHandler: ((NSError) -> Void)? = nil)
     {
-        validReachableSession?.sendMessage(message, replyHandler: replyHandler, errorHandler: errorHandler)
+        validReachableSession?.sendMessage(message, replyHandler: replyHandler, errorHandler: errorHandler as? ((Error) -> Void))
     }
     
-    func sendMessageData(data: NSData,
-                         replyHandler: ((NSData) -> Void)? = nil,
+    func sendMessageData(_ data: Data,
+                         replyHandler: ((Data) -> Void)? = nil,
                          errorHandler: ((NSError) -> Void)? = nil)
     {
-        validReachableSession?.sendMessageData(data, replyHandler: replyHandler, errorHandler: errorHandler)
+        validReachableSession?.sendMessageData(data, replyHandler: replyHandler, errorHandler: errorHandler as! ((Error) -> Void)?)
     }
     
     // Receiver
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         // handle receiving message
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             // make sure to put on the main queue to update UI!
         }
     }
     
-    func session(session: WCSession, didReceiveMessageData messageData: NSData, replyHandler: (NSData) -> Void) {
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
         // handle receiving message data
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             // make sure to put on the main queue to update UI!
         }
     }

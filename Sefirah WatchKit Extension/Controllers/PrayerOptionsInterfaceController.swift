@@ -14,8 +14,8 @@ class PrayerOptionsInterfaceController: WKInterfaceController {
     @IBOutlet var prayerOptionsTable: WKInterfaceTable!
     var prayerOptions = Options.allValues
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         loadTableData()
     }
@@ -23,7 +23,7 @@ class PrayerOptionsInterfaceController: WKInterfaceController {
     func loadTableData() {
         self.prayerOptionsTable.setNumberOfRows(prayerOptions.count, withRowType: "PrayerOptionRow")
         for index in 0..<prayerOptionsTable.numberOfRows {
-            if let controller = prayerOptionsTable.rowControllerAtIndex(index) as? PrayerOptionsRowController {
+            if let controller = prayerOptionsTable.rowController(at: index) as? PrayerOptionsRowController {
                 controller.prayerOption = prayerOptions[index]
             }
         }
@@ -49,16 +49,16 @@ class PrayerOptionsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         let option = prayerOptions[rowIndex]
-        var savedOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Options") as! [String]
+        var savedOptions = UserDefaults.standard.array(forKey: "Options") as! [String]
         if !savedOptions.contains(option.rawValue) {
             savedOptions.append(option.rawValue)
         } else {
-            let index = savedOptions.indexOf(option.rawValue)
-            savedOptions.removeAtIndex(index!)
+            let index = savedOptions.index(of: option.rawValue)
+            savedOptions.remove(at: index!)
         }
-        NSUserDefaults.standardUserDefaults().setValue(savedOptions, forKey: "Options")
+        UserDefaults.standard.setValue(savedOptions, forKey: "Options")
         loadTableData()
         
     }

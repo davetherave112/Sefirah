@@ -20,15 +20,15 @@ class SefirahTextInterfaceController: WKInterfaceController {
     var wasOwnView: Bool = false
     
     @IBAction func languageSettings() {
-        self.presentControllerWithName("LanguagesController", context: nil)
+        self.presentController(withName: "LanguagesController", context: nil)
     }
     
     @IBAction func prayerOptions() {
-        self.presentControllerWithName("PrayerOptionsController", context: nil)
+        self.presentController(withName: "PrayerOptionsController", context: nil)
     }
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         self.formatter = KCSefiraFormatter()
         
@@ -37,13 +37,13 @@ class SefirahTextInterfaceController: WKInterfaceController {
     
     func showPopup() {
 
-        let action = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.Cancel, handler: {
+        let action = WKAlertAction(title: "Cancel", style: WKAlertActionStyle.cancel, handler: {
             if self.wasOwnView {
                 self.displayedAlert = true;
-                self.dismissController();
+                self.dismiss();
             }
         })
-        self.presentAlertControllerWithTitle("Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .ActionSheet, actions: [action])
+        self.presentAlert(withTitle: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .actionSheet, actions: [action])
     }
     
     
@@ -53,9 +53,9 @@ class SefirahTextInterfaceController: WKInterfaceController {
         super.willActivate()
         
         let dayOfSefira = adjustedDay.sefiraDate
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        self.formatter.language = Languages.languageValues[userDefaults.stringForKey("Language")!]!
-        self.formatter.custom = Nusach.nusachValues[userDefaults.stringForKey("Nusach")!]!
+        let userDefaults = UserDefaults.standard
+        self.formatter.language = Languages.languageValues[userDefaults.string(forKey: "Language")!]!
+        self.formatter.custom = Nusach.nusachValues[userDefaults.string(forKey: "Nusach")!]!
         if let adjustedDay = dayOfSefira {
             self.setSefiraText(adjustedDay, formatter: formatter)
         } else {
@@ -94,15 +94,15 @@ class SefirahTextInterfaceController: WKInterfaceController {
     }
 
 
-    func setSefiraText(dayOfSefira: Int, formatter: KCSefiraFormatter) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let prayerDefaults = userDefaults.arrayForKey("Options") as! [String]
+    func setSefiraText(_ dayOfSefira: Int, formatter: KCSefiraFormatter) {
+        let userDefaults = UserDefaults.standard
+        let prayerDefaults = userDefaults.array(forKey: "Options") as! [String]
         var prayers: KCSefiraPrayerAddition = KCSefiraPrayerAddition()
         for option in prayerDefaults {
             prayers = prayers.union(Options.optionValues[option]!)
         }
         
-        let attributedString = formatter.countStringFromInteger(dayOfSefira, withPrayers: prayers)
+        let attributedString = formatter.countString(from: dayOfSefira, withPrayers: prayers)
         self.sefriahTextLabel.setAttributedText(attributedString)
     }
 }

@@ -21,13 +21,13 @@ class SefiraDayWatch: NSObject {
                 let complicationServer = CLKComplicationServer.sharedInstance()
                 if let activeComplications = complicationServer.activeComplications {
                     for complication in activeComplications {
-                        complicationServer.reloadTimelineForComplication(complication)
+                        complicationServer.reloadTimeline(for: complication)
                     }
                 }
             }
         }
     }
-    var tzeis: NSDate?
+    var tzeis: Date?
     var lastRecordedLocation: KCGeoLocation?
     var lastRecordedCLLocation: CLLocationCoordinate2D?
     
@@ -42,7 +42,7 @@ class SefiraDayWatch: NSObject {
         
         if CLLocationManager.locationServicesEnabled() {
             let status = CLLocationManager.authorizationStatus()
-            if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+            if status == .authorizedAlways || status == .authorizedWhenInUse {
                 locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
                 locationManager.requestLocation()
                 return true
@@ -54,26 +54,26 @@ class SefiraDayWatch: NSObject {
         }
     }
     
-    func setAdjustedSefiraDay(location: CLLocationCoordinate2D) {
-        let locationKC = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    func setAdjustedSefiraDay(_ location: CLLocationCoordinate2D) {
+        let locationKC = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         
         self.lastRecordedCLLocation = location
         let jewishCalendar = KCJewishCalendar(location: locationKC)
-        self.tzeis = jewishCalendar.tzais()
+        self.tzeis = jewishCalendar?.tzais()
         self.lastRecordedLocation = locationKC
     
         self.sefiraDate = self.workingDateAdjustedForSunset(tzeis!)
-        NSUserDefaults.standardUserDefaults().setInteger(self.sefiraDate!, forKey: "LastRecordedDay")
+        UserDefaults.standard.set(self.sefiraDate!, forKey: "LastRecordedDay")
         
     }
     
-    class func getTzeis(location: CLLocationCoordinate2D) -> NSDate {
-        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: NSTimeZone.localTimeZone())
+    class func getTzeis(_ location: CLLocationCoordinate2D) -> Date {
+        let KClocation = KCGeoLocation(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: TimeZone.autoupdatingCurrent)
         let jewishCalendar = KCJewishCalendar(location: KClocation)
-        return jewishCalendar.tzais()
+        return jewishCalendar!.tzais()
     }
     
-    func workingDateAdjustedForSunset(sunset: NSDate) -> Int {
+    func workingDateAdjustedForSunset(_ sunset: Date) -> Int {
         
         let isAfterSunset = sunset.timeIntervalSinceNow < 0
         

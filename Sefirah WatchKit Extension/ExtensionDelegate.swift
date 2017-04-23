@@ -11,12 +11,18 @@ import WatchConnectivity
 import KosherCocoa
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print(activationState)
+    }
+
     
     var omerCount = "--"
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        NSUserDefaults.standardUserDefaults().registerDefaults([
+        UserDefaults.standard.register(defaults: [
             "Language" : Languages.Hebrew.rawValue,
             "Nusach" : Nusach.Ashkenaz.rawValue,
             "Options" : [Options.Beracha.rawValue, Options.Harachaman.rawValue],

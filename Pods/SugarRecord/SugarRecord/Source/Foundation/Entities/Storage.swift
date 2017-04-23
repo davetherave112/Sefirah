@@ -1,9 +1,11 @@
 import Foundation
 
 public enum StorageType {
-    case CoreData
-    case Realm
+    case coreData
+    case realm
 }
+
+typealias StorageOperation = ((_ context: Context, _ save: () -> Void) throws -> Void) throws -> Void
 
 public protocol Storage: CustomStringConvertible, Requestable {
         
@@ -12,8 +14,8 @@ public protocol Storage: CustomStringConvertible, Requestable {
     var saveContext: Context! { get }
     var memoryContext: Context! { get }
     func removeStore() throws
-    func operation(operation: (context: Context, save: () -> Void) throws -> Void) throws
-    func fetch<T: Entity>(request: Request<T>) throws -> [T]
+    func operation<T>(_ operation: @escaping (_ context: Context, _ save: @escaping () -> Void) throws -> T) throws -> T
+    func fetch<T: Entity>(_ request: FetchRequest<T>) throws -> [T]
     
 }
 
@@ -21,7 +23,7 @@ public protocol Storage: CustomStringConvertible, Requestable {
 
 public extension Storage {
 
-    func fetch<T: Entity>(request: Request<T>) throws -> [T] {
+    func fetch<T: Entity>(_ request: FetchRequest<T>) throws -> [T] {
         return try self.mainContext.fetch(request)
     }
     

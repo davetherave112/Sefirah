@@ -17,9 +17,9 @@ class NotificationTableViewCell: UITableViewCell {
     @IBOutlet weak var notificationSwitch: UISwitch!
 
     lazy var db: CoreDataDefaultStorage = {
-        let store = CoreData.Store.Named("db")
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let model = CoreData.ObjectModel.Merged([bundle])
+        let store = CoreDataStore.named("db")
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
         let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
         return defaultStorage
     }()
@@ -28,9 +28,9 @@ class NotificationTableViewCell: UITableViewCell {
     var delegate: UITableView?
     
     //TODO: Check switch is properly set
-    @IBAction func switchChanged(sender: UISwitch) {
+    @IBAction func switchChanged(_ sender: UISwitch) {
         let toggleSwitch = sender
-        if !toggleSwitch.on {
+        if !toggleSwitch.isOn {
             do {
                try db.operation { (context, save) throws -> Void in
                     self.notification.enabled = false
@@ -44,7 +44,7 @@ class NotificationTableViewCell: UITableViewCell {
             let allNotifications: [UILocalNotification] = NotificationManager.sharedInstance.getAllNotifications()
             for notification in allNotifications {
                 if (notification.userInfo!["name"] as! String) == self.nameLabel.text! {
-                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+                    UIApplication.shared.cancelLocalNotification(notification)
                     return
                 }
             }
@@ -67,7 +67,7 @@ class NotificationTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

@@ -26,7 +26,7 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if SefiraDay.sharedInstance.lastRecordedCLLocation == nil {
@@ -54,11 +54,11 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
             return "Before"
         } else if section == 2 {
@@ -68,7 +68,7 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
         }
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else if section == 1 {
@@ -78,35 +78,35 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
         }
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.section > 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! TzeisNotificationTableViewCell
-            if indexPath.section == 1 {
-                let option = self.tzeisBefore[indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath as NSIndexPath).section > 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TzeisNotificationTableViewCell
+            if (indexPath as NSIndexPath).section == 1 {
+                let option = self.tzeisBefore[(indexPath as NSIndexPath).row]
                 cell.tzeisNotification = option
                 cell.textLabel?.text = option.description
             } else {
-                let option = self.tzeisAfter[indexPath.row]
+                let option = self.tzeisAfter[(indexPath as NSIndexPath).row]
                 cell.tzeisNotification = option
                 cell.textLabel?.text = option.description
             }
             
             return cell
-        } else if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("TimeCell", forIndexPath: indexPath)
+        } else if (indexPath as NSIndexPath).section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TimeCell", for: indexPath)
             if let location = SefiraDay.sharedInstance.lastRecordedCLLocation {
                 let tzeis = SefiraDay.getTzeis(location)
-                let timeFormatter = NSDateFormatter()
+                let timeFormatter = DateFormatter()
                 timeFormatter.setLocalizedDateFormatFromTemplate("hh/mm a")
-                let timeString: String = timeFormatter.stringFromDate(tzeis)
+                let timeString: String = timeFormatter.string(from: tzeis)
                 cell.detailTextLabel?.text = timeString
                 cell.textLabel?.text = "Local Time"
             } else {
                 let success = SefiraDay.sharedInstance.getLocation()
                 if !success {
-                    let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
+                    let alert = UIAlertController(title: "Error", message: "Unauthorized GPS Access. Please open Sefirah on your iPhone and tap on current location.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
             return cell
@@ -114,34 +114,34 @@ class TzeisNotificationsTableViewController: UITableViewController, CLLocationMa
         return UITableViewCell()
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath as NSIndexPath).section == 0 {
             return
         }
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TzeisNotificationTableViewCell
-        if cell.accessoryType == .Checkmark {
-            cell.accessoryType = .None
+        let cell = tableView.cellForRow(at: indexPath) as! TzeisNotificationTableViewCell
+        if cell.accessoryType == .checkmark {
+            cell.accessoryType = .none
         } else {
-            cell.accessoryType = .Checkmark
+            cell.accessoryType = .checkmark
         }
         
-        let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+        let notifications = UIApplication.shared.scheduledLocalNotifications
         
         let option = cell.tzeisNotification!
         
-        var savedOptions = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
-        if cell.accessoryType == .Checkmark {
+        var savedOptions = UserDefaults.standard.array(forKey: "Tzeis") as! [Double]
+        if cell.accessoryType == .checkmark {
             savedOptions.append(option.rawValue)
-            NSUserDefaults.standardUserDefaults().setObject(savedOptions, forKey: "Tzeis")
+            UserDefaults.standard.set(savedOptions, forKey: "Tzeis")
             NotificationManager.sharedInstance.getLocation()
         } else {
-            let index = savedOptions.indexOf(option.rawValue)
-            savedOptions.removeAtIndex(index!)
+            let index = savedOptions.index(of: option.rawValue)
+            savedOptions.remove(at: index!)
             let notification = notifications?.filter({($0.userInfo!["name"] as! String) == option.notificationName}).first
             if let notification = notification {
-                UIApplication.sharedApplication().cancelLocalNotification(notification)
+                UIApplication.shared.cancelLocalNotification(notification)
             }
-            NSUserDefaults.standardUserDefaults().setObject(savedOptions, forKey: "Tzeis")
+            UserDefaults.standard.set(savedOptions, forKey: "Tzeis")
         }
         
         self.tableView.reloadData()

@@ -12,12 +12,32 @@ import UIKit
 import KosherCocoa
 import CoreData
 import SugarRecord
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class NotificationManager: NSObject, CLLocationManagerDelegate {
     lazy var db: CoreDataDefaultStorage = {
-        let store = CoreData.Store.Named("db")
-        let bundle = NSBundle(forClass: self.classForCoder)
-        let model = CoreData.ObjectModel.Merged([bundle])
+        let store = CoreDataStore.named("db")
+        let bundle = Bundle(for: self.classForCoder)
+        let model = CoreDataObjectModel.merged([bundle])
         let defaultStorage = try! CoreDataDefaultStorage(store: store, model: model)
         return defaultStorage
     }()
@@ -25,14 +45,14 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
     static let sharedInstance = NotificationManager()
     let locationManager = CLLocationManager()
 
-    func getNotificationsDictionary() -> [String: [Bool: NSDate]]? {
-        let data = NSUserDefaults.standardUserDefaults().objectForKey("Notifications")
-        let object = NSKeyedUnarchiver.unarchiveObjectWithData(data as! NSData)
-        return object as? [String: [Bool: NSDate]]
+    func getNotificationsDictionary() -> [String: [Bool: Date]]? {
+        let data = UserDefaults.standard.object(forKey: "Notifications")
+        let object = NSKeyedUnarchiver.unarchiveObject(with: data as! Data)
+        return object as? [String: [Bool: Date]]
     }
     
     func getAllNotifications() -> [UILocalNotification] {
-        if let notifications = UIApplication.sharedApplication().scheduledLocalNotifications {
+        if let notifications = UIApplication.shared.scheduledLocalNotifications {
             return notifications
         } else {
             return []
@@ -63,11 +83,11 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue: CLLocationCoordinate2D = locations.last!.coordinate
         
         locationManager.stopUpdatingLocation()
@@ -76,48 +96,48 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
 
     }
 
-    func scheduleTzeis(location: CLLocationCoordinate2D) {
-        let settings = UIApplication.sharedApplication().currentUserNotificationSettings()
+    func scheduleTzeis(_ location: CLLocationCoordinate2D) {
+        let settings = UIApplication.shared.currentUserNotificationSettings
         
-        if settings!.types == .None {
+        if settings!.types == UIUserNotificationType() {
             return
         }
         
-        let timeZone = NSTimeZone.localTimeZone()
+        let timeZone = TimeZone.autoupdatingCurrent
         let location: KCGeoLocation = KCGeoLocation.init(latitude: location.latitude, andLongitude: location.longitude, andTimeZone: timeZone)
         let calendar: KCZmanimCalendar = KCZmanimCalendar.init(location: location)
         
         var tzeis = calendar.tzais()
         
-        if tzeis.timeIntervalSinceNow < 0 {
-            let adjustedDate = calendar.workingDate.dateByAddingTimeInterval(60*60*12)
+        if tzeis?.timeIntervalSinceNow < 0 {
+            let adjustedDate = calendar.workingDate.addingTimeInterval(60*60*12)
             calendar.workingDate = adjustedDate
             tzeis = calendar.tzais()
         }
         
         //UIApplication.sharedApplication().cancelAllLocalNotifications()
         
-        let savedValues = NSUserDefaults.standardUserDefaults().arrayForKey("Tzeis") as! [Double]
+        let savedValues = UserDefaults.standard.array(forKey: "Tzeis") as! [Double]
         for value in savedValues {
             let tzeisOption = Tzeis(rawValue: value)
             let notificationName = tzeisOption?.notificationName
-            let notifications = UIApplication.sharedApplication().scheduledLocalNotifications
+            let notifications = UIApplication.shared.scheduledLocalNotifications
             let notificationExists = notifications?.filter({($0.userInfo!["name"] as! String) == notificationName})
             if notificationExists?.count > 0 {
                 print("")
             } else {
-                let fireDate = tzeis.dateByAddingTimeInterval(Double(tzeisOption!.rawValue * 60))
-                scheduleLocal(notificationName!, fireDate: fireDate, repeatAlert: false, tzeis: true)
+                let fireDate = tzeis?.addingTimeInterval(Double(tzeisOption!.rawValue * 60))
+                scheduleLocal(notificationName!, fireDate: fireDate!, repeatAlert: false, tzeis: true)
             }
         }
         
     }
     
-    func scheduleLocal(name: String, fireDate: NSDate, repeatAlert: Bool, tzeis: Bool = false) {
+    func scheduleLocal(_ name: String, fireDate: Date, repeatAlert: Bool, tzeis: Bool = false) {
         let notification = UILocalNotification()
         notification.fireDate = fireDate
         if repeatAlert {
-            notification.repeatInterval = NSCalendarUnit.Day
+            notification.repeatInterval = NSCalendar.Unit.day
         }
         notification.alertBody = "This is a reminder to count Sefirat Ha'omer tonight/today!"
         //notification.timeZone = NSTimeZone.localTimeZone()
@@ -127,21 +147,21 @@ class NotificationManager: NSObject, CLLocationManagerDelegate {
         
         
         if tzeis {
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+            UIApplication.shared.scheduleLocalNotification(notification)
         } else {
             Notification.createNotification(name, fireDate: fireDate, enabled: true, repeatAlert: repeatAlert) { success, error in
                 if let error = error {
                     //TODO: handle error
                     return
                 } else {
-                    UIApplication.sharedApplication().scheduleLocalNotification(notification)
+                    UIApplication.shared.scheduleLocalNotification(notification)
                 }
             }
         }
-        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
-            let timeFormatter = NSDateFormatter()
+        for notification in UIApplication.shared.scheduledLocalNotifications! {
+            let timeFormatter = DateFormatter()
             timeFormatter.setLocalizedDateFormatFromTemplate("hh/mm a")
-            let timeString: String = timeFormatter.stringFromDate(notification.fireDate!)
+            let timeString: String = timeFormatter.string(from: notification.fireDate!)
             print(timeString)
         }
     }
